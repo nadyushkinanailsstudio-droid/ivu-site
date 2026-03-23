@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Институт Врожденной Успеваемости | Клуб Кручучу</title>
+  <meta name="description" content="Клуб Кручучу — детский вход в систему ИВУ: матрица 5×4, первые загадки, гимн, стартовые уроки и путь к первой сотне слов.">
+
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+
+  <meta property="og:title" content="Клуб Кручучу — ИВУ">
+  <meta property="og:description" content="Детский вход в систему ИВУ: загадка, матрица, гимн и первые шаги метода объёма.">
+  <meta property="og:image" content="favicon/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/club.html">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./club.css">
+</head>
+<body class="club-page">
+  <div class="noise-overlay"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="./index.html" class="header__logo">
+        <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+        <span class="header__logo-sub">Инженерный код языка</span>
+      </a>
+
+     <nav class="nav" aria-label="Основная навигация">
+        <a href="./index.html" class="nav__link">Главная</a>
+        <a href="./system.html" class="nav__link">Метод</a>
+        <a href="./parents.html" class="nav__link">Родителям</a>
+        <a href="./educators.html" class="nav__link">Педагогам</a>
+        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+        <a href="./club.html" class="nav__link active">Клуб Кручучу</a>
+        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+        <a href="./foundation.html" class="nav__link">Фонд</a>
+        <a href="./contacts.html" class="nav__link">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="club-hero reveal">
+      <div class="container">
+        <div class="club-hero-shell">
+          <div class="hero-grid">
+            <div class="hero-visual">
+              <div class="hero-visual-frame">
+                <div class="hero-orbit hero-orbit-one"></div>
+                <div class="hero-orbit hero-orbit-two"></div>
+
+                <img
+                  src="./img/kruchuchu.svg"
+                  alt="Маг Кручучу"
+                  class="hero-kruchu"
+                  onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 300\'%3E%3Crect width=\'200\' height=\'300\' fill=\'none\'/%3E%3Ccircle cx=\'100\' cy=\'100\' r=\'60\' fill=\'%232A4B7C\'/%3E%3Cpath d=\'M60 180 L140 180 L170 300 L30 300 Z\' fill=\'%230A192F\'/%3E%3C/svg%3E'"
+                >
+              </div>
+            </div>
+
+            <div class="hero-content">
+              <span class="label">Деканат для детей</span>
+
+              <h1>Приветствую вас, мои маленькие друзья!</h1>
+
+              <div class="hero-prose">
+                <p>
+                  Как вы думаете, кто я? Правильно, Кручучу. Я — не учитель и не воспитатель!
+                  Я — маг и волшебник, знаменитый Кручучу! А это мой верный спутник —
+                  крутящийся кубик. Он умеет делать что? Верно! Крутиться! Поэтому и имя у меня
+                  такое особенное.
+                </p>
+
+                <p class="hero-strong-note">Моя задача — открыть тебе тайный код чтения.</p>
+              </div>
+
+              <div class="hero-quote-box">
+                <div class="hero-quote-text">
+                  «Кубик цветной в руках я кручу,<br>
+                  С ним я играю и буквы учу.<br>
+                  Буквы узнаю, книжку возьму.<br>
+                  С радостью в школу учиться пойду!»
+                </div>
+              </div>
+
+              <p class="hero-italic-note">
+                Помни: читать нужно рифмами — иначе слова теряют свою магическую силу
+                и не складываются в смысл.
+              </p>
+
+              <p class="hero-path-note">
+                Первый шаг к 100 прочитанным книгам вместе с Кручучу.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#map" class="btn btn-magic">Открыть карту приключения</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section reveal" id="map">
+      <div class="container">
+        <div class="section-header">
+          <h2>Твоё большое приключение</h2>
+          <p>
+            В Клубе спрятано 36 загадок-допусков. Каждая разгаданная загадка
+            открывает следующий шаг, мультурок и новую часть пути.
+          </p>
+          <p class="section-header-note">
+            Клуб Кручучу — детский вход в систему ИВУ: от матрицы и первых слов
+            к первой сотне и дальше к 100 книгам.
+          </p>
+          <p class="section-header-emphasis">
+            6 базовых загадок → 15 дошкольных уровней → 15 школьных уровней
+          </p>
+        </div>
+
+        <div class="map-grid">
+          <div class="map-cable"></div>
+
+          <article class="map-card">
+            <div class="m-icon">01</div>
+            <h3>6 базовых загадок</h3>
+            <p class="map-card-lead">
+              Здесь открывается инженерное ядро языка — 20 согласных и первые
+              правила сборки.
+            </p>
+            <ul class="m-list">
+              <li>Матрица 5×4 и парад букв</li>
+              <li>Первые загадки о коде языка</li>
+              <li>Вход в систему через игру и логику</li>
+            </ul>
+          </article>
+
+          <article class="map-card">
+            <div class="m-icon">02</div>
+            <h3>15 дошкольных уровней</h3>
+            <p class="map-card-lead">
+              Через рифмы, рассказы и игровые задания ребёнок проходит первую сотню слов.
+            </p>
+            <ul class="m-list">
+              <li>15 игровых проводников</li>
+              <li>100 стихотворений и коротких рассказов</li>
+              <li>Домашние задания как награды</li>
+            </ul>
+          </article>
+
+          <article class="map-card">
+            <div class="m-icon">03</div>
+            <h3>15 школьных уровней</h3>
+            <p class="map-card-lead">
+              Здесь начинается следующий шаг: диктанты, вопросы, задачи и путь
+              к 100 книгам школьника.
+            </p>
+            <ul class="m-list">
+              <li>15 виртуальных учительниц</li>
+              <li>100 диктантов на слух</li>
+              <li>100 устных и письменных заданий</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="heroes-section container reveal">
+      <div class="section-header">
+        <h2>Кто ждёт тебя на уровнях?</h2>
+        <p>
+          На каждом этапе тебя сопровождают свои проводники.
+          Они открывают доступ к новым заданиям и помогают пройти путь дальше.
+        </p>
+        <p class="section-header-emphasis">
+          От игры — к системе. От рифмы — к чтению.
+        </p>
+      </div>
+
+      <details>
+        <summary>
+          <strong>Дошкольные хранители</strong><br>
+          <span>Игровые проводники первых уровней, рифм и рассказов</span>
+        </summary>
+
+        <div>
+          <p>
+            Эти герои помогают ребёнку пройти первые уровни,
+            запомнить слова и почувствовать ритм языка.
+          </p>
+
+          <ul>
+            <li>Незнайка</li>
+            <li>Лунтик</li>
+            <li>Пятачок</li>
+            <li>Бельчонок</li>
+            <li>Трубадур</li>
+            <li>Котёнок Гав</li>
+            <li>Карлсон</li>
+            <li>Львёнок и Черепаха</li>
+            <li>Дядя Фёдор</li>
+            <li>Маша</li>
+            <li>Забава</li>
+            <li>Ёжик</li>
+            <li>Колобок</li>
+            <li>Тигра</li>
+            <li>Богатырь</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>
+          <strong>Виртуальные учительницы</strong><br>
+          <span>Школьный уровень: внимание, диктанты, логика</span>
+        </summary>
+
+        <div>
+          <p>
+            Здесь начинаются более сложные задания:
+            диктанты, вопросы и упражнения на понимание текста.
+          </p>
+
+          <ul>
+            <li>Эмма Карловна</li>
+            <li>Августина Романовна</li>
+            <li>Северина Львовна</li>
+            <li>Клавдия Эрнестовна</li>
+            <li>Акулина Степановна</li>
+            <li>Аврора Станиславна</li>
+            <li>Варвара Аверьяновна</li>
+            <li>Лада Эдуардовна</li>
+            <li>Анжелика Руслановна</li>
+            <li>Анфиса Арнольдовна</li>
+            <li>Анна Альбертовна</li>
+            <li>Клара Спартаковна</li>
+            <li>Эльвира Кузьминична</li>
+            <li>Марта Аркадьевна</li>
+            <li>Алевтина Пантелеевна</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <section class="puzzle-section reveal" id="puzzle">
+      <div class="container">
+        <div class="puzzle-wrapper">
+          <div class="puzzle-grid">
+            <div class="puzzle-text">
+              <h2>Парад букв</h2>
+              <p>
+                Это первая загадка мага Кручучу. На календаре 20 августа.
+                Согласные буквы готовятся к торжественному параду, но они забыли свои места!
+              </p>
+              <p class="puzzle-text-strong">
+                Эти 20 букв составляют инженерное ядро языка.
+              </p>
+
+              <div class="puzzle-rules">
+                <h4>Инструкция Мага:</h4>
+                <ul>
+                  <li>В параде участвуют только согласные буквы.</li>
+                  <li>Буква <strong>А</strong> — знаменосец, она встанет впереди, когда парад будет собран.</li>
+                  <li>Буквы строятся в 4 шеренги по 5 букв.</li>
+                  <li>В каждой шеренге прячется ровно одна шипящая буква.</li>
+                  <li>Соблюдайте строгий алфавитный порядок!</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="matrix-board">
+              <div class="m-status">
+                <button class="m-reset" id="btn-reset" type="button">Очистить парад</button>
+              </div>
+
+              <div class="letter-grid" id="letter-grid">
+                <div class="l-cell" data-idx="0">?</div>
+                <div class="l-cell" data-idx="1">?</div>
+                <div class="l-cell" data-idx="2">?</div>
+                <div class="l-cell" data-idx="3">?</div>
+                <div class="l-cell" data-idx="4">?</div>
+                <div class="l-cell" data-idx="5">?</div>
+                <div class="l-cell" data-idx="6">?</div>
+                <div class="l-cell" data-idx="7">?</div>
+                <div class="l-cell" data-idx="8">?</div>
+                <div class="l-cell" data-idx="9">?</div>
+                <div class="l-cell" data-idx="10">?</div>
+                <div class="l-cell" data-idx="11">?</div>
+                <div class="l-cell" data-idx="12">?</div>
+                <div class="l-cell" data-idx="13">?</div>
+                <div class="l-cell" data-idx="14">?</div>
+                <div class="l-cell" data-idx="15">?</div>
+                <div class="l-cell" data-idx="16">?</div>
+                <div class="l-cell" data-idx="17">?</div>
+                <div class="l-cell" data-idx="18">?</div>
+                <div class="l-cell" data-idx="19">?</div>
+              </div>
+
+              <div class="input-area" id="input-area">
+                <input
+                  type="text"
+                  id="code-input"
+                  class="code-input"
+                  placeholder="Введи 5 букв..."
+                  maxlength="5"
+                  autocomplete="off"
+                >
+              </div>
+
+              <div class="sys-msg" id="sys-msg"></div>
+
+              <div class="victory-area" id="victory-area">
+                <div class="victory-announcement">
+                  <span class="victory-icon">🏆</span>
+                  <h3 class="victory-title">Ура! Матрица собрана правильно!</h3>
+                  <p class="victory-text-primary">
+                    Ты разгадал первую большую загадку Кручучу и правильно построил все четыре шеренги.
+                  </p>
+                  <p class="victory-text-secondary">
+                    Теперь перед тобой открывается <span class="victory-underline">Торжественный Гимн Матрицы</span>
+                    и первые секретные уроки. Это и есть твой первый шаг к тайному коду чтения.
+                  </p>
+                </div>
+
+                <p class="anthem-intro">
+                  Твоя награда за разгаданную Матрицу — запомни эти четыре шеренги и открой путь дальше.
+                </p>
+
+                <div class="anthem-box">
+                  <h4 class="anthem-title">Торжественный Гимн Матрицы</h4>
+
+                  <div class="anthem-line">
+                    <span class="highlight-letter">Б В Г Д Ж</span>
+                    Россия — священная наша ДЕРЖАВА
+                  </div>
+
+                  <div class="anthem-line">
+                    <span class="highlight-letter">З К Л М Ш</span>
+                    Россия — любимая наша СТРАНА
+                  </div>
+
+                  <div class="anthem-line">
+                    <span class="highlight-letter">Н П Р С Ч</span>
+                    Могучая воля, великая СЛАВА
+                  </div>
+
+                  <div class="anthem-line">
+                    <span class="highlight-letter">Т Ф Х Ц Щ</span>
+                    Твоё достоянье на все ВРЕМЕНА
+                  </div>
+                </div>
+
+                <div class="text-center" id="btn-unlock-container">
+                  <button class="btn btn-magic btn-unlock-club" id="btn-unlock" type="button">
+                    Открыть 4 секретных урока
+                  </button>
+                </div>
+
+                <div class="secret-lessons" id="secret-lessons">
+                  <div class="secret-lessons-head">
+                    <p class="secret-lessons-intro">Это первые шаги метода объёма.</p>
+                    <p class="secret-lessons-lead">
+                      После разгадки Матрицы ты получаешь доступ к первым четырём шагам —
+                      именно с них часто начинается настоящее вхождение в систему.
+                    </p>
+                  </div>
+
+                  <div class="lessons-showcase lessons-showcase--premium">
+                    <article class="lesson-stage lesson-stage--featured">
+                      <div class="lesson-stage-meta">
+                        <span class="lesson-stage-num">Шаг 1</span>
+                        <h4 class="lesson-stage-title">БВГДЖ + А</h4>
+                      </div>
+                      <div class="lesson-stage-body">
+                        <p class="lesson-stage-main">БА · ВА · ГА · ДА · ЖА</p>
+                        <p class="lesson-stage-formula">Первые слова: САД · ЧАЙ · ШАР · РАК</p>
+                      </div>
+                    </article>
+
+                    <article class="lesson-stage">
+                      <div class="lesson-stage-meta">
+                        <span class="lesson-stage-num">Шаг 2</span>
+                        <h4 class="lesson-stage-title">ЗКЛМШ + А</h4>
+                      </div>
+                      <div class="lesson-stage-body">
+                        <p class="lesson-stage-main">ЗА · КА · ЛА · МА · ША</p>
+                        <p class="lesson-stage-formula">Первые слова: ДАЧА · РАМА · ВАЗА · ЖАБА</p>
+                      </div>
+                    </article>
+
+                    <article class="lesson-stage">
+                      <div class="lesson-stage-meta">
+                        <span class="lesson-stage-num">Шаг 3</span>
+                        <h4 class="lesson-stage-title">НПРСЧ + А</h4>
+                      </div>
+                      <div class="lesson-stage-body">
+                        <p class="lesson-stage-main">НА · ПА · РА · СА · ЧА</p>
+                        <p class="lesson-stage-formula">Матрица расширяется и начинает работать как система.</p>
+                      </div>
+                    </article>
+
+                    <article class="lesson-stage">
+                      <div class="lesson-stage-meta">
+                        <span class="lesson-stage-num">Шаг 4</span>
+                        <h4 class="lesson-stage-title">ТФХЦЩ + А</h4>
+                      </div>
+                      <div class="lesson-stage-body">
+                        <p class="lesson-stage-main">ТА · ФА · ХА · ЦА · ЩА</p>
+                        <p class="lesson-stage-formula">Язык раскрывается дальше и собирается в цельную логику.</p>
+                      </div>
+                    </article>
+                  </div>
+
+                  <div class="lesson-result-window">
+                    <p class="lesson-result-label">Что происходит дальше</p>
+                    <h4 class="lesson-result-title">Слова начинают соединяться между собой</h4>
+                    <div class="lesson-result-grid">
+                      <span>САД — ДАЧА</span>
+                      <span>ЧАЙ — РАМА</span>
+                      <span>ШАР — ВАЗА</span>
+                      <span>РАК — ЖАБА</span>
+                    </div>
+                  </div>
+
+                  <div class="lessons-download-strip">
+                    <p class="lessons-download-text">
+                      Хочешь рассмотреть эти шаги внимательно? Ниже открыт полный лист с уроками —
+                      его можно пролистать прямо здесь или распечатать отдельно.
+                    </p>
+                    <a href="./img/uroki.pdf" class="btn btn-outline lessons-download-btn" target="_blank" rel="noopener">
+                      Скачать уроки в PDF
+                    </a>
+                  </div>
+
+                  <div class="lessons-pdf-viewer">
+                    <div class="lessons-pdf-head">
+                      <p class="lessons-pdf-kicker">Полный разворот уроков</p>
+                      <h4 class="lessons-pdf-title">Открытый лист для спокойного просмотра</h4>
+                    </div>
+
+                    <div class="lessons-pdf-frame-wrap">
+                      <iframe
+                        class="lessons-pdf-frame"
+                        src="./img/uroki.pdf"
+                        title="Первые уроки ИВУ"
+                        loading="lazy">
+                      </iframe>
+                    </div>
+                  </div>
+
+                  <div class="deep-start-screen" id="deep-start-screen">
+                    <img src="./img/kru-underwater.webp" alt="Кручучу под водой" class="deep-image">
+                    <div class="deep-overlay">
+                      <h4 class="deep-title">Готов к дальнейшему погружению?</h4>
+                      <p class="deep-text">
+                        Ты уже увидел, как буквы превращаются в слоги и слова.
+                        Теперь посмотри, как метод работает вживую.
+                      </p>
+                      <button class="btn btn-magic" id="btn-start-deep" type="button">
+                        Погрузиться глубже
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="demo-video-block" id="demo-video-block" hidden>
+                    <h4 class="demo-video-title">Демо-урок</h4>
+                    <p class="demo-video-text">
+                      Это короткий вход в живое объяснение метода после первых шагов.
+                    </p>
+
+                    <video id="club-video" class="demo-video-player" controls preload="metadata">
+                      <source src="./media/uroven_01_01.mp4" type="video/mp4">
+                      Ваш браузер не поддерживает воспроизведение видео.
+                    </video>
+                  </div>
+
+                  <div class="lesson-parent-note">
+                    <p class="lesson-note">
+                      Родители: сравните этот старт по ИВУ с обычным букварём и посмотрите,
+                      как ребёнок собирает слоги и слова.
+                    </p>
+                  </div>
+
+                  <div class="secret-actions">
+                    <a href="YOUR_VK_REVIEW_LINK_HERE" class="btn btn-outline btn-share-club" target="_blank" rel="noopener">
+                      Поделиться впечатлением во ВКонтакте
+                    </a>
+                    <a href="./contacts.html" class="btn btn-magic">Заказать консультацию</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="challenge-bridge">
+      Но это только начало. У Кручучу есть особый день,
+      когда язык раскрывается по-новому.
+    </p>
+
+    <section class="challenge-bs-section reveal">
+      <div class="container cbs-grid">
+        <article class="challenge-card challenge-card--magic">
+          <div class="c-date">20</div>
+          <div class="challenge-glow"></div>
+
+          <h2 class="challenge-title">Испытание 20 числа</h2>
+
+          <div class="challenge-text">
+            <p>
+              Раз в месяц, <strong>20 числа</strong>, Кручучу открывает маленький секрет.
+            </p>
+
+            <p>
+              Он меняет всего один элемент —
+              и вдруг весь язык начинает звучать иначе.
+            </p>
+
+            <p class="challenge-highlight">
+              Те же буквы.
+              Но уже другие слова.
+            </p>
+
+            <p>
+              В этот момент ребёнок впервые замечает:
+              язык можно не просто запоминать —
+            </p>
+
+            <p class="challenge-final">
+              его можно понимать и управлять им.
+            </p>
+          </div>
+        </article>
+
+        <article class="bs-card">
+          <img
+            src="./img/babystudent-logo.svg"
+            alt="BabyStudent"
+            class="bs-logo"
+          >
+
+          <h2>Знак BABYSTUDENT</h2>
+
+          <p class="bs-main-text">
+            Первая сотня в Клубе — это путь от матрицы и первых слогов
+            к 100 словам, а дальше — к 100 книгам.
+          </p>
+
+          <div class="bs-award-window">
+            <p class="bs-award-window-title">Путь награды</p>
+            <div class="bs-award-chain">
+              <span>10 заданий</span>
+              <i>→</i>
+              <span>1 грамота</span>
+              <i>→</i>
+              <span>10 грамот</span>
+              <i>→</i>
+              <strong>СУПЕРПРИЗ</strong>
+            </div>
+          </div>
+
+          <div class="bs-download-wrap">
+            <a
+              href="./img/ivu-poster-front.png"
+              class="btn btn-magic btn-download-map"
+              target="_blank"
+              download
+            >
+              Скачать карту приключения (A3)
+            </a>
+
+            <span class="bs-download-note">
+              Распечатайте карту на формате A3 и проходите путь вместе с ребёнком
+            </span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="bridge-section reveal">
+      <div class="container bridge-container">
+        <h2>Информация для родителей и педагогов</h2>
+
+        <p>
+          Клуб Кручучу — это детская игровая среда Института.
+          Полная система обучения, методические материалы и сценарии работы
+          открываются взрослым на специальных кафедрах.
+        </p>
+
+        <div class="bridge-actions">
+          <a href="./parents.html" class="btn btn-outline btn-bridge-outline">
+            Кафедра для родителей
+          </a>
+
+          <a href="./educators.html" class="btn btn-primary">
+            Кафедра для педагогов
+          </a>
+
+          <a href="./krutigrad.html" class="btn btn-magic btn-bridge-magic">
+            Вселенная «Крутиград»
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-manifesto reveal">
+      <div class="container">
+        <div class="site-manifesto-text">
+          Мы вернём России статус<br>самой читающей страны в мире.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-minimal">
+    <div class="container footer-minimal__inner">
+      <div class="footer-minimal__left">
+        <a href="./index.html" class="footer-minimal__logo-block">
+          <div class="footer-minimal__logo-icon">ИВУ</div>
+          <div class="footer-minimal__logo-text">
+            <strong>Институт Врожденной<br>Успеваемости</strong>
+            <span>От первых 100 слов —<br>к 100 книгам школьника</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer-minimal__center">
+        Авторская система Сергея Белолипецкого<br>
+        <a href="./privacy.html" style="font-size: 0.8rem; text-decoration: underline; margin-top: 8px; display: inline-block; color: var(--text-muted); opacity: 0.8;">
+          Политика конфиденциальности
+        </a>
+      </div>
+
+      <div class="footer-minimal__right">
+        <a href="#header" class="footer-minimal__up">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script src="./club.js"></script>
+</body>
+</html>

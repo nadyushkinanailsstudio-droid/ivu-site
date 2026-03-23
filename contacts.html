@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Приёмная и Контакты — ИВУ</title>
+  <meta name="description" content="Свяжитесь с Институтом Врожденной Успеваемости. Умная форма заявки для родителей, педагогов, детских садов и партнёров.">
+
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+
+  <meta property="og:title" content="Приёмная и Контакты — ИВУ">
+  <meta property="og:description" content="Умная форма заявки и маршруты связи с Институтом.">
+  <meta property="og:image" content="favicon/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/contacts.html">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./contacts.css">
+</head>
+<body class="contacts-page">
+  <div class="noise-overlay"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="./index.html" class="header__logo">
+        <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+        <span class="header__logo-sub">Инженерный код языка</span>
+      </a>
+
+      <nav class="nav">
+        <a href="./index.html" class="nav__link">Главная</a>
+        <a href="./system.html" class="nav__link">Метод</a>
+        <a href="./parents.html" class="nav__link">Родителям</a>
+        <a href="./educators.html" class="nav__link">Педагогам</a>
+        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+        <a href="./club.html" class="nav__link">Клуб Кручучу</a>
+        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+        <a href="./foundation.html" class="nav__link">Фонд</a>
+        <a href="./contacts.html" class="nav__link active">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contacts-hero container reveal">
+      <span class="label">Приёмная Института</span>
+      <h1>Связь с ИВУ</h1>
+      <p class="subtitle">
+        Доступ в закрытый Методкабинет, к консультациям, урокам и планам выстраивается через умную заявку.
+        Это не формальность, а фильтр осознанности, который защищает авторские материалы и формирует сильное
+        профессиональное сообщество.
+      </p>
+
+      <div class="hero-roles">
+        <span>Для родителей</span>
+        <span>Для педагогов и ДОУ</span>
+        <span>Для партнёров и СМИ</span>
+      </div>
+    </section>
+
+    <section class="smart-brief container" id="content">
+      <div class="form-panel reveal">
+        <div class="form-header">
+          <h2>Умная заявка (Бриф-фильтр)</h2>
+          <p>
+            Институт не открывает весь методический фонд автоматически. Бриф помогает понять вашу роль,
+            текущую задачу и подобрать правильный маршрут интеграции в систему.
+          </p>
+        </div>
+
+        <form action="#" method="POST" id="smart-brief-form">
+          <div class="role-switcher">
+            <label class="role-option">
+              <input type="radio" name="user-role" value="parent" checked>
+              <div class="role-card">Родитель</div>
+            </label>
+
+            <label class="role-option">
+              <input type="radio" name="user-role" value="educator">
+              <div class="role-card">Педагог / Репетитор</div>
+            </label>
+
+            <label class="role-option">
+              <input type="radio" name="user-role" value="dou">
+              <div class="role-card">Представитель ДОУ</div>
+            </label>
+
+            <label class="role-option">
+              <input type="radio" name="user-role" value="partner">
+              <div class="role-card">Партнёр / СМИ</div>
+            </label>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="user-name">Ваше имя</label>
+              <input
+                type="text"
+                id="user-name"
+                name="user-name"
+                class="form-control"
+                placeholder="Например, Надежда"
+                required
+              >
+            </div>
+
+            <div class="form-group">
+              <label for="user-contact">Контакт для связи</label>
+              <input
+                type="text"
+                id="user-contact"
+                name="user-contact"
+                class="form-control"
+                placeholder="Email или @username в Telegram"
+                required
+              >
+            </div>
+
+            <div class="form-group full-width">
+              <label for="request-format">Какой формат поддержки вам нужен?</label>
+              <select id="request-format" name="request-format" class="form-control" required>
+                <option value="" disabled selected>Выберите из списка...</option>
+                <option value="cabinet">Доступ к методическим материалам (Методкабинет)</option>
+                <option value="demo">Организация выездного демо-урока в ДОУ</option>
+                <option value="consultation">Индивидуальная консультация</option>
+                <option value="partnership">Информационное партнёрство / Интервью</option>
+              </select>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="experience-text">Опишите ваш опыт и текущую ситуацию</label>
+              <div class="helper-block" id="dynamic-helper">
+                Укажите возраст ребёнка, текущий уровень чтения и вашу готовность работать дома по маршруту
+                «первые 100 слов».
+              </div>
+              <textarea
+                id="experience-text"
+                name="experience-text"
+                class="form-control"
+                placeholder="Краткое описание..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group full-width">
+              <label for="mission-text">Финальный вопрос</label>
+              <p class="form-note">
+                Почему для вас важно присоединиться к миссии ИВУ и довести ребёнка
+                (или детей) до 100 прочитанных книг?
+              </p>
+              <textarea
+                id="mission-text"
+                name="mission-text"
+                class="form-control"
+                placeholder="Поделитесь вашими мыслями..."
+                required
+              ></textarea>
+            </div>
+          </div>
+
+       <div class="form-footer">
+            <button type="submit" class="btn btn-primary">Отправить бриф на рассмотрение</button>
+            <span class="privacy-note">
+              Отправляя форму, вы даете согласие на обработку персональных данных в соответствии 
+              с <a href="./privacy.html" style="text-decoration: underline; color: inherit;">Политикой конфиденциальности</a>. 
+              Мы свяжемся с вами после проверки заявки.
+            </span>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="direct-contact reveal">
+      <div class="container">
+        <h2>Прямая связь</h2>
+        <p>
+          Для общих вопросов, прессы, приглашения Сергея Белолипецкого на демо-урок
+          или назначения методической встречи.
+        </p>
+
+        <div class="chips-container">
+          <a href="mailto:info@ivu.example" class="contact-chip">Email приёмной</a>
+          <a href="#" class="contact-chip">Telegram / мессенджер</a>
+          <a href="./foundation.html" class="contact-chip">Фонд и партнёрства</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="foundation-bridge reveal">
+      <div class="container fb-container">
+        <h2>Если ваш запрос шире одной консультации</h2>
+        <p>
+          ИВУ — это не только урок или методический материал. Это архитектура чтения, взросления
+          и формирования культурного капитала ребёнка. Для масштабных партнёрств и внедрения
+          система открывается через отдельный маршрут.
+        </p>
+
+        <div class="fb-list">
+          <span>Демо-уроки</span>
+          <span>Методическое внедрение</span>
+          <span>Партнёрства</span>
+          <span>Фондовые программы</span>
+        </div>
+
+        <a href="./foundation.html" class="btn btn-outline">Перейти в раздел Фонда</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-minimal">
+    <div class="container footer-minimal__inner">
+      <div class="footer-minimal__left">
+        <a href="./index.html" class="footer-minimal__logo-block">
+          <div class="footer-minimal__logo-icon">ИВУ</div>
+          <div class="footer-minimal__logo-text">
+            <strong>Институт Врожденной<br>Успеваемости</strong>
+            <span>От первых 100 слов —<br>к 100 книгам школьника</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer-minimal__center">
+        Авторская система Сергея Белолипецкого<br>
+        <a href="./privacy.html" style="font-size: 0.8rem; text-decoration: underline; margin-top: 8px; display: inline-block; color: var(--text-muted); opacity: 0.8;">Политика конфиденциальности</a>
+      </div>
+
+      <div class="footer-minimal__right">
+        <a href="#header" class="footer-minimal__up">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
+  <script src="./contacts.js"></script>
+</body>
+</html>

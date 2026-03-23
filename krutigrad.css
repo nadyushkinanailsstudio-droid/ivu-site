@@ -1,0 +1,1065 @@
+/* ==========================================================================
+   KRUTIGRAD PAGE — final clean styles
+   Работает поверх общего style.css
+   ========================================================================== */
+
+.krutigrad-page {
+  --kg-line: rgba(10, 25, 47, 0.08);
+  --kg-line-strong: rgba(10, 25, 47, 0.14);
+  --kg-gold: #d2af63;
+  --kg-gold-soft: rgba(210, 175, 99, 0.14);
+
+  --kg-card: rgba(255, 255, 255, 0.86);
+  --kg-card-strong: rgba(255, 255, 255, 0.94);
+
+  --kg-shadow-sm: 0 12px 30px rgba(10, 25, 47, 0.05);
+  --kg-shadow-md: 0 20px 50px rgba(10, 25, 47, 0.08);
+  --kg-shadow-lg: 0 30px 80px rgba(10, 25, 47, 0.12);
+
+  --kg-radius: 24px;
+  --kg-radius-lg: 32px;
+
+  overflow-x: hidden;
+}
+
+/* ==========================================================================
+   PAGE BASICS
+   ========================================================================== */
+
+.krutigrad-page main {
+  position: relative;
+  z-index: 2;
+}
+
+.krutigrad-page .section-header {
+  max-width: 860px;
+  margin: 0 auto 52px;
+  text-align: center;
+}
+
+.krutigrad-page .section-header h2 {
+  margin: 0 0 16px;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.7vw, 3.2rem);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  text-wrap: balance;
+}
+
+.krutigrad-page .section-header p {
+  margin: 0 0 12px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.krutigrad-page .kg-header-note {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+.krutigrad-page .kg-label {
+  border-color: rgba(210, 175, 99, 0.32);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.78) 100%);
+  box-shadow: 0 10px 26px rgba(10,25,47,0.04);
+}
+
+.krutigrad-page .kg-label--dark {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.16);
+  color: rgba(255,255,255,0.84);
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.krutigrad-page .kg-hero {
+  position: relative;
+  padding: 160px 0 86px;
+}
+
+.krutigrad-page .kg-hero::before,
+.krutigrad-page .kg-hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(14px);
+}
+
+.krutigrad-page .kg-hero::before {
+  top: 84px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(210,175,99,0.10) 0%, rgba(210,175,99,0) 72%);
+}
+
+.krutigrad-page .kg-hero::after {
+  top: 140px;
+  left: 4%;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(46,104,255,0.05) 0%, rgba(46,104,255,0) 74%);
+}
+
+.krutigrad-page .kg-hero-shell {
+  position: relative;
+  overflow: hidden;
+  padding: 48px;
+  border-radius: var(--kg-radius-lg);
+  border: 1px solid var(--kg-line);
+  /* 👇 Вот эта часть обновилась 👇 */
+  background:
+    radial-gradient(circle at calc(var(--kg-mouse-x, 0.5) * 100%) calc(var(--kg-mouse-y, 0.5) * 100%), rgba(255, 255, 255, 0.95), transparent 30%),
+    radial-gradient(circle at 14% 16%, rgba(210,175,99,0.12), transparent 28%),
+    radial-gradient(circle at 88% 18%, rgba(255,255,255,0.68), transparent 22%),
+    linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.76) 100%);
+  /* 👆 ---------------------- 👆 */
+  box-shadow: var(--kg-shadow-lg);
+}
+
+.krutigrad-page .kg-hero-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(10,25,47,0.026) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10,25,47,0.026) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.krutigrad-page .kg-hero-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+.krutigrad-page .kg-hero-kicker {
+  margin-bottom: 24px;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(10,31,53,0.48);
+}
+
+.krutigrad-page .kg-hero-kicker::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 1px;
+  margin: 14px auto 0;
+  background: linear-gradient(
+    90deg,
+    rgba(210,175,99,0),
+    rgba(210,175,99,0.7),
+    rgba(210,175,99,0)
+  );
+}
+
+.krutigrad-page .kg-hero-grid {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 44px;
+  align-items: center;
+}
+
+.krutigrad-page .kg-hero-content .kg-label {
+  margin-bottom: 18px;
+}
+
+.krutigrad-page .kg-hero-title {
+  margin: 0 0 22px;
+  line-height: 1.02;
+  letter-spacing: -0.04em;
+  color: var(--navy);
+  text-wrap: balance;
+}
+
+.krutigrad-page .kg-hero-line-1,
+.krutigrad-page .kg-hero-line-2 {
+  display: block;
+}
+
+.krutigrad-page .kg-hero-line-1 {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-weight: 600;
+}
+
+.krutigrad-page .kg-hero-line-2 {
+  margin-top: 8px;
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2vw, 1.85rem);
+  font-weight: 500;
+  color: rgba(13,27,47,0.86);
+}
+
+.krutigrad-page .kg-manifesto {
+  max-width: 720px;
+  margin-bottom: 18px;
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-size: clamp(1.42rem, 2vw, 1.8rem);
+  line-height: 1.34;
+}
+
+.krutigrad-page .kg-subtitle,
+.krutigrad-page .kg-bridge {
+  max-width: 680px;
+  font-size: 1.02rem;
+  line-height: 1.74;
+}
+
+.krutigrad-page .kg-subtitle {
+  margin-bottom: 12px;
+  color: var(--text-muted);
+}
+
+.krutigrad-page .kg-bridge {
+  color: var(--navy);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   ORIGIN PANEL
+   ========================================================================== */
+
+.krutigrad-page .kg-origin-panel {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255,255,255,0.82);
+  border: 1px solid var(--kg-line);
+  box-shadow: var(--kg-shadow-md);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.krutigrad-page .kg-origin-panel::before {
+  content: "";
+  position: absolute;
+  top: 42px;
+  bottom: 42px;
+  left: 59px;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    rgba(210,175,99,0.44) 0%,
+    rgba(210,175,99,0.12) 100%
+  );
+  pointer-events: none;
+}
+
+.krutigrad-page .kg-origin-node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 18px;
+  align-items: center;
+  padding: 10px 0;
+  transition: transform var(--transition);
+}
+
+.krutigrad-page .kg-origin-node:hover {
+  transform: translateX(6px);
+}
+
+.krutigrad-page .kg-origin-icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96) 0%, rgba(248,245,239,0.92) 100%);
+  border: 1px solid rgba(210,175,99,0.34);
+  box-shadow:
+    0 12px 28px rgba(13,27,47,0.05),
+    0 0 0 10px rgba(255,255,255,0.68);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.krutigrad-page .kg-origin-icon--accent {
+  background: linear-gradient(180deg, var(--navy-2) 0%, var(--navy) 100%);
+  color: var(--kg-gold);
+  border-color: rgba(13,27,47,0.16);
+}
+
+.krutigrad-page .kg-origin-text h4 {
+  margin: 0 0 4px;
+  font-size: 1.08rem;
+  color: var(--navy);
+}
+
+.krutigrad-page .kg-origin-text p {
+  margin: 0;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   GLOBAL SECTION SPACING
+   ========================================================================== */
+
+.krutigrad-page .kg-story,
+.krutigrad-page .kg-world,
+.krutigrad-page .kg-impact,
+.krutigrad-page .kg-national,
+.krutigrad-page .kg-partnership {
+  padding: 112px 0;
+}
+
+/* ==========================================================================
+   STORY
+   ========================================================================== */
+
+.krutigrad-page .kg-story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.krutigrad-page .kg-card {
+  position: relative;
+  overflow: hidden;
+  padding: 42px 38px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 100%);
+  border: 1px solid var(--kg-line);
+  box-shadow:
+    0 22px 56px rgba(13,27,47,0.05),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+}
+
+.krutigrad-page .kg-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(210,175,99,0.08) 0%, rgba(210,175,99,0) 36%);
+  pointer-events: none;
+}
+
+.krutigrad-page .kg-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.krutigrad-page .kg-card-kicker {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: rgba(10,31,53,0.52);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.krutigrad-page .kg-card h2 {
+  margin: 0 0 18px;
+  font-size: clamp(1.9rem, 2.4vw, 2.45rem);
+  line-height: 1.1;
+  color: var(--navy);
+}
+
+.krutigrad-page .kg-card p {
+  margin: 0 0 14px;
+  color: var(--text-muted);
+  line-height: 1.72;
+}
+
+.krutigrad-page .kg-card p:last-child {
+  margin-bottom: 0;
+}
+
+.krutigrad-page .kg-highlight {
+  margin-top: 26px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(13,27,47,0.08);
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  line-height: 1.45;
+  color: var(--navy);
+  font-style: italic;
+}
+
+/* ==========================================================================
+   CHARACTER CARD
+   ========================================================================== */
+
+.krutigrad-page .kg-card--character {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 22px;
+  align-items: center;
+}
+
+.krutigrad-page .kg-character-content {
+  min-width: 0;
+}
+
+.krutigrad-page .kg-strong-line {
+  margin-top: 8px;
+  color: var(--navy) !important;
+  font-weight: 600;
+}
+
+.krutigrad-page .kg-character-visual {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.krutigrad-page .kg-character-orbit {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.krutigrad-page .kg-character-orbit-one {
+  bottom: 26px;
+  width: 214px;
+  height: 214px;
+  border: 1px solid rgba(210,175,99,0.30);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(248,245,239,0.78) 0%, rgba(255,255,255,0.96) 68%);
+  box-shadow:
+    inset 0 0 30px rgba(210,175,99,0.08),
+    0 14px 30px rgba(13,27,47,0.05);
+  opacity: 0.96;
+  transition: transform .45s ease, border-color .45s ease, opacity .45s ease;
+}
+
+.krutigrad-page .kg-character-orbit-two {
+  bottom: 58px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(13,27,47,0.10);
+  opacity: 0.75;
+  transition: transform .45s ease, border-color .45s ease, opacity .45s ease;
+}
+
+.krutigrad-page .kg-character-img {
+  position: relative;
+  z-index: 2;
+  height: 310px;
+  width: auto;
+  filter: drop-shadow(0 18px 28px rgba(13,27,47,0.14));
+  animation: kgFloat 6s ease-in-out infinite;
+  transition: transform .45s ease, filter .45s ease;
+}
+
+.krutigrad-page .kg-card--character:hover .kg-character-orbit-one {
+  transform: scale(1.04);
+  border-color: rgba(210,175,99,0.44);
+}
+
+.krutigrad-page .kg-card--character:hover .kg-character-orbit-two {
+  transform: scale(1.08);
+  border-color: rgba(13,27,47,0.16);
+  opacity: 0.92;
+}
+
+.krutigrad-page .kg-card--character:hover .kg-character-img {
+  transform: translateY(-8px) scale(1.03);
+  filter: drop-shadow(0 24px 38px rgba(13,27,47,0.2));
+}
+
+@keyframes kgFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* ==========================================================================
+   WORLD
+   ========================================================================== */
+
+.krutigrad-page .kg-factions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.krutigrad-page .kg-faction-card {
+  position: relative;
+  overflow: hidden;
+  padding: 34px 28px 28px;
+  border-radius: 24px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.82) 100%);
+  border: 1px solid var(--kg-line);
+  box-shadow: 0 18px 44px rgba(13,27,47,0.05);
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+}
+
+.krutigrad-page .kg-faction-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(210,175,99,0.25), rgba(13,27,47,0.7), rgba(210,175,99,0.25));
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.krutigrad-page .kg-faction-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(13,27,47,0.08);
+  border-color: rgba(13,27,47,0.12);
+}
+
+.krutigrad-page .kg-faction-card:hover::before {
+  opacity: 1;
+}
+
+.krutigrad-page .kg-faction-icon {
+  display: block;
+  margin-bottom: 14px;
+  color: var(--kg-gold);
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.krutigrad-page .kg-faction-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.42rem;
+  color: var(--navy);
+}
+
+.krutigrad-page .kg-faction-card p {
+  margin: 0 0 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.62;
+}
+
+.krutigrad-page .kg-faction-role {
+  display: block;
+  padding-top: 14px;
+  border-top: 1px solid rgba(13,27,47,0.08);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.krutigrad-page .kg-world-footer {
+  max-width: 920px;
+  margin: 28px auto 0;
+  padding: 30px 28px;
+  border-radius: 24px;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.34rem;
+  line-height: 1.42;
+  color: var(--navy);
+  background: rgba(255,255,255,0.8);
+  border: 1px solid var(--kg-line);
+  box-shadow: 0 18px 44px rgba(13,27,47,0.05);
+}
+
+/* ==========================================================================
+   IMPACT
+   ========================================================================== */
+
+.krutigrad-page .kg-impact-shell {
+  position: relative;
+  overflow: hidden;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 64px 48px 58px;
+  border-radius: 30px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,0.08), transparent 34%),
+    radial-gradient(circle at 50% 50%, rgba(210,175,99,0.10), transparent 58%),
+    linear-gradient(180deg, var(--navy-2) 0%, var(--navy) 100%);
+  box-shadow: 0 34px 84px rgba(13,27,47,0.22);
+}
+
+.krutigrad-page .kg-impact-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.krutigrad-page .kg-impact-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+.krutigrad-page .kg-impact-shell .kg-label {
+  margin-bottom: 18px;
+}
+
+.krutigrad-page .kg-impact-shell h2 {
+  margin: 0 0 22px;
+  color: #fff;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  line-height: 1.08;
+}
+
+.krutigrad-page .kg-impact-shell p {
+  max-width: 820px;
+  margin: 0 auto 16px;
+  color: rgba(255,255,255,0.84);
+  font-size: 1.04rem;
+  line-height: 1.76;
+}
+
+.krutigrad-page .kg-impact-method {
+  margin: 24px 0;
+  color: var(--kg-gold);
+  font-family: var(--font-heading);
+  font-size: 1.32rem;
+  line-height: 1.42;
+  font-style: italic;
+}
+
+.krutigrad-page .kg-impact-quote {
+  max-width: 760px;
+  margin: 30px auto 0;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: 1.48rem;
+  line-height: 1.5;
+}
+
+.krutigrad-page .kg-impact-quote span {
+  display: block;
+  margin-top: 8px;
+  color: var(--kg-gold);
+  font-size: 1.08rem;
+  font-family: var(--font-text);
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   NATIONAL
+   ========================================================================== */
+
+.krutigrad-page .kg-national {
+  padding-top: 96px;
+  padding-bottom: 84px;
+}
+
+.krutigrad-page .kg-national-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.krutigrad-page .kg-national-card {
+  position: relative;
+  padding: 40px 34px 34px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.86);
+  border: 1px solid var(--kg-line);
+  box-shadow: 0 18px 44px rgba(13,27,47,0.05);
+}
+
+.krutigrad-page .kg-national-card::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: 24px;
+  color: rgba(13,27,47,0.10);
+  font-family: var(--font-heading);
+  font-size: 3.4rem;
+  line-height: 1;
+}
+
+.krutigrad-page .kg-national-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: var(--navy);
+  font-family: var(--font-heading);
+  font-size: 1.34rem;
+  line-height: 1.5;
+}
+
+.krutigrad-page .kg-national-card span {
+  display: block;
+  margin-top: 20px;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.krutigrad-page .kg-manifesto-line {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.4vw, 2.65rem);
+  line-height: 1.35;
+  color: var(--navy);
+}
+
+.krutigrad-page .kg-manifesto-line small {
+  display: block;
+  margin-top: 14px;
+  color: var(--text-muted);
+  font-family: var(--font-text);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* ==========================================================================
+   PARTNERSHIP
+   ========================================================================== */
+
+.krutigrad-page .kg-partnership {
+  padding-top: 74px;
+}
+
+.krutigrad-page .kg-partnership-shell {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 46px 40px 40px;
+  border-radius: 30px;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.84) 100%);
+  border: 1px solid var(--kg-line);
+  box-shadow:
+    0 22px 56px rgba(13,27,47,0.05),
+    inset 0 1px 0 rgba(255,255,255,0.65);
+}
+
+.krutigrad-page .kg-partnership-shell .kg-label {
+  margin-bottom: 16px;
+}
+
+.krutigrad-page .kg-partnership-shell h2 {
+  margin: 0 0 18px;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  color: var(--navy);
+}
+
+.krutigrad-page .kg-partnership-shell > p {
+  max-width: 780px;
+  margin: 0 auto 12px;
+  color: var(--text-muted);
+  line-height: 1.72;
+}
+
+.krutigrad-page .kg-partnership-bridge {
+  margin-bottom: 28px !important;
+  color: var(--navy) !important;
+  font-weight: 500;
+}
+
+.krutigrad-page .kg-partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin: 0 0 34px;
+}
+
+.krutigrad-page .kg-track-card {
+  padding: 24px 20px 20px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9);
+  border: 1px solid rgba(10,25,47,0.06);
+  box-shadow: 0 16px 34px rgba(10,25,47,0.05);
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
+  text-align: left;
+}
+
+.krutigrad-page .kg-track-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 54px rgba(10,25,47,0.08);
+  border-color: rgba(10,25,47,0.12);
+}
+
+.krutigrad-page .kg-track-card--accent {
+  background: linear-gradient(180deg, var(--navy-2) 0%, var(--navy) 100%);
+  border-color: rgba(10,25,47,0.18);
+  box-shadow: 0 24px 60px rgba(10,25,47,0.16);
+}
+
+.krutigrad-page .kg-track-card--accent h3,
+.krutigrad-page .kg-track-card--accent p,
+.krutigrad-page .kg-track-card--accent .kg-track-num,
+.krutigrad-page .kg-track-card--accent .kg-track-line {
+  color: #fff;
+}
+
+.krutigrad-page .kg-track-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.krutigrad-page .kg-track-num {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(10,31,53,0.45);
+}
+
+.krutigrad-page .kg-track-line {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(10,31,53,0.6);
+}
+
+.krutigrad-page .kg-track-line::after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 1px;
+  margin-left: 8px;
+  background: rgba(210,175,99,0.4);
+}
+
+.krutigrad-page .kg-track-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  line-height: 1.25;
+  color: var(--navy);
+}
+
+.krutigrad-page .kg-track-card p {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.krutigrad-page .kg-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+  .krutigrad-page .kg-factions-grid,
+  .krutigrad-page .kg-partnership-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  .krutigrad-page .kg-hero-grid,
+  .krutigrad-page .kg-story-grid,
+  .krutigrad-page .kg-national-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .krutigrad-page .kg-card--character {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .krutigrad-page .kg-character-content {
+    order: 1;
+  }
+
+  .krutigrad-page .kg-character-visual {
+    order: 2;
+    min-height: 270px;
+  }
+
+  .krutigrad-page .kg-impact-shell {
+    padding: 52px 34px 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .krutigrad-page .kg-hero {
+    padding: 144px 0 72px;
+  }
+
+  .krutigrad-page .kg-hero-shell,
+  .krutigrad-page .kg-card,
+  .krutigrad-page .kg-partnership-shell {
+    padding: 26px 20px;
+  }
+
+  .krutigrad-page .kg-origin-panel {
+    padding: 22px;
+  }
+
+  .krutigrad-page .kg-origin-panel::before {
+    left: 48px;
+  }
+
+  .krutigrad-page .kg-origin-node {
+    grid-template-columns: 52px 1fr;
+    gap: 14px;
+  }
+
+  .krutigrad-page .kg-origin-icon {
+    width: 52px;
+    height: 52px;
+    font-size: 0.8rem;
+  }
+
+  .krutigrad-page .kg-story,
+  .krutigrad-page .kg-world,
+  .krutigrad-page .kg-impact,
+  .krutigrad-page .kg-national,
+  .krutigrad-page .kg-partnership {
+    padding: 84px 0;
+  }
+
+  .krutigrad-page .section-header {
+    margin-bottom: 42px;
+  }
+
+  .krutigrad-page .kg-factions-grid,
+  .krutigrad-page .kg-national-grid,
+  .krutigrad-page .kg-partnership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .krutigrad-page .kg-impact-shell {
+    padding: 42px 22px 38px;
+  }
+
+  .krutigrad-page .kg-impact-quote {
+    font-size: 1.26rem;
+  }
+
+  .krutigrad-page .kg-character-orbit-one {
+    width: 170px;
+    height: 170px;
+    bottom: 22px;
+  }
+
+  .krutigrad-page .kg-character-orbit-two {
+    width: 118px;
+    height: 118px;
+    bottom: 48px;
+  }
+
+  .krutigrad-page .kg-character-img {
+    height: 240px;
+  }
+
+  .krutigrad-page .kg-track-card {
+    padding: 20px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .krutigrad-page .kg-manifesto {
+    font-size: 1.2rem;
+  }
+
+  .krutigrad-page .kg-impact-quote {
+    font-size: 1.08rem;
+  }
+
+  .krutigrad-page .kg-track-head {
+    gap: 8px;
+  }
+
+  .krutigrad-page .kg-track-line {
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .krutigrad-page .kg-character-img {
+    animation: none;
+  }
+
+  .krutigrad-page .kg-origin-node,
+  .krutigrad-page .kg-faction-card,
+  .krutigrad-page .kg-track-card,
+  .krutigrad-page .kg-character-orbit-one,
+  .krutigrad-page .kg-character-orbit-two,
+  .krutigrad-page .kg-character-img {
+    transition: none;
+  }
+}
+/* ==========================================================================
+   FIX — accent partnership card text
+   ========================================================================== */
+
+.krutigrad-page .kg-track-card--accent,
+.krutigrad-page .kg-track-card--accent h3,
+.krutigrad-page .kg-track-card--accent p,
+.krutigrad-page .kg-track-card--accent .kg-track-num,
+.krutigrad-page .kg-track-card--accent .kg-track-line {
+  color: #ffffff;
+}
+
+.krutigrad-page .kg-track-card--accent h3 {
+  color: #ffffff !important;
+}
+
+.krutigrad-page .kg-track-card--accent p {
+  color: rgba(255, 255, 255, 0.82) !important;
+}
+
+.krutigrad-page .kg-track-card--accent .kg-track-num {
+  color: rgba(255, 255, 255, 0.78) !important;
+}
+
+.krutigrad-page .kg-track-card--accent .kg-track-line {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.krutigrad-page .kg-track-card--accent .kg-track-line::after {
+  background: rgba(210, 175, 99, 0.5) !important;
+}
