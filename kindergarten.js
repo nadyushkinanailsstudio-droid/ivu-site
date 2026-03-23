@@ -6,5 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', (event) => {
     event.preventDefault();
     alert('Заявка успешно отправлена. Представитель Института свяжется с вами.');
+    form.reset();
   });
 });
