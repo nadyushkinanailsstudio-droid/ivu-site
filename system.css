@@ -3267,3 +3267,48 @@ body.system-page .ivu-accordion__body {
     display: none !important;
   }
 }
+@media (max-width: 768px) {
+
+  /* контейнер прокручивается */
+  body.system-page .sg-graph {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* сам график шире экрана */
+  body.system-page .sg-svg {
+    min-width: 520px;
+  }
+
+  /* ВАЖНО: изолируем слои */
+  body.system-page .sg-layer {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .35s ease;
+  }
+
+  /* шаг 1 */
+  body.system-page .sg-layout[data-step="1"] .sg-layer--nikitin {
+    opacity: 1;
+  }
+
+  /* шаг 2 */
+  body.system-page .sg-layout[data-step="2"] .sg-layer--nikitin {
+    opacity: 0.2;
+  }
+  body.system-page .sg-layout[data-step="2"] .sg-layer--wechsler {
+    opacity: 1;
+  }
+
+  /* шаг 3 */
+  body.system-page .sg-layout[data-step="3"] .sg-layer--nikitin {
+    opacity: 0.15;
+  }
+  body.system-page .sg-layout[data-step="3"] .sg-layer--wechsler {
+    opacity: 0.3;
+  }
+  body.system-page .sg-layout[data-step="3"] .sg-layer--ivu {
+    opacity: 1;
+  }
+
+}
