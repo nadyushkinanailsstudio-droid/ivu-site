@@ -3230,3 +3230,26 @@ body.system-page .ivu-accordion__body {
   45%, 50% { transform: translateX(1px) rotateX(180deg); }
   100%     { transform: translateX(1px) rotateX(-180deg); }
 }
+@media (max-width: 768px) {
+  body.system-page .sg-graph {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.system-page .sg-svg {
+    min-width: 460px;
+  }
+
+  body.system-page .sg-tabs {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  body.system-page .sg-tab {
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.25;
+    font-size: 0.78rem;
+  }
+}
