@@ -3253,3 +3253,17 @@ body.system-page .ivu-accordion__body {
     font-size: 0.78rem;
   }
 }
+@media (max-width: 768px) {
+  body.system-page .sg-graph {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body.system-page .sg-svg {
+    min-width: 460px;
+  }
+
+  body.system-page .sg-hud {
+    display: none !important;
+  }
+}
