@@ -130,7 +130,9 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; /* 👈 не дает шапке перекрывать заголовки */
+  scroll-padding-top: 100px;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -523,5 +525,31 @@ select {
 
   .site-manifesto-text {
     padding: 44px 22px;
+  }
+}
+@media (max-width: 768px) {
+  .header__inner {
+    align-items: flex-start;
+  }
+
+  .nav {
+    width: 100%;
+    max-width: 100%;
+    gap: 16px;
+  }
+
+  .nav__link {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .nav {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .nav__link {
+    flex: 0 0 auto;
   }
 }
