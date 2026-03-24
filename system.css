@@ -3241,75 +3241,78 @@ body.system-page .ivu-accordion__body {
   .sg-text-wrapper {
     min-height: auto !important;
   }
-/* =========================
+
+  /* =========================
    HTML HUD (mobile fix)
 ========================= */
 
-/* ВАЖНО: привязываем к контейнеру */
 .sg-layout {
   position: relative;
 }
 
-/* базовый стиль */
 .sg-html-hud {
   position: absolute;
-  z-index: 10;
+  z-index: 6;
   display: block;
   opacity: 0;
   transform: translateY(8px);
-  transition: opacity .4s ease, transform .4s ease;
+  transition: opacity .35s ease, transform .35s ease;
   pointer-events: none;
 
-  font-size: 10px;
-  line-height: 1.2;
-  padding: 6px 10px;
+  font-size: 9px;
+  line-height: 1.15;
+  padding: 5px 9px;
   border-radius: 10px;
 
-  background: rgba(10, 25, 45, 0.85);
+  background: rgba(22, 37, 63, 0.78);
   color: #fff;
 
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  box-shadow:
+    0 8px 18px rgba(10, 25, 45, 0.12),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  max-width: 190px;
 }
 
-/* =========================
-   ПОЗИЦИИ
-========================= */
-
+/* позиции */
 .sg-html-hud--nikitin {
-  left: 30px;
-  bottom: 55px;
+  left: 42px;
+  bottom: 66px;
 }
 
 .sg-html-hud--nikitin-top {
-  left: 110px;
-  top: 30px;
+  left: 165px;
+  top: 28px;
 }
 
 .sg-html-hud--wechsler {
-  left: 140px;
-  bottom: 85px;
+  left: 210px;
+  top: 88px;
+  max-width: 210px;
 }
 
 .sg-html-hud--ivu-1 {
-  left: 240px;
-  bottom: 110px;
+  left: 170px;
+  bottom: 82px;
 }
 
 .sg-html-hud--ivu-2 {
-  left: 300px;
-  top: 60px;
+  left: 220px;
+  top: 72px;
+  max-width: 170px;
 }
 
 .sg-html-hud--ivu-3 {
-  right: 20px;
-  top: 20px;
+  right: 34px;
+  top: 34px;
+  max-width: 110px;
+  text-align: center;
 }
 
-/* =========================
-   ЛОГИКА ПОЯВЛЕНИЯ
-========================= */
-
+/* логика появления */
 .sg-layout[data-step="1"] .sg-html-hud--nikitin,
 .sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
   opacity: 1;
@@ -3328,32 +3331,35 @@ body.system-page .ivu-accordion__body {
   transform: translateY(0);
 }
 
-/* =========================
-   ТОЛЬКО МОБИЛКА
-========================= */
-
-@media (min-width: 769px) {
-  .sg-html-hud {
-    display: none;
-  }
-}
-/* =========================
-   MOBILE: hide SVG HUD, show HTML HUD
-========================= */
+/* только мобилка: прячем SVG-подписи, показываем HTML */
 @media (max-width: 768px) {
-  /* прячем старые подписи внутри SVG */
   body.system-page .sg-hud {
     display: none !important;
     opacity: 0 !important;
   }
 
-  /* HTML-подписи работаем только на мобиле */
   body.system-page .sg-html-hud {
     display: block !important;
   }
+
+  /* даём место графику */
+  body.system-page .sg-svg {
+    min-width: 520px;
+  }
+
+  /* кубик поднимаем поверх линии, но под плашками */
+  body.system-page #movingCubeGroup {
+    opacity: 1;
+  }
+
+  body.system-page .mc-container {
+    position: relative;
+    z-index: 5;
+    transform: scale(1.08);
+  }
 }
 
-/* На десктопе HTML HUD не нужен */
+/* десктоп: HTML HUD не нужен */
 @media (min-width: 769px) {
   body.system-page .sg-html-hud {
     display: none !important;
