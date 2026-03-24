@@ -3271,256 +3271,134 @@ body.system-page .sg-html-hud {
 }
 
 /* ==========================================================================
-   SCIENCE GRAPH — MOBILE PREMIUM FINAL POLISH
+   SCIENCE GRAPH — MOBILE HUD PREMIUM GLASS OVERRIDE
    ========================================================================== */
 
 @media (max-width: 900px) {
-  body.system-page .sg-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    align-items: start;
-  }
-
-  body.system-page .sg-side {
-    padding-top: 0;
-  }
-
-  body.system-page .sg-right-title {
-    margin-bottom: 16px;
-    font-size: .76rem;
-    letter-spacing: .12em;
-  }
-
-  body.system-page .sg-tabs {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin-bottom: 22px;
-  }
-
-  body.system-page .sg-tab {
-    width: 100%;
-    justify-content: center;
-    padding: 15px 18px;
-    font-size: .84rem;
-    letter-spacing: .06em;
-    border-radius: 999px;
-    box-shadow:
-      0 10px 24px rgba(10,25,47,.05),
-      inset 0 1px 0 rgba(255,255,255,.72);
-  }
-
-  body.system-page .sg-tab.is-active {
-    box-shadow:
-      0 16px 34px rgba(13,27,47,.16),
-      inset 0 1px 0 rgba(255,255,255,.08);
-  }
-
-  body.system-page .sg-text-wrapper {
-    min-height: 0;
-  }
-
-  body.system-page .sg-step-title {
-    margin-bottom: 14px;
-    font-size: clamp(2rem, 5.3vw, 2.7rem);
-    line-height: 0.98;
-    letter-spacing: -0.04em;
-    text-wrap: balance;
-  }
-
-  body.system-page .sg-step-text {
-    max-width: none;
-    font-size: 1.02rem;
-    line-height: 1.66;
-  }
-
-  /* desktop SVG HUD off */
-  body.system-page .sg-hud,
-  body.system-page .sg-hud--wechsler-bars {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-
-  /* mobile HUD */
   body.system-page .sg-html-hud {
-    position: absolute;
-    z-index: 6;
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-    transition:
-      opacity .34s ease,
-      transform .34s ease,
-      visibility .34s ease;
-    pointer-events: none;
+    padding: 6px 12px !important;
+    border-radius: 16px !important;
+    max-width: 190px !important;
 
-    padding: 6px 11px;
-    border-radius: 14px;
-    max-width: 190px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(33, 52, 82, 0.58) 0%,
+        rgba(24, 39, 64, 0.46) 100%
+      ) !important;
+    color: rgba(255, 255, 255, 0.96) !important;
 
-    background: linear-gradient(
-      180deg,
-      rgba(48,66,96,.72) 0%,
-      rgba(28,42,68,.72) 100%
-    );
-    color: rgba(255,255,255,.94);
-
-    font-family: var(--font-mono);
-    font-size: 7.2px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: .05em;
+    border: 1px solid rgba(210, 224, 255, 0.22) !important;
 
     box-shadow:
-      0 8px 18px rgba(10,25,47,.10),
-      inset 0 1px 0 rgba(255,255,255,.06);
+      0 10px 24px rgba(10, 25, 47, 0.10),
+      inset 0 1px 0 rgba(255,255,255,0.16),
+      inset 0 -1px 0 rgba(255,255,255,0.04) !important;
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(14px) saturate(115%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(115%) !important;
+
+    font-family: var(--font-mono) !important;
+    font-size: 6.8px !important;
+    font-weight: 700 !important;
+    line-height: 1.14 !important;
+    letter-spacing: 0.055em !important;
+    text-transform: uppercase !important;
   }
 
-  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin,
-  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  body.system-page .sg-layout[data-step="2"] .sg-html-hud--wechsler {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1,
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2,
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-3 {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  /* ---------- Step 1 ---------- */
   body.system-page .sg-html-hud--nikitin {
-    left: 24px;
-    top: 108px;
-    max-width: 210px;
-    text-align: center;
+    left: 18px !important;
+    top: 116px !important;
+    max-width: 214px !important;
+    text-align: center !important;
   }
 
   body.system-page .sg-html-hud--nikitin-top {
-    right: 26px;
-    top: 34px;
-    max-width: 114px;
-    text-align: center;
+    right: 20px !important;
+    top: 34px !important;
+    max-width: 112px !important;
+    text-align: center !important;
   }
 
-  /* ---------- Step 2 ---------- */
   body.system-page .sg-html-hud--wechsler {
-    left: 50%;
-    bottom: 24px;
-    transform: translateX(-50%) translateY(8px);
-    max-width: 186px;
-    text-align: center;
+    left: 50% !important;
+    bottom: 30px !important;
+    max-width: 182px !important;
+    text-align: center !important;
   }
 
   body.system-page .sg-layout[data-step="2"] .sg-html-hud--wechsler {
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0) !important;
   }
 
-  /* ---------- Step 3 ---------- */
   body.system-page .sg-html-hud--ivu-2 {
-    left: 50%;
-    top: 96px;
-    transform: translateX(-50%) translateY(8px);
-    max-width: 206px;
-    text-align: center;
+    left: 50% !important;
+    top: 102px !important;
+    max-width: 214px !important;
+    text-align: center !important;
   }
 
   body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2 {
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0) !important;
   }
 
   body.system-page .sg-html-hud--ivu-3 {
-    right: 30px;
-    top: 36px;
-    max-width: 84px;
-    text-align: center;
+    right: 26px !important;
+    top: 38px !important;
+    max-width: 86px !important;
+    text-align: center !important;
   }
 
   body.system-page .sg-html-hud--ivu-1 {
-    left: 50%;
-    bottom: 10px;
-    transform: translateX(-50%) translateY(8px);
-    max-width: 158px;
-    text-align: center;
+    left: 50% !important;
+    bottom: 18px !important;
+    max-width: 156px !important;
+    text-align: center !important;
   }
 
   body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1 {
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0) !important;
   }
 }
 
 @media (max-width: 640px) {
-  body.system-page .sg-right-title {
-    font-size: .74rem;
-    letter-spacing: .11em;
-  }
-
-  body.system-page .sg-tab {
-    padding: 14px 16px;
-    font-size: .82rem;
-  }
-
-  body.system-page .sg-step-title {
-    font-size: clamp(1.86rem, 6.2vw, 2.35rem);
-    line-height: 0.99;
-  }
-
-  body.system-page .sg-step-text {
-    font-size: .98rem;
-    line-height: 1.64;
-  }
-
   body.system-page .sg-html-hud {
-    padding: 5px 10px;
-    border-radius: 13px;
-    font-size: 6.9px;
-    max-width: 175px;
+    padding: 5px 11px !important;
+    border-radius: 15px !important;
+    font-size: 6.35px !important;
+    max-width: 176px !important;
   }
 
   body.system-page .sg-html-hud--nikitin {
-    left: 22px;
-    top: 104px;
-    max-width: 194px;
+    left: 16px !important;
+    top: 112px !important;
+    max-width: 198px !important;
   }
 
   body.system-page .sg-html-hud--nikitin-top {
-    right: 22px;
-    top: 30px;
-    max-width: 106px;
+    right: 18px !important;
+    top: 32px !important;
+    max-width: 102px !important;
   }
 
   body.system-page .sg-html-hud--wechsler {
-    bottom: 22px;
-    max-width: 172px;
+    bottom: 28px !important;
+    max-width: 168px !important;
   }
 
   body.system-page .sg-html-hud--ivu-2 {
-    top: 90px;
-    max-width: 192px;
+    top: 96px !important;
+    max-width: 194px !important;
   }
 
   body.system-page .sg-html-hud--ivu-3 {
-    right: 24px;
-    top: 32px;
-    max-width: 78px;
+    right: 22px !important;
+    top: 34px !important;
+    max-width: 78px !important;
   }
 
   body.system-page .sg-html-hud--ivu-1 {
-    bottom: 8px;
-    max-width: 146px;
+    bottom: 16px !important;
+    max-width: 144px !important;
   }
 }
