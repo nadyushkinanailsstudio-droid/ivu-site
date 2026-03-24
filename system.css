@@ -3230,15 +3230,6 @@ body.system-page .ivu-accordion__body {
   45%, 50% { transform: translateX(1px) rotateX(180deg); }
   100%     { transform: translateX(1px) rotateX(-180deg); }
 }
-/* =========================
-   FIX MOBILE GRAPH (Safari)
-========================= */
-
-@media (max-width: 768px) {
-
-  .sg-hud {
-    display: none !important;
-  }
 
   .sg-step {
     position: relative !important;
@@ -3250,5 +3241,81 @@ body.system-page .ivu-accordion__body {
   .sg-text-wrapper {
     min-height: auto !important;
   }
+/* =========================
+   HTML HUD (mobile fix)
+========================= */
 
+.sg-graph {
+  position: relative;
+}
+
+.sg-html-hud {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .4s ease, transform .4s ease;
+  pointer-events: none;
+  font-size: 10px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(10, 25, 45, 0.85);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+/* позиции (примерно как в графике) */
+.sg-html-hud--nikitin {
+  left: 40px;
+  bottom: 60px;
+}
+
+.sg-html-hud--nikitin-top {
+  left: 120px;
+  top: 40px;
+}
+
+.sg-html-hud--wechsler {
+  left: 160px;
+  bottom: 90px;
+}
+
+.sg-html-hud--ivu-1 {
+  left: 260px;
+  bottom: 120px;
+}
+
+.sg-html-hud--ivu-2 {
+  left: 340px;
+  bottom: 150px;
+}
+
+.sg-html-hud--ivu-3 {
+  right: 20px;
+  top: 60px;
+}
+
+/* логика появления */
+.sg-layout[data-step="1"] .sg-html-hud--nikitin,
+.sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sg-layout[data-step="2"] .sg-html-hud--wechsler {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sg-layout[data-step="3"] .sg-html-hud--ivu-1,
+.sg-layout[data-step="3"] .sg-html-hud--ivu-2,
+.sg-layout[data-step="3"] .sg-html-hud--ivu-3 {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* только для мобилки */
+@media (min-width: 769px) {
+  .sg-html-hud {
+    display: none;
+  }
 }
