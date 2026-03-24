@@ -34,7 +34,7 @@
                 <span class="header__logo-sub">Инженерный код языка</span>
             </a>
 
-           <nav class="nav" aria-label="Основная навигация">
+            <nav class="nav">
                 <a href="./index.html" class="nav__link">Главная</a>
                 <a href="./system.html" class="nav__link active">Метод</a>
                 <a href="./parents.html" class="nav__link">Родителям</a>
@@ -67,12 +67,9 @@
         </section>
 
         <section class="container">
-           <div class="premium-panel reveal" id="science">
-    <span id="nikitin-graph"></span>
-    <span id="wechsler-graph"></span>
-    
-    <span class="qa-label">Научный фундамент</span>
-    <h3 class="h3">Никитин, Векслер и архитектура метода ИВУ</h3>
+            <div class="premium-panel reveal" id="science">
+                <span class="qa-label">Научный фундамент</span>
+                <h3 class="h3">Никитин, Векслер и архитектура метода ИВУ</h3>
                 <p class="p">
                     Мы соединяем идеи Никитина и Векслера о развитии интеллекта
                     в управляемую систему ИВУ — не вместо классического обучения,
@@ -81,186 +78,166 @@
                     ИВУ реализует эту идею через язык и структуру азбуки.
                 </p>
 
-              <div class="science-graph-section">
-    <div class="sg-layout" data-step="0" id="liveGraph">
-        <div class="sg-graph">
-            <svg aria-label="Инженерный график развития интеллекта" class="sg-svg" role="img" viewBox="0 0 460 260">
-                <defs>
-                    <linearGradient id="cubeColumnGrad" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stop-color="#EFECE6"></stop>
-                        <stop offset="100%" stop-color="#0A192F"></stop>
-                    </linearGradient>
-                </defs>
+                <div class="science-graph-section">
+                    <div class="sg-layout" data-step="0" id="liveGraph">
+                        <div class="sg-graph">
+                            <svg aria-label="Инженерный график развития интеллекта" class="sg-svg" role="img" viewBox="0 0 460 260">
+                                <defs>
+                                    <linearGradient id="cubeColumnGrad" x1="0" x2="0" y1="0" y2="1">
+                                        <stop offset="0%" stop-color="#EFECE6"></stop>
+                                        <stop offset="100%" stop-color="#0A192F"></stop>
+                                    </linearGradient>
+                                </defs>
 
-                <g stroke="var(--stone)" stroke-width="1">
-                    <line x1="0" x2="460" y1="65" y2="65"></line>
-                    <line x1="0" x2="460" y1="130" y2="130"></line>
-                    <line x1="0" x2="460" y1="195" y2="195"></line>
-                    <line x1="115" x2="115" y1="0" y2="260"></line>
-                    <line x1="230" x2="230" y1="0" y2="260"></line>
-                    <line x1="345" x2="345" y1="0" y2="260"></line>
-                </g>
+                                <g stroke="var(--stone)" stroke-width="1">
+                                    <line x1="0" x2="460" y1="65" y2="65"></line>
+                                    <line x1="0" x2="460" y1="130" y2="130"></line>
+                                    <line x1="0" x2="460" y1="195" y2="195"></line>
+                                    <line x1="115" x2="115" y1="0" y2="260"></line>
+                                    <line x1="230" x2="230" y1="0" y2="260"></line>
+                                    <line x1="345" x2="345" y1="0" y2="260"></line>
+                                </g>
 
-                <g stroke="rgba(10,25,47,0.2)" stroke-width="1.5">
-                    <line stroke-dasharray="3 3" x1="30" x2="430" y1="230" y2="230"></line>
-                    <path d="M425 225 L435 235 M425 235 L435 225"></path>
-                    <line stroke-dasharray="3 3" x1="40" x2="40" y1="240" y2="30"></line>
-                    <path d="M35 35 L45 45 M35 45 L45 35"></path>
-                </g>
+                                <g stroke="rgba(10,25,47,0.2)" stroke-width="1.5">
+                                    <line stroke-dasharray="3 3" x1="30" x2="430" y1="230" y2="230"></line>
+                                    <path d="M425 225 L435 235 M425 235 L435 225"></path>
+                                    <line stroke-dasharray="3 3" x1="40" x2="40" y1="240" y2="30"></line>
+                                    <path d="M35 35 L45 45 M35 45 L45 35"></path>
+                                </g>
 
-                <text fill="rgba(10,25,47,0.4)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" letter-spacing="0.1em" x="50" y="42">
-                    ИНТЕЛЛЕКТ / ЁМКОСТЬ ПАМЯТИ
-                </text>
+                                <text fill="rgba(10,25,47,0.4)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" letter-spacing="0.1em" x="50" y="42">
+                                    ИНТЕЛЛЕКТ / ЁМКОСТЬ ПАМЯТИ
+                                </text>
 
-                <text fill="rgba(10,25,47,0.4)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" letter-spacing="0.1em" x="285" y="222">
-                    ВРЕМЯ / НАГРУЗКА
-                </text>
+                                <text fill="rgba(10,25,47,0.4)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" letter-spacing="0.1em" x="285" y="222">
+                                    ВРЕМЯ / НАГРУЗКА
+                                </text>
 
-                <g class="sg-layer sg-layer--nikitin">
-                    <path class="sg-path" d="M40 220 C 130 215, 190 210, 250 170 C 290 140, 320 100, 390 80" stroke="#8C9CAE" stroke-width="3"></path>
+                                <g class="sg-layer sg-layer--nikitin">
+                                    <path class="sg-path" d="M40 220 C 130 215, 190 210, 250 170 C 290 140, 320 100, 390 80" stroke="#8C9CAE" stroke-width="3"></path>
 
-                    <foreignObject class="sg-hud sg-hud--nikitin" height="34" width="230" x="55" y="195">
-                        <div class="hud-tag" xmlns="http://www.w3.org/1999/xhtml">
-                            <span class="hud-num">01</span> НИКИТИН: ОПЕРЕЖАЮЩАЯ СРЕДА
+                                    <foreignObject class="sg-hud sg-hud--nikitin" height="34" width="230" x="55" y="195">
+                                        <div class="hud-tag" xmlns="http://www.w3.org/1999/xhtml">
+                                            <span class="hud-num">01</span> НИКИТИН: ОПЕРЕЖАЮЩАЯ СРЕДА
+                                        </div>
+                                    </foreignObject>
+
+                                    <foreignObject class="sg-hud sg-hud--nikitin" height="34" width="130" x="315" y="92">
+                                        <div class="hud-tag" xmlns="http://www.w3.org/1999/xhtml">ТОЧКА ВЗЛЁТА</div>
+                                    </foreignObject>
+                                </g>
+
+                                <g class="sg-layer sg-layer--wechsler">
+                                    <rect class="glass-rect" height="50" rx="6" width="36" x="215" y="180"></rect>
+                                    <rect class="glass-rect" height="90" rx="6" width="36" x="275" y="140"></rect>
+                                    <rect class="glass-rect" height="140" rx="6" width="36" x="335" y="90"></rect>
+
+                                    <foreignObject class="sg-hud sg-hud--wechsler" height="40" width="310" x="108" y="106">
+                                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">
+                                            <span class="hud-num">02</span> ВЕКСЛЕР: СКОЛЬКО ЗАДАЧ ДЕРЖИТ ГОЛОВА
+                                        </div>
+                                    </foreignObject>
+
+                                    <g class="sg-hud sg-hud--wechsler">
+                                        <foreignObject height="34" width="84" x="170" y="226">
+                                            <div class="hud-tag" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">1 ЕДИНИЦА</div>
+                                        </foreignObject>
+
+                                        <foreignObject height="34" width="84" x="245" y="226">
+                                            <div class="hud-tag" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">2 ЕДИНИЦЫ</div>
+                                        </foreignObject>
+
+                                        <foreignObject height="34" width="84" x="320" y="226">
+                                            <div class="hud-tag hud-tag--blue" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">ОБЪЁМ</div>
+                                        </foreignObject>
+                                    </g>
+                                </g>
+
+                                <g class="sg-layer sg-layer--ivu">
+                                    <path class="sg-path" d="M40 220 C 100 215, 150 150, 210 120 C 270 90, 320 70, 410 45" id="ivuPath" stroke="var(--navy)" stroke-width="3.5"></path>
+
+                                    <foreignObject class="sg-hud sg-hud--ivu-1" height="34" width="175" x="105" y="160">
+                                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">ЯДРО: 20 СОГЛАСНЫХ</div>
+                                    </foreignObject>
+
+                                    <foreignObject class="sg-hud sg-hud--ivu-2" height="42" width="250" x="150" y="52">
+                                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">ПАРАЛЛЕЛЬНЫЕ КНИГИ + АВТОМАТИЗАЦИЯ</div>
+                                    </foreignObject>
+
+                                    <foreignObject class="sg-hud sg-hud--ivu-3" height="36" width="110" x="325" y="12">
+                                        <div class="hud-tag hud-tag--solid" xmlns="http://www.w3.org/1999/xhtml">100 КНИГ</div>
+                                    </foreignObject>
+
+                                    <g id="movingCubeGroup" style="opacity: 0; transition: opacity 0.3s ease;">
+                                        <animateMotion begin="indefinite" calcMode="spline" dur="2.6s" fill="freeze" id="cubeAnimator" keySplines="0.4 0 0.2 1" keyTimes="0;1">
+                                            <mpath href="#ivuPath"></mpath>
+                                        </animateMotion>
+
+                                        <foreignObject height="24" width="24" x="-12" y="-12">
+                                            <div class="mc-container" xmlns="http://www.w3.org/1999/xhtml">
+                                                <div class="mc-rotator">
+                                                    <div class="mc-face mc-front"></div>
+                                                    <div class="mc-face mc-back"></div>
+                                                    <div class="mc-face mc-left"></div>
+                                                    <div class="mc-face mc-right"></div>
+                                                    <div class="mc-face mc-top"></div>
+                                                    <div class="mc-face mc-bottom"></div>
+                                                    <div class="mc-core"></div>
+                                                </div>
+                                            </div>
+                                        </foreignObject>
+                                    </g>
+                                </g>
+                            </svg>
                         </div>
-                    </foreignObject>
 
-                    <foreignObject class="sg-hud sg-hud--nikitin" height="34" width="130" x="315" y="92">
-                        <div class="hud-tag" xmlns="http://www.w3.org/1999/xhtml">ТОЧКА ВЗЛЁТА</div>
-                    </foreignObject>
-                </g>
+                        <div class="sg-side">
+                            <div class="sg-right-title">Никитин, Векслер и метод объёма ИВУ</div>
 
-                <g class="sg-layer sg-layer--wechsler">
-                    <rect class="glass-rect" height="50" rx="6" width="36" x="215" y="180"></rect>
-                    <rect class="glass-rect" height="90" rx="6" width="36" x="275" y="140"></rect>
-                    <rect class="glass-rect" height="140" rx="6" width="36" x="335" y="90"></rect>
+                            <div class="sg-tabs" role="tablist">
+                                <button class="sg-tab" data-step="1" type="button">01. НИКИТИН</button>
+                                <button class="sg-tab" data-step="2" type="button">02. ВЕКСЛЕР</button>
+                                <button class="sg-tab" data-step="3" type="button">03. ИВУ</button>
+                            </div>
 
-                    <foreignObject class="sg-hud sg-hud--wechsler" height="40" width="310" x="108" y="106">
-                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">
-                            <span class="hud-num">02</span> ВЕКСЛЕР: СКОЛЬКО ЗАДАЧ ДЕРЖИТ ГОЛОВА
-                        </div>
-                    </foreignObject>
+                            <div class="sg-text-wrapper">
+                                <div class="sg-step" id="sg-step-1">
+                                    <div class="sg-step-title">Никитин: опережающая среда</div>
+                                    <p class="sg-step-text">
+                                        Ребёнок раньше нормы получает сложную среду: игры, задачи и материалы.
+                                        Сначала кажется, что развитие замедляется — мозг обрабатывает объём.
+                                        Затем наступает точка взлёта: накопленный опыт превращается в скачок интеллекта.
+                                    </p>
+                                </div>
 
-                    <g class="sg-hud sg-hud--wechsler">
-                        <foreignObject height="34" width="84" x="170" y="226">
-                            <div class="hud-tag" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">1 ЕДИНИЦА</div>
-                        </foreignObject>
+                                <div class="sg-step" id="sg-step-2">
+                                    <div class="sg-step-title">Векслер: сколько задач держит голова</div>
+                                    <p class="sg-step-text">
+                                        Тест Векслера измеряет не «ум», а объём рабочей памяти.
+                                        Один стимул — одна мысль.
+                                        Два стимула — две параллельные мысли.
+                                        Объём возникает тогда, когда ребёнок удерживает несколько задач одновременно.
+                                    </p>
+                                </div>
 
-                        <foreignObject height="34" width="84" x="245" y="226">
-                            <div class="hud-tag" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">2 ЕДИНИЦЫ</div>
-                        </foreignObject>
-
-                        <foreignObject height="34" width="84" x="320" y="226">
-                            <div class="hud-tag hud-tag--blue" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">ОБЪЁМ</div>
-                        </foreignObject>
-                    </g>
-                </g>
-
-                <g class="sg-layer sg-layer--ivu">
-                    <path class="sg-path" d="M40 220 C 100 215, 150 150, 210 120 C 270 90, 320 70, 410 45" id="ivuPath" stroke="var(--navy)" stroke-width="3.5"></path>
-
-                    <foreignObject class="sg-hud sg-hud--ivu-1" height="34" width="175" x="105" y="160">
-                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">ЯДРО: 20 СОГЛАСНЫХ</div>
-                    </foreignObject>
-
-                    <foreignObject class="sg-hud sg-hud--ivu-2" height="42" width="250" x="150" y="52">
-                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">ПАРАЛЛЕЛЬНЫЕ КНИГИ + АВТОМАТИЗАЦИЯ</div>
-                    </foreignObject>
-
-                    <foreignObject class="sg-hud sg-hud--ivu-3" height="36" width="110" x="325" y="12">
-                        <div class="hud-tag hud-tag--solid" xmlns="http://www.w3.org/1999/xhtml">100 КНИГ</div>
-                    </foreignObject>
-
-                    <g id="movingCubeGroup" style="opacity: 0; transition: opacity 0.3s ease;">
-                        <animateMotion begin="indefinite" calcMode="spline" dur="2.6s" fill="freeze" id="cubeAnimator" keySplines="0.4 0 0.2 1" keyTimes="0;1">
-                            <mpath href="#ivuPath"></mpath>
-                        </animateMotion>
-
-                        <foreignObject height="24" width="24" x="-12" y="-12">
-                            <div class="mc-container" xmlns="http://www.w3.org/1999/xhtml">
-                                <div class="mc-rotator">
-                                    <div class="mc-face mc-front"></div>
-                                    <div class="mc-face mc-back"></div>
-                                    <div class="mc-face mc-left"></div>
-                                    <div class="mc-face mc-right"></div>
-                                    <div class="mc-face mc-top"></div>
-                                    <div class="mc-face mc-bottom"></div>
-                                    <div class="mc-core"></div>
+                                <div class="sg-step" id="sg-step-3">
+                                    <div class="sg-step-title">ИВУ: управляемый объём</div>
+                                    <p class="sg-step-text">
+                                        Метод ИВУ задаёт правильную когнитивную нагрузку:
+                                        чтение трёх книг разворотами, ядро из 20 согласных
+                                        и автоматизацию на «А».
+                                        Так расширяется рабочая память по принципам Векслера
+                                        и появляется эффект Никитина.
+                                    </p>
                                 </div>
                             </div>
-                        </foreignObject>
-                    </g>
-                </g>
-            </svg>
 
-            <div class="sg-html-hud sg-html-hud--nikitin">НИКИТИН: ОПЕРЕЖАЮЩАЯ СРЕДА</div>
-            <div class="sg-html-hud sg-html-hud--nikitin-top">ТОЧКА ВЗЛЁТА</div>
-            <div class="sg-html-hud sg-html-hud--wechsler">ВЕКСЛЕР: ОБЪЁМ ОПЕРАТИВНОЙ ПАМЯТИ</div>
-            <div class="sg-html-hud sg-html-hud--ivu-1">ЯДРО: 20 СОГЛАСНЫХ</div>
-            <div class="sg-html-hud sg-html-hud--ivu-2">ПАРАЛЛЕЛЬНЫЕ КНИГИ + АВТОМАТИЗАЦИЯ</div>
-            <div class="sg-html-hud sg-html-hud--ivu-3">100 КНИГ</div>
-
-            <div class="sg-cube-fallback" aria-hidden="true">
-                <div class="sg-cube-fallback__inner">
-                    <div class="sg-cube-fallback__face sg-cube-fallback__face--front"></div>
-                    <div class="sg-cube-fallback__face sg-cube-fallback__face--back"></div>
-                    <div class="sg-cube-fallback__face sg-cube-fallback__face--left"></div>
-                    <div class="sg-cube-fallback__face sg-cube-fallback__face--right"></div>
-                    <div class="sg-cube-fallback__face sg-cube-fallback__face--top"></div>
-                    <div class="sg-cube-fallback__face sg-cube-fallback__face--bottom"></div>
-                    <div class="sg-cube-fallback__core"></div>
+                            <div style="margin-top: 24px;">
+                                <a class="btn btn-outline" href="./foundation.html">Графики и документы → Фонд</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="sg-side">
-            <div class="sg-right-title">Никитин, Векслер и метод объёма ИВУ</div>
-
-            <div class="sg-tabs" role="tablist">
-                <button class="sg-tab" data-step="1" type="button">01. НИКИТИН</button>
-                <button class="sg-tab" data-step="2" type="button">02. ВЕКСЛЕР</button>
-                <button class="sg-tab" data-step="3" type="button">03. ИВУ</button>
-            </div>
-
-            <div class="sg-text-wrapper">
-                <div class="sg-step" id="sg-step-1">
-                    <div class="sg-step-title">Никитин: опережающая среда</div>
-                    <p class="sg-step-text">
-                        Ребёнок раньше нормы получает сложную среду: игры, задачи и материалы.
-                        Сначала кажется, что развитие замедляется — мозг обрабатывает объём.
-                        Затем наступает точка взлёта: накопленный опыт превращается в скачок интеллекта.
-                    </p>
-                </div>
-
-                <div class="sg-step" id="sg-step-2">
-                    <div class="sg-step-title">Векслер: сколько задач держит голова</div>
-                    <p class="sg-step-text">
-                        Тест Векслера измеряет не «ум», а объём рабочей памяти.
-                        Один стимул — одна мысль.
-                        Два стимула — две параллельные мысли.
-                        Объём возникает тогда, когда ребёнок удерживает несколько задач одновременно.
-                    </p>
-                </div>
-
-                <div class="sg-step" id="sg-step-3">
-                    <div class="sg-step-title">ИВУ: управляемый объём</div>
-                    <p class="sg-step-text">
-                        Метод ИВУ задаёт правильную когнитивную нагрузку:
-                        чтение трёх книг разворотами, ядро из 20 согласных
-                        и автоматизацию на «А».
-                        Так расширяется рабочая память по принципам Векслера
-                        и появляется эффект Никитина.
-                    </p>
-                </div>
-            </div>
-
-            <div style="margin-top: 24px;">
-                <a class="btn btn-outline" href="./foundation.html">Графики и документы → Фонд</a>
-            </div>
-        </div>
-    </div>
-</div>
-
             </div>
         </section>
 

@@ -2964,407 +2964,269 @@ body.system-page .ivu-accordion__body {
   }
 }
 /* ==========================================================================
-   SCIENCE GRAPH — DESKTOP + MOBILE HUD FIX
+   RESPONSIVE — synced with rebuilt system sections
    ========================================================================== */
 
-/* HTML HUD по умолчанию скрыт.
-   На десктопе работают родные SVG-плашки. */
-body.system-page .sg-html-hud {
-  display: none;
-}
+@media (max-width: 1024px) {
+  body.system-page .half--left {
+    animation: leftPartActionMobile 16s cubic-bezier(.4,0,.2,1) infinite;
+  }
 
-/* ПК: оставляем график слева, текст справа */
-@media (min-width: 901px) {
+  body.system-page .half--right {
+    animation: rightPartActionMobile 16s cubic-bezier(.4,0,.2,1) infinite;
+  }
+
   body.system-page .sg-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1.42fr) minmax(300px, 0.9fr);
-    gap: 34px;
-    align-items: start;
+    grid-template-columns: minmax(0, 1.2fr) minmax(260px, .92fr);
+    gap: 24px;
   }
 
-  body.system-page .sg-graph {
-    position: relative;
-    min-width: 0;
+  body.system-page .infra-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  body.system-page .sg-side {
-    min-width: 0;
-    padding-top: 6px;
+  body.system-page .pill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-/* Планшет/мобила: график сверху, текст ниже */
 @media (max-width: 900px) {
-  body.system-page .sg-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 22px;
-    align-items: start;
+  body.system-page .system-hero {
+    padding-top: 148px;
+    padding-bottom: 40px;
   }
 
-  body.system-page .sg-graph {
-    position: relative;
-    min-width: 0;
-    overflow: hidden;
+  body.system-page .system-hero::before {
+    right: -120px;
+    width: 260px;
+    height: 260px;
+  }
+
+  body.system-page .system-hero::after {
+    left: -20px;
+    width: 160px;
+    height: 160px;
+  }
+
+  body.system-page .grid2,
+  body.system-page .routes-grid,
+  body.system-page .method-compare,
+  body.system-page .sg-layout,
+  body.system-page #automationA .compare,
+  body.system-page .programs-grid,
+  body.system-page .infra-grid,
+  body.system-page .evidence-grid,
+  body.system-page .pill-grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.system-page .premium-panel {
+    padding: 34px 24px 30px;
+    border-radius: 24px;
+  }
+
+  body.system-page .qa-label {
+    margin-bottom: 20px;
+    padding: 9px 16px;
+  }
+
+  body.system-page .h2 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+
+  body.system-page .h3,
+  body.system-page .sg-step-title,
+  body.system-page .route-title,
+  body.system-page .program-title,
+  body.system-page .timeline-step__title,
+  body.system-page .pill-title,
+  body.system-page .infra-title {
+    font-size: 1.34rem;
+  }
+
+  body.system-page .method-head {
+    margin-bottom: 26px;
+  }
+
+  body.system-page .method-card {
+    padding: 24px 22px 22px;
+  }
+
+  body.system-page #method .anim-zone {
+    height: 210px;
+  }
+
+  body.system-page .ivu-panel {
+    width: 260px;
+    transform: scale(.95);
+  }
+
+  body.system-page #core .v-matrix-grid {
+    max-width: 254px;
+  }
+
+  body.system-page #automationA .compare {
+    max-width: 320px;
+    gap: 12px;
+    min-height: auto;
+  }
+
+  body.system-page #automationA .compare__mid,
+  body.system-page .compare__mid {
+    transform: rotate(90deg);
+    margin: 6px auto;
   }
 
   body.system-page .sg-side {
-    min-width: 0;
     padding-top: 0;
   }
 
-  /* на мобильных прячем SVG-плашки */
-  body.system-page .sg-hud {
-    display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
-  }
-
-  /* а HTML HUD показываем */
-  body.system-page .sg-html-hud {
-    position: absolute;
-    z-index: 6;
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-    transition:
-      opacity .35s ease,
-      transform .35s ease,
-      visibility .35s ease;
-    pointer-events: none;
-
-    font-size: 9px;
-    line-height: 1.14;
-    padding: 6px 10px;
-    border-radius: 14px;
-
-    background: rgba(22, 37, 63, 0.78);
-    color: #fff;
-
-    box-shadow:
-      0 8px 18px rgba(10, 25, 45, 0.12),
-      inset 0 1px 0 rgba(255,255,255,0.08);
-
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-
-    max-width: 190px;
-  }
-
-  /* мобильные позиции */
-  body.system-page .sg-html-hud--nikitin {
-    left: 38px;
-    bottom: 66px;
-  }
-
-  body.system-page .sg-html-hud--nikitin-top {
-    left: 168px;
-    top: 34px;
-  }
-
-  body.system-page .sg-html-hud--wechsler {
-    left: 236px;
-    top: 110px;
-    max-width: 170px;
-  }
-
-  body.system-page .sg-html-hud--ivu-1 {
-    left: 170px;
-    bottom: 92px;
-    max-width: 170px;
-  }
-
-  body.system-page .sg-html-hud--ivu-2 {
-    left: 272px;
-    top: 78px;
-    max-width: 150px;
-  }
-
-  body.system-page .sg-html-hud--ivu-3 {
-    right: 38px;
-    top: 38px;
-    max-width: 108px;
-    text-align: center;
-  }
-
-  /* логика появления на мобиле */
-  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin,
-  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  body.system-page .sg-layout[data-step="2"] .sg-html-hud--wechsler {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1,
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2,
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-3 {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
-
-  /* текстовый блок под кнопками — только один активный */
   body.system-page .sg-text-wrapper {
-    position: relative;
     min-height: 150px;
-  }
-
-  body.system-page .sg-step {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition:
-      opacity .45s ease,
-      transform .45s ease,
-      visibility .45s ease;
-  }
-
-  body.system-page .sg-step.is-active {
-    position: relative;
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
   }
 
   body.system-page .sg-step-text {
     max-width: none;
   }
-}
 
-/* маленькие телефоны */
-@media (max-width: 640px) {
-  body.system-page .sg-html-hud {
-    font-size: 8px;
-    padding: 5px 9px;
-    border-radius: 12px;
+  body.system-page .system-core-transfer__layout {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  body.system-page .sg-html-hud--nikitin {
-    left: 32px;
-    bottom: 62px;
+  body.system-page .system-core-transfer__flow {
+    width: 100%;
   }
 
-  body.system-page .sg-html-hud--nikitin-top {
-    left: 150px;
-    top: 30px;
+  body.system-page .system-core-transfer__arrow {
+    transform: rotate(90deg);
   }
 
-  body.system-page .sg-html-hud--wechsler {
-    left: 220px;
-    top: 102px;
-    max-width: 150px;
+  body.system-page .cubeScene {
+    transform: scale(.74);
   }
 
-  body.system-page .sg-html-hud--ivu-1 {
-    left: 160px;
-    bottom: 88px;
-    max-width: 150px;
+  body.system-page .cube-visual {
+    min-height: 280px;
   }
 
-  body.system-page .sg-html-hud--ivu-2 {
-    left: 248px;
-    top: 70px;
-    max-width: 140px;
+  body.system-page .monument-wrapper {
+    margin: 30px 0 22px;
   }
 
-  body.system-page .sg-html-hud--ivu-3 {
-    right: 34px;
-    top: 34px;
-    max-width: 96px;
-  }
-}
-/* ==========================================================================
-   GRAPH POLISH — mobile HUD + fallback cube
-   ========================================================================== */
+  body.system-page .m-step-4 { width: 72%; }
+  body.system-page .m-step-3 { width: 82%; }
+  body.system-page .m-step-2 { width: 92%; }
+  body.system-page .m-step-1 { width: 100%; }
 
-/* fallback cube */
-body.system-page .sg-cube-fallback {
-  position: absolute;
-  left: 58%;
-  top: 58%;
-  width: 28px;
-  height: 28px;
-  z-index: 5;
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(.9);
-  transition: opacity .35s ease, transform .35s ease;
-  pointer-events: none;
-}
-
-body.system-page .sg-layout[data-step="3"] .sg-cube-fallback {
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-
-body.system-page .sg-cube-fallback__inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  animation: sgCubeSpin 4s linear infinite;
-}
-
-body.system-page .sg-cube-fallback__face {
-  position: absolute;
-  inset: 0;
-  border: 1px solid rgba(120, 160, 255, 0.38);
-  border-radius: 4px;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.52) 0%, rgba(220,232,255,.18) 100%);
-  box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.45),
-    0 2px 8px rgba(46,104,255,.08);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-}
-
-body.system-page .sg-cube-fallback__face--front  { transform: translateZ(14px); }
-body.system-page .sg-cube-fallback__face--back   { transform: rotateY(180deg) translateZ(14px); }
-body.system-page .sg-cube-fallback__face--left   { transform: rotateY(-90deg) translateZ(14px); }
-body.system-page .sg-cube-fallback__face--right  { transform: rotateY(90deg) translateZ(14px); }
-body.system-page .sg-cube-fallback__face--top    { transform: rotateX(90deg) translateZ(14px); }
-body.system-page .sg-cube-fallback__face--bottom { transform: rotateX(-90deg) translateZ(14px); }
-
-body.system-page .sg-cube-fallback__core {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(115,165,255,.95) 0%, rgba(115,165,255,.35) 55%, rgba(115,165,255,0) 100%);
-  box-shadow: 0 0 18px rgba(115,165,255,.45);
-}
-
-@keyframes sgCubeSpin {
-  from { transform: rotateX(-18deg) rotateY(0deg); }
-  to   { transform: rotateX(-18deg) rotateY(360deg); }
-}
-
-/* мобильная полировка HUD */
-@media (max-width: 900px) {
-  body.system-page .sg-tabs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  body.system-page .sg-tab {
-    min-width: 146px;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  body.system-page .sg-html-hud {
-    font-size: 8px;
-    line-height: 1.12;
-    padding: 5px 9px;
-    border-radius: 12px;
-    max-width: 160px;
-  }
-
-  body.system-page .sg-html-hud--nikitin {
-    left: 36px;
-    bottom: 64px;
-    max-width: 190px;
-  }
-
-  body.system-page .sg-html-hud--nikitin-top {
-    left: 166px;
-    top: 34px;
-    max-width: 120px;
-  }
-
-  body.system-page .sg-html-hud--wechsler {
-    left: auto;
-    right: 20px;
-    top: 112px;
-    max-width: 118px;
-    text-align: left;
-  }
-
-  body.system-page .sg-html-hud--ivu-1 {
-    left: auto;
-    right: 34px;
-    top: 126px;
-    max-width: 148px;
-  }
-
-  body.system-page .sg-html-hud--ivu-2 {
-    left: auto;
-    right: 18px;
-    top: 76px;
-    max-width: 150px;
-  }
-
-  body.system-page .sg-html-hud--ivu-3 {
-    right: 38px;
-    top: 38px;
-    max-width: 92px;
-    text-align: center;
-  }
-
-  body.system-page .sg-cube-fallback {
-    left: 57%;
-    top: 60%;
-    width: 24px;
-    height: 24px;
+  body.system-page .routes-section {
+    margin-top: 52px;
   }
 }
 
 @media (max-width: 640px) {
-  body.system-page .sg-html-hud--nikitin {
-    left: 28px;
-    bottom: 60px;
-    max-width: 180px;
+  body.system-page .system-hero {
+    padding-top: 140px;
+    padding-bottom: 34px;
   }
 
-  body.system-page .sg-html-hud--nikitin-top {
-    left: 150px;
-    top: 28px;
+  body.system-page .system-hero__kicker {
+    font-size: .62rem;
+    letter-spacing: .16em;
   }
 
-  body.system-page .sg-html-hud--wechsler {
-    right: 16px;
-    top: 108px;
-    max-width: 110px;
+  body.system-page .system-hero__pretitle {
+    font-size: .64rem;
+    letter-spacing: .14em;
   }
 
-  body.system-page .sg-html-hud--ivu-1 {
-    right: 24px;
-    top: 122px;
-    max-width: 138px;
+  body.system-page .system-hero__description,
+  body.system-page .sub {
+    font-size: .98rem;
+    line-height: 1.64;
   }
 
-  body.system-page .sg-html-hud--ivu-2 {
-    right: 12px;
-    top: 70px;
-    max-width: 138px;
+  body.system-page .premium-panel {
+    padding: 28px 18px 24px;
   }
 
-  body.system-page .sg-html-hud--ivu-3 {
-    right: 32px;
-    top: 34px;
-    max-width: 86px;
+  body.system-page .method-card {
+    padding: 20px 18px 18px;
   }
 
-  body.system-page .sg-cube-fallback {
-    left: 58%;
-    top: 60%;
-    width: 22px;
-    height: 22px;
+  body.system-page .anim-zone {
+    height: 188px;
   }
+
+  body.system-page .slot-container {
+    transform: scale(.94);
+  }
+
+  body.system-page .ivu-panel {
+    width: 232px;
+    transform: scale(.88);
+  }
+
+  body.system-page #core .v-matrix-grid {
+    max-width: 236px;
+    gap: 7px;
+    padding: 14px;
+  }
+
+  body.system-page #automationA .compare {
+    max-width: 280px;
+  }
+
+  body.system-page #automationA .compare__col {
+    min-height: 104px;
+    padding: 18px 14px;
+  }
+
+  body.system-page #automationA .key-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  body.system-page .system-core-transfer__inner {
+    padding: 18px 16px 16px;
+  }
+
+  body.system-page .system-core-transfer__panel {
+    min-height: 0;
+    padding: 14px 14px;
+  }
+
+  body.system-page .timeline-step,
+  body.system-page .program-card,
+  body.system-page .infra-card,
+  body.system-page .evidence-item {
+    padding: 24px 18px;
+  }
+
+  body.system-page .cubeScene {
+    transform: scale(.66);
+  }
+
+  body.system-page .cube-visual {
+    min-height: 250px;
+  }
+
+  body.system-page .route-card {
+    padding: 26px 20px;
+  }
+}
+
+@keyframes leftPartActionMobile {
+  0%, 15%  { transform: translateX(-54px) rotateX(0deg); }
+  20%, 25% { transform: translateX(-1px) rotateX(0deg); }
+  45%, 50% { transform: translateX(-1px) rotateX(-180deg); }
+  100%     { transform: translateX(-1px) rotateX(-540deg); }
+}
+
+@keyframes rightPartActionMobile {
+  0%, 15%  { transform: translateX(54px) rotateX(0deg); }
+  20%, 25% { transform: translateX(1px) rotateX(0deg); }
+  45%, 50% { transform: translateX(1px) rotateX(180deg); }
+  100%     { transform: translateX(1px) rotateX(-180deg); }
 }
