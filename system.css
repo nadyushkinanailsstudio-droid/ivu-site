@@ -3245,56 +3245,71 @@ body.system-page .ivu-accordion__body {
    HTML HUD (mobile fix)
 ========================= */
 
-.sg-graph {
+/* ВАЖНО: привязываем к контейнеру */
+.sg-layout {
   position: relative;
 }
 
+/* базовый стиль */
 .sg-html-hud {
   position: absolute;
+  z-index: 10;
+  display: block;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity .4s ease, transform .4s ease;
   pointer-events: none;
+
   font-size: 10px;
+  line-height: 1.2;
   padding: 6px 10px;
   border-radius: 10px;
+
   background: rgba(10, 25, 45, 0.85);
   color: #fff;
+
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
-/* позиции (примерно как в графике) */
+/* =========================
+   ПОЗИЦИИ
+========================= */
+
 .sg-html-hud--nikitin {
-  left: 40px;
-  bottom: 60px;
+  left: 30px;
+  bottom: 55px;
 }
 
 .sg-html-hud--nikitin-top {
-  left: 120px;
-  top: 40px;
+  left: 110px;
+  top: 30px;
 }
 
 .sg-html-hud--wechsler {
-  left: 160px;
-  bottom: 90px;
+  left: 140px;
+  bottom: 85px;
 }
 
 .sg-html-hud--ivu-1 {
-  left: 260px;
-  bottom: 120px;
+  left: 240px;
+  bottom: 110px;
 }
 
 .sg-html-hud--ivu-2 {
-  left: 340px;
-  bottom: 150px;
+  left: 300px;
+  top: 60px;
 }
 
 .sg-html-hud--ivu-3 {
   right: 20px;
-  top: 60px;
+  top: 20px;
 }
 
-/* логика появления */
+/* =========================
+   ЛОГИКА ПОЯВЛЕНИЯ
+========================= */
+
 .sg-layout[data-step="1"] .sg-html-hud--nikitin,
 .sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
   opacity: 1;
@@ -3313,7 +3328,10 @@ body.system-page .ivu-accordion__body {
   transform: translateY(0);
 }
 
-/* только для мобилки */
+/* =========================
+   ТОЛЬКО МОБИЛКА
+========================= */
+
 @media (min-width: 769px) {
   .sg-html-hud {
     display: none;
