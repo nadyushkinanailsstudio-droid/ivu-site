@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /* ===============================
-     Аккордеоны system
-  =============================== */
   const accordions = document.querySelectorAll('.ivu-accordion');
 
   accordions.forEach((acc) => {
@@ -12,9 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* ===============================
-     Интерактивный график Никитин / Векслер / ИВУ
-  =============================== */
   const layout = document.getElementById('liveGraph');
 
   if (layout) {
@@ -27,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cubeGroup = document.getElementById('movingCubeGroup');
     const cubeAnimator = document.getElementById('cubeAnimator');
+    const cubeFallback = document.querySelector('.sg-cube-fallback');
 
     let isAutoPlaying = true;
     let autoPlayTimer1 = null;
@@ -44,16 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
         stepEl.classList.toggle('is-active', idx + 1 === stepNum);
       });
 
-      if (cubeGroup) {
-        cubeGroup.style.opacity = stepNum === 3 ? '1' : '0';
-      }
+      if (stepNum === 3) {
+        if (cubeGroup) cubeGroup.style.opacity = '1';
+        if (cubeFallback) cubeFallback.style.opacity = '1';
 
-      if (stepNum === 3 && cubeAnimator) {
-        try {
-          cubeAnimator.beginElement();
-        } catch (e) {
-          /* nothing */
+        if (cubeAnimator) {
+          try { cubeAnimator.setCurrentTime(0); } catch (e) {}
+          try { cubeAnimator.beginElement(); } catch (e) {}
         }
+      } else {
+        if (cubeGroup) cubeGroup.style.opacity = '0';
+        if (cubeFallback) cubeFallback.style.opacity = '0';
       }
     }
 
@@ -93,9 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(layout);
   }
 
-  /* ===============================
-     Монумент 100 книг
-  =============================== */
   const monument = document.querySelector('.monument-wrapper');
 
   if (monument) {
