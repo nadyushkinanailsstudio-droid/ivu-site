@@ -2964,404 +2964,223 @@ body.system-page .ivu-accordion__body {
   }
 }
 /* ==========================================================================
-   RESPONSIVE — synced with rebuilt system sections
+   SCIENCE GRAPH — DESKTOP + MOBILE HUD FIX
    ========================================================================== */
 
-@media (max-width: 1024px) {
-  body.system-page .half--left {
-    animation: leftPartActionMobile 16s cubic-bezier(.4,0,.2,1) infinite;
-  }
-
-  body.system-page .half--right {
-    animation: rightPartActionMobile 16s cubic-bezier(.4,0,.2,1) infinite;
-  }
-
-  body.system-page .sg-layout {
-    grid-template-columns: minmax(0, 1.2fr) minmax(260px, .92fr);
-    gap: 24px;
-  }
-
-  body.system-page .infra-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  body.system-page .pill-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+/* HTML HUD по умолчанию скрыт.
+   На десктопе работают родные SVG-плашки. */
+body.system-page .sg-html-hud {
+  display: none;
 }
 
-@media (max-width: 900px) {
-  body.system-page .system-hero {
-    padding-top: 148px;
-    padding-bottom: 40px;
+/* ПК: оставляем график слева, текст справа */
+@media (min-width: 901px) {
+  body.system-page .sg-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.42fr) minmax(300px, 0.9fr);
+    gap: 34px;
+    align-items: start;
   }
 
-  body.system-page .system-hero::before {
-    right: -120px;
-    width: 260px;
-    height: 260px;
-  }
-
-  body.system-page .system-hero::after {
-    left: -20px;
-    width: 160px;
-    height: 160px;
-  }
-
-  body.system-page .grid2,
-  body.system-page .routes-grid,
-  body.system-page .method-compare,
-  body.system-page .sg-layout,
-  body.system-page #automationA .compare,
-  body.system-page .programs-grid,
-  body.system-page .infra-grid,
-  body.system-page .evidence-grid,
-  body.system-page .pill-grid {
-    grid-template-columns: 1fr;
-  }
-
-  body.system-page .premium-panel {
-    padding: 34px 24px 30px;
-    border-radius: 24px;
-  }
-
-  body.system-page .qa-label {
-    margin-bottom: 20px;
-    padding: 9px 16px;
-  }
-
-  body.system-page .h2 {
-    font-size: clamp(2rem, 8vw, 2.7rem);
-  }
-
-  body.system-page .h3,
-  body.system-page .sg-step-title,
-  body.system-page .route-title,
-  body.system-page .program-title,
-  body.system-page .timeline-step__title,
-  body.system-page .pill-title,
-  body.system-page .infra-title {
-    font-size: 1.34rem;
-  }
-
-  body.system-page .method-head {
-    margin-bottom: 26px;
-  }
-
-  body.system-page .method-card {
-    padding: 24px 22px 22px;
-  }
-
-  body.system-page #method .anim-zone {
-    height: 210px;
-  }
-
-  body.system-page .ivu-panel {
-    width: 260px;
-    transform: scale(.95);
-  }
-
-  body.system-page #core .v-matrix-grid {
-    max-width: 254px;
-  }
-
-  body.system-page #automationA .compare {
-    max-width: 320px;
-    gap: 12px;
-    min-height: auto;
-  }
-
-  body.system-page #automationA .compare__mid,
-  body.system-page .compare__mid {
-    transform: rotate(90deg);
-    margin: 6px auto;
+  body.system-page .sg-graph {
+    position: relative;
+    min-width: 0;
   }
 
   body.system-page .sg-side {
+    min-width: 0;
+    padding-top: 6px;
+  }
+}
+
+/* Планшет/мобила: график сверху, текст ниже */
+@media (max-width: 900px) {
+  body.system-page .sg-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+    align-items: start;
+  }
+
+  body.system-page .sg-graph {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  body.system-page .sg-side {
+    min-width: 0;
     padding-top: 0;
   }
 
+  /* на мобильных прячем SVG-плашки */
+  body.system-page .sg-hud {
+    display: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+
+  /* а HTML HUD показываем */
+  body.system-page .sg-html-hud {
+    position: absolute;
+    z-index: 6;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition:
+      opacity .35s ease,
+      transform .35s ease,
+      visibility .35s ease;
+    pointer-events: none;
+
+    font-size: 9px;
+    line-height: 1.14;
+    padding: 6px 10px;
+    border-radius: 14px;
+
+    background: rgba(22, 37, 63, 0.78);
+    color: #fff;
+
+    box-shadow:
+      0 8px 18px rgba(10, 25, 45, 0.12),
+      inset 0 1px 0 rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    max-width: 190px;
+  }
+
+  /* мобильные позиции */
+  body.system-page .sg-html-hud--nikitin {
+    left: 38px;
+    bottom: 66px;
+  }
+
+  body.system-page .sg-html-hud--nikitin-top {
+    left: 168px;
+    top: 34px;
+  }
+
+  body.system-page .sg-html-hud--wechsler {
+    left: 236px;
+    top: 110px;
+    max-width: 170px;
+  }
+
+  body.system-page .sg-html-hud--ivu-1 {
+    left: 170px;
+    bottom: 92px;
+    max-width: 170px;
+  }
+
+  body.system-page .sg-html-hud--ivu-2 {
+    left: 272px;
+    top: 78px;
+    max-width: 150px;
+  }
+
+  body.system-page .sg-html-hud--ivu-3 {
+    right: 38px;
+    top: 38px;
+    max-width: 108px;
+    text-align: center;
+  }
+
+  /* логика появления на мобиле */
+  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin,
+  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  body.system-page .sg-layout[data-step="2"] .sg-html-hud--wechsler {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1,
+  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2,
+  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-3 {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* текстовый блок под кнопками — только один активный */
   body.system-page .sg-text-wrapper {
+    position: relative;
     min-height: 150px;
+  }
+
+  body.system-page .sg-step {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+      opacity .45s ease,
+      transform .45s ease,
+      visibility .45s ease;
+  }
+
+  body.system-page .sg-step.is-active {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   body.system-page .sg-step-text {
     max-width: none;
   }
-
-  body.system-page .system-core-transfer__layout {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  body.system-page .system-core-transfer__flow {
-    width: 100%;
-  }
-
-  body.system-page .system-core-transfer__arrow {
-    transform: rotate(90deg);
-  }
-
-  body.system-page .cubeScene {
-    transform: scale(.74);
-  }
-
-  body.system-page .cube-visual {
-    min-height: 280px;
-  }
-
-  body.system-page .monument-wrapper {
-    margin: 30px 0 22px;
-  }
-
-  body.system-page .m-step-4 { width: 72%; }
-  body.system-page .m-step-3 { width: 82%; }
-  body.system-page .m-step-2 { width: 92%; }
-  body.system-page .m-step-1 { width: 100%; }
-
-  body.system-page .routes-section {
-    margin-top: 52px;
-  }
 }
 
+/* маленькие телефоны */
 @media (max-width: 640px) {
-  body.system-page .system-hero {
-    padding-top: 140px;
-    padding-bottom: 34px;
-  }
-
-  body.system-page .system-hero__kicker {
-    font-size: .62rem;
-    letter-spacing: .16em;
-  }
-
-  body.system-page .system-hero__pretitle {
-    font-size: .64rem;
-    letter-spacing: .14em;
-  }
-
-  body.system-page .system-hero__description,
-  body.system-page .sub {
-    font-size: .98rem;
-    line-height: 1.64;
-  }
-
-  body.system-page .premium-panel {
-    padding: 28px 18px 24px;
-  }
-
-  body.system-page .method-card {
-    padding: 20px 18px 18px;
-  }
-
-  body.system-page .anim-zone {
-    height: 188px;
-  }
-
-  body.system-page .slot-container {
-    transform: scale(.94);
-  }
-
-  body.system-page .ivu-panel {
-    width: 232px;
-    transform: scale(.88);
-  }
-
-  body.system-page #core .v-matrix-grid {
-    max-width: 236px;
-    gap: 7px;
-    padding: 14px;
-  }
-
-  body.system-page #automationA .compare {
-    max-width: 280px;
-  }
-
-  body.system-page #automationA .compare__col {
-    min-height: 104px;
-    padding: 18px 14px;
-  }
-
-  body.system-page #automationA .key-btn {
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-  }
-
-  body.system-page .system-core-transfer__inner {
-    padding: 18px 16px 16px;
-  }
-
-  body.system-page .system-core-transfer__panel {
-    min-height: 0;
-    padding: 14px 14px;
-  }
-
-  body.system-page .timeline-step,
-  body.system-page .program-card,
-  body.system-page .infra-card,
-  body.system-page .evidence-item {
-    padding: 24px 18px;
-  }
-
-  body.system-page .cubeScene {
-    transform: scale(.66);
-  }
-
-  body.system-page .cube-visual {
-    min-height: 250px;
-  }
-
-  body.system-page .route-card {
-    padding: 26px 20px;
-  }
-}
-
-@keyframes leftPartActionMobile {
-  0%, 15%  { transform: translateX(-54px) rotateX(0deg); }
-  20%, 25% { transform: translateX(-1px) rotateX(0deg); }
-  45%, 50% { transform: translateX(-1px) rotateX(-180deg); }
-  100%     { transform: translateX(-1px) rotateX(-540deg); }
-}
-
-@keyframes rightPartActionMobile {
-  0%, 15%  { transform: translateX(54px) rotateX(0deg); }
-  20%, 25% { transform: translateX(1px) rotateX(0deg); }
-  45%, 50% { transform: translateX(1px) rotateX(180deg); }
-  100%     { transform: translateX(1px) rotateX(-180deg); }
-}
-
-  .sg-step {
-    position: relative !important;
-    opacity: 1 !important;
-    visibility: visible !important;
-    transform: none !important;
-  }
-
-  .sg-text-wrapper {
-    min-height: auto !important;
-  }
-
-  /* =========================
-   HTML HUD (mobile fix)
-========================= */
-
-.sg-layout {
-  position: relative;
-}
-
-.sg-html-hud {
-  position: absolute;
-  z-index: 6;
-  display: block;
-  opacity: 0;
-  transform: translateY(8px);
-  transition: opacity .35s ease, transform .35s ease;
-  pointer-events: none;
-
-  font-size: 9px;
-  line-height: 1.15;
-  padding: 5px 9px;
-  border-radius: 10px;
-
-  background: rgba(22, 37, 63, 0.78);
-  color: #fff;
-
-  box-shadow:
-    0 8px 18px rgba(10, 25, 45, 0.12),
-    inset 0 1px 0 rgba(255,255,255,0.06);
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-
-  max-width: 190px;
-}
-
-/* позиции */
-.sg-html-hud--nikitin {
-  left: 42px;
-  bottom: 66px;
-}
-
-.sg-html-hud--nikitin-top {
-  left: 165px;
-  top: 28px;
-}
-
-.sg-html-hud--wechsler {
-  left: 210px;
-  top: 88px;
-  max-width: 210px;
-}
-
-.sg-html-hud--ivu-1 {
-  left: 170px;
-  bottom: 82px;
-}
-
-.sg-html-hud--ivu-2 {
-  left: 220px;
-  top: 72px;
-  max-width: 170px;
-}
-
-.sg-html-hud--ivu-3 {
-  right: 34px;
-  top: 34px;
-  max-width: 110px;
-  text-align: center;
-}
-
-/* логика появления */
-.sg-layout[data-step="1"] .sg-html-hud--nikitin,
-.sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.sg-layout[data-step="2"] .sg-html-hud--wechsler {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.sg-layout[data-step="3"] .sg-html-hud--ivu-1,
-.sg-layout[data-step="3"] .sg-html-hud--ivu-2,
-.sg-layout[data-step="3"] .sg-html-hud--ivu-3 {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* только мобилка: прячем SVG-подписи, показываем HTML */
-@media (max-width: 768px) {
-  body.system-page .sg-hud {
-    display: none !important;
-    opacity: 0 !important;
-  }
-
   body.system-page .sg-html-hud {
-    display: block !important;
+    font-size: 8px;
+    padding: 5px 9px;
+    border-radius: 12px;
   }
 
-  /* даём место графику */
-  body.system-page .sg-svg {
-    min-width: 520px;
+  body.system-page .sg-html-hud--nikitin {
+    left: 32px;
+    bottom: 62px;
   }
 
-  /* кубик поднимаем поверх линии, но под плашками */
-  body.system-page #movingCubeGroup {
-    opacity: 1;
+  body.system-page .sg-html-hud--nikitin-top {
+    left: 150px;
+    top: 30px;
   }
 
-  body.system-page .mc-container {
-    position: relative;
-    z-index: 5;
-    transform: scale(1.08);
+  body.system-page .sg-html-hud--wechsler {
+    left: 220px;
+    top: 102px;
+    max-width: 150px;
   }
-}
 
-/* десктоп: HTML HUD не нужен */
-@media (min-width: 769px) {
-  body.system-page .sg-html-hud {
-    display: none !important;
+  body.system-page .sg-html-hud--ivu-1 {
+    left: 160px;
+    bottom: 88px;
+    max-width: 150px;
+  }
+
+  body.system-page .sg-html-hud--ivu-2 {
+    left: 248px;
+    top: 70px;
+    max-width: 140px;
+  }
+
+  body.system-page .sg-html-hud--ivu-3 {
+    right: 34px;
+    top: 34px;
+    max-width: 96px;
   }
 }
