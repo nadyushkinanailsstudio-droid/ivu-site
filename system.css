@@ -3271,261 +3271,215 @@ body.system-page .sg-html-hud {
 }
 
 /* ==========================================================================
-   SCIENCE GRAPH — MOBILE / TABLET PREMIUM POLISH
+   SCIENCE GRAPH — FINAL PREMIUM APPLE VERSION
    ========================================================================== */
 
+/* =========================
+   MOBILE / TABLET LAYOUT
+   ========================= */
+
 @media (max-width: 900px) {
+
   body.system-page .sg-layout {
-    grid-template-columns: 1fr;
-    gap: 24px;
-    align-items: start;
-  }
-
-  body.system-page .sg-side {
-    padding-top: 0;
-  }
-
-  body.system-page .sg-right-title {
-    margin-bottom: 16px;
-    font-size: .76rem;
-    letter-spacing: .12em;
-  }
-
-  body.system-page .sg-tabs {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 14px;
-    margin-bottom: 22px;
+    gap: 22px;
+  }
+
+  /* =========================
+     TABS — В ОДИН РЯД
+     ========================= */
+
+  body.system-page .sg-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
   }
 
   body.system-page .sg-tab {
-    width: 100%;
-    justify-content: center;
-    padding: 15px 18px;
-    font-size: .84rem;
-    letter-spacing: .06em;
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 11px;
     border-radius: 999px;
+
+    background: #f3efe9;
+    color: rgba(10,25,47,.55);
+
+    border: 1px solid rgba(10,25,47,.06);
+
     box-shadow:
-      0 10px 24px rgba(10,25,47,.05),
-      inset 0 1px 0 rgba(255,255,255,.72);
+      inset 0 1px 0 rgba(255,255,255,.9),
+      0 4px 10px rgba(10,25,47,.04);
+
+    transition: all .25s ease;
   }
 
   body.system-page .sg-tab.is-active {
+    background: linear-gradient(180deg,#142c4a 0%,#0b1f36 100%);
+    color: #fff;
+
     box-shadow:
-      0 16px 34px rgba(13,27,47,.16),
-      inset 0 1px 0 rgba(255,255,255,.08);
+      0 8px 20px rgba(10,25,47,.18),
+      inset 0 1px 0 rgba(255,255,255,.1);
   }
 
-  body.system-page .sg-text-wrapper {
-    min-height: 0;
-  }
+  /* =========================
+     TEXT
+     ========================= */
 
   body.system-page .sg-step-title {
-    margin-bottom: 14px;
-    font-size: clamp(2rem, 5.3vw, 2.7rem);
-    line-height: 0.98;
-    letter-spacing: -0.04em;
-    text-wrap: balance;
+    font-size: clamp(1.9rem, 5vw, 2.4rem);
+    line-height: 1;
+    margin-bottom: 12px;
   }
 
   body.system-page .sg-step-text {
-    max-width: none;
-    font-size: 1.02rem;
-    line-height: 1.66;
+    font-size: .98rem;
+    line-height: 1.65;
   }
 
-  /* desktop SVG HUD выключаем */
-  body.system-page .sg-hud,
-  body.system-page .sg-hud--wechsler-bars {
+  /* =========================
+     SVG HUD OFF
+     ========================= */
+
+  body.system-page .sg-hud {
     display: none !important;
-    opacity: 0 !important;
-    pointer-events: none !important;
   }
 
-  /* mobile HUD включаем */
+  /* =========================
+     PREMIUM GLASS HUD
+     ========================= */
+
   body.system-page .sg-html-hud {
     position: absolute;
-    z-index: 6;
-    display: block;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(8px);
-    transition:
-      opacity .34s ease,
-      transform .34s ease,
-      visibility .34s ease;
-    pointer-events: none;
+    z-index: 5;
 
-    padding: 6px 11px;
-    border-radius: 16px;
-    max-width: 190px;
+    opacity: 0;
+    transform: translateY(8px);
+
+    transition: all .35s ease;
+
+    padding: 5px 10px;
+    border-radius: 18px;
+
+    font-size: 6.5px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,.92);
 
     background:
       linear-gradient(
         180deg,
-        rgba(33,52,82,0.58) 0%,
-        rgba(24,39,64,0.46) 100%
+        rgba(38,55,82,.42) 0%,
+        rgba(28,42,64,.34) 100%
       );
-    color: rgba(255,255,255,.96);
 
-    border: 1px solid rgba(210,224,255,0.22);
+    border: 1px solid rgba(255,255,255,.18);
 
-    font-family: var(--font-mono);
-    font-size: 6.8px;
-    font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: .055em;
-    text-transform: uppercase;
+    backdrop-filter: blur(18px) saturate(120%);
+    -webkit-backdrop-filter: blur(18px) saturate(120%);
 
     box-shadow:
-      0 10px 24px rgba(10,25,47,.10),
-      inset 0 1px 0 rgba(255,255,255,.16),
-      inset 0 -1px 0 rgba(255,255,255,.04);
+      0 8px 20px rgba(10,25,47,.08),
+      inset 0 1px 0 rgba(255,255,255,.22),
+      inset 0 -1px 0 rgba(255,255,255,.05);
 
-    backdrop-filter: blur(14px) saturate(115%);
-    -webkit-backdrop-filter: blur(14px) saturate(115%);
+    max-width: 170px;
+    text-align: center;
   }
+
+  /* =========================
+     ПОЯВЛЕНИЕ
+     ========================= */
 
   body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin,
   body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
     opacity: 1;
-    visibility: visible;
     transform: translateY(0);
   }
 
   body.system-page .sg-layout[data-step="2"] .sg-html-hud--wechsler {
     opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%,0);
   }
 
   body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1,
   body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2,
   body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-3 {
     opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+    transform: translate(-50%,0);
   }
 
-  /* ---------- Step 1 ---------- */
+  /* =========================
+     STEP 1 (Никитин)
+     ========================= */
+
   body.system-page .sg-html-hud--nikitin {
-    left: 18px;
-    top: 116px;
-    max-width: 214px;
-    text-align: center;
+    left: 16px;
+    top: 104px;
   }
 
   body.system-page .sg-html-hud--nikitin-top {
-    right: 20px;
-    top: 34px;
-    max-width: 112px;
-    text-align: center;
+    right: 16px;
+    top: 30px;
   }
 
-  /* ---------- Step 2 ---------- */
+  /* =========================
+     STEP 2 (Векслер)
+     ========================= */
+
   body.system-page .sg-html-hud--wechsler {
     left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%) translateY(8px);
-    max-width: 182px;
-    text-align: center;
+    bottom: 32px;
+    transform: translate(-50%,8px);
   }
 
-  body.system-page .sg-layout[data-step="2"] .sg-html-hud--wechsler {
-    transform: translateX(-50%) translateY(0);
-  }
+  /* =========================
+     STEP 3 (ИВУ)
+     ========================= */
 
-  /* ---------- Step 3 ---------- */
   body.system-page .sg-html-hud--ivu-2 {
     left: 50%;
-    top: 102px;
-    transform: translateX(-50%) translateY(8px);
-    max-width: 214px;
-    text-align: center;
-  }
-
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2 {
-    transform: translateX(-50%) translateY(0);
+    top: 92px;
+    transform: translate(-50%,8px);
   }
 
   body.system-page .sg-html-hud--ivu-3 {
-    right: 26px;
-    top: 38px;
-    max-width: 86px;
-    text-align: center;
+    right: 18px;
+    top: 32px;
   }
 
   body.system-page .sg-html-hud--ivu-1 {
     left: 50%;
     bottom: 18px;
-    transform: translateX(-50%) translateY(8px);
-    max-width: 156px;
-    text-align: center;
-  }
-
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1 {
-    transform: translateX(-50%) translateY(0);
+    transform: translate(-50%,8px);
   }
 }
 
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
 @media (max-width: 640px) {
-  body.system-page .sg-right-title {
-    font-size: .74rem;
-    letter-spacing: .11em;
-  }
 
   body.system-page .sg-tab {
-    padding: 14px 16px;
-    font-size: .82rem;
-  }
-
-  body.system-page .sg-step-title {
-    font-size: clamp(1.86rem, 6.2vw, 2.35rem);
-    line-height: 0.99;
-  }
-
-  body.system-page .sg-step-text {
-    font-size: .98rem;
-    line-height: 1.64;
+    font-size: 10px;
+    padding: 11px 8px;
   }
 
   body.system-page .sg-html-hud {
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 6.35px;
-    max-width: 176px;
+    font-size: 6px;
+    padding: 4px 9px;
+    max-width: 150px;
   }
 
   body.system-page .sg-html-hud--nikitin {
-    left: 16px;
-    top: 112px;
-    max-width: 198px;
-  }
-
-  body.system-page .sg-html-hud--nikitin-top {
-    right: 18px;
-    top: 32px;
-    max-width: 102px;
-  }
-
-  body.system-page .sg-html-hud--wechsler {
-    bottom: 28px;
-    max-width: 168px;
+    top: 100px;
   }
 
   body.system-page .sg-html-hud--ivu-2 {
-    top: 96px;
-    max-width: 194px;
-  }
-
-  body.system-page .sg-html-hud--ivu-3 {
-    right: 22px;
-    top: 34px;
-    max-width: 78px;
-  }
-
-  body.system-page .sg-html-hud--ivu-1 {
-    bottom: 16px;
-    max-width: 144px;
+    top: 88px;
   }
 }
