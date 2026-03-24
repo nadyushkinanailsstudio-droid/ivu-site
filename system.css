@@ -3312,7 +3312,7 @@ body.system-page .sg-html-hud {
 
   body.system-page .sg-tab.is-active {
     box-shadow:
-      0 16px 34px rgba(13,27,47,.18),
+      0 16px 34px rgba(13,27,47,.16),
       inset 0 1px 0 rgba(255,255,255,.08);
   }
 
@@ -3356,25 +3356,34 @@ body.system-page .sg-html-hud {
       visibility .34s ease;
     pointer-events: none;
 
-    padding: 7px 12px;
-    border-radius: 14px;
-    max-width: 200px;
+    padding: 6px 11px;
+    border-radius: 16px;
+    max-width: 190px;
 
-    background: linear-gradient(180deg, rgba(48,66,96,.90) 0%, rgba(28,42,68,.90) 100%);
+    background:
+      linear-gradient(
+        180deg,
+        rgba(33,52,82,0.58) 0%,
+        rgba(24,39,64,0.46) 100%
+      );
     color: rgba(255,255,255,.96);
 
+    border: 1px solid rgba(210,224,255,0.22);
+
     font-family: var(--font-mono);
-    font-size: 8px;
+    font-size: 6.8px;
     font-weight: 700;
-    line-height: 1.16;
-    letter-spacing: .04em;
+    line-height: 1.14;
+    letter-spacing: .055em;
+    text-transform: uppercase;
 
     box-shadow:
-      0 10px 24px rgba(10,25,47,.14),
-      inset 0 1px 0 rgba(255,255,255,.08);
+      0 10px 24px rgba(10,25,47,.10),
+      inset 0 1px 0 rgba(255,255,255,.16),
+      inset 0 -1px 0 rgba(255,255,255,.04);
 
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(14px) saturate(115%);
+    -webkit-backdrop-filter: blur(14px) saturate(115%);
   }
 
   body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin,
@@ -3400,25 +3409,25 @@ body.system-page .sg-html-hud {
 
   /* ---------- Step 1 ---------- */
   body.system-page .sg-html-hud--nikitin {
-    left: 28px;
-    top: 118px;
-    max-width: 230px;
+    left: 18px;
+    top: 116px;
+    max-width: 214px;
     text-align: center;
   }
 
   body.system-page .sg-html-hud--nikitin-top {
-    right: 28px;
-    top: 38px;
-    max-width: 132px;
+    right: 20px;
+    top: 34px;
+    max-width: 112px;
     text-align: center;
   }
 
   /* ---------- Step 2 ---------- */
   body.system-page .sg-html-hud--wechsler {
     left: 50%;
-    bottom: 16px;
+    bottom: 30px;
     transform: translateX(-50%) translateY(8px);
-    max-width: 220px;
+    max-width: 182px;
     text-align: center;
   }
 
@@ -3429,9 +3438,9 @@ body.system-page .sg-html-hud {
   /* ---------- Step 3 ---------- */
   body.system-page .sg-html-hud--ivu-2 {
     left: 50%;
-    top: 88px;
+    top: 102px;
     transform: translateX(-50%) translateY(8px);
-    max-width: 250px;
+    max-width: 214px;
     text-align: center;
   }
 
@@ -3440,17 +3449,17 @@ body.system-page .sg-html-hud {
   }
 
   body.system-page .sg-html-hud--ivu-3 {
-    right: 34px;
+    right: 26px;
     top: 38px;
-    max-width: 96px;
+    max-width: 86px;
     text-align: center;
   }
 
   body.system-page .sg-html-hud--ivu-1 {
     left: 50%;
-    bottom: -2px;
+    bottom: 18px;
     transform: translateX(-50%) translateY(8px);
-    max-width: 178px;
+    max-width: 156px;
     text-align: center;
   }
 
@@ -3481,41 +3490,42 @@ body.system-page .sg-html-hud {
   }
 
   body.system-page .sg-html-hud {
-    padding: 6px 10px;
-    border-radius: 13px;
-    font-size: 7.5px;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 6.35px;
+    max-width: 176px;
   }
 
   body.system-page .sg-html-hud--nikitin {
-    left: 24px;
-    top: 114px;
-    max-width: 214px;
+    left: 16px;
+    top: 112px;
+    max-width: 198px;
   }
 
   body.system-page .sg-html-hud--nikitin-top {
-    right: 24px;
-    top: 34px;
-    max-width: 118px;
+    right: 18px;
+    top: 32px;
+    max-width: 102px;
   }
 
   body.system-page .sg-html-hud--wechsler {
-    bottom: 14px;
-    max-width: 200px;
+    bottom: 28px;
+    max-width: 168px;
   }
 
   body.system-page .sg-html-hud--ivu-2 {
-    top: 82px;
-    max-width: 220px;
+    top: 96px;
+    max-width: 194px;
   }
 
   body.system-page .sg-html-hud--ivu-3 {
-    right: 28px;
+    right: 22px;
     top: 34px;
-    max-width: 86px;
+    max-width: 78px;
   }
 
   body.system-page .sg-html-hud--ivu-1 {
-    bottom: -4px;
-    max-width: 160px;
+    bottom: 16px;
+    max-width: 144px;
   }
 }
