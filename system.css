@@ -3271,134 +3271,245 @@ body.system-page .sg-html-hud {
 }
 
 /* ==========================================================================
-   SCIENCE GRAPH — MOBILE HUD PREMIUM GLASS OVERRIDE
+   SCIENCE GRAPH — CLEAN PREMIUM NASA VERSION
+   ========================================================================== */
+
+/* === Layout === */
+body.system-page .sg-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 1fr);
+  gap: 36px;
+  align-items: start;
+}
+
+body.system-page .sg-graph {
+  position: relative;
+  min-width: 0;
+}
+
+body.system-page .sg-side {
+  min-width: 0;
+}
+
+/* === SVG === */
+body.system-page .sg-svg {
+  width: 100%;
+  height: auto;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #f6f3ee 0%, #ebe6de 100%);
+  box-shadow:
+    0 20px 40px rgba(10, 25, 47, 0.06),
+    inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+/* === Paths animation === */
+body.system-page .sg-path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  transition: stroke-dashoffset 1.6s cubic-bezier(.4,0,.2,1);
+}
+
+body.system-page .sg-layout[data-step="1"] .sg-layer--nikitin .sg-path {
+  stroke-dashoffset: 0;
+}
+
+body.system-page .sg-layout[data-step="2"] .sg-layer--wechsler .glass-rect {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+body.system-page .sg-layout[data-step="3"] .sg-layer--ivu .sg-path {
+  stroke-dashoffset: 0;
+}
+
+/* === Bars === */
+body.system-page .glass-rect {
+  fill: url(#cubeColumnGrad);
+  opacity: 0;
+  transform: scaleY(0.2);
+  transform-origin: bottom;
+  transition: all .8s ease;
+}
+
+/* === Desktop HUD === */
+body.system-page .sg-hud .hud-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 8px 14px;
+  border-radius: 16px;
+
+  background: rgba(25, 45, 75, 0.65);
+  color: #fff;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 24px rgba(10,25,47,0.10),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+
+/* === Tabs === */
+body.system-page .sg-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+body.system-page .sg-tab {
+  padding: 14px 20px;
+  border-radius: 999px;
+  border: 1px solid rgba(10,25,47,0.08);
+
+  background: #f4f1ec;
+  color: rgba(10,25,47,0.6);
+
+  font-weight: 600;
+  letter-spacing: .05em;
+
+  transition: all .3s ease;
+}
+
+body.system-page .sg-tab.is-active {
+  background: linear-gradient(180deg, #142c4a 0%, #0b1f36 100%);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(10,25,47,0.2);
+}
+
+/* === Text === */
+body.system-page .sg-step {
+  display: none;
+  margin-top: 18px;
+}
+
+body.system-page .sg-step.is-active {
+  display: block;
+}
+
+body.system-page .sg-step-title {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+body.system-page .sg-step-text {
+  color: rgba(10,25,47,0.7);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   MOBILE — PREMIUM HUD GLASS
    ========================================================================== */
 
 @media (max-width: 900px) {
+
+  body.system-page .sg-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* скрываем SVG HUD */
+  body.system-page .sg-hud {
+    display: none !important;
+  }
+
+  /* === HTML HUD === */
   body.system-page .sg-html-hud {
-    padding: 6px 12px !important;
-    border-radius: 16px !important;
-    max-width: 190px !important;
+    position: absolute;
+    z-index: 6;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition: all .4s ease;
+
+    padding: 6px 12px;
+    border-radius: 16px;
 
     background:
       linear-gradient(
         180deg,
-        rgba(33, 52, 82, 0.58) 0%,
-        rgba(24, 39, 64, 0.46) 100%
-      ) !important;
-    color: rgba(255, 255, 255, 0.96) !important;
+        rgba(33,52,82,0.55) 0%,
+        rgba(24,39,64,0.45) 100%
+      );
 
-    border: 1px solid rgba(210, 224, 255, 0.22) !important;
+    color: #fff;
 
-    box-shadow:
-      0 10px 24px rgba(10, 25, 47, 0.10),
-      inset 0 1px 0 rgba(255,255,255,0.16),
-      inset 0 -1px 0 rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(210,224,255,0.25);
 
-    backdrop-filter: blur(14px) saturate(115%) !important;
-    -webkit-backdrop-filter: blur(14px) saturate(115%) !important;
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 
-    font-family: var(--font-mono) !important;
-    font-size: 6.8px !important;
-    font-weight: 700 !important;
-    line-height: 1.14 !important;
-    letter-spacing: 0.055em !important;
-    text-transform: uppercase !important;
+    font-size: 7px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    text-align: center;
+    max-width: 200px;
   }
 
+  /* === Positions (выверенные) === */
+
   body.system-page .sg-html-hud--nikitin {
-    left: 18px !important;
-    top: 116px !important;
-    max-width: 214px !important;
-    text-align: center !important;
+    left: 20px;
+    top: 110px;
   }
 
   body.system-page .sg-html-hud--nikitin-top {
-    right: 20px !important;
-    top: 34px !important;
-    max-width: 112px !important;
-    text-align: center !important;
+    right: 20px;
+    top: 32px;
   }
 
   body.system-page .sg-html-hud--wechsler {
-    left: 50% !important;
-    bottom: 30px !important;
-    max-width: 182px !important;
-    text-align: center !important;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+  }
+
+  body.system-page .sg-html-hud--ivu-2 {
+    left: 50%;
+    top: 96px;
+    transform: translateX(-50%);
+  }
+
+  body.system-page .sg-html-hud--ivu-3 {
+    right: 24px;
+    top: 36px;
+  }
+
+  body.system-page .sg-html-hud--ivu-1 {
+    left: 50%;
+    bottom: 14px;
+    transform: translateX(-50%);
+  }
+
+  /* === Visibility logic === */
+
+  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin,
+  body.system-page .sg-layout[data-step="1"] .sg-html-hud--nikitin-top {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   body.system-page .sg-layout[data-step="2"] .sg-html-hud--wechsler {
-    transform: translateX(-50%) translateY(0) !important;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 
-  body.system-page .sg-html-hud--ivu-2 {
-    left: 50% !important;
-    top: 102px !important;
-    max-width: 214px !important;
-    text-align: center !important;
-  }
-
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2 {
-    transform: translateX(-50%) translateY(0) !important;
-  }
-
-  body.system-page .sg-html-hud--ivu-3 {
-    right: 26px !important;
-    top: 38px !important;
-    max-width: 86px !important;
-    text-align: center !important;
-  }
-
-  body.system-page .sg-html-hud--ivu-1 {
-    left: 50% !important;
-    bottom: 18px !important;
-    max-width: 156px !important;
-    text-align: center !important;
-  }
-
-  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1 {
-    transform: translateX(-50%) translateY(0) !important;
+  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-1,
+  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-2,
+  body.system-page .sg-layout[data-step="3"] .sg-html-hud--ivu-3 {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
   }
 }
 
+/* === Small phones === */
 @media (max-width: 640px) {
   body.system-page .sg-html-hud {
-    padding: 5px 11px !important;
-    border-radius: 15px !important;
-    font-size: 6.35px !important;
-    max-width: 176px !important;
-  }
-
-  body.system-page .sg-html-hud--nikitin {
-    left: 16px !important;
-    top: 112px !important;
-    max-width: 198px !important;
-  }
-
-  body.system-page .sg-html-hud--nikitin-top {
-    right: 18px !important;
-    top: 32px !important;
-    max-width: 102px !important;
-  }
-
-  body.system-page .sg-html-hud--wechsler {
-    bottom: 28px !important;
-    max-width: 168px !important;
-  }
-
-  body.system-page .sg-html-hud--ivu-2 {
-    top: 96px !important;
-    max-width: 194px !important;
-  }
-
-  body.system-page .sg-html-hud--ivu-3 {
-    right: 22px !important;
-    top: 34px !important;
-    max-width: 78px !important;
-  }
-
-  body.system-page .sg-html-hud--ivu-1 {
-    bottom: 16px !important;
-    max-width: 144px !important;
+    font-size: 6px;
+    padding: 5px 10px;
   }
 }
