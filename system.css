@@ -3337,3 +3337,25 @@ body.system-page .ivu-accordion__body {
     display: none;
   }
 }
+/* =========================
+   MOBILE: hide SVG HUD, show HTML HUD
+========================= */
+@media (max-width: 768px) {
+  /* прячем старые подписи внутри SVG */
+  body.system-page .sg-hud {
+    display: none !important;
+    opacity: 0 !important;
+  }
+
+  /* HTML-подписи работаем только на мобиле */
+  body.system-page .sg-html-hud {
+    display: block !important;
+  }
+}
+
+/* На десктопе HTML HUD не нужен */
+@media (min-width: 769px) {
+  body.system-page .sg-html-hud {
+    display: none !important;
+  }
+}
