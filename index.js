@@ -52,32 +52,48 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ===============================
      Анимация бегущих цифр
   =============================== */
-  const animateCounters = () => {
-    if (!mission || countersStarted || !counters.length) return;
+ const animateCounters = () => {
+  if (!mission || countersStarted || !counters.length) return;
 
-    // Запускаем, когда блок появляется на экране
-    if (mission.getBoundingClientRect().top > window.innerHeight - COUNTER_START_OFFSET) return;
+  if (mission.getBoundingClientRect().top > window.innerHeight - COUNTER_START_OFFSET) return;
 
-    countersStarted = true;
+  countersStarted = true;
 
-    counters.forEach((counter) => {
-      const target = Number(counter.textContent.trim() || 0);
-      const start = performance.now();
+  counters.forEach((counter) => {
+    const isFormula = counter.classList.contains('mission__number--formula');
+    const target = isFormula
+      ? Number(counter.dataset.base || 0)
+      : Number(counter.textContent.trim() || 0);
 
-      const tick = (time) => {
-        const progress = Math.min((time - start) / COUNTER_DURATION, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        counter.textContent = String(Math.round(target * eased));
+    if (!Number.isFinite(target) || target <= 0) return;
 
-        if (progress < 1) {
-          requestAnimationFrame(tick);
-        }
-      };
+    const start = performance.now();
 
+    const tick = (time) => {
+      const progress = Math.min((time - start) / COUNTER_DURATION, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const value = Math.round(target * eased);
+
+      if (isFormula) {
+        counter.textContent = `${value} × 3`;
+      } else {
+        counter.textContent = String(value);
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(tick);
+      }
+    };
+
+    if (isFormula) {
+      counter.textContent = '0 × 3';
+    } else {
       counter.textContent = '0';
-      requestAnimationFrame(tick);
-    });
-  };
+    }
+
+    requestAnimationFrame(tick);
+  });
+};
 
   /* ===============================
      ПОДКЛЮЧАЕМСЯ К ГЛОБАЛЬНОМУ СКРОЛЛУ
@@ -100,3 +116,35 @@ document.addEventListener('DOMContentLoaded', () => {
   goToSlide(0);
   startSlider();
 });
+  /* ===============================
+     ПЛАВАЮЩЕЕ МЕНЮ ПО БЛОКАМ
+  =============================== */
+  const anchorLinks = Array.from(document.querySelectorAll('.page-anchor-link'));
+  const anchorSections = anchorLinks
+    .map((link) => {
+      const id = link.getAttribute('href');
+      if (!id || !id.startsWith('#')) return null;
+      const section = document.querySelector(id);
+      return section ? { link, section } : null;
+    })
+    .filter(Boolean);
+
+  const updateActiveAnchor = () => {
+    if (!anchorSections.length) return;
+
+    const offset = 160;
+    let current = anchorSections[0];
+
+    anchorSections.forEach((item) => {
+      const top = item.section.getBoundingClientRect().top;
+      if (top - offset <= 0) current = item;
+    });
+
+    anchorSections.forEach((item) => {
+      item.link.classList.toggle('active', item === current);
+    });
+  };
+
+  window.addEventListener('scroll', updateActiveAnchor, { passive: true });
+  window.addEventListener('resize', updateActiveAnchor);
+  updateActiveAnchor();
