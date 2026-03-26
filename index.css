@@ -1167,6 +1167,28 @@
 .index-page .hero-actions--spaced {
   margin-top: 36px;
 }
+@media (max-width: 768px) {
+  .index-page .hero-actions--spaced {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .index-page .hero-actions--spaced .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    min-height: 54px;
+    padding: 0 18px;
+  }
+
+  .index-page .hero-actions--spaced .btn-outline {
+    color: var(--navy);
+    background: rgba(255,255,255,.96);
+    border: 1px solid rgba(13,27,47,.12);
+  }
+}
 
 .index-page .cube-visual {
   position: relative;
@@ -2747,4 +2769,135 @@
 /* убираем лишнюю дыру после удаления routes */
 .index-page .start-grid {
   margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .index-page .cube-right-col {
+    overflow: hidden;
+  }
+
+  .index-page .eng-panel {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
+  }
+
+  .index-page .panel-track {
+    width: 100%;
+  }
+
+  .index-page .panel-step {
+    min-width: 0;
+    padding: 10px 8px 12px;
+  }
+
+  .index-page .step-title {
+    font-size: 8px;
+    line-height: 1.2;
+  }
+
+  .index-page .step-desc {
+    font-size: 7px;
+    line-height: 1.2;
+  }
+
+  .index-page .model-id {
+    font-size: 8px;
+    right: 8px;
+    bottom: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .index-page .section-padding {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .index-page .mission {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .index-page .problem-band,
+  .index-page .result-band,
+  .index-page .trust-strip,
+  .index-page .not-just-reading,
+  .index-page .site-manifesto {
+    margin-top: 0;
+  }
+
+  .index-page .section-header {
+    margin-bottom: 28px;
+  }
+
+  .index-page .hero {
+    padding-bottom: 20px;
+  }
+
+  .index-page .trust-strip {
+    padding-top: 42px;
+    padding-bottom: 42px;
+  }
+}
+/* ==========================================================================
+   PAGE ANCHOR NAV
+   ========================================================================== */
+
+.page-anchor-nav {
+  position: sticky;
+  top: 72px;
+  z-index: 80;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 12px 18px;
+  background: rgba(248,246,241,.92);
+  border-bottom: 1px solid rgba(13,27,47,.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  scrollbar-width: none;
+}
+
+.page-anchor-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.page-anchor-link {
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(13,27,47,.10);
+  background: rgba(255,255,255,.82);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  letter-spacing: .04em;
+  text-decoration: none;
+  transition:
+    background-color .25s ease,
+    border-color .25s ease,
+    color .25s ease,
+    transform .25s ease;
+}
+
+.page-anchor-link:hover,
+.page-anchor-link.active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .page-anchor-nav {
+    top: 68px;
+    padding: 10px 12px;
+    gap: 8px;
+  }
+
+  .page-anchor-link {
+    padding: 8px 12px;
+    font-size: .7rem;
+  }
 }
