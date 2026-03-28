@@ -33,6 +33,27 @@
                 <span class="header__logo-title">Институт Врожденной Успеваемости</span>
                 <span class="header__logo-sub">Инженерный код языка</span>
             </a>
+           <div class="page-sections-bar page-sections-bar--header">
+  <div class="page-sections">
+    <button
+      class="page-sections__toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="page-sections-panel"
+    >
+      <span class="page-sections__label">Разделы</span>
+      <span class="page-sections__icon">+</span>
+    </button>
+
+    <div class="page-sections__panel" id="page-sections-panel" hidden>
+      <a href="#science" class="page-sections__link">Научная база</a>
+      <a href="#volume" class="page-sections__link">Метод объёма</a>
+      <a href="#automation" class="page-sections__link">Автоматизация</a>
+      <a href="#result" class="page-sections__link">Результат</a>
+      <a href="#start" class="page-sections__link">Как начать</a>
+    </div>
+  </div>
+</div> 
 
            <nav class="nav" aria-label="Основная навигация">
                 <a href="./index.html" class="nav__link">Главная</a>
@@ -48,756 +69,481 @@
         </div>
     </header>
 
-    <main id="content">
-        <section class="system-hero container reveal">
-            <div class="system-hero__kicker">Архитектура метода ИВУ</div>
+  <main id="content">
 
-            <p class="system-hero__pretitle">Никитин • Векслер • Метод объёма</p>
+  <section class="system-hero container reveal">
+    <div class="system-hero-shell">
+      <div class="system-hero__kicker">Архитектура метода ИВУ</div>
 
-            <h1 class="system-hero__title">
-                <span class="system-hero__line-1">Архитектура метода</span>
-                <span class="system-hero__line-2">инженерия языка и памяти</span>
-            </h1>
+      <p class="system-hero__pretitle">Никитин • Векслер • Метод объёма</p>
 
-            <p class="system-hero__description">
-                Метод ИВУ объединяет идеи Никитина, тесты Векслера
-                и структуру русского языка в единую систему развития
-                памяти, мышления и чтения ребёнка.
-            </p>
-        </section>
+      <h1 class="system-hero__title">
+        <span class="system-hero__line-1">Почему дети теряют смысл при чтении</span>
+        <span class="system-hero__line-2">и как метод объёма это исправляет</span>
+      </h1>
 
-        <section class="container">
-           <div class="premium-panel reveal" id="science">
-    <span id="nikitin-graph"></span>
-    <span id="wechsler-graph"></span>
-    
-    <span class="qa-label">Научный фундамент</span>
-    <h3 class="h3">Никитин, Векслер и архитектура метода ИВУ</h3>
-                <p class="p">
-                    Мы соединяем идеи Никитина и Векслера о развитии интеллекта
-                    в управляемую систему ИВУ — не вместо классического обучения,
-                    а как его усиление.
-                    <strong>Когда растёт объём оперативной памяти — ускоряется анализ и понимание.</strong>
-                    ИВУ реализует эту идею через язык и структуру азбуки.
-                </p>
+      <p class="system-hero__description">
+        Проблема не в ребёнке.
+        Проблема в том, что обучение не учитывает объём памяти.
+        Метод ИВУ показывает, как через правильную структуру нагрузки
+        ребёнок начинает удерживать, понимать и связывать смысл.
+      </p>
+    </div>
+  </section>
 
-             <div class="science-graph-section">
-    <div class="sg-layout" data-step="0" id="liveGraph">
-        <div class="sg-graph">
-            <svg aria-label="Инженерный график развития интеллекта" class="sg-svg" role="img" viewBox="0 0 460 260">
-                <defs>
-                    <linearGradient id="cubeColumnGrad" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stop-color="#EFECE6"></stop>
-                        <stop offset="100%" stop-color="#0A192F"></stop>
-                    </linearGradient>
-                </defs>
+  <section class="container">
+    <div class="premium-panel reveal" id="science">
+      <span class="qa-label">Научный фундамент</span>
+      <h3 class="h3">Как растёт интеллект ребёнка</h3>
 
-                <g stroke="var(--stone)" stroke-width="1">
-                    <line x1="0" x2="460" y1="65" y2="65"></line>
-                    <line x1="0" x2="460" y1="130" y2="130"></line>
-                    <line x1="0" x2="460" y1="195" y2="195"></line>
-                    <line x1="115" x2="115" y1="0" y2="260"></line>
-                    <line x1="230" x2="230" y1="0" y2="260"></line>
-                    <line x1="345" x2="345" y1="0" y2="260"></line>
-                </g>
+      <p class="p">
+        Метод ИВУ основан не на догадках, а на понятной логике развития памяти.
+        Чтобы это объяснить, важно увидеть три ключевые идеи:
+        сначала мозг привыкает к объёму, потом память удерживает больше,
+        а затем чтение начинает складываться быстрее.
+      </p>
 
-                <g stroke="rgba(10,25,47,0.2)" stroke-width="1.5">
-                    <line stroke-dasharray="3 3" x1="30" x2="430" y1="230" y2="230"></line>
-                    <path d="M425 225 L435 235 M425 235 L435 225"></path>
-                    <line stroke-dasharray="3 3" x1="40" x2="40" y1="240" y2="30"></line>
-                    <path d="M35 35 L45 45 M35 45 L45 35"></path>
-                </g>
+      <div class="science-graph-section">
+        <div class="sg-layout" data-step="0" id="liveGraph">
 
-                <text fill="rgba(10,25,47,0.4)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" letter-spacing="0.1em" x="50" y="42">
-                    ИНТЕЛЛЕКТ / ЁМКОСТЬ ПАМЯТИ
-                </text>
+          <div class="sg-graph">
+            <svg class="sg-svg" viewBox="0 0 460 260" role="img" aria-label="Как работает метод ИВУ">
+              <g stroke="rgba(10,25,47,0.08)" stroke-width="1">
+                <line x1="0" y1="65" x2="460" y2="65"></line>
+                <line x1="0" y1="130" x2="460" y2="130"></line>
+                <line x1="0" y1="195" x2="460" y2="195"></line>
+              </g>
 
-                <text fill="rgba(10,25,47,0.4)" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700" letter-spacing="0.1em" x="285" y="222">
-                    ВРЕМЯ / НАГРУЗКА
-                </text>
+              <!-- НИКИТИН -->
+              <g class="sg-layer sg-layer--nikitin">
+                <path
+                  class="sg-path"
+                  d="M40 220 C 120 215, 180 210, 240 170 C 280 140, 320 100, 400 80"
+                  stroke="#8C9CAE"
+                  stroke-width="3"
+                  fill="none"></path>
 
-                <g class="sg-layer sg-layer--nikitin">
-                    <path class="sg-path" d="M40 220 C 130 215, 190 210, 250 170 C 290 140, 320 100, 390 80" stroke="#8C9CAE" stroke-width="3"></path>
+                <foreignObject class="sg-hud sg-hud--nikitin" x="60" y="195" width="190" height="34">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag">
+                    01 • СНАЧАЛА СЛОЖНО
+                  </div>
+                </foreignObject>
 
-                    <foreignObject class="sg-hud sg-hud--nikitin" height="34" width="230" x="55" y="195">
-                        <div class="hud-tag" xmlns="http://www.w3.org/1999/xhtml">
-                            <span class="hud-num">01</span> НИКИТИН: ОПЕРЕЖАЮЩАЯ СРЕДА
-                        </div>
-                    </foreignObject>
+                <foreignObject class="sg-hud sg-hud--nikitin" x="300" y="90" width="130" height="34">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag">
+                    ПОТОМ БЫСТРО
+                  </div>
+                </foreignObject>
+              </g>
 
-                    <foreignObject class="sg-hud sg-hud--nikitin-top" height="34" width="130" x="315" y="92">
-                        <div class="hud-tag" xmlns="http://www.w3.org/1999/xhtml">ТОЧКА ВЗЛЁТА</div>
-                    </foreignObject>
-                </g>
+              <!-- ВЕКСЛЕР -->
+              <g class="sg-layer sg-layer--wechsler">
+                <rect class="glass-rect" x="200" y="180" width="30" height="50" rx="6"></rect>
+                <rect class="glass-rect" x="260" y="140" width="30" height="90" rx="6"></rect>
+                <rect class="glass-rect" x="320" y="90" width="30" height="140" rx="6"></rect>
 
-                <g class="sg-layer sg-layer--wechsler">
-                    <rect class="glass-rect" height="50" rx="6" width="36" x="215" y="180"></rect>
-                    <rect class="glass-rect" height="90" rx="6" width="36" x="275" y="140"></rect>
-                    <rect class="glass-rect" height="140" rx="6" width="36" x="335" y="90"></rect>
+                <foreignObject class="sg-hud sg-hud--wechsler" x="110" y="108" width="270" height="40">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--blue">
+                    02 • ПАМЯТЬ: СКОЛЬКО ПОМЕЩАЕТСЯ
+                  </div>
+                </foreignObject>
 
-                    <foreignObject class="sg-hud sg-hud--wechsler" height="40" width="310" x="108" y="106">
-                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">
-                            <span class="hud-num">02</span> ВЕКСЛЕР: СКОЛЬКО ЗАДАЧ ДЕРЖИТ ГОЛОВА
-                        </div>
-                    </foreignObject>
+                <foreignObject class="sg-hud sg-hud--wechsler" x="168" y="226" width="84" height="34">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag" style="font-size:8px;">
+                    ПО ОДНОЙ
+                  </div>
+                </foreignObject>
 
-                    <g class="sg-hud sg-hud--wechsler-bars">
-                        <foreignObject height="34" width="84" x="170" y="226">
-                            <div class="hud-tag" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">1 ЕДИНИЦА</div>
-                        </foreignObject>
+                <foreignObject class="sg-hud sg-hud--wechsler" x="242" y="226" width="110" height="34">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag" style="font-size:8px;">
+                    СРАЗУ НЕСКОЛЬКО
+                  </div>
+                </foreignObject>
+              </g>
 
-                        <foreignObject height="34" width="84" x="245" y="226">
-                            <div class="hud-tag" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">2 ЕДИНИЦЫ</div>
-                        </foreignObject>
+              <!-- ИВУ -->
+              <g class="sg-layer sg-layer--ivu">
+                <path
+                  class="sg-path"
+                  d="M40 220 C 100 215, 150 150, 210 120 C 270 90, 320 70, 410 45"
+                  stroke="var(--navy)"
+                  stroke-width="3.5"
+                  fill="none"></path>
 
-                        <foreignObject height="34" width="84" x="320" y="226">
-                            <div class="hud-tag hud-tag--blue" style="font-size:8px;" xmlns="http://www.w3.org/1999/xhtml">ОБЪЁМ</div>
-                        </foreignObject>
-                    </g>
-                </g>
+                <foreignObject class="sg-hud sg-hud--ivu-1" x="100" y="160" width="200" height="34">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--blue">
+                    20 СОГЛАСНЫХ — ОСНОВА
+                  </div>
+                </foreignObject>
 
-                <g class="sg-layer sg-layer--ivu">
-                    <path class="sg-path" d="M40 220 C 100 215, 150 150, 210 120 C 270 90, 320 70, 410 45" stroke="var(--navy)" stroke-width="3.5"></path>
+                <foreignObject class="sg-hud sg-hud--ivu-2" x="150" y="60" width="220" height="40">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--blue">
+                    «А» СОЕДИНЯЕТ И УСКОРЯЕТ
+                  </div>
+                </foreignObject>
 
-                    <foreignObject class="sg-hud sg-hud--ivu-1" height="34" width="175" x="105" y="160">
-                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">ЯДРО: 20 СОГЛАСНЫХ</div>
-                    </foreignObject>
-
-                    <foreignObject class="sg-hud sg-hud--ivu-2" height="42" width="250" x="150" y="52">
-                        <div class="hud-tag hud-tag--blue" xmlns="http://www.w3.org/1999/xhtml">ПАРАЛЛЕЛЬНЫЕ КНИГИ + АВТОМАТИЗАЦИЯ</div>
-                    </foreignObject>
-
-                    <foreignObject class="sg-hud sg-hud--ivu-3" height="36" width="110" x="325" y="12">
-                        <div class="hud-tag hud-tag--solid" xmlns="http://www.w3.org/1999/xhtml">100 КНИГ</div>
-                    </foreignObject>
-                </g>
+                <foreignObject class="sg-hud sg-hud--ivu-3" x="330" y="20" width="100" height="34">
+                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--solid">
+                    100 КНИГ
+                  </div>
+                </foreignObject>
+              </g>
             </svg>
+          </div>
 
-            <!-- mobile HUD -->
-            <div class="sg-html-hud sg-html-hud--nikitin">НИКИТИН: ОПЕРЕЖАЮЩАЯ СРЕДА</div>
-            <div class="sg-html-hud sg-html-hud--nikitin-top">ТОЧКА ВЗЛЁТА</div>
-
-            <div class="sg-html-hud sg-html-hud--wechsler">ВЕКСЛЕР: ОБЪЁМ ОПЕРАТИВНОЙ ПАМЯТИ</div>
-
-            <div class="sg-html-hud sg-html-hud--ivu-1">ЯДРО: 20 СОГЛАСНЫХ</div>
-            <div class="sg-html-hud sg-html-hud--ivu-2">ПАРАЛЛЕЛЬНЫЕ КНИГИ + АВТОМАТИЗАЦИЯ</div>
-            <div class="sg-html-hud sg-html-hud--ivu-3">100 КНИГ</div>
-        </div>
-
-        <div class="sg-side">
-            <div class="sg-right-title">Никитин, Векслер и метод объёма ИВУ</div>
+          <div class="sg-side">
+            <div class="sg-right-title">Как работает метод ИВУ</div>
 
             <div class="sg-tabs" role="tablist">
-                <button class="sg-tab" data-step="1" type="button">01. НИКИТИН</button>
-                <button class="sg-tab" data-step="2" type="button">02. ВЕКСЛЕР</button>
-                <button class="sg-tab" data-step="3" type="button">03. ИВУ</button>
+              <button class="sg-tab" data-step="1" type="button">01. НИКИТИН</button>
+              <button class="sg-tab" data-step="2" type="button">02. ВЕКСЛЕР</button>
+              <button class="sg-tab" data-step="3" type="button">03. ИВУ</button>
             </div>
 
             <div class="sg-text-wrapper">
-                <div class="sg-step" id="sg-step-1">
-                    <div class="sg-step-title">Никитин: опережающая среда</div>
-                    <p class="sg-step-text">
-                        Ребёнок раньше нормы получает сложную среду: игры, задачи и материалы.
-                        Сначала кажется, что развитие замедляется — мозг обрабатывает объём.
-                        Затем наступает точка взлёта: накопленный опыт превращается в скачок интеллекта.
-                    </p>
-                </div>
+              <div class="sg-step" id="sg-step-1">
+                <div class="sg-step-title">Сначала сложно — потом легко</div>
+                <p class="sg-step-text">
+                  Ребёнок сразу видит не один элемент, а целую среду.
+                  Сначала это кажется сложным.
+                  Потом мозг привыкает к объёму — и развитие идёт быстрее.
+                </p>
+              </div>
 
-                <div class="sg-step" id="sg-step-2">
-                    <div class="sg-step-title">Векслер: сколько задач держит голова</div>
-                    <p class="sg-step-text">
-                        Тест Векслера измеряет не «ум», а объём рабочей памяти.
-                        Один стимул — одна мысль. Два стимула — две параллельные мысли.
-                        Объём возникает тогда, когда ребёнок удерживает несколько задач одновременно.
-                    </p>
-                </div>
+              <div class="sg-step" id="sg-step-2">
+                <div class="sg-step-title">Чем больше помещается — тем быстрее</div>
+                <p class="sg-step-text">
+                  Если память удерживает только одно, обучение идёт медленно.
+                  Если удерживает сразу несколько элементов, понимание ускоряется.
+                </p>
+              </div>
 
-                <div class="sg-step" id="sg-step-3">
-                    <div class="sg-step-title">ИВУ: управляемый объём</div>
-                    <p class="sg-step-text">
-                        Метод ИВУ задаёт правильную когнитивную нагрузку: чтение трёх книг разворотами,
-                        ядро из 20 согласных и автоматизацию на «А». Так расширяется рабочая память
-                        по принципам Векслера и появляется эффект Никитина.
-                    </p>
-                </div>
+              <div class="sg-step" id="sg-step-3">
+                <div class="sg-step-title">Не по одной букве — а сразу системой</div>
+                <p class="sg-step-text">
+                  В ИВУ ребёнок работает не с одной буквой, а сразу со структурой.
+                  20 согласных дают основу, «А» помогает соединять,
+                  и чтение начинает складываться быстрее.
+                </p>
+              </div>
             </div>
 
             <div style="margin-top: 24px;">
-                <a class="btn btn-outline" href="./foundation.html">Графики и документы → Фонд</a>
+              <a class="btn btn-outline" href="./foundation.html">Смотреть доказательства →</a>
             </div>
+          </div>
+
         </div>
+      </div>
     </div>
-</div>
+  </section>
 
+  <section class="container">
+    <hr class="hr reveal">
+
+    <div id="volume" class="reveal">
+      <div class="section-head">
+        <span class="qa-label">Обычный путь и путь ИВУ</span>
+        <h2 class="h2">Чем метод объёма отличается от обычного обучения</h2>
+        <p class="sub">
+          Обычное обучение дробит материал и заставляет мозг всё время переключаться.
+          ИВУ, наоборот, помогает удерживать несколько связанных элементов сразу.
+        </p>
+      </div>
+
+      <div class="method-compare">
+        <article class="method-card method-card--old">
+          <div class="method-card__topline">
+            <span class="method-badge method-badge--old">ПРОБЛЕМА</span>
+            <div class="method-formula">по очереди → разрыв смысла → перегрузка</div>
+          </div>
+
+          <h3 class="method-card__title">Обычное обучение дробит смысл</h3>
+
+          <p class="method-card__lead">
+            Чтение, письмо и математика идут как отдельные куски.
+            Мозг не собирает их в одну систему.
+          </p>
+
+          <div class="anim-zone">
+            <div class="slot-container">
+              <div class="slot-item">Чтение</div>
+              <div class="slot-item">Письмо</div>
+              <div class="slot-item">Математика</div>
+              <div class="buffer-clear">
+                <span class="bc-title">Буфер очищен</span>
+                <span class="bc-sub">переключение контекста</span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section class="container">
-            <hr class="hr reveal">
+          <div class="method-copy">
+            <p class="p">
+              Ребёнок постоянно переключается между задачами.
+              Из-за этого быстро устаёт и теряет смысл.
+            </p>
+          </div>
 
-            <div id="method" class="reveal">
-                <div class="section-head method-head">
-                    <span class="qa-label">Память ребёнка</span>
-                    <h2 class="h2">Объём без перегруза: как работает память ребёнка</h2>
-                    <p class="sub">
-                        В обычной школе тоже много предметов и уроков,
-                        поэтому кажется, что ребёнок получает большой объём информации.<br>
-                        Но внутри обучение устроено иначе.
-                    </p>
-                </div>
+          <div class="method-result">
+            Итог: знания есть, а цельной картины нет.
+          </div>
+        </article>
 
-                <div class="method-compare">
-                    <article class="method-card method-card--old">
-                        <div class="method-card__topline">
-                            <span class="method-badge method-badge--old">ПРОБЛЕМА</span>
-                            <div class="method-formula">Один предмет → один буфер памяти → переключение</div>
-                        </div>
+        <article class="method-card method-card--new">
+          <div class="method-card__topline">
+            <span class="method-badge method-badge--new">РЕШЕНИЕ ИВУ</span>
+            <div class="method-formula">связь → удержание → понимание</div>
+          </div>
 
-                        <h3 class="method-card__title">Линейное обучение: переключение вместо объёма</h3>
-                        <p class="method-card__lead">
-                            Мозг ребёнка обрабатывает предметы по очереди,
-                            а не как единую систему.
-                        </p>
+          <h3 class="method-card__title">Метод объёма соединяет смысл в один процесс</h3>
 
-                        <div class="anim-zone">
-                            <div class="slot-container">
-                                <div class="slot-item si-1">Чтение</div>
-                                <div class="slot-item si-2">Письмо</div>
-                                <div class="slot-item si-3">Математика</div>
-                                <div class="buffer-clear">
-                                    <span class="bc-title">Буфер очищен</span>
-                                    <span class="bc-sub">переключение контекста</span>
-                                </div>
-                            </div>
-                        </div>
+          <p class="method-card__lead">
+            Вместо постоянного переключения ребёнок удерживает несколько связанных элементов сразу.
+          </p>
 
-                        <div class="method-copy">
-                            <p class="p">
-                                На первый взгляд кажется, что программа даёт объём:
-                                у ребёнка есть и чтение, и письмо, и математика.
-                            </p>
-                            <p class="p">
-                                <strong>Но внутри всё идёт по очереди:</strong>
-                                один предмет завершается, затем включается следующий.
-                                Для мозга это не объём, а постоянное переключение.
-                            </p>
-                        </div>
+          <div class="anim-zone">
+            <div class="ivu-panel">
+              <div class="wp-books">
+                <div class="wp-book">Книга 1</div>
+                <div class="wp-book">Книга 2</div>
+                <div class="wp-book">Книга 3</div>
+              </div>
 
-                        <div class="method-result">
-                            Линейное переключение контекста → стирание буфера → навыки не объединяются.
-                        </div>
-                    </article>
+              <div class="wp-beams">
+                <div class="wp-beam"></div>
+                <div class="wp-beam"></div>
+                <div class="wp-beam"></div>
+              </div>
 
-                    <article class="method-card method-card--new">
-                        <div class="method-card__topline">
-                            <span class="method-badge method-badge--new">РЕШЕНИЕ ИВУ</span>
-                            <div class="method-formula">Три разворота → один принцип → синтез</div>
-                        </div>
-
-                        <h3 class="method-card__title">Метод ИВУ: три разворота для объёмного мышления</h3>
-                        <p class="method-card__lead">Мы не увеличиваем количество — мы меняем способ восприятия.</p>
-
-                        <div class="anim-zone">
-                            <div class="ivu-panel">
-                                <div class="wp-books">
-                                    <div class="wp-book">Книга 1</div>
-                                    <div class="wp-book">Книга 2</div>
-                                    <div class="wp-book">Книга 3</div>
-                                </div>
-                                <div class="wp-beams">
-                                    <div class="wp-beam bm-1"></div>
-                                    <div class="wp-beam bm-2"></div>
-                                    <div class="wp-beam bm-3"></div>
-                                </div>
-                                <div class="wp-base">
-                                    <div class="wp-lines"></div>
-                                    <div class="wp-core"></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="method-copy">
-                            <p class="p">В ИВУ ребёнок видит не один учебник, а три разворота одновременно — один принцип сразу с трёх сторон.</p>
-                            <p class="p"><strong>Мозг перестаёт зубрить страницу и начинает видеть алгоритм.</strong> Так появляется объём — расширение рабочей памяти без перегруза.</p>
-                        </div>
-
-                        <div class="method-result method-result--accent">
-                            Параллельный вход → синтез алгоритма → объём без перегруза.
-                        </div>
-                    </article>
-                </div>
+              <div class="wp-base">
+                <div class="wp-lines"></div>
+                <div class="wp-core"></div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section class="container">
-            <hr class="hr reveal">
+          <div class="method-copy">
+            <p class="p">
+              В ИВУ один принцип показывается сразу с нескольких сторон.
+              Так мозг перестаёт зубрить куски и начинает видеть систему.
+            </p>
+          </div>
 
-            <div class="grid2 reveal">
-                <div class="premium-panel split-panel-col" id="core" style="margin-bottom:0;">
-                    <div class="split-panel-content">
-                        <span class="qa-label">Код языка</span>
-                        <h3 class="h3">Архитектура языка в цифрах</h3>
-                        <ul class="lab-list">
-                            <li><strong>20 согласных</strong> — ядро русской азбуки.</li>
-                            <li><strong>10 гласных</strong> — ритм 10 месяцев учебного года.</li>
-                            <li><strong>5–6 лет</strong> — работа с пятёрками в цикле 36 недель.</li>
-                            <li><strong>6–7 лет</strong> — автоматизация и выход к 60 словам.</li>
-                            <li><strong>9 текстов на А</strong> — переход к устойчивому чтению.</li>
-                        </ul>
-                    </div>
+          <div class="method-result method-result--accent">
+            Итог: ребёнок понимает быстрее, удерживает больше и учится увереннее.
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-                    <div class="visual-section">
-                        <div class="v-matrix-grid">
-                            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-                            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-                            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-                            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-                        </div>
+  <section class="container">
+    <hr class="hr reveal">
 
-                        <p class="p small muted matrix-note">
-                            Расстановка 20 согласных раскрывается только в Клубе.
-                        </p>
-                    </div>
-                </div>
+    <div class="grid2 reveal">
+      <div class="premium-panel split-panel-col" id="core" style="margin-bottom:0;">
+        <div class="split-panel-content">
+          <span class="qa-label">Основа метода</span>
+          <h3 class="h3">20 согласных и «А» как точка запуска</h3>
+          <p class="p">
+            В ИВУ язык показывается не как россыпь букв, а как структура.
+            20 согласных создают основу, а «А» помогает быстро запустить
+            соединение звуков и чтения.
+          </p>
+        </div>
 
-                <div class="premium-panel split-panel-col" id="automationA" style="margin-bottom:0;">
-                    <div class="split-panel-content">
-                        <span class="qa-label">Сигнал чтения</span>
-                        <h3 class="h3">«А» как Enter: запуск механизма</h3>
-                        <p class="p">
-                            В ИВУ буква «А» работает как технический сигнал.
-                            Через неё запускается механизм автоматизации чтения.
-                        </p>
-                    </div>
+        <div class="visual-section">
+          <div class="v-matrix-grid">
+            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
+            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
+            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
+            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
+          </div>
 
-                    <div class="visual-section">
-                        <div class="compare">
-                            <div class="compare__col compare__col--image">
-                                <div class="compare__cap">Образный режим</div>
-                                <div class="key-btn-row">
-                                    <div class="key-btn" style="color:var(--text-muted); border-color:var(--stone);">А</div>
-                                    <span class="key-sign">= ОБРАЗ</span>
-                                </div>
-                            </div>
+          <p class="p small muted matrix-note">
+            Полная расстановка матрицы открывается в Клубе Кручучу.
+          </p>
+        </div>
+      </div>
 
-                            <div class="compare__mid">→</div>
+      <div class="premium-panel split-panel-col" id="automation" style="margin-bottom:0;">
+        <div class="split-panel-content">
+          <span class="qa-label">Запуск чтения</span>
+          <h3 class="h3">Почему в ИВУ важна буква «А»</h3>
+          <p class="p">
+            В обычном подходе буква остаётся образом.
+            В ИВУ «А» работает как сигнал запуска:
+            помогает соединять звуки и переводить чтение в автоматический режим.
+          </p>
+        </div>
 
-                            <div class="compare__col compare__col--ivu">
-                                <div class="compare__cap">Инженерный режим</div>
-                                <div class="key-btn-row">
-                                    <div class="key-btn">A</div>
-                                    <span class="key-sign active">= ENTER</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <p class="p small muted" style="text-align:center; margin-top:16px;">
-                            В классическом подходе «А» — образ («арбуз»).
-                            В ИВУ «А» работает как кнопка алгоритма.
-                            Механизм чтения доводится до автоматизма.
-                        </p>
-                    </div>
-                </div>
+        <div class="visual-section">
+          <div class="compare">
+            <div class="compare__col">
+              <div class="compare__cap">Обычный подход</div>
+              <div class="key-btn-row">
+                <div class="key-btn" style="color:var(--text-muted); border-color:var(--stone);">А</div>
+                <span class="key-sign">= образ</span>
+              </div>
             </div>
-        </section>
 
-     <section class="container reveal">
+            <div class="compare__mid">→</div>
+
+            <div class="compare__col">
+              <div class="compare__cap">ИВУ</div>
+              <div class="key-btn-row">
+                <div class="key-btn">A</div>
+                <span class="key-sign active">= запуск</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="p small muted" style="text-align:center; margin-top:16px;">
+            Один принцип запускается на «А» и затем переносится на другие гласные.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container reveal">
     <div class="system-core-transfer">
-        <div class="system-core-transfer__inner">
-            <div class="system-core-transfer__topline">Алгоритм автоматизации чтения</div>
+      <div class="system-core-transfer__inner">
+        <div class="system-core-transfer__topline">Как переносится навык</div>
 
-            <div class="system-core-transfer__layout">
-                <div class="system-core-transfer__panel system-core-transfer__panel--main">
-                    <div class="system-core-transfer__label">Ядро языка</div>
-                    <div class="system-core-transfer__title">20 согласных + «А»</div>
-                    <div class="system-core-transfer__sub">
-                        Точка запуска, через которую ребёнок осваивает принцип слияния звуков.
-                    </div>
-                </div>
+        <div class="system-core-transfer__layout">
+          <div class="system-core-transfer__panel system-core-transfer__panel--main">
+            <div class="system-core-transfer__label">Точка запуска</div>
+            <div class="system-core-transfer__title">20 согласных + «А»</div>
+            <div class="system-core-transfer__sub">
+              Сначала ребёнок понимает один принцип соединения.
+            </div>
+          </div>
 
-                <div class="system-core-transfer__flow">
-                    <div class="system-core-transfer__arrow">⟶</div>
+          <div class="system-core-transfer__flow">
+            <div class="system-core-transfer__arrow">⟶</div>
 
-                    <div class="system-core-transfer__vowels">
-                        <span>О</span>
-                        <span>У</span>
-                        <span>И</span>
-                        <span>Э</span>
-                    </div>
-
-                    <div class="system-core-transfer__micro">другие гласные языка</div>
-                </div>
-
-                <div class="system-core-transfer__panel system-core-transfer__panel--text">
-                    <div class="system-core-transfer__text">
-                        <strong>Механизм чтения запущен.</strong>
-                        Освоив принцип слияния на «А», ребёнок переносит его на другие гласные без повторного обучения.
-                    </div>
-                </div>
+            <div class="system-core-transfer__vowels">
+              <span>О</span>
+              <span>У</span>
+              <span>И</span>
+              <span>Э</span>
             </div>
 
-            <div class="system-core-transfer__formula">
-                Один принцип ⟶ весь язык
+            <div class="system-core-transfer__micro">другие гласные</div>
+          </div>
+
+          <div class="system-core-transfer__panel system-core-transfer__panel--text">
+            <div class="system-core-transfer__text">
+              <strong>Дальше механизм переносится на весь язык.</strong>
+              Ребёнок уже не учится заново, а расширяет один понятный принцип.
             </div>
+          </div>
         </div>
+
+        <div class="system-core-transfer__formula">
+          Один принцип ⟶ много слов ⟶ чтение
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-        <section class="container">
-            <hr class="hr reveal">
+  <section class="container">
+    <hr class="hr reveal">
 
-            <div class="premium-panel reveal" id="mmng">
-                <span class="qa-label">Спокойный маршрут</span>
-                <h3 class="h3">ММНГ — понятный путь от сентября до июня</h3>
-                <p class="p">
-                    Математическая модель начальной грамотности звучит строго,
-                    но по сути это просто ясный и спокойный маршрут обучения.
-                    <strong>ММНГ строится на естественном ритме:
-                    4 пятёрки согласных укладываются в 4 недели,
-                    а 10 гласных — в 10 месяцев учебного года.</strong>
-                </p>
+    <div class="premium-panel reveal" id="result">
+      <span class="qa-label">Результат метода</span>
+      <h3 class="h3">К чему ведёт метод ИВУ</h3>
 
-                <div class="timeline">
-                    <div class="timeline-step">
-                        <div class="timeline-step__num">1</div>
-                        <div class="timeline-step__title">Пятёрки согласных</div>
-                        <div class="timeline-step__text">
-                            4 недели работы с ядром языка — рядами матрицы 5×4.
-                            Ребёнок видит язык как цельную структуру, а не как россыпь букв.
-                        </div>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="timeline-step__num">2</div>
-                        <div class="timeline-step__title">Учебный год</div>
-                        <div class="timeline-step__text">
-                            10 гласных соответствуют 10 месяцам учебного года.
-                            В 5–6 лет это спокойная база без принуждения к скорости:
-                            навык закрепляется глубоко и даёт ребёнку уверенность.
-                        </div>
-                    </div>
-                    <div class="timeline-step">
-                        <div class="timeline-step__num">3</div>
-                        <div class="timeline-step__title">Автоматизация и комплекс</div>
-                        <div class="timeline-step__text">
-                            В 6–7 лет ребёнок выходит к чтению текста за 1–2 минуты.
-                            В этот же маршрут встроены устный счёт и развитие моторики —
-                            чтение, речь и математика растут вместе, формируя объём.
-                        </div>
-                    </div>
-                </div>
+      <p class="p">
+        Метод ИВУ нужен не ради красивой теории.
+        Его задача — сделать чтение устойчивым, понятным и уверенным.
+      </p>
 
-               <details class="ivu-accordion">
-    <summary>
-  <span class="accordion-summary-main">
-    <span class="accordion-summary-title">Программы ИВУ: от 3 до 11 лет</span>
-    <span class="accordion-summary-hint">Нажмите, чтобы открыть возрастные модули</span>
-  </span>
-</summary>
-                    <div class="ivu-accordion__body">
-                        <p class="p small">
-                            Система одна, но возрастные модули разные:
-                            от первых цветных слов до параллельной работы с учебниками.
-                        </p>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-step__num">1</div>
+          <div class="timeline-step__title">Меньше перегруза</div>
+          <div class="timeline-step__text">
+            Ребёнок перестаёт тонуть в отдельных кусках информации.
+          </div>
+        </div>
 
-                        <div class="programs-grid">
-                            <div class="program-card">
-                                <div class="program-age">3–4 года</div>
-                                <div class="program-title">80 слов по цветам</div>
-                                <div class="program-text">
-                                    Крупные карточки и ритм недель по цветам:
-                                    жёлтые, красные, зелёные, голубые.
-                                    Ребёнок запоминает слово как целый объект, а не по буквам.
-                                </div>
-                            </div>
-                            <div class="program-card">
-                                <div class="program-age">4–5 лет</div>
-                                <div class="program-title">Те же 80 слов на кубиках</div>
-                                <div class="program-text">
-                                    Слова переходят в объём.
-                                    Подключается моторика: ребёнок крутит половинки,
-                                    собирает слово руками и слышит, как оно звучит.
-                                </div>
-                            </div>
-                            <div class="program-card">
-                                <div class="program-age">5–6 лет</div>
-                                <div class="program-title">4 пятёрки + 36 четверостиший</div>
-                                <div class="program-text">
-                                    4 недели работы с ядром и 9 месяцев спокойного закрепления навыка.
-                                    По одному четверостишию на неделю:
-                                    ритм, память и чувство языка.
-                                </div>
-                            </div>
-                            <div class="program-card">
-                                <div class="program-age">6–7 лет</div>
-                                <div class="program-title">Главный цикл автоматизации</div>
-                                <div class="program-text">
-                                    20 согласных, 20 слогов на «А», 60 слов-конструкций
-                                    и контрольный текст «Правда важна».
-                                    Итог — чтение текста за 1–2 минуты к 7 годам.
-                                </div>
-                            </div>
-                            <div class="program-card">
-                                <div class="program-age">7–11 лет</div>
-                                <div class="program-title">«Дважды математик»</div>
-                                <div class="program-text">
-                                    Три учебника разворотами одновременно и страница из четвёртого.
-                                    Ребёнок учится удерживать параллельные задачи
-                                    и связывать их в одно целое.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-            </div>
+        <div class="timeline-step">
+          <div class="timeline-step__num">2</div>
+          <div class="timeline-step__title">Больше понимания</div>
+          <div class="timeline-step__text">
+            Память удерживает больше, и смысл перестаёт обрываться.
+          </div>
+        </div>
 
-            <hr class="hr reveal">
+        <div class="timeline-step">
+          <div class="timeline-step__num">3</div>
+          <div class="timeline-step__title">Путь к 100 книгам</div>
+          <div class="timeline-step__text">
+            Ребёнок выходит к уверенному чтению и получает основу для большого читательского пути.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="grid2 reveal">
-                <div class="premium-panel" style="margin-bottom:0; display: flex; flex-direction: column;">
-                    <span class="qa-label">Прототип мозга</span>
-                    <h3 class="h3">Кубик ИВУ: модель инженерного тренажёра</h3>
-                    <p class="p">
-                        Кубик ИВУ показывает принцип инженерного тренажёра.
-                        Он не заменяет учебники и не учит механически пропевать склады,
-                        а показывает, как мозг соединяет две части в единый код:
-                        ядро, объём и смысл.
-                        Две половинки кубика связаны осью — как полушария мозга.
-                    </p>
+  <section class="container">
+    <hr class="hr reveal">
 
-                    <div class="cube-visual" style="min-height: 280px; padding: 20px 0; flex: none;">
-                        <div class="cube-main-premium">
-                            <div class="cubeScene">
-                                <div class="cubeRoot">
-                                    <div class="half half--left">
-                                        <div class="halfInner">
-                                            <div class="face f-front"></div>
-                                            <div class="face f-left"></div>
-                                            <div class="face f-right face-logoStamp">
-                                                <div class="cube-mark" aria-hidden="true">
-                                                    <div class="cube-mark__mb">МБ</div>
-                                                    <div class="cube-mark__line"></div>
-                                                    <div class="cube-mark__txt">методика</div>
-                                                    <div class="cube-mark__txt cube-mark__txt--small">белолипецкого</div>
-                                                    <div class="cube-mark__badge">1986</div>
-                                                </div>
-                                            </div>
-                                            <div class="face f-back"></div>
-                                            <div class="face f-top"></div>
-                                            <div class="face f-bottom"></div>
-                                        </div>
-                                    </div>
+    <div class="premium-panel reveal" id="start">
+      <span class="qa-label">Как начать</span>
+      <h3 class="h3">Куда идти дальше после страницы «Метод»</h3>
 
-                                    <div class="half half--right">
-                                        <div class="halfInner">
-                                            <div class="face f-front"></div>
-                                            <div class="face f-right"></div>
-                                            <div class="face f-left"></div>
-                                            <div class="face f-back"></div>
-                                            <div class="face f-top"></div>
-                                            <div class="face f-bottom"></div>
-                                        </div>
-                                    </div>
+      <p class="p">
+        Эта страница объясняет логику метода.
+        Следующий шаг зависит от вашей роли:
+        семья, педагог, детский сад или запрос на доступ к материалам.
+      </p>
 
-                                    <div class="brain-container">
-                                        <div class="brain-nucleus">
-                                            <div class="nucleus-ring"></div>
-                                            <div class="nucleus-ring"></div>
-                                            <div class="nucleus-ring"></div>
-                                            <div class="nucleus-ring"></div>
-                                        </div>
-                                        <div class="nucleus-core">
-                                            <div class="core-plane"></div>
-                                            <div class="core-plane"></div>
-                                            <div class="core-plane"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <div class="routes-grid">
+        <a href="./parents.html" class="route-card">
+          <div class="route-num">01</div>
+          <div class="route-title">Родителям</div>
+          <div class="route-text">
+            Домашний маршрут ребёнка, роль семьи и первые шаги без перегруза.
+          </div>
+        </a>
 
-                    <p class="p small">
-                        Запатентованный инженерный тренажёр Сергея Белолипецкого (1999) —
-                        это набор из 10 вращающихся кубиков,
-                        который заменяет 40 громоздких классических кубиков Зайцева.
-                        <strong>Ребёнок собирает смысл руками по четырёхцветному коду,</strong>
-                        а мелкая моторика синхронизируется с чтением.
-                        Так он буквально может «потрогать» объём.
-                    </p>
+        <a href="./educators.html" class="route-card">
+          <div class="route-num">02</div>
+          <div class="route-title">Педагогам</div>
+          <div class="route-text">
+            Методическая система, ММНГ, профессиональный вход и структура внедрения.
+          </div>
+        </a>
 
-                    <div class="actions" style="margin-top: auto;">
-                        <a class="btn btn-outline" href="./parents.html#diy">Инструкция: собрать кубик</a>
-                    </div>
-                </div>
+        <a href="./contacts.html" class="route-card">
+          <div class="route-num">03</div>
+          <div class="route-title">Доступ и заявка</div>
+          <div class="route-text">
+            Открытые материалы — для знакомства.
+            Полный доступ и маршруты — через заявку.
+          </div>
+        </a>
+      </div>
 
-                <div class="premium-panel" id="funnel" style="margin-bottom:0;">
-                    <span class="qa-label">Национальная цель</span>
-                    <h3 class="h3">Монумент 100 книг: от кода к культурному коду</h3>
-                    <p class="p">
-                        От первых 100 слов до 100 книг —
-                        так выглядит маршрут ИВУ.
-                        Это личная траектория ребёнка,
-                        которая работает на возвращение статуса самой читающей страны.
-                    </p>
+      <div class="actions">
+        <a class="btn btn-primary" href="./contacts.html">Оставить заявку</a>
+        <a class="btn btn-outline" href="./foundation.html">Открыть Фонд</a>
+      </div>
+    </div>
+  </section>
 
-                    <div class="monument-wrapper">
-                        <div class="monument-step m-step-4">100 книг <span class="m-step-sub">«Список школьника»</span></div>
-                        <div class="monument-step m-step-3">100 абзацев <span class="m-step-sub">анализ</span></div>
-                        <div class="monument-step m-step-2">100 предложений <span class="m-step-sub">логика</span></div>
-                        <div class="monument-step m-step-1">100 слов <span class="m-step-sub">код языка</span></div>
-                    </div>
+  <section class="site-manifesto reveal">
+    <div class="container">
+      <div class="site-manifesto-text">
+        Мы вернём России статус<br>самой читающей страны в мире.
+      </div>
+    </div>
+  </section>
 
-                    <p class="p small muted" style="text-align: center;">
-                        Ступень за ступенью: от автоматизации ядра к свободному чтению.
-                    </p>
-                </div>
-            </div>
-
-            <hr class="hr reveal">
-
-            <div class="premium-panel reveal" id="infrastructure">
-                <span class="qa-label">Инфраструктура системы</span>
-                <h3 class="h3">Как система живёт: сады, Клуб Кручучу и BABYSTUDENT</h3>
-                <p class="p">
-                    Система ИВУ — это не только учебные модули.
-                    Вокруг неё выстроена целая инфраструктура:
-                    детские сады, клуб и ранние программы для самых маленьких.
-                </p>
-
-            <details class="ivu-accordion">
-    <summary>
-        <span class="accordion-summary-main">
-            <span class="accordion-summary-title">Инфраструктура системы</span>
-            <span class="accordion-summary-hint">Нажмите, чтобы открыть направления ИВУ</span>
-        </span>
-    </summary>
-                    <div class="ivu-accordion__body">
-                        <div class="infra-grid">
-                            <div class="infra-card">
-                                <div class="infra-title">Сады ИВУ — не программа, а инициатива</div>
-                                <div class="infra-text">
-                                    У детских садов есть свои государственные программы,
-                                    и ИВУ их не заменяет.
-                                    Мы приходим как академическая инициатива:
-                                    показываем занятия, даём методические ориентиры
-                                    и поддерживаем обмен практиками между садами.
-                                </div>
-                                <a class="infra-link" href="./kindergarten.html">Подробнее о работе с садами →</a>
-                            </div>
-
-                            <div class="infra-card">
-                                <div class="infra-title">Клуб Кручучу — детский проводник</div>
-                                <div class="infra-text">
-                                    Кручучу — не символ Института, а герой детского мира.
-                                    Он сопровождает ребёнка в интерактивах, загадках и мини-конкурсах,
-                                    помогая войти в мир матрицы и объёма
-                                    в игровой, но инженерной форме.
-                                </div>
-                                <a class="infra-link" href="./club.html#puzzle">Загадки и интерактивы клуба →</a>
-                            </div>
-
-                            <div class="infra-card">
-                                <div class="infra-title">BABYSTUDENT — ранний опыт и знак качества</div>
-                                <div class="infra-text">
-                                    BABYSTUDENT — это знак раннего опыта и качества.
-                                    Он не конкурирует с ИВУ, а усиливает систему:
-                                    появляется на тетрадях, роликах, грамотах
-                                    и отмечает материалы, связанные с ранним развитием.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </details>
-
-                <div style="margin-top:40px;" id="evidence">
-                    <span class="qa-label">Доказательная база</span>
-                    <h3 class="h3">Что стоит за системой: уроки, диктанты, книги и графики</h3>
-                    <p class="p">
-                        Система ИВУ опирается не только на идею,
-                        но и на большую доказательную базу:
-                        видеоуроки, диктанты, учебные материалы
-                        и графики развития Никитина и Векслера.
-                    </p>
-
-                  <details class="ivu-accordion">
-    <summary>
-        <span class="accordion-summary-main">
-            <span class="accordion-summary-title">Доказательная база системы</span>
-            <span class="accordion-summary-hint">Нажмите, чтобы открыть материалы и показатели</span>
-        </span>
-    </summary> 
-                        <div class="ivu-accordion__body">
-                            <div class="evidence-grid">
-                                <div class="evidence-item">
-                                    <div class="evidence-label">Видеоуроки и конспекты</div>
-                                    <div class="evidence-main">270</div>
-                                    <div class="p small" style="margin-bottom:0;">135 дошкольных и 135 школьных уроков + 270 поурочных разработок для педагогов.</div>
-                                </div>
-
-                                <div class="evidence-item">
-                                    <div class="evidence-label">Письмо и орфография</div>
-                                    <div class="evidence-main">400</div>
-                                    <div class="p small" style="margin-bottom:0;">Диктантов 1–4 классов. Проверяется не только скорость чтения, но и точность письма и понимание текста.</div>
-                                </div>
-
-                                <div class="evidence-item">
-                                    <div class="evidence-label">Издательская база</div>
-                                    <div class="evidence-main" style="font-size: 24px;">7 книг и 4 тетради</div>
-                                    <div class="p small" style="margin-bottom:0;">От бестселлеров ЭКСМО (2003 г.) до современных учебников «НОУ-ХАУ Азбука», «НОУ-ХАУ Букварь» и «Букварь А».</div>
-                                </div>
-
-                                <div class="evidence-item">
-                                    <div class="evidence-label">Графики развития</div>
-                                    <div class="evidence-main" style="font-size: 24px;">Никитин и Векслер</div>
-                                    <div class="p small" style="margin-bottom:0;">Графики раннего развития у Никитиных и распределение IQ по Векслеру подтверждают: работает именно объёмная модель нагрузки.</div>
-                                </div>
-                            </div>
-
-                            <div class="evidence-note">
-                                <strong>И это только часть масштабной базы.</strong>
-                                В арсенале Института — запатентованные инженерные кубики ИВУ,
-                                сотни устных заданий, логопедические стихи
-                                и промежуточные материалы, которые открываются педагогам
-                                и родителям по мере прохождения системы.
-                            </div>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <div class="routes-section reveal" id="routes">
-                <h2>Траектории внедрения</h2>
-                <div class="routes-grid">
-                    <a href="./parents.html" class="route-card">
-                        <div class="route-num">01</div>
-                        <div class="route-title">Родителям</div>
-                        <div class="route-text">Домашняя траектория. Инструменты и программы для родителей, которые хотят запустить объём в семье.</div>
-                    </a>
-
-                    <a href="./educators.html" class="route-card">
-                        <div class="route-num">02</div>
-                        <div class="route-title">Педагогам</div>
-                        <div class="route-text">Методическая база, сценарии занятий и материалы для профессионалов, работающих в системе ИВУ.</div>
-                    </a>
-
-                    <a href="./kindergarten.html" class="route-card">
-                        <div class="route-num">03</div>
-                        <div class="route-title">Детским садам (B2B)</div>
-                        <div class="route-text">
-                            Системное внедрение в детский сад или школу:
-                            демонстрация, сопровождение и подтверждение результата.
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="site-manifesto reveal">
-            <div class="container">
-                <div class="site-manifesto-text">Мы вернём России статус<br>самой читающей страны в мире.</div>
-            </div>
-        </section>
-    </main>
+</main>
 
    <footer class="footer-minimal">
         <div class="container footer-minimal__inner">
