@@ -1320,16 +1320,30 @@ body.index-page main {
     inset 0 1px 0 rgba(255,255,255,.68);
   text-align: center;
 }
-
 .index-page .language-core-formula {
   margin: 0;
   color: var(--navy);
   font-size: 1.08rem;
   line-height: 1.76;
+  text-align: center;
 }
 
 .index-page .language-core-formula strong {
   font-weight: 700;
+}
+
+/* 20:10 — как отдельная формула */
+.index-page .language-core-formula strong:first-child {
+  display: block;
+  font-size: 1.28rem;
+  margin-bottom: 6px;
+  letter-spacing: .04em;
+}
+
+/* строки ниже чуть мягче */
+.index-page .language-core-formula br + strong {
+  display: inline-block;
+  margin-top: 4px;
 }
 
 .index-page .language-core-grid {
@@ -3540,6 +3554,21 @@ body.index-page main {
   .index-page .access-actions .btn {
     width: 100%;
   }
+  .index-page .hero,
+.index-page .hero-shell,
+.index-page .hero__grid,
+.index-page .hero__author,
+.index-page .hero__info {
+  min-width: 0;
+}
+
+.index-page .hero__actions {
+  width: 100%;
+}
+
+.index-page .hero__actions .btn {
+  min-width: 0;
+}
 
   /* PROBLEM */
   .index-page .problem-top {
