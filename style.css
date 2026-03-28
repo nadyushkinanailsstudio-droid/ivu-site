@@ -364,12 +364,14 @@ select {
 }
 
 .nav__link:hover,
-.nav__link.active {
+.nav__link.active,
+.nav__link.is-active {
   color: var(--navy);
 }
 
 .nav__link:hover::after,
-.nav__link.active::after {
+.nav__link.active::after,
+.nav__link.is-active::after {
   transform: scaleX(1);
 }
 
@@ -456,6 +458,20 @@ select {
   color: var(--text-muted);
   font-size: .9rem;
 }
+.footer-minimal__policy {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: .8rem;
+  color: var(--text-muted);
+  opacity: .8;
+  text-decoration: underline;
+  transition: opacity var(--transition), color var(--transition);
+}
+
+.footer-minimal__policy:hover {
+  opacity: 1;
+  color: var(--navy);
+}
 
 .footer-minimal__up {
   color: var(--navy);
@@ -482,22 +498,23 @@ select {
   }
   .footer-minimal__logo-block { justify-content: center; }
 }
-
 @media (max-width: 768px) {
   .container {
     width: min(100% - 28px, 1400px);
   }
+
   .section-padding {
     padding: 78px 0;
   }
+
   .section-header {
     margin-bottom: 42px;
   }
+
   .section-header h2 {
     font-size: 2rem;
   }
-  
-  /* ПРЕМИУМ: Горизонтальный скролл меню для мобильных */
+
   .header__inner {
     flex-direction: column;
     align-items: flex-start;
@@ -505,51 +522,33 @@ select {
     gap: 12px;
     padding: 16px 0 12px;
   }
+
   .nav {
     flex-wrap: nowrap;
-    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 16px;
     width: calc(100% + 28px);
+    max-width: none;
     margin-left: -14px;
     padding: 0 14px 8px;
-    justify-content: flex-start;
-    -ms-overflow-style: none; /* Скрываем ползунок IE/Edge */
-    scrollbar-width: none; /* Скрываем ползунок Firefox */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
-  .nav::-webkit-scrollbar { 
-    display: none; /* Скрываем ползунок Chrome/Safari */
+
+  .nav::-webkit-scrollbar {
+    display: none;
   }
+
   .nav__link {
+    flex: 0 0 auto;
     white-space: nowrap;
     font-size: .85rem;
   }
 
   .site-manifesto-text {
     padding: 44px 22px;
-  }
-}
-@media (max-width: 768px) {
-  .header__inner {
-    align-items: flex-start;
-  }
-
-  .nav {
-    width: 100%;
-    max-width: 100%;
-    gap: 16px;
-  }
-
-  .nav__link {
-    flex: 0 0 auto;
-    white-space: nowrap;
-  }
-}
-@media (max-width: 768px) {
-  .nav {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .nav__link {
-    flex: 0 0 auto;
   }
 }
