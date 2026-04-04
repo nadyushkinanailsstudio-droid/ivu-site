@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <title>Родителям — Институт Врожденной Успеваемости</title>
-  <meta name="description" content="Домашний маршрут ребёнка 3–11 лет: путь от первых 100 слов к 100 книгам, обучающие кубики ИВУ и Клуб Кручучу.">
+  <meta name="description" content="Родителям: семейный маршрут ИВУ для детей 3–11 лет. От первых слов и домашней практики — к уверенному чтению, пониманию текста и школьной устойчивости.">
 
   <link rel="icon" href="favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -14,11 +14,11 @@
   <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
 
-  <meta property="og:title" content="Родителям — ИВУ">
-  <meta property="og:description" content="Домашняя лаборатория и первые 100 слов без репетиторов и зубрежки.">
+  <meta property="og:title" content="Родителям — Институт Врожденной Успеваемости">
+  <meta property="og:description" content="Семейный маршрут ИВУ: домашняя практика, первые шаги в чтении, понимание текста и уверенность ребёнка в школе.">
   <meta property="og:image" content="favicon/og-image.png">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="/parents.html">
+  <meta property="og:url" content="./parents.html">
 
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./parents.css">
@@ -29,15 +29,39 @@
 
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="./index.html" class="header__logo">
-        <span class="header__logo-title">Институт Врожденной Успеваемости</span>
-        <span class="header__logo-sub">Инженерный код языка</span>
-      </a>
+
+      <div class="header__brand">
+        <a href="./index.html" class="header__logo">
+          <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+          <span class="header__logo-sub">Инженерный код языка</span>
+        </a>
+
+        <div class="page-sections-bar page-sections-bar--header">
+          <div class="page-sections">
+            <button
+              class="page-sections__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="parents-sections-panel"
+            >
+              <span class="page-sections__label">Разделы</span>
+              <span class="page-sections__icon"></span>
+            </button>
+
+            <div class="page-sections__panel" id="parents-sections-panel" hidden>
+             <a href="#hero" class="page-sections__link is-active">Старт</a>
+              <a href="#programs" class="page-sections__link">Маршрут</a>
+              <a href="#lab" class="page-sections__link">Домашняя практика</a>
+              <a href="#brief" class="page-sections__link">Заявка</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <nav class="nav" aria-label="Основная навигация">
         <a href="./index.html" class="nav__link">Главная</a>
         <a href="./system.html" class="nav__link">Метод</a>
-        <a href="./parents.html" class="nav__link active">Родителям</a>
+        <a href="./parents.html" class="nav__link is-active">Родителям</a>
         <a href="./educators.html" class="nav__link">Педагогам</a>
         <a href="./kindergarten.html" class="nav__link">Детским садам</a>
         <a href="./club.html" class="nav__link">Клуб Кручучу</a>
@@ -45,470 +69,459 @@
         <a href="./foundation.html" class="nav__link">Фонд</a>
         <a href="./contacts.html" class="nav__link">Контакты</a>
       </nav>
+
     </div>
   </header>
 
   <main>
-    <section class="hero-parents container reveal">
-      <div class="hero-grid">
-        <div class="hero-content">
-          <span class="label">Домашняя траектория ИВУ</span>
+  <section class="hero-parents container reveal" id="hero">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <span class="label">Домашняя траектория ИВУ</span>
 
-          <h1>Как поддержать ребёнка дома без репетиторства и давления</h1>
+        <h1>Ребёнок читает, но не понимает смысл?</h1>
 
-          <p class="subtitle">
-            Страница для родителей — это семейный вход в общую систему ИВУ.
-            Ребёнок проходит спокойный маршрут от первых 100 слов и домашних артефактов
-            к автоматизации чтения, школьной устойчивости и пути к 100 книгам.
-          </p>
+        <p class="subtitle">
+          Научите его читать осознанно — без слёз, зубрёжки и репетиторов. 
+          ИВУ даёт пошаговый домашний маршрут, где чтение становится естественным навыком, а не тяжёлой обязанностью.
+        </p>
 
-          <div class="status-markers" aria-label="Возрастные этапы маршрута">
-            <div class="marker">
-              <span class="marker-age">3–5 лет</span>
-              <span class="marker-text">80 слов, цвет, кубики, моторика</span>
-            </div>
+        <p class="hero-proof">
+         Наша цель: к 6–7 годам ваш ребёнок уверенно читает и понимает текст из 100 слов за 3 минуты. Без запинок, стресса и перегруза.
+        </p>
 
-            <div class="marker">
-              <span class="marker-age">5–7 лет</span>
-              <span class="marker-text">36 четверостиший, 20 слогов, автоматизация</span>
-            </div>
-
-            <div class="marker">
-              <span class="marker-age">7–11 лет</span>
-              <span class="marker-text">Школа, объём мышления, путь к 100 книгам</span>
-            </div>
+        <div class="status-markers" aria-label="Возрастные этапы маршрута">
+          <div class="marker">
+            <span class="marker-age">3–5 лет</span>
+            <span class="marker-text">знакомимся со словом через игру, цвет и движение</span>
           </div>
 
-          <div class="hero-actions">
-            <a href="#programs" class="btn btn-primary">Посмотреть возрастной маршрут</a>
-            <a href="#lab" class="btn btn-outline">Сделать первые тренажёры дома</a>
+          <div class="marker marker--accent">
+            <span class="marker-age">6–7 лет</span>
+            <span class="marker-text">читаем бегло, понимаем прочитанное, готовимся к школе</span>
           </div>
 
-          <p class="hero-note">
-            Родителю не нужно становиться учителем.
-            Домашняя роль в ИВУ — поддержать ритм, собрать среду и пройти маршрут вместе с ребёнком.
-          </p>
-        </div>
-
-        <aside class="role-panel reveal" aria-label="Роль родителей в системе ИВУ">
-          <h2>Поддержка семьи в общей архитектуре ИВУ</h2>
-
-          <p class="role-text">
-            В системе ИВУ у каждой роли своя задача.
-            Институт собирает метод, педагоги ведут практику, детские сады внедряют маршрут,
-            а родители поддерживают ребёнка дома спокойно и без перегруза.
-          </p>
-
-          <div class="role-chain">
-            <div class="role-item">
-              <div class="r-dot">01</div>
-              <span>Институт ИВУ</span>
-            </div>
-
-            <div class="role-item">
-              <div class="r-dot">02</div>
-              <span>Педагоги и методкабинет</span>
-            </div>
-
-            <div class="role-item">
-              <div class="r-dot">03</div>
-              <span>Детские сады и группы</span>
-            </div>
-
-            <div class="role-item active">
-              <div class="r-dot">04</div>
-              <span>Родители и домашняя среда</span>
-            </div>
+          <div class="marker">
+            <span class="marker-age">7–11 лет</span>
+            <span class="marker-text">легко справляемся со школьной программой и любим учиться</span>
           </div>
-        </aside>
-      </div>
-
-      <div class="practice-grid reveal">
-        <article class="practice-item">
-          <strong>Без домашних «уроков»</strong>
-          <p>
-            ИВУ не требует превращать дом в школьный класс.
-            Ребёнок входит в систему через короткие касания:
-            карточки, кубики, чтение ритма и простые домашние действия.
-          </p>
-        </article>
-
-        <article class="practice-item">
-          <strong>Родитель не заменяет педагога</strong>
-          <p>
-            Задача семьи — не объяснять весь метод,
-            а поддерживать готовую траекторию Института,
-            чтобы ребёнок взаимодействовал с языком через движение, слух и объём.
-          </p>
-        </article>
-
-        <article class="practice-item">
-          <strong>Маршрут и мотивация уже встроены</strong>
-          <p>
-            Домашняя работа не существует отдельно от системы.
-            Ребёнок может входить в Клуб Кручучу, получать задания,
-            двигаться по карте и видеть результат шаг за шагом.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="programs reveal" id="programs">
-      <div class="container">
-        <div class="section-header">
-          <h2>Возрастной маршрут семьи</h2>
-          <p>
-            ИВУ строится не по принципу «выучили одну букву — пошли дальше»,
-            а как последовательное расширение объёма памяти, речи, моторики и чтения.
-          </p>
-          <p class="programs-lead">
-            Ниже — семейная версия общей траектории ИВУ,
-            согласованная с маршрутами страниц
-            <a href="./system.html">«Метод»</a>,
-            <a href="./educators.html">«Педагогам»</a>
-            и
-            <a href="./kindergarten.html">«Детским садам»</a>.
-          </p>
         </div>
 
-        <div class="programs-grid">
-          <article class="p-card">
-            <div class="p-card-header">
-              <span class="p-age">3–5 лет</span>
-              <h3 class="p-title">Первые слова и вход в объём</h3>
-            </div>
-
-            <p class="p-desc">
-              Играем с цветом и формой без зубрёжки букв.
-              Мы берём 80 базовых слов и собираем их на цветных кубиках.
-              Ребёнок учится видеть слово целиком и подключает моторику:
-              покрутил грани — прочитал слово.
-            </p>
-
-            <ul class="p-list">
-              <li>3–4 года: цветовые недели и первые 80 слов.</li>
-              <li>4–5 лет: те же 80 слов переходят на крутящиеся кубики.</li>
-              <li>Слово запоминается через цвет, движение и целостный образ, а не через зубрёжку букв.</li>
-            </ul>
-
-            <a href="#lab" class="btn btn-outline">С чего начать дома</a>
-          </article>
-
-          <article class="p-card p-card--accent">
-            <div class="p-card-header">
-              <span class="p-age">5–7 лет</span>
-              <h3 class="p-title">Автоматизация чтения без перегруза</h3>
-            </div>
-
-            <p class="p-desc">
-              Вместо скучных букварей — ритмичные четверостишия и 20 базовых слогов на букву «А».
-              Ребёнок не застревает на сложных участках,
-              а мягко автоматизирует навык, доходя до чтения контрольного текста за 1–2 минуты.
-            </p>
-
-            <ul class="p-list">
-              <li>5–6 лет: 36 четверостиший на 36 недель — запись ритма, словаря и структуры языка.</li>
-              <li>6–7 лет: 20 согласных, 20 слогов с «А», 60 слов с «А» и выход к контрольному тексту.</li>
-              <li>Итог: ребёнок подходит к школе без побуквенного торможения и с готовностью к переносу навыка на другие гласные.</li>
-            </ul>
-
-            <a href="#brief" class="btn btn-primary">Получить маршрут для семьи</a>
-          </article>
-
-          <article class="p-card">
-            <div class="p-card-header">
-              <span class="p-age">7–11 лет</span>
-              <h3 class="p-title">Уверенность в школе</h3>
-            </div>
-
-            <p class="p-desc">
-              Когда чтение автоматизировано, мы расширяем оперативную память.
-              Ребёнок учится держать в голове несколько задач параллельно,
-              легче анализирует тексты и движется к главной цели —
-              100 прочитанным книгам.
-            </p>
-
-            <ul class="p-list">
-              <li>Программа «Дважды математик» развивает логику, речь, ритм и математическое мышление.</li>
-              <li>Параллельно укрепляются чтение, письмо, понимание текста и устойчивость к школьной нагрузке.</li>
-              <li>Маршрут продолжается от первой сотни слов и текстов к большим объёмам чтения и к 100 книгам школьника.</li>
-            </ul>
-
-            <a href="#brief" class="btn btn-outline">Запросить консультацию</a>
-          </article>
+        <div class="hero-actions">
+          <a href="#programs" class="btn btn-primary">Посмотреть возрастной маршрут</a>
+          <a href="#lab" class="btn btn-outline">Сделать первые шаги дома</a>
         </div>
-      </div>
-    </section>
 
-    <section class="container lab-section reveal" id="lab">
-      <div class="section-header section-header--lab">
-        <h2>Домашняя лаборатория: вход в систему своими руками</h2>
+        <p class="hero-note">
+          Вам не нужно становиться строгим учителем. Ваша задача — просто быть рядом, 
+          поддерживать ребёнка и радоваться его первым успехам.
+        </p>
+      </div>
+
+      <aside class="role-panel reveal" aria-label="Роль родителей в системе ИВУ">
+        <h2>Вы не остаётесь один на один с проблемой</h2>
+
+        <p class="role-text">
+          В системе ИВУ каждый делает своё дело. Институт создаёт метод, педагоги ведут практику, 
+          а вы — создаёте спокойную и тёплую домашнюю среду, где ребёнок с удовольствием закрепляет успех.
+        </p>
+
+        <div class="role-chain">
+          <div class="role-item">
+            <div class="r-dot">01</div>
+            <span>Институт ИВУ</span>
+          </div>
+
+          <div class="role-item">
+            <div class="r-dot">02</div>
+            <span>Педагоги и методкабинет</span>
+          </div>
+
+          <div class="role-item">
+            <div class="r-dot">03</div>
+            <span>Детские сады и группы</span>
+          </div>
+
+          <div class="role-item active">
+            <div class="r-dot">04</div>
+            <span>Родители и домашняя среда</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="practice-grid reveal">
+      <article class="practice-item">
+        <strong>Учимся играя, а не за партой</strong>
         <p>
-          Родители могут начать вход в ИВУ без сложного оборудования.
-          Домашние артефакты помогают ребёнку взаимодействовать с языком
-          не только глазами, но и через движение, тактильность и ритм.
+          Ребёнку не нужно часами сидеть над букварём. Он входит в язык через движение, 
+          тактильность и короткие увлекательные действия.
         </p>
-        <p class="lab-lead">
-          Домашняя среда не заменяет Институт,
-          а аккуратно продолжает его маршрут в семье.
+      </article>
+
+      <article class="practice-item">
+        <strong>Вы — родитель, а не учитель</strong>
+        <p>
+          Вам не придётся объяснять сложные правила. Метод уже выстроен так, 
+          чтобы ребёнок понимал всё сам, естественно и без вашего давления.
         </p>
-      </div>
+      </article>
 
-      <div class="lab-grid">
-        <div class="diy-card">
-          <span class="label">Базовые артефакты ИВУ</span>
+      <article class="practice-item">
+        <strong>Мотивация уже внутри</strong>
+        <p>
+          Ребёнок сам хочет продолжать. Он видит свой прогресс, получает награды 
+          в Клубе Кручучу и не воспринимает занятия как скучный урок.
+        </p>
+      </article>
+    </div>
+  </section>
 
-          <div class="diy-steps">
-            <article class="diy-item">
-              <div class="diy-icon">01</div>
-              <div class="diy-content">
-                <h3>Крупные карточки со словами</h3>
-                <p>
-                  На старте ребёнок работает с крупными словами как с цельными объектами.
-                  Это домашнее продолжение этапа первых 80 слов и цветовых недель.
-                </p>
-              </div>
-            </article>
+<section class="parent-hook reveal">
+  <div class="container">
+    <div class="parent-hook__inner">
+      <p class="parent-hook__main">
+        Ребёнку нужен не нажим, а поддержка и понятный маршрут.
+      </p>
 
-            <article class="diy-item">
-              <div class="diy-icon">02</div>
-              <div class="diy-content">
-                <h3>Крутящийся кубик своими руками</h3>
-                <p>
-                  Не обязательно сразу покупать готовые наборы.
-                  Обычный пластмассовый кубик можно разрезать и посадить на болтик.
-                  Ребёнок сам крутит половинки, собирая слово, —
-                  так чтение превращается в инженерную игру, а не в повинность.
-                </p>
-              </div>
-            </article>
+      <p class="parent-hook__sub">
+        С системой ИВУ у вас есть ясные этапы, домашний старт и чёткая точка результата:
+        от первых слов — к уверенному чтению и глубокому пониманию текста.
+      </p>
+    </div>
+  </div>
+</section>
 
-            <article class="diy-item">
-              <div class="diy-icon">03</div>
-              <div class="diy-content">
-                <h3>«Круглый карандаш» из шарика</h3>
-                <p>
-                  Суставы малышей ещё не готовы к классическому карандашу.
-                  Сергей Белолипецкий предложил простое решение:
-                  проткнуть шарик для пинг-понга обычным карандашом.
-                  Ребёнок обхватывает шарик всей кистью, снимая напряжение,
-                  и может начинать писать раньше и свободнее.
-                </p>
-              </div>
-            </article>
+<section class="programs reveal" id="programs">
+  <div class="container">
+    <div class="section-header">
+      <h2>Как растёт ваш ребёнок в системе ИВУ</h2>
+      <p class="programs-lead">
+        Мы не учим «по одной букве». Мы последовательно расширяем память, 
+        речь и внимание ребёнка, чтобы чтение проросло само.
+      </p>
+    </div>
 
-            <article class="diy-item">
-              <div class="diy-icon">04</div>
-              <div class="diy-content">
-                <h3>Дощечки с канавками</h3>
-                <p>
-                  Тактильная опора для руки.
-                  Ребёнок проводит по контуру и закрепляет знак не только зрительно,
-                  но и через мышечное ощущение.
-                </p>
-              </div>
-            </article>
-          </div>
-
-          <div class="diy-helper">
-            <p>Нужна инструкция по домашнему старту?</p>
-            <a
-              href="#brief"
-              class="btn btn-outline diy-helper__btn"
-              onclick="document.getElementById('mission-text').value='Здравствуйте! Пришлите, пожалуйста, семейный маршрут старта и инструкцию по домашним артефактам ИВУ.'"
-            >
-              Запросить семейный стартовый пакет
-            </a>
-          </div>
+    <div class="programs-grid">
+      <article class="p-card">
+        <div class="p-card-header">
+          <span class="p-age">3–5 лет</span>
+          <h3 class="p-title">Знакомство со словом</h3>
         </div>
 
-        <aside class="bs-card" aria-label="Знак BABYSTUDENT">
-          <img
-            src="./img/babystudent-logo.svg"
-            alt="Знак BABYSTUDENT"
-            class="bs-logo"
-            onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2745%27 fill=%27none%27 stroke=%27white%27 stroke-width=%274%27/%3E%3Cpath d=%27M35 50 L45 60 L70 35%27 stroke=%27white%27 stroke-width=%276%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E'"
-          >
+        <p class="p-desc">
+          Ребёнок начинает видеть слово целиком через цвет, форму и движение — без мучительного заучивания алфавита.
+        </p>
 
-          <h2>Знак BABYSTUDENT</h2>
-          <span class="bs-motto">Шаг за шагом к результату</span>
+        <ul class="p-list">
+          <li>Взаимодействуем со словами как с игрушками: без давления и скучных прописей.</li>
+          <li>Развиваем речь, чувство ритма и моторику — невидимый фундамент будущего интеллекта.</li>
+          <li><strong>Итог:</strong> ребёнок мягко погружается в язык и любит заниматься.</li>
+        </ul>
 
-          <p>
-            Домашние действия входят в большую систему.
-            Через артефакты, задания и игровые переходы ребёнок постепенно движется
-            от первых 100 слов к более крупным маршрутам Института.
-          </p>
+        <a href="#lab" class="btn btn-outline">С чего начать дома</a>
+      </article>
 
-          <div class="bs-card__action">
-            <a href="./club.html#map" class="btn btn-outline">Перейти в Клуб Кручучу</a>
+      <article class="p-card p-card--accent">
+        <div class="p-card-header">
+          <span class="p-age">6–7 лет</span>
+          <h3 class="p-title">Беглое чтение со смыслом</h3>
+        </div>
+
+        <p class="p-desc">
+          Ребёнок перестаёт «спотыкаться» на слогах. Чтение становится ровным, быстрым и осмысленным.
+        </p>
+
+        <ul class="p-list">
+          <li>Запоминаем ритм и структуру языка через 36 весёлых четверостиший.</li>
+          <li>Тренируем беглость на 100 базовых словах — спокойно и в своём темпе.</li>
+          <li><strong>Контрольная точка:</strong> уверенное чтение текста «Правда важна» (100 слов за 3 минуты).</li>
+          <li><strong>Итог:</strong> ребёнок идёт в первый класс абсолютно подготовленным, без страха перед книгами.</li>
+        </ul>
+
+        <a href="#brief" class="btn btn-primary">Получить маршрут для семьи</a>
+      </article>
+
+      <article class="p-card">
+        <div class="p-card-header">
+          <span class="p-age">7–11 лет</span>
+          <h3 class="p-title">Школьная устойчивость</h3>
+        </div>
+
+        <p class="p-desc">
+          Чтение становится главным инструментом для лёгкой учёбы и понимания мира.
+        </p>
+
+        <ul class="p-list">
+          <li>Программа «Дважды математик» развивает логику и аналитическое мышление.</li>
+          <li>Ребёнок легко понимает условия задач и с интересом пересказывает тексты.</li>
+          <li><strong>Итог:</strong> самостоятельный школьник, который умеет учиться и не просит делать уроки вместе с ним.</li>
+        </ul>
+
+        <a href="#brief" class="btn btn-outline">Запросить консультацию</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="container lab-section reveal" id="lab">
+  <div class="section-header section-header--lab">
+    <h2>Домашняя лаборатория: начните прямо сейчас</h2>
+    <p class="lab-lead">
+      Вам не нужно покупать дорогое оборудование. Первые шаги в ИВУ — 
+      это совместное творчество, где слово можно буквально потрогать руками.
+    </p>
+  </div>
+
+  <div class="lab-grid">
+    <div class="diy-card">
+      <span class="label">Домашняя практика ИВУ</span>
+
+      <div class="diy-steps">
+        <article class="diy-item">
+          <div class="diy-icon">01</div>
+          <div class="diy-content">
+            <h3>Крупные карточки со словами</h3>
+            <p>
+              Вместо мелких букв — большие, понятные образы. 
+              Ребёнок видит слово целиком и легко его запоминает.
+            </p>
           </div>
-        </aside>
+        </article>
+
+        <article class="diy-item">
+          <div class="diy-icon">02</div>
+          <div class="diy-content">
+            <h3>Крутящийся кубик своими руками</h3>
+            <p>
+              Обычный кубик превращается в тренажёр! Ребёнок крутит грани, 
+              сам «собирает» слова и видит, что чтение — это фокус, а не зубрёжка.
+            </p>
+          </div>
+        </article>
+
+        <article class="diy-item">
+          <div class="diy-icon">03</div>
+          <div class="diy-content">
+            <h3>«Круглый карандаш» из шарика</h3>
+            <p>
+              Идеальный инструмент для мягкого входа в письмо. Снимает 
+              напряжение с кисти и учит правильно держать руку.
+            </p>
+          </div>
+        </article>
+
+        <article class="diy-item">
+          <div class="diy-icon">04</div>
+          <div class="diy-content">
+            <h3>Дощечки и ритмичные движения</h3>
+            <p>
+              Короткие тактильные действия помогают ребёнку 
+              дольше удерживать внимание и совершенно не уставать.
+            </p>
+          </div>
+        </article>
       </div>
-    </section>
+
+      <div class="diy-helper">
+        <p>Нужна инструкция по домашнему старту?</p>
+        <a
+          href="#brief"
+          class="btn btn-outline diy-helper__btn"
+          onclick="document.getElementById('mission-text').value='Здравствуйте! Пришлите, пожалуйста, семейный маршрут старта и инструкцию по домашним инструментам ИВУ.'"
+        >
+          Запросить семейный стартовый пакет
+        </a>
+      </div>
+    </div>
+
+    <aside class="bs-card" aria-label="Знак BABYSTUDENT">
+      <img
+        src="./img/babystudent-logo.svg"
+        alt="Знак BABYSTUDENT"
+        class="bs-logo"
+        onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ccircle cx=%2750%27 cy=%2750%27 r=%2745%27 fill=%27none%27 stroke=%27white%27 stroke-width=%274%27/%3E%3Cpath d=%27M35 50 L45 60 L70 35%27 stroke=%27white%27 stroke-width=%276%27 fill=%27none%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E'"
+      >
+
+      <h2>Знак BABYSTUDENT</h2>
+      <span class="bs-motto">Шаг за шагом к результату</span>
+
+      <p>
+        Домашняя лаборатория не существует отдельно от системы.
+        Она помогает ребёнку сделать первые шаги,
+        почувствовать движение вперёд
+        и войти в большой маршрут ИВУ.
+      </p>
+
+      <div class="bs-card__action">
+        <a href="./club.html#map" class="btn btn-outline">Перейти в Клуб Кручучу</a>
+      </div>
+    </aside>
+  </div>
+</section>
 
     <section class="not-just-reading reveal" aria-labelledby="not-just-reading-title">
-      <div class="container not-just-reading__inner">
-        <h2 id="not-just-reading-title">ИВУ — это не только про чтение</h2>
-        <p>
-          Домашний маршрут ИВУ помогает ребёнку не просто читать,
-          а развивать память, удержание смысла, письмо, ритм и готовность к школьной нагрузке.
-        </p>
-      </div>
-    </section>
+  <div class="container not-just-reading__inner">
+    <h2 id="not-just-reading-title">ИВУ — это не только про чтение</h2>
+    <p>
+      Домашний маршрут ИВУ помогает ребёнку не просто читать,
+      а развивать память, удержание смысла, письмо, ритм
+      и внутреннюю готовность к школьной нагрузке.
+    </p>
+  </div>
+</section>
 
-    <section class="family-bridge container reveal">
-      <div class="section-header">
-        <h2>Клуб, задания и семейная мотивация</h2>
-        <p>
-          Для ребёнка система может продолжаться в
-          <a href="./club.html">Клубе Кручучу</a>:
-          через игровые испытания, карту пути, грамоты и постепенное открытие новых уровней.
-        </p>
-      </div>
+<section class="family-bridge container reveal">
+  <div class="section-header">
+    <h2>Клуб Кручучу: там, где учиться интересно</h2>
+    <p>
+      Чтобы ребёнок не бросил занятия, маршрут продолжается в
+      <a href="./club.html">игровой вселенной Клуба</a>. 
+      Это место, где чтение превращается в настоящее приключение.
+    </p>
+  </div>
 
-      <div class="practice-grid">
-        <article class="practice-item">
-          <strong>Игровой вход</strong>
-          <p>
-            В клубе ребёнок входит в инженерный код языка через загадки,
-            рифмы, героев и карту движения по уровням.
-          </p>
-        </article>
+  <div class="family-grid">
+    <article class="family-card">
+      <strong>Игровой вход</strong>
+      <p>
+        В клубе ребёнок входит в инженерный код языка через загадки,
+        рифмы, забавных героев и красивую карту пути.
+      </p>
+    </article>
 
-        <article class="practice-item">
-          <strong>Система мотивирует сама</strong>
-          <p>
-            Вам не нужно заставлять ребёнка заниматься.
-            В методе заложена чёткая игровая логика:
-            короткие задания, грамоты BABYSTUDENT и постепенное открытие новых шагов маршрута.
-          </p>
-        </article>
+    <article class="family-card family-card--accent">
+      <strong>Никакого принуждения</strong>
+      <p>
+        Короткие задания, понятные награды (грамоты BABYSTUDENT) 
+        и искренняя радость от каждого нового открытого уровня.
+      </p>
+    </article>
 
-        <article class="practice-item">
-          <strong>Связь с большой системой</strong>
-          <p>
-            Клуб не существует отдельно от ИВУ.
-            Он помогает удерживать интерес ребёнка к маршруту,
-            который продолжается дома, в саду, у педагога и в школе.
-          </p>
-        </article>
-      </div>
-    </section>
+   <article class="family-card">
+  <strong>Гордость за себя</strong>
+  <p>
+    Ребёнок видит свои шаги, радуется победам 
+    и сам просит вас «поиграть в Кручучу ещё немного».
+  </p>
+</article>
+  </div>
+</section>
 
     <section class="brief-section reveal" id="brief">
-      <div class="container brief-container">
-        <div class="brief-header">
-          <h2>Умная заявка для родителей</h2>
-          <p class="brief-lead">
-            Заявка помогает Институту понять возраст ребёнка, текущую точку старта и подобрать семейный маршрут.
-          </p>
-          <p>
-            Полный методический фонд не выкладывается в открытый доступ автоматически.
-            Институт открывает доступ к материалам, консультациям и маршрутам по роли и задаче семьи.
-          </p>
+  <div class="container">
+    <div class="brief-header">
+     <h2>Получите ваш персональный маршрут</h2>
+<p class="brief-lead">
+  Расскажите немного о вашем ребёнке. Мы не рассылаем стандартные отписки. 
+  Вы получите маршрут, который подходит именно под ваш возраст, навыки и ситуацию: 
+  будь то материалы для домашнего старта или личная консультация.
+</p>
+    </div>
+
+    <div class="form-glass">
+      <form
+        action="#"
+        method="POST"
+        id="parents-brief"
+        onsubmit="event.preventDefault(); alert('Заявка отправлена в приёмную ИВУ. Мы свяжемся с вами и подберём маршрут для семьи.');"
+      >
+        <p class="brief-form-intro">Пожалуйста, ответьте на несколько вопросов:</p>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="parent-name">Ваше имя</label>
+            <input type="text" id="parent-name" name="parent-name" placeholder="Как к вам обращаться?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="parent-email">Электронная почта</label>
+            <input type="email" id="parent-email" name="parent-email" placeholder="Куда отправить ответ?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="child-age">Возраст ребёнка</label>
+            <select id="child-age" name="child-age" required>
+              <option value="" disabled selected>Выберите возраст...</option>
+              <option value="3-4">3–4 года</option>
+              <option value="4-5">4–5 лет</option>
+              <option value="5-6">5–6 лет</option>
+              <option value="6-7">6–7 лет</option>
+              <option value="7-11">7–11 лет</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="kindergarten">Связь с детским садом или педагогом</label>
+            <span class="form-hint">
+              Укажите, посещает ли ребёнок детский сад, занимается ли с педагогом
+              или вы хотите проходить только домашний маршрут.
+            </span>
+            <input type="text" id="kindergarten" name="kindergarten" placeholder="Например: ДОУ №42 / частный педагог / пока только дома">
+          </div>
+
+          <div class="form-group form-group--full">
+            <label>Текущая точка ребёнка</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="reading-level" value="none" required>
+                <span class="radio-text">Пока не знает букв</span>
+              </label>
+
+              <label class="radio-label">
+                <input type="radio" name="reading-level" value="words">
+                <span class="radio-text">Узнаёт отдельные слова или карточки</span>
+              </label>
+
+              <label class="radio-label">
+                <input type="radio" name="reading-level" value="syllables">
+                <span class="radio-text">Читает по слогам</span>
+              </label>
+
+              <label class="radio-label">
+                <input type="radio" name="reading-level" value="text">
+                <span class="radio-text">Читает текст, но быстро устаёт или теряет смысл</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group form-group--full">
+            <label>Какой формат старта вам ближе?</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="readiness" value="home-start" required>
+                <span class="radio-text">Домашний старт с практикой и инструкцией</span>
+              </label>
+
+              <label class="radio-label">
+                <input type="radio" name="readiness" value="consultation">
+                <span class="radio-text">Сначала нужна консультация и подбор маршрута</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group form-group--full">
+            <label for="mission-text">Ваш запрос к Институту</label>
+            <textarea
+              id="mission-text"
+              name="mission-text"
+              placeholder="Опишите ситуацию: что уже получается, а где ребёнок спотыкается? Нужна ли инструкция к домашней практике?"
+              required
+            ></textarea>
+          </div>
         </div>
 
-        <div class="form-glass">
-          <form
-            action="#"
-            method="POST"
-            id="parents-brief"
-            onsubmit="event.preventDefault(); alert('Заявка отправлена в приёмную ИВУ. Мы свяжемся с вами и подберём маршрут для семьи.');"
-          >
-            <p class="brief-form-intro">Пожалуйста, ответьте на несколько вопросов:</p>
-
-            <div class="form-group">
-              <label for="parent-name">Ваше имя</label>
-              <input type="text" id="parent-name" name="parent-name" placeholder="Как к вам обращаться?" required>
-            </div>
-
-            <div class="form-group">
-              <label for="parent-email">Электронная почта</label>
-              <input type="email" id="parent-email" name="parent-email" placeholder="Куда отправить ответ?" required>
-            </div>
-
-            <div class="form-group">
-              <label for="child-age">Возраст ребёнка</label>
-              <select id="child-age" name="child-age" required>
-                <option value="" disabled selected>Выберите возраст...</option>
-                <option value="3-4">3–4 года</option>
-                <option value="4-5">4–5 лет</option>
-                <option value="5-6">5–6 лет</option>
-                <option value="6-7">6–7 лет</option>
-                <option value="7-11">7–11 лет</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label>Текущая точка ребёнка</label>
-              <div class="radio-group">
-                <label class="radio-label">
-                  <input type="radio" name="reading-level" value="none" required>
-                  <span class="radio-text">Пока не знает букв</span>
-                </label>
-
-                <label class="radio-label">
-                  <input type="radio" name="reading-level" value="words">
-                  <span class="radio-text">Узнаёт отдельные слова или карточки</span>
-                </label>
-
-                <label class="radio-label">
-                  <input type="radio" name="reading-level" value="syllables">
-                  <span class="radio-text">Читает по слогам</span>
-                </label>
-
-                <label class="radio-label">
-                  <input type="radio" name="reading-level" value="text">
-                  <span class="radio-text">Читает текст, но быстро устаёт или теряет смысл</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="kindergarten">Связь с детским садом или педагогом</label>
-              <span class="form-hint">
-                Укажите, посещает ли ребёнок детский сад, занимается ли с педагогом
-                или вы хотите проходить только домашний маршрут.
-              </span>
-              <input type="text" id="kindergarten" name="kindergarten" placeholder="Например: ДОУ №42 / частный педагог / пока только дома">
-            </div>
-
-            <div class="form-group">
-              <label>Какой формат старта вам ближе?</label>
-              <div class="radio-group">
-                <label class="radio-label">
-                  <input type="radio" name="readiness" value="home-start" required>
-                  <span class="radio-text">Домашний старт с артефактами и инструкцией</span>
-                </label>
-
-                <label class="radio-label">
-                  <input type="radio" name="readiness" value="consultation">
-                  <span class="radio-text">Сначала нужна консультация и подбор маршрута</span>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="mission-text">Ваш запрос к Институту</label>
-              <textarea
-                id="mission-text"
-                name="mission-text"
-                placeholder="Опишите ситуацию: что уже получается, а где ребёнок спотыкается? Нужна ли инструкция к домашним тренажёрам?"
-                required
-              ></textarea>
-            </div>
-
-            <div class="form-submit">
-              <button type="submit" class="btn btn-primary">Отправить заявку в Институт</button>
-              <span class="privacy-note">
-                Нажимая кнопку, вы соглашаетесь на обработку персональных данных 
-                в соответствии с <a href="./privacy.html" style="text-decoration: underline; color: inherit;">Политикой конфиденциальности</a>.
-              </span>
-            </div>
-          </form>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Отправить заявку в Институт</button>
+          <span class="privacy-note">
+            Нажимая кнопку, вы соглашаетесь на обработку персональных данных
+            в соответствии с <a href="./privacy.html" class="privacy-link">Политикой конфиденциальности</a>.
+          </span>
         </div>
-      </div>
-    </section>
+      </form>
+    </div>
+  </div>
+</section>
 
     <section class="site-manifesto reveal">
       <div class="container">

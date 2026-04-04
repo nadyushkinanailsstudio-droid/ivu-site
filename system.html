@@ -1,574 +1,574 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Метод объёма и Архитектура ИВУ</title>
+  <meta name="description" content="Как работает метод ИВУ: от инженерии языка до дошкольной аттестации. Почему дети начинают читать быстро и с полным пониманием смысла.">
+  <meta name="theme-color" content="#0d1b2f">
+  <meta name="format-detection" content="telephone=no">
 
-    <title>Архитектура метода — ИВУ</title>
-    <meta name="description" content="Архитектура метода ИВУ: научный фундамент, идеи Никитина и Векслера, развитие памяти, чтения и мышления ребёнка в единой системе.">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Институт Врожденной Успеваемости">
+  <meta property="og:title" content="Метод объёма и Архитектура ИВУ">
+  <meta property="og:description" content="Как работает метод ИВУ: от инженерии языка до дошкольной аттестации. Почему дети начинают читать быстро и с полным пониманием смысла.">
+  <meta property="og:image" content="https://ТВОЙ_ДОМЕН_ИЛИ_ТВОЙ_GITHUB_PAGES_URL/favicon/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ТВОЙ_ДОМЕН_ИЛИ_ТВОЙ_GITHUB_PAGES_URL/system.html">
 
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Метод объёма и Архитектура ИВУ">
+  <meta name="twitter:description" content="Как работает метод ИВУ: от инженерии языка до дошкольной аттестации.">
+  <meta name="twitter:image" content="https://ТВОЙ_ДОМЕН_ИЛИ_ТВОЙ_GITHUB_PAGES_URL/favicon/og-image.png">
 
-    <meta property="og:title" content="Архитектура метода — ИВУ">
-    <meta property="og:description" content="Метод ИВУ объединяет идеи Никитина, тесты Векслера и структуру русского языка в единую систему развития памяти, чтения и мышления.">
-    <meta property="og:image" content="favicon/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="/system.html">
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./system.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./system.css">
 </head>
 <body class="system-page">
 
-    <div class="noise-overlay"></div>
+  <div class="noise-overlay"></div>
 
-    <header class="header" id="header">
-        <div class="container header__inner">
-            <a href="./index.html" class="header__logo">
-                <span class="header__logo-title">Институт Врожденной Успеваемости</span>
-                <span class="header__logo-sub">Инженерный код языка</span>
-            </a>
-           <div class="page-sections-bar page-sections-bar--header">
-  <div class="page-sections">
-    <button
-      class="page-sections__toggle"
-      type="button"
-      aria-expanded="false"
-      aria-controls="page-sections-panel"
-    >
-      <span class="page-sections__label">Разделы</span>
-      <span class="page-sections__icon">+</span>
-    </button>
+  <header class="header" id="header">
+    <div class="container header__inner">
 
-    <div class="page-sections__panel" id="page-sections-panel" hidden>
-      <a href="#science" class="page-sections__link">Научная база</a>
-      <a href="#volume" class="page-sections__link">Метод объёма</a>
-      <a href="#automation" class="page-sections__link">Автоматизация</a>
-      <a href="#result" class="page-sections__link">Результат</a>
-      <a href="#start" class="page-sections__link">Как начать</a>
+      <div class="header__brand">
+        <a href="./index.html" class="header__logo">
+          <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+          <span class="header__logo-sub">Инженерный код языка</span>
+        </a>
+
+        <div class="page-sections-bar page-sections-bar--header">
+          <div class="page-sections">
+            <button
+              class="page-sections__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="page-sections-panel"
+            >
+              <span class="page-sections__label">Разделы</span>
+              <span class="page-sections__icon"></span>
+            </button>
+
+            <div class="page-sections__panel" id="page-sections-panel" hidden>
+              <a href="#hero" class="page-sections__link is-active">Старт</a>
+              <a href="#problem" class="page-sections__link">Проблема</a>
+              <a href="#magic" class="page-sections__link">Парадигма</a>
+              <a href="#system-algorithm" class="page-sections__link">Алгоритм</a>
+              <a href="#science" class="page-sections__link">Научная опора</a>
+              <a href="#practice-point" class="page-sections__link">Контрольная точка</a>
+              <a href="#practice" class="page-sections__link">Практика</a>
+              <a href="#system-next" class="page-sections__link">Как начать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="./index.html" class="nav__link">Главная</a>
+        <a href="./system.html" class="nav__link is-active">Метод</a>
+        <a href="./parents.html" class="nav__link">Родителям</a>
+        <a href="./educators.html" class="nav__link">Педагогам</a>
+        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+        <a href="./club.html" class="nav__link">Клуб Кручучу</a>
+        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+        <a href="./foundation.html" class="nav__link">Фонд</a>
+        <a href="./contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="page-flow">
+
+   <section class="system-hero reveal" id="hero">
+      <div class="container">
+        <div class="system-hero__shell">
+          <span class="system-chip">Инженерия языка</span>
+
+          <h1 class="system-hero__title">
+            <span class="system-hero__title-line">Мы не учим читать.</span>
+            <span class="system-hero__title-line">Мы учим собирать смысл.</span>
+          </h1>
+
+          <p class="system-hero__statement">
+            Метод ИВУ — это система,
+            в которой ребёнок начинает удерживать смысл,
+            а не просто читать слова.
+            <br><br>
+            Чтение становится естественным результатом
+            развития памяти и мышления.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  <section class="memory-flow-final reveal" id="problem">
+  <div class="container">
+    <div class="memory-final">
+
+      <div class="memory-final__head">
+        <div class="system-chip">Анатомия проблемы</div>
+        <h2 class="memory-final__title">Почему смысл ускользает?</h2>
+        <p class="memory-final__subtitle">Ребёнок читает слова — но не удерживает смысл.</p>
+      </div>
+
+      <div class="memory-final__core">
+        <article class="memory-card">
+          <div class="memory-card__badge">Жизненный пример</div>
+          <h3 class="memory-card__title">Вода в ладошках</h3>
+          <p class="memory-card__text">
+            Ребёнок очень старается и аккуратно несёт воду.
+            Но пока он доходит до цели — вода теряется.
+          </p>
+          <div class="memory-card__accent">В ладошках воду не удержать.</div>
+        </article>
+
+        <div class="memory-visual" aria-hidden="true">
+          <div class="memory-visual__image-wrapper">
+            <img
+              src="./img/system-memory-capacity.png"
+              alt="Вода в ладошках и ёмкость как метафора удержания смысла"
+              loading="lazy"
+              decoding="async"
+            >
+          </div>
+
+          <div class="memory-visual__axis">
+            <div class="drops">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+        <article class="memory-card">
+          <div class="memory-card__badge memory-card__badge--blue">Проекция на чтение</div>
+          <h3 class="memory-card__title">Потерянный смысл</h3>
+          <p class="memory-card__text">
+            Ребёнок читает слова, но к концу предложения забывает начало.
+          </p>
+          <div class="memory-card__accent">Смысл не удерживается.</div>
+        </article>
+      </div>
+
+      <div class="memory-solution">
+        <div class="memory-solution__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M12 3.8a5.2 5.2 0 0 0-2.8 9.58c.48.32.75.86.75 1.43v.5h4.1v-.5c0-.58.28-1.1.77-1.42A5.2 5.2 0 0 0 12 3.8Z" />
+            <path d="M10.2 17.2h3.6" />
+            <path d="M10.7 19.4h2.6" />
+          </svg>
+        </div>
+
+        <div class="memory-solution__content">
+          <h3 class="memory-solution__title">Метод объёма ИВУ меняет сам принцип.</h3>
+          <p class="memory-solution__text">
+            Мы даём ребёнку систему, в которой память перестаёт удерживать слова по одному
+            и начинает вмещать смысл целиком.
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
-</div> 
+</section> 
 
-           <nav class="nav" aria-label="Основная навигация">
-                <a href="./index.html" class="nav__link">Главная</a>
-                <a href="./system.html" class="nav__link active">Метод</a>
-                <a href="./parents.html" class="nav__link">Родителям</a>
-                <a href="./educators.html" class="nav__link">Педагогам</a>
-                <a href="./kindergarten.html" class="nav__link">Детским садам</a>
-                <a href="./club.html" class="nav__link">Клуб Кручучу</a>
-                <a href="./krutigrad.html" class="nav__link">Крутиград</a>
-                <a href="./foundation.html" class="nav__link">Фонд</a>
-                <a href="./contacts.html" class="nav__link">Контакты</a>
-            </nav>
+    <section class="system-puzzle reveal" id="magic">
+      <div class="container">
+        <div class="section-header section-header--system">
+          <span class="system-chip">Парадигма</span>
+          <h2>Те же буквы — другой результат</h2>
+          <p>Разница не в буквах. Разница в том, собираются ли они в смысл.</p>
         </div>
-    </header>
 
-  <main id="content">
+        <div class="puzzle-grid">
+          <article class="puzzle-card puzzle-card--regular">
+            <div class="puzzle-card__badge">Обычный подход</div>
+            <h3>Линейное обучение</h3>
+            <ul class="puzzle-card__list">
+              <li>буква воспринимается отдельно</li>
+              <li>слова складываются медленно</li>
+              <li>смысл появляется слишком поздно</li>
+            </ul>
+            <div class="puzzle-card__metaphor">
+              <strong>Простыми словами:</strong>
+              Это как собирать сложный пазл по одной детали, не видя картинки на коробке.
+              Детали в руках есть, а общего смысла нет.
+            </div>
+          </article>
 
-  <section class="system-hero container reveal">
-    <div class="system-hero-shell">
-      <div class="system-hero__kicker">Архитектура метода ИВУ</div>
+          <div class="puzzle-arrow" aria-hidden="true">→</div>
 
-      <p class="system-hero__pretitle">Никитин • Векслер • Метод объёма</p>
+          <article class="puzzle-card puzzle-card--ivu">
+            <div class="puzzle-card__badge">Система ИВУ</div>
+            <h3>Метод объёма</h3>
+            <ul class="puzzle-card__list">
+              <li>буква работает как часть системы</li>
+              <li>слова сразу встают на своё место</li>
+              <li>смысл удерживается без перегруза</li>
+            </ul>
+            <div class="puzzle-card__metaphor">
+              <strong>Простыми словами:</strong>
+              Мы сразу даём ребёнку рамку, в которой каждое новое слово встаёт на своё место —
+              и смысл начинает собираться.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-      <h1 class="system-hero__title">
-        <span class="system-hero__line-1">Почему дети теряют смысл при чтении</span>
-        <span class="system-hero__line-2">и как метод объёма это исправляет</span>
-      </h1>
+    <section class="system-algorithm reveal" id="system-algorithm">
+      <div class="container">
+        <div class="algorithm">
 
-      <p class="system-hero__description">
-        Проблема не в ребёнке.
-        Проблема в том, что обучение не учитывает объём памяти.
-        Метод ИВУ показывает, как через правильную структуру нагрузки
-        ребёнок начинает удерживать, понимать и связывать смысл.
-      </p>
-    </div>
-  </section>
-
-  <section class="container">
-    <div class="premium-panel reveal" id="science">
-      <span class="qa-label">Научный фундамент</span>
-      <h3 class="h3">Как растёт интеллект ребёнка</h3>
-
-      <p class="p">
-        Метод ИВУ основан не на догадках, а на понятной логике развития памяти.
-        Чтобы это объяснить, важно увидеть три ключевые идеи:
-        сначала мозг привыкает к объёму, потом память удерживает больше,
-        а затем чтение начинает складываться быстрее.
-      </p>
-
-      <div class="science-graph-section">
-        <div class="sg-layout" data-step="0" id="liveGraph">
-
-          <div class="sg-graph">
-            <svg class="sg-svg" viewBox="0 0 460 260" role="img" aria-label="Как работает метод ИВУ">
-              <g stroke="rgba(10,25,47,0.08)" stroke-width="1">
-                <line x1="0" y1="65" x2="460" y2="65"></line>
-                <line x1="0" y1="130" x2="460" y2="130"></line>
-                <line x1="0" y1="195" x2="460" y2="195"></line>
-              </g>
-
-              <!-- НИКИТИН -->
-              <g class="sg-layer sg-layer--nikitin">
-                <path
-                  class="sg-path"
-                  d="M40 220 C 120 215, 180 210, 240 170 C 280 140, 320 100, 400 80"
-                  stroke="#8C9CAE"
-                  stroke-width="3"
-                  fill="none"></path>
-
-                <foreignObject class="sg-hud sg-hud--nikitin" x="60" y="195" width="190" height="34">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag">
-                    01 • СНАЧАЛА СЛОЖНО
-                  </div>
-                </foreignObject>
-
-                <foreignObject class="sg-hud sg-hud--nikitin" x="300" y="90" width="130" height="34">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag">
-                    ПОТОМ БЫСТРО
-                  </div>
-                </foreignObject>
-              </g>
-
-              <!-- ВЕКСЛЕР -->
-              <g class="sg-layer sg-layer--wechsler">
-                <rect class="glass-rect" x="200" y="180" width="30" height="50" rx="6"></rect>
-                <rect class="glass-rect" x="260" y="140" width="30" height="90" rx="6"></rect>
-                <rect class="glass-rect" x="320" y="90" width="30" height="140" rx="6"></rect>
-
-                <foreignObject class="sg-hud sg-hud--wechsler" x="110" y="108" width="270" height="40">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--blue">
-                    02 • ПАМЯТЬ: СКОЛЬКО ПОМЕЩАЕТСЯ
-                  </div>
-                </foreignObject>
-
-                <foreignObject class="sg-hud sg-hud--wechsler" x="168" y="226" width="84" height="34">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag" style="font-size:8px;">
-                    ПО ОДНОЙ
-                  </div>
-                </foreignObject>
-
-                <foreignObject class="sg-hud sg-hud--wechsler" x="242" y="226" width="110" height="34">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag" style="font-size:8px;">
-                    СРАЗУ НЕСКОЛЬКО
-                  </div>
-                </foreignObject>
-              </g>
-
-              <!-- ИВУ -->
-              <g class="sg-layer sg-layer--ivu">
-                <path
-                  class="sg-path"
-                  d="M40 220 C 100 215, 150 150, 210 120 C 270 90, 320 70, 410 45"
-                  stroke="var(--navy)"
-                  stroke-width="3.5"
-                  fill="none"></path>
-
-                <foreignObject class="sg-hud sg-hud--ivu-1" x="100" y="160" width="200" height="34">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--blue">
-                    20 СОГЛАСНЫХ — ОСНОВА
-                  </div>
-                </foreignObject>
-
-                <foreignObject class="sg-hud sg-hud--ivu-2" x="150" y="60" width="220" height="40">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--blue">
-                    «А» СОЕДИНЯЕТ И УСКОРЯЕТ
-                  </div>
-                </foreignObject>
-
-                <foreignObject class="sg-hud sg-hud--ivu-3" x="330" y="20" width="100" height="34">
-                  <div xmlns="http://www.w3.org/1999/xhtml" class="hud-tag hud-tag--solid">
-                    100 КНИГ
-                  </div>
-                </foreignObject>
-              </g>
-            </svg>
+          <div class="algorithm__head">
+            <div class="system-chip system-chip--light">Алгоритм чтения</div>
+            <h2 class="algorithm__title">Один принцип — весь язык</h2>
+            <p class="algorithm__subtitle">
+              Ребёнок не заучивает буквы.
+              Он запускает механизм.
+            </p>
           </div>
 
-          <div class="sg-side">
-            <div class="sg-right-title">Как работает метод ИВУ</div>
-
-            <div class="sg-tabs" role="tablist">
-              <button class="sg-tab" data-step="1" type="button">01. НИКИТИН</button>
-              <button class="sg-tab" data-step="2" type="button">02. ВЕКСЛЕР</button>
-              <button class="sg-tab" data-step="3" type="button">03. ИВУ</button>
-            </div>
-
-            <div class="sg-text-wrapper">
-              <div class="sg-step" id="sg-step-1">
-                <div class="sg-step-title">Сначала сложно — потом легко</div>
-                <p class="sg-step-text">
-                  Ребёнок сразу видит не один элемент, а целую среду.
-                  Сначала это кажется сложным.
-                  Потом мозг привыкает к объёму — и развитие идёт быстрее.
-                </p>
-              </div>
-
-              <div class="sg-step" id="sg-step-2">
-                <div class="sg-step-title">Чем больше помещается — тем быстрее</div>
-                <p class="sg-step-text">
-                  Если память удерживает только одно, обучение идёт медленно.
-                  Если удерживает сразу несколько элементов, понимание ускоряется.
-                </p>
-              </div>
-
-              <div class="sg-step" id="sg-step-3">
-                <div class="sg-step-title">Не по одной букве — а сразу системой</div>
-                <p class="sg-step-text">
-                  В ИВУ ребёнок работает не с одной буквой, а сразу со структурой.
-                  20 согласных дают основу, «А» помогает соединять,
-                  и чтение начинает складываться быстрее.
-                </p>
+          <div class="algorithm__core">
+            <div class="algorithm__block">
+              <div class="algorithm__label">ядро системы</div>
+              <div class="algorithm__main">20 согласных + «А»</div>
+              <div class="algorithm__note">
+                точка запуска, через которую ребёнок осваивает принцип слияния
               </div>
             </div>
 
-            <div style="margin-top: 24px;">
-              <a class="btn btn-outline" href="./foundation.html">Смотреть доказательства →</a>
+            <div class="algorithm__flow" aria-hidden="true">
+              <div class="algorithm__arrow"></div>
+              <div class="algorithm__vowels">
+                <span>О</span>
+                <span>У</span>
+                <span>И</span>
+                <span>Э</span>
+              </div>
+              <div class="algorithm__caption">перенос на другие гласные</div>
             </div>
+
+            <div class="algorithm__block algorithm__block--result">
+              <div class="algorithm__label">результат</div>
+              <div class="algorithm__main">механизм чтения запущен</div>
+              <div class="algorithm__note">
+                ребёнок начинает читать без повторного обучения
+              </div>
+            </div>
+          </div>
+
+          <div class="algorithm__footer">
+            один принцип → вся система языка
           </div>
 
         </div>
       </div>
+    </section>
+
+  <section class="system-architecture reveal" id="science">
+  <div class="container">
+    <div class="section-header section-header--system">
+      <span class="system-chip">Научная опора</span>
+      <h2>Небоскрёб интеллекта</h2>
+      <p>ИВУ опирается на фундаментальную науку. Мы не просто учим читать — мы развиваем память, мышление и внутреннюю устойчивость ребёнка.</p>
     </div>
-  </section>
 
-  <section class="container">
-    <hr class="hr reveal">
-
-    <div id="volume" class="reveal">
-      <div class="section-head">
-        <span class="qa-label">Обычный путь и путь ИВУ</span>
-        <h2 class="h2">Чем метод объёма отличается от обычного обучения</h2>
-        <p class="sub">
-          Обычное обучение дробит материал и заставляет мозг всё время переключаться.
-          ИВУ, наоборот, помогает удерживать несколько связанных элементов сразу.
+    <div class="architecture-grid">
+      <article class="arch-card">
+        <div class="arch-marker"></div>
+        <h3>Скрытые корни</h3>
+        <div class="arch-card__gold">Опережающая среда Никитина</div>
+        <p>
+          Мы не тянем ребёнка за результат.
+          Сначала создаём среду, в которой развиваются логика,
+          внимание и пространственное мышление.
+          Когда корни сильны, чтение прорастает естественно.
         </p>
-      </div>
+      </article>
 
-      <div class="method-compare">
-        <article class="method-card method-card--old">
-          <div class="method-card__topline">
-            <span class="method-badge method-badge--old">ПРОБЛЕМА</span>
-            <div class="method-formula">по очереди → разрыв смысла → перегрузка</div>
-          </div>
+      <article class="arch-card arch-card--center">
+        <div class="arch-marker"></div>
+        <h3>Метод объёма</h3>
+        <div class="arch-card__gold">Расширение когнитивной ёмкости</div>
+        <p>
+          Ребёнок перестаёт тратить все силы на расшифровку букв.
+          Он начинает удерживать целые конструкции
+          и видеть смысл сразу, а не по кускам.
+        </p>
+      </article>
 
-          <h3 class="method-card__title">Обычное обучение дробит смысл</h3>
+      <article class="arch-card">
+        <div class="arch-marker"></div>
+        <h3>Шкала Векслера</h3>
+        <div class="arch-card__gold">Международный стандарт</div>
+        <p>
+          Метод ИВУ опирается на архитектуру одного из главных мировых тестов на интеллект
+          и развивает те когнитивные навыки,
+          которые лежат в основе реального учебного успеха.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
 
-          <p class="method-card__lead">
-            Чтение, письмо и математика идут как отдельные куски.
-            Мозг не собирает их в одну систему.
+    <section class="system-triumph reveal" id="practice-point">
+      <div class="container">
+        <div class="triumph-shell">
+
+          <span class="system-chip system-chip--light">Контрольная точка перед школой</span>
+
+          <h2 class="triumph-title">100 слов за 3 минуты</h2>
+
+          <p class="triumph-lead">
+            Это не финиш и не вся цель метода.
+            Это первый ясный показатель, что ребёнок
+            <strong>читает с пониманием</strong>,
+            удерживает смысл и готов воспринимать школьную программу
+            без перегруза и постоянных срывов.
           </p>
 
-          <div class="anim-zone">
-            <div class="slot-container">
-              <div class="slot-item">Чтение</div>
-              <div class="slot-item">Письмо</div>
-              <div class="slot-item">Математика</div>
-              <div class="buffer-clear">
-                <span class="bc-title">Буфер очищен</span>
-                <span class="bc-sub">переключение контекста</span>
-              </div>
-            </div>
+          <p class="triumph-note">
+            Когда чтение перестаёт быть трудом, оно становится инструментом учёбы.
+          </p>
+
+          <div class="triumph-stats">
+
+  <div class="stat-item">
+    <div class="stat-item__number">6–7</div>
+    <div class="stat-item__label">возраст контрольной аттестации</div>
+  </div>
+
+  <div class="stat-item stat-item--divider">
+    <div class="stat-item__number">100</div>
+    <div class="stat-item__label">слов в контрольном тексте</div>
+  </div>
+
+  <div class="stat-item stat-item--divider">
+    <div class="stat-item__number">3</div>
+    <div class="stat-item__label">минуты на чтение с пониманием</div>
+  </div>
+
+</div>
+          <div class="triumph-result">
+            Эта точка показывает, что механизм чтения уже запущен —
+            дальше ребёнок может не просто читать,
+            а учиться через текст.
           </div>
 
-          <div class="method-copy">
-            <p class="p">
-              Ребёнок постоянно переключается между задачами.
-              Из-за этого быстро устаёт и теряет смысл.
+        </div>
+      </div>
+    </section>
+
+    <section class="system-tools reveal" id="practice">
+      <div class="container">
+
+        <div class="section-header section-header--system">
+          <span class="system-chip">Практика</span>
+          <h2>Как проходит занятие</h2>
+          <p>
+            Ребёнок не заучивает буквы.
+            Он работает с системой, в которой чтение запускается как механизм.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+
+          <article class="tool-card">
+            <div class="tool-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4.5" y="4.5" width="15" height="15" rx="3" />
+                <path d="M8 8h2.4" />
+                <path d="M13.6 8H16" />
+                <path d="M8 12h2.4" />
+                <path d="M13.6 12H16" />
+                <circle cx="12" cy="16" r="1.5" />
+              </svg>
+            </div>
+            <div class="tool-card__content">
+              <h3>Технология ММНГ</h3>
+              <div class="tool-card__subtitle">Навигатор чтения</div>
+              <p>
+                Это не таблица слогов.
+                Это система ориентиров, по которой ребёнок начинает понимать,
+                как работает язык.
+                Он больше не угадывает — он видит структуру и читает уверенно.
+              </p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <rect x="4.5" y="5" width="6" height="14" rx="1.5" />
+                <rect x="13.5" y="9" width="6" height="10" rx="1.5" />
+                <path d="M10.5 12h3" />
+                <path d="M12 10.5v3" />
+              </svg>
+            </div>
+            <div class="tool-card__content">
+              <h3>Конструкция слов</h3>
+              <div class="tool-card__subtitle">Инженерная сборка</div>
+              <p>
+                Слово больше не читается “по буквам”.
+                Ребёнок видит его как конструкцию:
+                основу и присоединяемые части.
+                Поэтому смысл считывается сразу, без потерь.
+              </p>
+            </div>
+          </article>
+
+          <article class="tool-card">
+            <div class="tool-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="6.8" />
+                <path d="M12 7.2V12l3.3 2.2" />
+                <path d="M12 3.8v1.8" />
+                <path d="M20.2 12h-1.8" />
+              </svg>
+            </div>
+            <div class="tool-card__content">
+              <h3>Точная адаптация</h3>
+              <div class="tool-card__subtitle">3–11 лет</div>
+              <p>
+                Нагрузка точно соответствует возрасту.
+                Ребёнок не перегружается и не отстаёт —
+                он движется в своём темпе,
+                но по чёткой системе.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="tools-result">
+          В результате ребёнок не учится читать —
+          он начинает понимать текст.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="system-next reveal" id="system-next">
+      <div class="container">
+        <div class="system-next__shell">
+
+          <div class="system-next__head">
+            <div class="system-chip">С чего начать</div>
+            <h2 class="system-next__title">Траектории внедрения</h2>
+            <p class="system-next__lead">
+              Система ИВУ масштабируется под разные задачи:
+              от домашнего старта до внедрения в образовательную среду.
             </p>
           </div>
 
-          <div class="method-result">
-            Итог: знания есть, а цельной картины нет.
+          <div class="system-next__grid">
+
+            <article class="system-next__card">
+              <div class="system-next__num">01</div>
+              <div class="system-next__mode">Старт для семьи</div>
+              <h3>Родителям</h3>
+              <p>
+                Домашняя траектория.
+                Понятный вход в систему для семьи, которая хочет запустить чтение,
+                память и мышление без перегруза.
+              </p>
+              <a href="./parents.html" class="btn btn-outline">Перейти родителям</a>
+            </article>
+
+            <article class="system-next__card">
+              <div class="system-next__num">02</div>
+              <div class="system-next__mode">Методика и материалы</div>
+              <h3>Педагогам</h3>
+              <p>
+                Методическая база, сценарии занятий и материалы
+                для специалистов, которые хотят работать в системе ИВУ
+                как по готовой архитектуре.
+              </p>
+              <a href="./educators.html" class="btn btn-outline">Перейти педагогам</a>
+            </article>
+
+            <article class="system-next__card">
+              <div class="system-next__num">03</div>
+              <div class="system-next__mode">Внедрение и сопровождение</div>
+              <h3>Детским садам и школам</h3>
+              <p>
+                Системное внедрение в группу, детский сад или образовательную площадку:
+                демонстрация, сопровождение и подтверждение результата.
+              </p>
+              <a href="./kindergarten.html" class="btn btn-outline">Перейти учреждениям</a>
+            </article>
+
+            <article class="system-next__card system-next__card--accent">
+              <div class="system-next__num">04</div>
+              <div class="system-next__mode">Индивидуальный формат</div>
+              <h3>Партнёрам и организациям</h3>
+              <p>
+                Если вы представляете проект, школу или платформу,
+                мы подберём формат внедрения и взаимодействия под вашу задачу.
+              </p>
+              <a href="./contacts.html#application-form" class="btn btn-primary">Обсудить подключение</a>
+            </article>
+
           </div>
-        </article>
 
-        <article class="method-card method-card--new">
-          <div class="method-card__topline">
-            <span class="method-badge method-badge--new">РЕШЕНИЕ ИВУ</span>
-            <div class="method-formula">связь → удержание → понимание</div>
-          </div>
-
-          <h3 class="method-card__title">Метод объёма соединяет смысл в один процесс</h3>
-
-          <p class="method-card__lead">
-            Вместо постоянного переключения ребёнок удерживает несколько связанных элементов сразу.
-          </p>
-
-          <div class="anim-zone">
-            <div class="ivu-panel">
-              <div class="wp-books">
-                <div class="wp-book">Книга 1</div>
-                <div class="wp-book">Книга 2</div>
-                <div class="wp-book">Книга 3</div>
-              </div>
-
-              <div class="wp-beams">
-                <div class="wp-beam"></div>
-                <div class="wp-beam"></div>
-                <div class="wp-beam"></div>
-              </div>
-
-              <div class="wp-base">
-                <div class="wp-lines"></div>
-                <div class="wp-core"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="method-copy">
-            <p class="p">
-              В ИВУ один принцип показывается сразу с нескольких сторон.
-              Так мозг перестаёт зубрить куски и начинает видеть систему.
+          <div class="system-next__final">
+            <p>
+              Метод ИВУ — это не “курс чтения”.
+              Это система, которую можно запустить в семье, в классе и в образовательной организации.
             </p>
           </div>
 
-          <div class="method-result method-result--accent">
-            Итог: ребёнок понимает быстрее, удерживает больше и учится увереннее.
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="container">
-    <hr class="hr reveal">
-
-    <div class="grid2 reveal">
-      <div class="premium-panel split-panel-col" id="core" style="margin-bottom:0;">
-        <div class="split-panel-content">
-          <span class="qa-label">Основа метода</span>
-          <h3 class="h3">20 согласных и «А» как точка запуска</h3>
-          <p class="p">
-            В ИВУ язык показывается не как россыпь букв, а как структура.
-            20 согласных создают основу, а «А» помогает быстро запустить
-            соединение звуков и чтения.
-          </p>
-        </div>
-
-        <div class="visual-section">
-          <div class="v-matrix-grid">
-            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-            <div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div><div class="v-matrix-cube"></div>
-          </div>
-
-          <p class="p small muted matrix-note">
-            Полная расстановка матрицы открывается в Клубе Кручучу.
-          </p>
         </div>
       </div>
+    </section>
 
-      <div class="premium-panel split-panel-col" id="automation" style="margin-bottom:0;">
-        <div class="split-panel-content">
-          <span class="qa-label">Запуск чтения</span>
-          <h3 class="h3">Почему в ИВУ важна буква «А»</h3>
-          <p class="p">
-            В обычном подходе буква остаётся образом.
-            В ИВУ «А» работает как сигнал запуска:
-            помогает соединять звуки и переводить чтение в автоматический режим.
-          </p>
-        </div>
-
-        <div class="visual-section">
-          <div class="compare">
-            <div class="compare__col">
-              <div class="compare__cap">Обычный подход</div>
-              <div class="key-btn-row">
-                <div class="key-btn" style="color:var(--text-muted); border-color:var(--stone);">А</div>
-                <span class="key-sign">= образ</span>
-              </div>
-            </div>
-
-            <div class="compare__mid">→</div>
-
-            <div class="compare__col">
-              <div class="compare__cap">ИВУ</div>
-              <div class="key-btn-row">
-                <div class="key-btn">A</div>
-                <span class="key-sign active">= запуск</span>
-              </div>
-            </div>
-          </div>
-
-          <p class="p small muted" style="text-align:center; margin-top:16px;">
-            Один принцип запускается на «А» и затем переносится на другие гласные.
-          </p>
+    <section class="site-manifesto reveal">
+      <div class="container">
+        <div class="site-manifesto-text">
+          Мы вернём России статус<br>самой читающей страны в мире.
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="container reveal">
-    <div class="system-core-transfer">
-      <div class="system-core-transfer__inner">
-        <div class="system-core-transfer__topline">Как переносится навык</div>
+  </main>
 
-        <div class="system-core-transfer__layout">
-          <div class="system-core-transfer__panel system-core-transfer__panel--main">
-            <div class="system-core-transfer__label">Точка запуска</div>
-            <div class="system-core-transfer__title">20 согласных + «А»</div>
-            <div class="system-core-transfer__sub">
-              Сначала ребёнок понимает один принцип соединения.
-            </div>
-          </div>
+  <footer class="footer-minimal">
+    <div class="container footer-minimal__inner">
 
-          <div class="system-core-transfer__flow">
-            <div class="system-core-transfer__arrow">⟶</div>
-
-            <div class="system-core-transfer__vowels">
-              <span>О</span>
-              <span>У</span>
-              <span>И</span>
-              <span>Э</span>
-            </div>
-
-            <div class="system-core-transfer__micro">другие гласные</div>
-          </div>
-
-          <div class="system-core-transfer__panel system-core-transfer__panel--text">
-            <div class="system-core-transfer__text">
-              <strong>Дальше механизм переносится на весь язык.</strong>
-              Ребёнок уже не учится заново, а расширяет один понятный принцип.
-            </div>
-          </div>
-        </div>
-
-        <div class="system-core-transfer__formula">
-          Один принцип ⟶ много слов ⟶ чтение
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container">
-    <hr class="hr reveal">
-
-    <div class="premium-panel reveal" id="result">
-      <span class="qa-label">Результат метода</span>
-      <h3 class="h3">К чему ведёт метод ИВУ</h3>
-
-      <p class="p">
-        Метод ИВУ нужен не ради красивой теории.
-        Его задача — сделать чтение устойчивым, понятным и уверенным.
-      </p>
-
-      <div class="timeline">
-        <div class="timeline-step">
-          <div class="timeline-step__num">1</div>
-          <div class="timeline-step__title">Меньше перегруза</div>
-          <div class="timeline-step__text">
-            Ребёнок перестаёт тонуть в отдельных кусках информации.
-          </div>
-        </div>
-
-        <div class="timeline-step">
-          <div class="timeline-step__num">2</div>
-          <div class="timeline-step__title">Больше понимания</div>
-          <div class="timeline-step__text">
-            Память удерживает больше, и смысл перестаёт обрываться.
-          </div>
-        </div>
-
-        <div class="timeline-step">
-          <div class="timeline-step__num">3</div>
-          <div class="timeline-step__title">Путь к 100 книгам</div>
-          <div class="timeline-step__text">
-            Ребёнок выходит к уверенному чтению и получает основу для большого читательского пути.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="container">
-    <hr class="hr reveal">
-
-    <div class="premium-panel reveal" id="start">
-      <span class="qa-label">Как начать</span>
-      <h3 class="h3">Куда идти дальше после страницы «Метод»</h3>
-
-      <p class="p">
-        Эта страница объясняет логику метода.
-        Следующий шаг зависит от вашей роли:
-        семья, педагог, детский сад или запрос на доступ к материалам.
-      </p>
-
-      <div class="routes-grid">
-        <a href="./parents.html" class="route-card">
-          <div class="route-num">01</div>
-          <div class="route-title">Родителям</div>
-          <div class="route-text">
-            Домашний маршрут ребёнка, роль семьи и первые шаги без перегруза.
-          </div>
-        </a>
-
-        <a href="./educators.html" class="route-card">
-          <div class="route-num">02</div>
-          <div class="route-title">Педагогам</div>
-          <div class="route-text">
-            Методическая система, ММНГ, профессиональный вход и структура внедрения.
-          </div>
-        </a>
-
-        <a href="./contacts.html" class="route-card">
-          <div class="route-num">03</div>
-          <div class="route-title">Доступ и заявка</div>
-          <div class="route-text">
-            Открытые материалы — для знакомства.
-            Полный доступ и маршруты — через заявку.
+      <div>
+        <a href="./index.html" class="footer-minimal__logo-block">
+          <div class="footer-minimal__logo-icon">ИВУ</div>
+          <div class="footer-minimal__logo-text">
+            <strong>Институт Врожденной<br>Успеваемости</strong>
+            <span>100 слов за 3 минуты —<br>к 6–7 годам</span>
           </div>
         </a>
       </div>
 
-      <div class="actions">
-        <a class="btn btn-primary" href="./contacts.html">Оставить заявку</a>
-        <a class="btn btn-outline" href="./foundation.html">Открыть Фонд</a>
+      <div class="footer-minimal__center">
+        Авторская система Сергея Белолипецкого<br>
+        <a href="./privacy.html" class="footer-minimal__policy">
+          Политика конфиденциальности
+        </a>
       </div>
-    </div>
-  </section>
 
-  <section class="site-manifesto reveal">
-    <div class="container">
-      <div class="site-manifesto-text">
-        Мы вернём России статус<br>самой читающей страны в мире.
+      <div>
+        <a href="#header" class="footer-minimal__up">Наверх ↑</a>
       </div>
+
     </div>
-  </section>
+  </footer>
 
-</main>
-
-   <footer class="footer-minimal">
-        <div class="container footer-minimal__inner">
-            <div class="footer-minimal__left">
-                <a href="./index.html" class="footer-minimal__logo-block">
-                    <div class="footer-minimal__logo-icon">ИВУ</div>
-                    <div class="footer-minimal__logo-text">
-                        <strong>Институт Врожденной<br>Успеваемости</strong>
-                        <span>От первых 100 слов —<br>к 100 книгам школьника</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="footer-minimal__center">
-                Авторская система Сергея Белолипецкого<br>
-                <a href="./privacy.html" style="font-size: 0.8rem; text-decoration: underline; margin-top: 8px; display: inline-block; color: var(--text-muted); opacity: 0.8;">Политика конфиденциальности</a>
-            </div>
-
-            <div class="footer-minimal__right">
-                <a href="#header" class="footer-minimal__up">Наверх ↑</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="./script.js"></script>
-    <script src="./system.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

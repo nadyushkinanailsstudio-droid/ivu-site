@@ -4,101 +4,168 @@
 
 /* --- INTER --- */
 @font-face {
-  font-display: swap; font-family: 'Inter'; font-style: normal; font-weight: 300;
-  src: url('./fonts/inter-v20-cyrillic_latin-300.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/inter-v20-cyrillic_latin-300.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Inter'; font-style: normal; font-weight: 400;
-  src: url('./fonts/inter-v20-cyrillic_latin-regular.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/inter-v20-cyrillic_latin-regular.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Inter'; font-style: normal; font-weight: 500;
-  src: url('./fonts/inter-v20-cyrillic_latin-500.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/inter-v20-cyrillic_latin-500.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Inter'; font-style: normal; font-weight: 600;
-  src: url('./fonts/inter-v20-cyrillic_latin-600.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/inter-v20-cyrillic_latin-600.woff2') format('woff2');
 }
 
 /* --- JETBRAINS MONO --- */
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: normal; font-weight: 300;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-300.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 300;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-300.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: italic; font-weight: 300;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-300italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 300;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-300italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: normal; font-weight: 400;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-regular.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-regular.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: italic; font-weight: 400;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: normal; font-weight: 500;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-500.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-500.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: italic; font-weight: 500;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-500italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-500italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: normal; font-weight: 600;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-600.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-600.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: italic; font-weight: 600;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-600italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 600;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-600italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: normal; font-weight: 700;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-700.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-700.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'JetBrains Mono'; font-style: italic; font-weight: 700;
-  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-700italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./fonts/jetbrains-mono-v24-cyrillic_latin-700italic.woff2') format('woff2');
 }
 
 /* --- PLAYFAIR DISPLAY --- */
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: normal; font-weight: 400;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-regular.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-regular.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: italic; font-weight: 400;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 400;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: normal; font-weight: 500;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-500.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-500.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: italic; font-weight: 500;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-500italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 500;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-500italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: normal; font-weight: 600;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-600.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 600;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-600.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: italic; font-weight: 600;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-600italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 600;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-600italic.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: normal; font-weight: 700;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-700.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-700.woff2') format('woff2');
 }
 @font-face {
-  font-display: swap; font-family: 'Playfair Display'; font-style: italic; font-weight: 700;
-  src: url('./fonts/playfair-display-v40-cyrillic_latin-700italic.woff2') format('woff2'); 
+  font-display: swap;
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  src: url('./fonts/playfair-display-v40-cyrillic_latin-700italic.woff2') format('woff2');
 }
 
 /* ==========================================================================
    TOKENS / RESET
    ========================================================================== */
+
 :root {
   --ivory: #f8f5ef;
   --stone: #ece7dc;
@@ -130,7 +197,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px;
+  scroll-padding-top: 120px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -169,21 +236,27 @@ body::before {
 }
 
 a {
-  color: inherit; text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 img {
-  display: block; max-width: 100%; height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
-h1,h2,h3,h4 {
-  margin: 0; font-family: var(--font-heading); color: var(--navy); line-height: 1.12;
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--font-heading);
+  color: var(--navy);
+  line-height: 1.12;
 }
 
 p {
   margin: 0;
 }
-/* Глобальная кастомная стрелочка для всех select на сайте */
+
 select {
   appearance: none;
   -webkit-appearance: none;
@@ -197,6 +270,7 @@ select {
 /* ==========================================================================
    LAYOUT
    ========================================================================== */
+
 .container {
   width: min(1400px, calc(100% - 48px));
   margin: 0 auto;
@@ -205,8 +279,9 @@ select {
 }
 
 .section-padding {
-  padding: 120px 0;
+  padding: clamp(72px, 8vw, 96px) 0;
 }
+
 
 .section-header {
   text-align: center;
@@ -215,10 +290,10 @@ select {
 }
 
 .section-header h2 {
+  margin-bottom: 16px;
   font-size: clamp(2.2rem, 3.8vw, 3.4rem);
   letter-spacing: -0.03em;
-  margin-bottom: 16px;
-  text-wrap: balance; /* ПРЕМИУМ: Идеальные переносы строк для заголовков */
+  text-wrap: balance;
 }
 
 .section-header p {
@@ -230,6 +305,7 @@ select {
 /* ==========================================================================
    COMMON UI
    ========================================================================== */
+
 .label {
   display: inline-flex;
   align-items: center;
@@ -239,8 +315,8 @@ select {
   font-family: var(--font-mono);
   font-size: .72rem;
   font-weight: 700;
-  text-transform: uppercase;
   letter-spacing: .14em;
+  text-transform: uppercase;
   color: var(--text-muted);
   background: rgba(255,255,255,.78);
   border: 1px solid var(--line);
@@ -299,6 +375,10 @@ select {
   transform: translateY(0);
 }
 
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
 .header {
   position: fixed;
   inset: 0 0 auto 0;
@@ -323,16 +403,31 @@ select {
   gap: 24px;
 }
 
+.header__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .header__logo {
-  display: flex; flex-direction: column; gap: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
 .header__logo-title {
-  font-family: var(--font-heading); font-size: 1.08rem; font-weight: 600; color: var(--navy);
+  font-family: var(--font-heading);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--navy);
 }
 
 .header__logo-sub {
-  font-family: var(--font-mono); font-size: .65rem; color: var(--text-muted); letter-spacing: .1em; text-transform: uppercase;
+  font-family: var(--font-mono);
+  font-size: .65rem;
+  color: var(--text-muted);
+  letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -376,8 +471,136 @@ select {
 }
 
 /* ==========================================================================
+   GLOBAL HEADER BRAND + PAGE SECTIONS
+   ========================================================================== */
+
+.page-sections-bar {
+  margin-top: 10px;
+}
+
+.page-sections-bar--header {
+  position: relative;
+}
+
+.page-sections {
+  position: relative;
+}
+
+.page-sections__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 14px;
+  border: 1px solid rgba(13,27,47,.08);
+  border-radius: 999px;
+  background: rgba(255,255,255,.82);
+  color: var(--navy);
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition),
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.page-sections__toggle:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(13,27,47,.08);
+  background: rgba(255,255,255,.94);
+}
+
+.page-sections__label {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  line-height: 1;
+  white-space: nowrap;
+}
+.page-sections__icon {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  flex: 0 0 10px;
+  margin-left: 6px;
+  font-size: 0;
+}
+
+.page-sections__icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid var(--navy);
+  border-bottom: 1.5px solid var(--navy);
+  transform: translate(-50%, -60%) rotate(45deg);
+  transition: transform var(--transition);
+  opacity: 0.72;
+}
+
+.page-sections__toggle[aria-expanded="true"] .page-sections__icon::before {
+  transform: translate(-50%, -40%) rotate(-135deg);
+}
+
+.page-sections__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  z-index: 1002;
+  display: grid;
+  gap: 6px;
+  width: min(320px, calc(100vw - 32px));
+  min-width: 250px;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.96);
+  border: 1px solid rgba(13,27,47,.08);
+  box-shadow: 0 26px 70px rgba(13,27,47,.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.page-sections__panel[hidden] {
+  display: none !important;
+}
+
+.page-sections__link {
+  display: block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: var(--text-main);
+  font-size: .92rem;
+  line-height: 1.4;
+  transition: background var(--transition), color var(--transition);
+}
+
+.page-sections__link:hover,
+.page-sections__link.is-active {
+  background: rgba(13,27,47,.05);
+  color: var(--navy);
+}
+
+/* ==========================================================================
    MANIFESTO
    ========================================================================== */
+
 .site-manifesto {
   padding: 36px 0 0;
 }
@@ -400,6 +623,7 @@ select {
 /* ==========================================================================
    FOOTER
    ========================================================================== */
+
 .footer-minimal {
   padding: 24px 0 48px;
 }
@@ -458,6 +682,7 @@ select {
   color: var(--text-muted);
   font-size: .9rem;
 }
+
 .footer-minimal__policy {
   display: inline-block;
   margin-top: 8px;
@@ -486,25 +711,39 @@ select {
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
+
 @media (max-width: 1200px) {
-  .nav { gap: 16px; }
+  .nav {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 1024px) {
-  .section-padding { padding: 96px 0; }
-  .header__inner { min-height: 76px; }
-  .footer-minimal__inner {
-    grid-template-columns: 1fr; text-align: center;
+  .section-padding {
+    padding: 80px 0;
   }
-  .footer-minimal__logo-block { justify-content: center; }
+
+  .header__inner {
+    min-height: 76px;
+  }
+
+  .footer-minimal__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-minimal__logo-block {
+    justify-content: center;
+  }
 }
+
 @media (max-width: 768px) {
   .container {
     width: min(100% - 28px, 1400px);
   }
 
   .section-padding {
-    padding: 78px 0;
+    padding: 60px 0;
   }
 
   .section-header {
@@ -524,13 +763,14 @@ select {
   }
 
   .nav {
+    display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 16px;
-    width: calc(100% + 28px);
-    max-width: none;
-    margin-left: -14px;
-    padding: 0 14px 8px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding: 0 0 8px;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
@@ -551,4 +791,59 @@ select {
   .site-manifesto-text {
     padding: 44px 22px;
   }
+
+  .page-sections__panel {
+    width: min(300px, calc(100vw - 24px));
+    max-height: 68vh;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .page-sections__link {
+    font-size: .88rem;
+    padding: 9px 10px;
+  }
+}
+
+@media (max-width: 560px) {
+  .page-sections-bar {
+    margin-top: 8px;
+  }
+
+  .page-sections__toggle {
+    min-height: 30px;
+    padding: 0 12px;
+    font-size: .62rem;
+    letter-spacing: .08em;
+  }
+
+  .page-sections__label {
+    font-size: .62rem;
+    letter-spacing: .08em;
+  }
+
+   .page-sections__panel {
+    min-width: min(260px, calc(100vw - 28px));
+  }
+}
+
+@media (max-width: 480px) {
+  .section-padding {
+    padding: 48px 0;
+  }
+}
+::selection {
+  background: rgba(210, 175, 99, 0.25);
+  color: var(--navy);
+}
+.page-sections__icon {
+  width: 9px;
+  height: 9px;
+  flex-basis: 9px;
+  margin-left: 5px;
+}
+
+.page-sections__icon::before {
+  width: 5px;
+  height: 5px;
 }

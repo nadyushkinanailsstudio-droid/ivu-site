@@ -1,814 +1,906 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    
-    <title>Институт Врожденной Успеваемости | Педагогам</title>
-    <meta name="description" content="Методика ИВУ для педагогов, репетиторов и школ. Внедрение Механизма Мышления, Навыка чтения и Грамотности (ММНГ) в образовательный процесс.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
-    <link rel="icon" href="favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+  <title>Институт Врожденной Успеваемости | Педагогам</title>
+  <meta name="description" content="Методика ИВУ для педагогов, репетиторов и школ. Внедрение Механизма Мышления, Навыка чтения и Грамотности (ММНГ) в образовательный процесс.">
 
-    <meta property="og:title" content="Педагогам — ИВУ">
-    <meta property="og:description" content="Методика ИВУ для педагогов, репетиторов и школ.">
-    <meta property="og:image" content="favicon/og-image.png">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="/educators.html">
+  <link rel="icon" href="favicon/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
 
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./educators.css">
+  <meta property="og:title" content="Педагогам — ИВУ">
+  <meta property="og:description" content="Методика ИВУ для педагогов, репетиторов и школ.">
+  <meta property="og:image" content="favicon/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/educators.html">
+
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./educators.css">
 </head>
 <body class="educators-page">
 
-    <div class="noise-overlay"></div>
+  <div class="noise-overlay"></div>
 
-    <header class="header" id="header">
-        <div class="container header__inner">
-            <a href="./index.html" class="header__logo">
-                <span class="header__logo-title">Институт Врожденной Успеваемости</span>
-                <span class="header__logo-sub">Инженерный код языка</span>
-            </a>
+  <header class="header" id="header">
+    <div class="container header__inner">
 
-    <nav class="nav" aria-label="Основная навигация">
-    <a href="./index.html" class="nav__link">Главная</a>
-    <a href="./system.html" class="nav__link">Метод</a>
-    <a href="./parents.html" class="nav__link">Родителям</a>
-    <a href="./educators.html" class="nav__link active">Педагогам</a>
-    <a href="./kindergarten.html" class="nav__link">Детским садам</a>
-    <a href="./club.html" class="nav__link">Клуб Кручучу</a>
-    <a href="./krutigrad.html" class="nav__link">Крутиград</a>
-    <a href="./foundation.html" class="nav__link">Фонд</a>
-    <a href="./contacts.html" class="nav__link">Контакты</a>
-</nav>
+      <div class="header__brand">
+        <a href="./index.html" class="header__logo">
+          <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+          <span class="header__logo-sub">Инженерный код языка</span>
+        </a>
+
+        <div class="page-sections-bar page-sections-bar--header">
+          <div class="page-sections">
+            <button
+              class="page-sections__toggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="educators-sections-panel"
+            >
+              <span class="page-sections__label">Разделы</span>
+              <span class="page-sections__icon"></span>
+            </button>
+
+            <div class="page-sections__panel" id="educators-sections-panel" hidden>
+              <a href="#hero" class="page-sections__link is-active">Старт</a>
+              <a href="#audience" class="page-sections__link">Кому подходит</a>
+              <a href="#rhythm" class="page-sections__link">Ядро и ритм</a>
+              <a href="#programs" class="page-sections__link">Архитектура</a>
+              <a href="#lesson" class="page-sections__link">Алгоритм занятия</a>
+              <a href="#method-cabinet" class="page-sections__link">Методкабинет</a>
+              <a href="#evidence" class="page-sections__link">Научная база</a>
+              <a href="#routes" class="page-sections__link">Траектории</a>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
 
-    <main>
-        <section class="hero-educators container reveal">
-            <div class="hero-grid">
-                <div class="hero-content">
-                    <span class="label">Кафедра для педагогов и методистов</span>
-                    <h1>Как довести ребёнка до 100 книг без перегруза оперативной памяти</h1>
-                    <p class="subtitle">
-                        ИВУ даёт педагогу не набор случайных материалов, а ядро, календарный ритм,
-                        математическую модель и структуру занятий, которые позволяют развивать чтение,
-                        письмо и математику как единую систему.
-                    </p>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="./index.html" class="nav__link">Главная</a>
+        <a href="./system.html" class="nav__link">Метод</a>
+        <a href="./parents.html" class="nav__link">Родителям</a>
+        <a href="./educators.html" class="nav__link is-active">Педагогам</a>
+        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+        <a href="./club.html" class="nav__link">Клуб Кручучу</a>
+        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+        <a href="./foundation.html" class="nav__link">Фонд</a>
+        <a href="./contacts.html" class="nav__link">Контакты</a>
+      </nav>
 
-                    <div class="hero-markers">
-                        <div class="h-marker">20 согласных — инженерное ядро языка</div>
-                        <div class="h-marker">ММНГ — календарный ритм обучения</div>
-                        <div class="h-marker">Чтение + письмо + математика — единая система</div>
-                    </div>
+    </div>
+  </header>
 
-                    <a href="#method-cabinet" class="btn btn-primary">Войти в Методкабинет</a>
-                </div>
+  <main>
+    <section class="hero-educators container reveal" id="hero">
+      <div class="hero-grid">
+       <div class="hero-content">
+  <span class="label">Кафедра ИВУ: технология успеха</span>
+  <h1>Технология «беглого старта»: от первых слов до 100 книг</h1>
+  <p class="subtitle">
+    ИВУ дает педагогу математически точный алгоритм. Мы не «проходим программу», 
+    а расширяем когнитивную емкость ребенка. Это система, в которой чтение, 
+    письмо и логика развиваются параллельно, не перегружая память.
+  </p>
 
-                <div class="hero-panel">
-                    <div class="hp-content">
-                        <h2>Расширение карты памяти ребёнка</h2>
-                        <p>
-                            Обычные программы идут линейно: выучили букву, перешли к следующей,
-                            начали математику — забыли чтение. Мозг постоянно стирает контекст.
-                        </p>
-                        <p>
-                            Метод ИВУ работает через развороты, параллельные блоки и увеличение
-                            объёма удерживаемого материала. Это не «больше информации», а
-                            принципиально другая организация входа в память.
-                        </p>
-                        <span class="hp-highlight">Архитектура объёма, а не заучивание.</span>
-                        <p class="hero-panel-note">
-                            Метод объёма позволяет расширять карту памяти ребёнка без перегрузки нервной системы.
-                        </p>
-                    </div>
-                </div>
+  <div class="hero-markers">
+    <div class="h-marker">Управление вниманием группы до 20 человек</div>
+    <div class="h-marker">Готовый календарный ритм ММНГ</div>
+    <div class="h-marker">Результат, который можно измерить цифрами</div>
+  </div>
+
+  <a href="#method-cabinet" class="btn btn-primary">Изучить Методкабинет</a>
+</div>
+
+        <div class="hero-panel">
+          <div class="hp-content">
+            <h2>Расширение карты памяти ребёнка</h2>
+            <p>
+              Обычные программы идут линейно: выучили букву, перешли к следующей,
+              начали математику — забыли чтение. Мозг постоянно стирает контекст.
+            </p>
+            <p>
+              Метод ИВУ работает через развороты, параллельные блоки и увеличение
+              объёма удерживаемого материала. Это не «больше информации», а
+              принципиально другая организация входа в память.
+            </p>
+            <span class="hp-highlight">Архитектура объёма, а не заучивание.</span>
+            <p class="hero-panel-note">
+              Метод объёма позволяет расширять карту памяти ребёнка без перегрузки нервной системы.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding container reveal" id="audience">
+      <div class="section-header educators-section-header educators-section-header--narrow">
+        <h2 class="educators-section-title">Кому подойдёт эта система</h2>
+        <p class="educators-section-lead">
+          ИВУ можно внедрять с разных точек: в группе, в классе, в методической работе
+          и в индивидуальном сопровождении ребёнка. У каждой роли — своя задача,
+          но общий результат один: чтение, письмо и мышление начинают работать как система.
+        </p>
+      </div>
+
+      <div class="audience-grid">
+        <article class="audience-card">
+          <div class="audience-card__eyebrow">Практика</div>
+          <h3>Учителям и воспитателям</h3>
+          <p>
+            ИВУ помогает выстроить занятия так, чтобы чтение, письмо и математика
+            работали не разрозненно, а на один общий результат — объём памяти,
+            понимание текста и спокойную учебную устойчивость ребёнка.
+          </p>
+        </article>
+
+        <article class="audience-card audience-card--accent">
+          <div class="audience-card__eyebrow">Архитектура</div>
+          <h3>Методистам и руководителям программ</h3>
+          <p>
+            Система даёт не набор случайных материалов, а понятную архитектуру:
+            ММНГ, календарный ритм, этапы по возрастам и прозрачную логику,
+            по которой можно планировать внедрение и сопровождение.
+          </p>
+        </article>
+
+        <article class="audience-card">
+          <div class="audience-card__eyebrow">Индивидуальная работа</div>
+          <h3>Репетиторам и частным педагогам</h3>
+          <p>
+            ИВУ даёт профессионалу сильную методическую опору:
+            вместо обычного букварного движения по буквам —
+            систему, в которой есть измеримая контрольная точка,
+            ясный маршрут и понятный результат для семьи.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-padding container reveal" id="rhythm">
+      <div class="section-header educators-section-header educators-section-header--narrow">
+        <h2 class="educators-section-title">Ядро 20 согласных и календарный ритм</h2>
+        <p class="educators-section-lead">
+          В ИВУ матрица 5×4 — это не абстрактная схема, а рабочая логика педагога.
+          Четыре пятёрки согласных задают последовательность нагрузки,
+          а 10 гласных помогают выстроить ритм учебного года.
+          Так ММНГ связывает структуру языка с понятным календарным маршрутом.
+        </p>
+        <div class="educators-inline-badge">
+          Полная расстановка ядра и рабочие схемы открываются в методическом кабинете
+        </div>
+      </div>
+
+      <div class="rhythm-grid">
+        <article class="r-block">
+          <div class="r-icon">20.10</div>
+          <div class="r-text">
+            <h4>Ритм 20.10</h4>
+            <p>
+              Система помогает держать не хаотичный темп, а понятный ритм продвижения.
+              Контрольные точки, мини-сценарии и игровые форматы позволяют фиксировать
+              результат спокойно, без перегруза для педагога и детей.
+            </p>
+          </div>
+        </article>
+
+        <article class="r-block r-block--accent">
+          <div class="r-icon">5×4</div>
+          <div class="r-text">
+            <h4>Рабочая карта педагога</h4>
+            <p>
+              Ядро согласных превращается в удобную карту движения:
+              педагог видит, что вводить, в какой последовательности идти
+              и как удерживать общий ритм группы без распада на случайные шаги.
+            </p>
+          </div>
+        </article>
+
+        <article class="r-block">
+          <div class="r-icon">А-Я</div>
+          <div class="r-text">
+            <h4>Проверка через действие</h4>
+            <p>
+              Понимание структуры проверяется не зубрёжкой,
+              а через игру, пространственные ориентиры, звук и движение.
+              Ребёнок показывает знание системы в действии, а не только на словах.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-padding container reveal" id="programs">
+      <div class="section-header educators-section-header educators-section-header--narrow">
+        <h2 class="educators-section-title">Архитектура программ: от садика до школы</h2>
+        <p class="educators-section-lead">
+          ММНГ — это не абстрактная теория, а понятная траектория по возрастам.
+          На каждом этапе ребёнок получает свой объём нагрузки, свой ритм
+          и свой результат, который подготавливает следующий шаг.
+        </p>
+      </div>
+
+      <div class="mmng-timeline">
+        <article class="tl-step">
+          <div class="tl-dot">I</div>
+          <h4>5–6 лет: запись ритма и структуры</h4>
+          <p>
+            Четыре согласные пятёрки, 9 гласных на 9 месяцев и 36 четверостиший
+            формируют у ребёнка ритм, словарь и внутреннюю структуру языка
+            без давления на скорость.
+          </p>
+        </article>
+
+        <article class="tl-step tl-step--accent">
+          <div class="tl-dot">II</div>
+          <h4>6–7 лет: автоматизация на «А»</h4>
+          <p>
+            На этом этапе собирается механизм чтения:
+            20 согласных, слоги с «А», базовые слова и выход
+            к контрольному тексту «Правда важна».
+          </p>
+        </article>
+
+        <article class="tl-step">
+          <div class="tl-dot">III</div>
+          <h4>7–11 лет: перенос в школу</h4>
+          <p>
+            Система переносится на другие гласные и связывается
+            со школьной практикой. Чтение, письмо и математика
+            начинают работать как единая учебная опора.
+          </p>
+        </article>
+      </div>
+
+      <p class="mmng-note">
+        Каждый этап увеличивает объём удерживаемой информации
+        и спокойно готовит ребёнка к следующему уровню сложности.
+      </p>
+
+      <div class="mmng-grid">
+        <div class="m-card">
+          <span class="m-age">3–4 года</span>
+          <div class="m-title">Цветовые недели и первые 80 слов</div>
+        </div>
+
+        <div class="m-card">
+          <span class="m-age">4–5 лет</span>
+          <div class="m-title">80 слов на инженерных кубиках</div>
+        </div>
+
+        <div class="m-card">
+          <span class="m-age">5–6 лет</span>
+          <div class="m-title">База ММНГ и 36 четверостиший</div>
+        </div>
+
+        <div class="m-card active">
+          <span class="m-age">6–7 лет</span>
+          <div class="m-title">Сборка чтения и контрольная точка</div>
+        </div>
+
+        <div class="m-card">
+          <span class="m-age">7–11 лет</span>
+          <div class="m-title">Школьная устойчивость и «Дважды математик»</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding lesson-section reveal" id="lesson">
+      <div class="container">
+       <div class="section-header educators-section-header educators-section-header--narrow">
+          <h2 class="educators-section-title">Алгоритм проведения занятия</h2>
+          <p class="educators-section-lead">
+            Это не абстрактное описание, а готовый сценарий «20 детей — 20 кубиков»,
+            по которому педагог может управлять вниманием группы, удерживать ритм
+            и спокойно вести детей через действие к результату.
+          </p>
+          <p class="lesson-accent">
+            Вы больше не «надзиратель» над прописями. Вы — дирижер интеллектуального процесса. 
+            Подготовка к занятию занимает 5 минут, а вовлеченность детей — 100%.
+          </p>
+        </div>
+
+        <div class="lesson-grid">
+          <aside class="prep-panel">
+            <h3>Что нужно для старта</h3>
+
+            <div class="prep-list">
+              <div class="prep-item">Группа до 20 детей</div>
+              <div class="prep-item">20 бейджиков с согласными буквами</div>
+              <div class="prep-item">Комплект крутящихся кубиков ИВУ</div>
+              <div class="prep-item">Крупные карточки со словами для показа</div>
             </div>
-        </section>
 
-        <section class="section-padding container reveal">
-            <div class="section-header educators-section-header educators-section-header--narrow">
-                <h2 class="educators-section-title">Кому подойдёт эта система</h2>
-                <p class="educators-section-lead">
-                    Вы можете входить в систему ИВУ с разных точек, становясь частью всероссийского
-                    методического обмена. Система ИВУ объединяет педагогов в единое методическое пространство.
-                </p>
+            <div class="prep-note">
+              Всё построено так, чтобы педагог не перегружался подготовкой,
+              а сразу работал с группой через структуру и ритм.
+            </div>
+          </aside>
+
+          <div class="process-panel">
+            <h3>Как проходит занятие</h3>
+
+            <div class="process-steps">
+              <div class="p-step">
+                <div class="p-num">1</div>
+                <div class="p-content">
+                  <h4>Распределение ролей</h4>
+                  <p>
+                    Каждый ребёнок получает кубик и бейджик с буквой.
+                    Так у него сразу появляется своё место в общей системе и понятная роль в матрице.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-step">
+                <div class="p-num">2</div>
+                <div class="p-content">
+                  <h4>Сигнал педагога</h4>
+                  <p>
+                    Педагог показывает крупную карточку и чётко подаёт слово.
+                    Вся группа получает один общий ориентир и работает в едином ритме.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-step">
+                <div class="p-num">3</div>
+                <div class="p-content">
+                  <h4>Поиск и действие</h4>
+                  <p>
+                    Дети ищут нужное слово на своих кубиках, прокручивают грани,
+                    соотносят звук, зрительный образ и движение руки.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-step">
+                <div class="p-num">4</div>
+                <div class="p-content">
+                  <h4>Фиксация результата</h4>
+                  <p>
+                    Педагог подходит, помогает проверить правильность
+                    и закрепляет найденное слово как успешное действие, а не случайную догадку.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="audience-grid">
-                <div class="audience-card">
-                    <h3>Учителям и воспитателям</h3>
-                    <p>
-                        ИВУ помогает перестроить уроки так, чтобы чтение, письмо и математика работали
-                        на один результат — объём памяти, без перегруза и хаоса для детей и педагога.
-                    </p>
-                </div>
-
-                <div class="audience-card">
-                    <h3>Методистам садов</h3>
-                    <p>
-                        Институт задаёт архитектуру и стандарты (ММНГ), а практики на местах обогащают
-                        систему живыми сценариями, прозрачным планированием и наблюдениями.
-                    </p>
-                </div>
-
-                <div class="audience-card">
-                    <h3>Репетиторам</h3>
-                    <p>
-                        Система даёт мощный методический фундамент, который выделяет профессионала
-                        на фоне обычного «букварного» подхода и гарантирует измеримый результат.
-                    </p>
-                </div>
+            <div class="lesson-result">
+              Итог: группа не распадается на хаотичные действия,
+              а проходит единый сценарий, в котором каждый ребёнок
+              закрепляет структуру языка через движение, внимание и слово.
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <section class="section-padding container reveal">
-            <div class="section-header educators-section-header educators-section-header--narrow">
-                <h2 class="educators-section-title">Ядро 20 согласных и календарный ритм</h2>
-                <p class="educators-section-lead">
-                    Матрица 5×4 — это не абстрактная таблица, а рабочий план учителя. Четыре пятёрки
-                    задают недельные циклы, 10 гласных — ритм учебного года. ММНГ связывает структуру
-                    языка с календарным ритмом.
-                </p>
-                <div class="educators-inline-badge">
-                    Топология ядра скрыта. Доступ к расстановке — в кабинете.
+    <div class="founder-quote">
+          <h2>Слово основателя</h2>
+
+          <div class="founder-quote__inner">
+            <div class="founder-quote__card">
+              <p class="founder-quote__lead">
+                Я, Белолипецкий Сергей, руководитель Института Врождённой Успеваемости.
+              </p>
+
+              <p>
+                История помнит, что наша страна была самой читающей нацией. Сейчас мы не входим даже
+                в «пятёрку стран» по навыкам функционального чтения. Потери начинаются в раннем возрасте,
+                накапливаются к средним классам, и затем ребёнок читает текст, не понимая прочитанного.
+              </p>
+
+              <p>
+                Человек, который теряет интерес к чтению, не способен быстро анализировать,
+                не имеет творческого воображения, не умеет красиво и чётко выражать свои мысли. 
+                <strong>Список из 100 книг, сформированный нашими культурными авторитетами по инициативе президента</strong>,
+                под силу прочитать лишь очень немногим выпускникам российской школы.
+              </p>
+
+              <p class="founder-quote__accent">
+                Мы возвращаем детям не просто технический навык чтения — мы возвращаем им культуру мышления. 
+                И мы можем уверенно, с пушкинским размахом справиться с этой национальной задачей.
+              </p>
+
+              <p>
+                В нашем методическом кабинете на сайте ИВУ мы предлагаем единый интуитивно понятный
+                учебный план, который легко масштабируется. Воспользоваться нашими решениями могут
+                воспитатели детских садов, учителя начальных классов, родители.
+              </p>
+
+              <p>
+                Уверен, что вместе мы способны вернуть России статус самой читающей нации.
+              </p>
+
+              <div class="founder-quote__author">
+                <img src="./img/autor_3.png" alt="Сергей Белолипецкий">
+                <div class="founder-quote__meta">
+                  <span class="founder-quote__name">СЕРГЕЙ БЕЛОЛИПЕЦКИЙ</span>
+                  <span class="founder-quote__role">Руководитель ИВУ</span>
                 </div>
+              </div>
             </div>
+          </div>
+        </div>
 
-            <div class="rhythm-grid">
-                <div class="r-block">
-                    <div class="r-icon">20.10</div>
-                    <div class="r-text">
-                        <h4>Ритм 20.10</h4>
-                        <p>
-                            Каждое 20-е число месяца — контрольная точка фиксации объёма.
-                            Клуб Кручучу и мини-сценарии поддерживают ритм без стресса.
-                        </p>
-                    </div>
-                </div>
+        <div class="accordion-container">
+          <div class="method-cabinet-head">
+            <span class="method-cabinet-kicker">Методическая система ИВУ</span>
+            <h2 class="method-cabinet-title">Витрина Методкабинета ИВУ</h2>
 
-                <div class="r-block">
-                    <div class="r-icon">А-Я</div>
-                    <div class="r-text">
-                        <h4>Парад букв</h4>
-                        <p>
-                            Пример игровой проверки структуры, где класс демонстрирует понимание
-                            ядра языка через пространственные и звуковые координаты.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding container reveal">
-            <div class="section-header educators-section-header educators-section-header--narrow">
-                <h2 class="educators-section-title">Архитектура программ: от садика до школы</h2>
-                <p class="educators-section-lead">
-                    ММНГ (Математическая модель начальной грамотности) задаёт не абстрактную теорию,
-                    а точную траекторию объёмов, ритмов и результатов для каждого возраста.
-                </p>
-            </div>
-
-            <div class="mmng-timeline">
-                <div class="tl-step">
-                    <div class="tl-dot">I</div>
-                    <h4>5–6 лет: Запись в подкорку</h4>
-                    <p>4 согласные пятёрки, 9 гласных на 9 месяцев, 36 четверостиший. Запись объёма без принуждения к скорости.</p>
-                </div>
-
-                <div class="tl-step">
-                    <div class="tl-dot">II</div>
-                    <h4>6–7 лет: Автоматизация на «А»</h4>
-                    <p>20 согласных + 20 слогов с «А» + 60 слов. Полная сборка механизма и итоговая дошкольная аттестация.</p>
-                </div>
-
-                <div class="tl-step">
-                    <div class="tl-dot">III</div>
-                    <h4>7–11 лет: Перенос</h4>
-                    <p>Открытый алгоритм переносится на другие гласные, подключается школьная программа «Дважды математик».</p>
-                </div>
-            </div>
-
-            <p class="mmng-note">
-                Каждый этап увеличивает объём удерживаемой информации и готовит ребёнка к следующему уровню сложности.
+            <p class="acc-intro">
+              Методкабинет ИВУ — это готовая система работы педагога.
             </p>
 
-            <div class="mmng-grid">
-                <div class="m-card">
-                    <span class="m-age">3–4 года</span>
-                    <div class="m-title">Цветовые недели и 80 опорных слов</div>
+            <div class="method-cabinet-summary">
+              <p class="method-cabinet-lead">
+                Дошкольный и школьный контур, билеты, сезонные циклы чтения, диктанты,
+                мультуроки и практические задания собраны в единую архитектуру обучения.
+                Это не набор материалов, а сорокалетняя система, выстроенная для постепенного
+                расширения объёма памяти ребёнка, формирования устойчивого чтения
+                и точного педагогического маршрута.
+              </p>
+
+              <div class="method-cabinet-meta">
+                <div class="mc-meta-card">
+                  <span class="mc-meta-num">2</span>
+                  <span class="mc-meta-label">факультета</span>
+                  <span class="mc-meta-note">дошкольный и школьный</span>
                 </div>
-                <div class="m-card">
-                    <span class="m-age">4–5 лет</span>
-                    <div class="m-title">80 слов на инженерных кубиках</div>
+
+                <div class="mc-meta-card">
+                  <span class="mc-meta-num">100 + 100</span>
+                  <span class="mc-meta-label">рассказы и четверостишия</span>
+                  <span class="mc-meta-note">сезоны + энциклопедия</span>
                 </div>
-                <div class="m-card">
-                    <span class="m-age">5–6 лет</span>
-                    <div class="m-title">База ММНГ и 36 четверостиший</div>
+
+                <div class="mc-meta-card">
+                  <span class="mc-meta-num">100</span>
+                  <span class="mc-meta-label">историй про Кручучу</span>
+                  <span class="mc-meta-note">мотивация к чтению</span>
                 </div>
-                <div class="m-card active">
-                    <span class="m-age">6–7 лет</span>
-                    <div class="m-title">Начальный автомат и сборка чтения</div>
+
+                <div class="mc-meta-card">
+                  <span class="mc-meta-num">1–4</span>
+                  <span class="mc-meta-label">классы диктантов</span>
+                  <span class="mc-meta-note">по школьным ступеням</span>
                 </div>
-                <div class="m-card">
-                    <span class="m-age">7–11 лет</span>
-                    <div class="m-title">Система «Дважды математик»</div>
+
+                <div class="mc-meta-card">
+                  <span class="mc-meta-num">270</span>
+                  <span class="mc-meta-label">мультуроков</span>
+                  <span class="mc-meta-note">дошкольные и школьные</span>
                 </div>
+
+                <div class="mc-meta-card">
+                  <span class="mc-meta-num">Билеты</span>
+                  <span class="mc-meta-label">по темам и уровням</span>
+                  <span class="mc-meta-note">готовая логика для педагога</span>
+                </div>
+              </div>
+
+              <div class="method-cabinet-logic">
+                <div class="mc-logic-item">Возраст</div>
+                <div class="mc-logic-arrow">→</div>
+                <div class="mc-logic-item">Раздел</div>
+                <div class="mc-logic-arrow">→</div>
+                <div class="mc-logic-item">Билет</div>
+                <div class="mc-logic-arrow">→</div>
+                <div class="mc-logic-item">Готовый материал</div>
+                <div class="mc-logic-arrow">→</div>
+                <div class="mc-logic-item">Практика и результат</div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section class="section-padding lesson-section reveal">
-            <div class="container">
-                <div class="section-header educators-section-header educators-section-header--narrow">
-                    <h2 class="educators-section-title">Алгоритм проведения занятия</h2>
-                    <p class="educators-section-lead">
-                        Готовый сценарий «20 детей — 20 кубиков», который показывает,
-                        как управлять объёмом и вниманием группы без перегруза педагога.
-                    </p>
-                    <p class="lesson-accent">
-                        Алгоритм «20 детей — 20 кубиков» позволяет управлять вниманием всей группы без перегрузки.
-                    </p>
-                </div>
+          <div class="funnel-banner">
+            <strong>Игровая воронка мотивации</strong>
+            <span>10 заданий → 1 Грамота BABYSTUDENT · 10 грамот → Суперприз Института</span>
+          </div>
 
-                <div class="lesson-grid">
-                    <div class="prep-panel">
-                        <h3>Подготовка к уроку</h3>
-                        <div class="prep-list">
-                            <div class="prep-item">Группа 20 детей</div>
-                            <div class="prep-item">20 бейджиков с согласными буквами</div>
-                            <div class="prep-item">Коробка с 20 крутящимися кубиками ИВУ</div>
-                            <div class="prep-item">80 крупных цветных карточек со словами</div>
-                        </div>
-                    </div>
+          <details class="acc-item">
+            <summary class="acc-header">Дошкольный факультет (3–7 лет)</summary>
 
-                    <div class="process-panel">
-                        <h3>Ход урока</h3>
-                        <div class="process-steps">
-                            <div class="p-step">
-                                <div class="p-num">1</div>
-                                <div class="p-content">
-                                    <h4>Распределение ролей</h4>
-                                    <p>Каждый ребёнок берёт кубик и получает бейджик, закрепляющий за ним роль в матрице.</p>
-                                </div>
-                            </div>
+            <div class="acc-content">
+              <p class="acc-desc">
+                База для записи на подкорку и автоматизации чтения. Тексты скрыты, выбор билетов хаотичный.
+              </p>
 
-                            <div class="p-step">
-                                <div class="p-num">2</div>
-                                <div class="p-content">
-                                    <h4>Сигнал педагога</h4>
-                                    <p>Педагог показывает крупную карточку и чётко читает слово.</p>
-                                </div>
-                            </div>
+              <div class="acc-grid">
+                <div class="acc-card">
+                  <strong>100 рассказов и 100 стихотворений</strong>
+                  <span>
+                    Сезонная библиотека ИВУ для записи структуры языка, ритма чтения и постепенного
+                    расширения объёма памяти ребёнка. Материалы сгруппированы по темам и подаются парами:
+                    рассказ + стихотворение.
+                  </span>
 
-                            <div class="p-step">
-                                <div class="p-num">3</div>
-                                <div class="p-content">
-                                    <h4>Поиск и моторика</h4>
-                                    <p>Дети ищут нужное слово на своих кубиках, прокручивая грани.</p>
-                                </div>
-                            </div>
+                  <div class="acc-card-kpis">
+                    <span>осень</span>
+                    <span>зима</span>
+                    <span>весна</span>
+                    <span>энциклопедия</span>
+                  </div>
 
-                            <div class="p-step">
-                                <div class="p-num">4</div>
-                                <div class="p-content">
-                                    <h4>Фиксация</h4>
-                                    <p>Педагог подходит и помогает ребёнку, у которого слово собрано правильно, зафиксировать результат.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="lesson-result">
-                            Итог: 20 детей читают по одному слову и закрепляют структуру языка через действие.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding reveal" id="method-cabinet">
-            <div class="container">
-                <div class="founder-quote">
-                    <h2>Слово основателя</h2>
-
-                    <div class="founder-quote__inner">
-                        <div class="founder-quote__card">
-                            <p class="founder-quote__lead">
-                                Я, Белолипецкий Сергей, руководитель Института Врождённой Успеваемости.
-                            </p>
-
-                            <p>
-                                История помнит, что наша страна была самой читающей нацией. Сейчас мы не входим даже
-                                в «пятёрку стран» по навыкам функционального чтения. Потери начинаются в раннем возрасте,
-                                накапливаются к средним классам, и затем ребёнок читает текст, не понимая прочитанного.
-                            </p>
-
-                            <p>
-                                Человек, который теряет интерес к чтению, не способен быстро анализировать,
-                                не имеет творческого воображения, не умеет красиво и чётко выражать свои мысли.
-                                Список из 100 книг, сформированный нашими культурными авторитетами по инициативе президента,
-                                под силу прочитать лишь очень немногим выпускникам российской школы.
-                            </p>
-
-                            <p class="founder-quote__accent">
-                                Однако мы можем красиво, уверенно, с пушкинским размахом справиться с этой задачей.
-                            </p>
-
-                            <p>
-                                В нашем методическом кабинете на сайте ИВУ мы предлагаем единый интуитивно понятный
-                                учебный план, который легко масштабируется. Воспользоваться нашими решениями могут
-                                воспитатели детских садов, учителя начальных классов, родители.
-                            </p>
-
-                            <p>
-                                Уверен, что вместе мы способны вернуть России статус самой читающей нации.
-                            </p>
-
-                            <div class="founder-quote__author">
-                                <img src="./img/autor_3.png" alt="Сергей Белолипецкий">
-                                <div class="founder-quote__meta">
-                                    <span class="founder-quote__name">СЕРГЕЙ БЕЛОЛИПЕЦКИЙ</span>
-                                    <span class="founder-quote__role">Руководитель ИВУ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-container">
-                    <div class="method-cabinet-head">
-                        <span class="method-cabinet-kicker">Методическая система ИВУ</span>
-                        <h2 class="method-cabinet-title">Витрина Методкабинета ИВУ</h2>
-
-                        <p class="acc-intro">
-                            Методкабинет ИВУ — это готовая система работы педагога.
-                        </p>
-
-                        <div class="method-cabinet-summary">
-                            <p class="method-cabinet-lead">
-                                Дошкольный и школьный контур, билеты, сезонные циклы чтения, диктанты,
-                                мультуроки и практические задания собраны в единую архитектуру обучения.
-                                Это не набор материалов, а сорокалетняя система, выстроенная для постепенного
-                                расширения объёма памяти ребёнка, формирования устойчивого чтения
-                                и точного педагогического маршрута.
-                            </p>
-
-                            <div class="method-cabinet-meta">
-                                <div class="mc-meta-card">
-                                    <span class="mc-meta-num">2</span>
-                                    <span class="mc-meta-label">факультета</span>
-                                    <span class="mc-meta-note">дошкольный и школьный</span>
-                                </div>
-
-                                <div class="mc-meta-card">
-                                    <span class="mc-meta-num">100 + 100</span>
-                                    <span class="mc-meta-label">рассказы и четверостишия</span>
-                                    <span class="mc-meta-note">сезоны + энциклопедия</span>
-                                </div>
-
-                                <div class="mc-meta-card">
-                                    <span class="mc-meta-num">100</span>
-                                    <span class="mc-meta-label">историй про Кручучу</span>
-                                    <span class="mc-meta-note">мотивация к чтению</span>
-                                </div>
-
-                                <div class="mc-meta-card">
-                                    <span class="mc-meta-num">1–4</span>
-                                    <span class="mc-meta-label">классы диктантов</span>
-                                    <span class="mc-meta-note">по школьным ступеням</span>
-                                </div>
-
-                                <div class="mc-meta-card">
-                                    <span class="mc-meta-num">270</span>
-                                    <span class="mc-meta-label">мультуроков</span>
-                                    <span class="mc-meta-note">дошкольные и школьные</span>
-                                </div>
-
-                                <div class="mc-meta-card">
-                                    <span class="mc-meta-num">Билеты</span>
-                                    <span class="mc-meta-label">по темам и уровням</span>
-                                    <span class="mc-meta-note">готовая логика для педагога</span>
-                                </div>
-                            </div>
-
-                            <div class="method-cabinet-logic">
-                                <div class="mc-logic-item">Возраст</div>
-                                <div class="mc-logic-arrow">→</div>
-                                <div class="mc-logic-item">Раздел</div>
-                                <div class="mc-logic-arrow">→</div>
-                                <div class="mc-logic-item">Билет</div>
-                                <div class="mc-logic-arrow">→</div>
-                                <div class="mc-logic-item">Готовый материал</div>
-                                <div class="mc-logic-arrow">→</div>
-                                <div class="mc-logic-item">Практика и результат</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="funnel-banner">
-                        <strong>Игровая воронка мотивации</strong>
-                        <span>10 заданий → 1 Грамота BABYSTUDENT · 10 грамот → Суперприз Института</span>
-                    </div>
-
-                    <details class="acc-item">
-                        <summary class="acc-header">Дошкольный факультет (3–7 лет)</summary>
-
-                        <div class="acc-content">
-                            <p class="acc-desc">
-                                База для записи на подкорку и автоматизации чтения. Тексты скрыты, выбор билетов хаотичный.
-                            </p>
-
-                            <div class="acc-grid">
-                                <div class="acc-card">
-                                    <strong>100 рассказов и 100 стихотворений</strong>
-                                    <span>
-                                        Сезонная библиотека ИВУ для записи структуры языка, ритма чтения и постепенного
-                                        расширения объёма памяти ребёнка. Материалы сгруппированы по темам и подаются парами:
-                                        рассказ + стихотворение.
-                                    </span>
-
-                                    <div class="acc-card-kpis">
-                                        <span>осень</span>
-                                        <span>зима</span>
-                                        <span>весна</span>
-                                        <span>энциклопедия</span>
-                                    </div>
-
-                                    <div class="premium-list-container">
-                                        <div class="premium-list-category">Чтение про осень</div>
-                                        <ul class="premium-list">
-                                            <li>Дар + Карл и Клара</li>
-                                            <li>Дача + Капа</li>
-                                            <li>Барс и кабан + Кабан и барс</li>
-                                            <li>Скакалка + Наша дача</li>
-                                            <li>Барсук и кабан + Кабан, барсук и баран</li>
-                                            <li>Гранат и груша + Груша</li>
-                                            <li>Кап и Тук + Кап и Тук</li>
-                                            <li>Маша и лужа + Маша и каша</li>
-                                            <li>Алиса и карандаши + Радуга</li>
-                                            <li>Торопыга заяц + Заяц-грибник</li>
-                                            <li>Рыжий хвост + Бельчата</li>
-                                            <li>Кленовый зонт + Весёлый ёж</li>
-                                            <li>Кот и бублики + Крот и кот</li>
-                                            <li>Котёнок и клубок + Вверх дном или кот-клубок</li>
-                                            <li>Маша и Шарик + Праздник</li>
-                                            <li>Медвежонок и мёд + Медведь и лужа</li>
-                                            <li>Гербарий + Лист артист</li>
-                                            <li>Лохматый, полосатый + Четыре ножки</li>
-                                            <li>Цирк + Я считаю до пяти</li>
-                                            <li>Большая медведица + Единица</li>
-                                            <li>Как заяц с ёжиком менялись + Три и три</li>
-                                            <li>Пиратский клад + Собака Лада</li>
-                                            <li>Считалочка + Учитель-крокодил</li>
-                                            <li>Мороженое + Дни недели</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="acc-card">
-                                    <strong>100 рассказов про Кручучу</strong>
-                                    <span>
-                                        Мотивационный контур Методкабинета. Серии историй помогают удерживать интерес ребёнка
-                                        к чтению, эмоционально закрепляют материал и превращают обучение в живой маршрут приключений.
-                                    </span>
-
-                                    <div class="acc-card-kpis">
-                                        <span>10 серий</span>
-                                        <span>по 10 историй</span>
-                                        <span>планетарий</span>
-                                        <span>театр / музей / лес</span>
-                                    </div>
-
-                                    <div class="premium-list-container">
-                                        <div class="premium-list-category">Кручучу в планетарии</div>
-                                        <ul class="premium-list">
-                                            <li>1. Космос — это как суп?</li>
-                                            <li>2. Солнце пропало!</li>
-                                            <li>3. Как Кубик в космос не улетел</li>
-                                            <li>4. Испуганный Кубик</li>
-                                            <li>5. Белка, Стрелка и Кубик</li>
-                                            <li>6. Как Кубик космонавтом стал</li>
-                                            <li>7. Есть ли в космосе медведи?</li>
-                                            <li>8. Как Земля и Луна</li>
-                                            <li>9. Встреча Кубика с Марсианином</li>
-                                            <li>10. Уберите телефоны</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="acc-card reward-card">
-                                    <strong>100 домашних заданий</strong>
-                                    <span>
-                                        Продолжение методического маршрута за пределами занятия. Блок помогает закреплять
-                                        материал, вовлекать семью и удерживать ритм развития ребёнка между встречами с педагогом.
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-
-                    <details class="acc-item">
-                        <summary class="acc-header">Школьный факультет (7–11 лет)</summary>
-
-                        <div class="acc-content">
-                            <p class="acc-desc">
-                                Удержание объёма памяти, развитие логики и устойчивости к школьным нагрузкам.
-                            </p>
-
-                            <div class="acc-grid">
-                                <div class="acc-card">
-                                    <strong>Диктанты (1–4 класс)</strong>
-                                    <span>
-                                        Школьный блок контроля и тренировки. Слуховые, буквенные и смысловые диктанты
-                                        распределены по ступеням и помогают укреплять память, письмо, внимание
-                                        и устойчивость к учебной нагрузке.
-                                    </span>
-
-                                    <div class="acc-card-kpis">
-                                        <span>1 класс</span>
-                                        <span>2 класс</span>
-                                        <span>3 класс</span>
-                                        <span>4 класс</span>
-                                    </div>
-
-                                    <div class="premium-list-container">
-                                        <div class="premium-list-category">1–4 классы</div>
-                                        <ul class="premium-list">
-                                            <li>Диктанты распределены по школьным ступеням</li>
-                                            <li>Тренируют память, письмо и устойчивость внимания</li>
-                                            <li>Помогают удерживать структуру задания до результата</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <div class="acc-card">
-                                    <strong>100 устных вопросов и письменных задач</strong>
-                                    <span>
-                                        Аналитический блок Методкабинета. Материалы тренируют логическое мышление,
-                                        устный счёт, кратковременную память и способность ребёнка удерживать
-                                        структуру задания до результата.
-                                    </span>
-                                </div>
-
-                                <div class="acc-card reward-card">
-                                    <strong>270 Мультуроков</strong>
-                                    <span>
-                                        Призовой архив ИВУ из дошкольных и школьных обучающих роликов.
-                                        Используется как система поощрения, дополнительной мотивации
-                                        и мягкого сопровождения маршрута ребёнка.
-                                    </span>
-
-                                    <div class="acc-card-kpis">
-                                        <span>15 уровней</span>
-                                        <span>дошкольные</span>
-                                        <span>школьные</span>
-                                        <span>герои и учителя</span>
-                                    </div>
-
-                                    <div class="premium-list-container">
-                                        <div class="premium-list-category">Дошкольные герои (135 уроков)</div>
-                                        <ul class="premium-list">
-                                            <li>Незнайка, Лунтик, Пятачок</li>
-                                            <li>Бельчонок, Трубодур, Котёнок Гав</li>
-                                            <li>Карлсон, Львёнок (с черепахой)</li>
-                                            <li>Дядя Фёдор, Маша (без медведя)</li>
-                                            <li>Забава, Ёжик, Колобок</li>
-                                            <li>Тигра, Богатырь</li>
-                                        </ul>
-
-                                        <div class="premium-list-category">Школьные учителя (135 уроков)</div>
-                                        <ul class="premium-list">
-                                            <li>Учительница Эмма Карловна</li>
-                                            <li>Учительница Августина Романовна</li>
-                                            <li>Учительница Северина Львовна</li>
-                                            <li>Учительница Клавдия Эрнестовна</li>
-                                            <li>Учительница Акулина Степановна</li>
-                                            <li>Учительница Аврора Станиславовна</li>
-                                            <li>Учительница Варвара Аверьяновна</li>
-                                            <li>Учительница Лада Эдуардовна</li>
-                                            <li>Учительница Анжелика Руслановна</li>
-                                            <li>Учительница Анфиса Арнольдовна</li>
-                                            <li>Учительница Анна Альбертовна</li>
-                                            <li>Учительница Клара Спартаковна</li>
-                                            <li>Учительница Эльвира Кузьминична</li>
-                                            <li>Учительница Марта Аркадьевна</li>
-                                            <li>Учительница Алевтина Пантелеевна</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </details>
-
-                    <div class="method-cabinet-practice">
-                        <div class="method-cabinet-practice__head">
-                            <span class="method-cabinet-practice__kicker">Практический фонд ИВУ</span>
-                            <h3 class="method-cabinet-practice__title">Фонд заданий и практики</h3>
-                            <p class="method-cabinet-practice__lead">
-                                Отдельный пласт Методкабинета, в котором собраны практические материалы для закрепления чтения,
-                                письма, внимания, логики и математики. Это не приложение к курсу, а рабочий фонд упражнений,
-                                карточек и заданий, который помогает педагогу удерживать систему в действии.
-                            </p>
-                        </div>
-
-                        <div class="method-cabinet-practice__grid">
-                            <div class="method-cabinet-practice__card">
-                                <strong>Практические блоки</strong>
-                                <span>
-                                    Карточки, прописи, скороговорки, загадки, упражнения и игровые задания
-                                    для закрепления структуры языка и развития устойчивого навыка.
-                                </span>
-
-                                <div class="acc-card-kpis">
-                                    <span>3000+ страниц</span>
-                                    <span>карточки</span>
-                                    <span>прописи</span>
-                                    <span>игровая практика</span>
-                                </div>
-
-                                <div class="premium-list-container">
-                                    <div class="premium-list-category">Практические блоки</div>
-                                    <ul class="premium-list">
-                                        <li>Считалки, загадки, скороговорки</li>
-                                        <li>Карточки с буквами и образами</li>
-                                        <li>Прописи и паттерны (32 листа)</li>
-                                        <li>Развивающие раскраски</li>
-                                        <li>Задачи с прогрессией сложности</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="method-cabinet-practice__card">
-                                <strong>Математика, логика и тексты</strong>
-                                <span>
-                                    Система охватывает не только чтение, но и математическое мышление,
-                                    удержание структуры задания, развитие внимания и постепенное увеличение объёма текста.
-                                </span>
-
-                                <div class="acc-card-kpis">
-                                    <span>математика</span>
-                                    <span>логика</span>
-                                    <span>55 рассказов</span>
-                                    <span>324 слова</span>
-                                </div>
-
-                                <div class="premium-list-container">
-                                    <div class="premium-list-category">Математика и логика</div>
-                                    <ul class="premium-list">
-                                        <li>27 заданий по математике</li>
-                                        <li>Разложение чисел (наглядные модели)</li>
-                                        <li>Пространственное мышление</li>
-                                        <li>Составление задач</li>
-                                    </ul>
-
-                                    <div class="premium-list-category">Чтение и тексты</div>
-                                    <ul class="premium-list">
-                                        <li>55 рассказов с иллюстрациями</li>
-                                        <li>27 тематических текстов</li>
-                                        <li>324 слова + 324 изображения</li>
-                                        <li>Постепенное увеличение объёма текста</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="smart-form-cta">
-                    <h3>Умная заявка педагога</h3>
-                    <p>
-                        Доступ к закрытому фонду выдаётся через профессиональный бриф. Нам важен ваш опыт,
-                        готовность делиться результатами практики и мотивация довести ребёнка до 100 книг.
-                    </p>
-                    <a href="./contacts.html#form" class="btn btn-outline">Заполнить заявку педагога</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding container reveal">
-            <div class="section-header educators-section-header">
-                <h2 class="educators-section-title">Научная база и среда</h2>
-            </div>
-
-            <div class="evidence-grid">
-                <div class="ev-panel">
-                    <h3>Профессиональная среда</h3>
-                    <ul class="ev-list">
-                        <li>Демонстрационные уроки на реальных группах</li>
-                        <li>Обучение педагогов и методическое сопровождение</li>
-                        <li>Закрытый методкабинет для сертифицированных специалистов</li>
-                        <li>Живой обмен практиками между регионами</li>
+                  <div class="premium-list-container">
+                    <div class="premium-list-category">Чтение про осень</div>
+                    <ul class="premium-list">
+                      <li>Дар + Карл и Клара</li>
+                      <li>Дача + Капа</li>
+                      <li>Барс и кабан + Кабан и барс</li>
+                      <li>Скакалка + Наша дача</li>
+                      <li>Барсук и кабан + Кабан, барсук и баран</li>
+                      <li>Гранат и груша + Груша</li>
+                      <li>Кап и Тук + Кап и Тук</li>
+                      <li>Маша и лужа + Маша и каша</li>
+                      <li>Алиса и карандаши + Радуга</li>
+                      <li>Торопыга заяц + Заяц-грибник</li>
+                      <li>Рыжий хвост + Бельчата</li>
+                      <li>Кленовый зонт + Весёлый ёж</li>
+                      <li>Кот и бублики + Крот и кот</li>
+                      <li>Котёнок и клубок + Вверх дном или кот-клубок</li>
+                      <li>Маша и Шарик + Праздник</li>
+                      <li>Медвежонок и мёд + Медведь и лужа</li>
+                      <li>Гербарий + Лист артист</li>
+                      <li>Лохматый, полосатый + Четыре ножки</li>
+                      <li>Цирк + Я считаю до пяти</li>
+                      <li>Большая медведица + Единица</li>
+                      <li>Как заяц с ёжиком менялись + Три и три</li>
+                      <li>Пиратский клад + Собака Лада</li>
+                      <li>Считалочка + Учитель-крокодил</li>
+                      <li>Мороженое + Дни недели</li>
                     </ul>
-                    <a href="./contacts.html#educators" class="btn btn-outline ev-panel__btn">
-                        Связаться с Институтом
-                    </a>
+                  </div>
                 </div>
 
-                <div class="ev-panel">
-                    <h3>Доказательная база метода</h3>
-                    <ul class="ev-list">
-                        <li>Опора на графики раннего развития Б.П. Никитина</li>
-                        <li>Шкалы измерения интеллекта и памяти Дэвида Векслера</li>
-                        <li>Метод объёма как способ уплотнить и структурировать время обучения без перегрузки нервной системы</li>
-                        <li><strong>Фундаментальная библиотека:</strong> 7 авторских учебных изданий (от бестселлеров ЭКСМО до современных «НОУ-ХАУ Азбуки» и «Букваря А») и 4 рабочие тетради.</li>
-                        <li><strong>Инженерный тренажёр (Патент 1999 г.):</strong> Авторские крутящиеся кубики. Компактная система из 10 кубиков, заменяющая громоздкие аналоги прошлого века (40 кубиков Зайцева), с 4-х цветовой кодировкой для мгновенного чтения слов.</li>
+                <div class="acc-card">
+                  <strong>100 рассказов про Кручучу</strong>
+                  <span>
+                    Мотивационный контур Методкабинета. Серии историй помогают удерживать интерес ребёнка
+                    к чтению, эмоционально закрепляют материал и превращают обучение в живой маршрут приключений.
+                  </span>
+
+                  <div class="acc-card-kpis">
+                    <span>10 серий</span>
+                    <span>по 10 историй</span>
+                    <span>планетарий</span>
+                    <span>театр / музей / лес</span>
+                  </div>
+
+                  <div class="premium-list-container">
+                    <div class="premium-list-category">Кручучу в планетарии</div>
+                    <ul class="premium-list">
+                      <li>1. Космос — это как суп?</li>
+                      <li>2. Солнце пропало!</li>
+                      <li>3. Как Кубик в космос не улетел</li>
+                      <li>4. Испуганный Кубик</li>
+                      <li>5. Белка, Стрелка и Кубик</li>
+                      <li>6. Как Кубик космонавтом стал</li>
+                      <li>7. Есть ли в космосе медведи?</li>
+                      <li>8. Как Земля и Луна</li>
+                      <li>9. Встреча Кубика с Марсианином</li>
+                      <li>10. Уберите телефоны</li>
                     </ul>
-                </div>
-            </div>
-
-            <div class="evidence-bridge">
-                Метод объёма соединяет идеи раннего развития Никитина и измерения памяти Векслера в единую образовательную архитектуру.
-            </div>
-
-            <div class="foundation-bridge">
-                <div class="fb-text">
-                    <h3>Инициатива масштаба страны</h3>
-                    <p>
-                        Базовые программы для детей и садов бесплатны. Институт развивается благодаря поддержке
-                        сообщества и попечителей. Эти средства идут на разработку материалов, демонстрации
-                        и обучение педагогов.
-                    </p>
-                    <div class="fb-mission">
-                        ИВУ — общественная инициатива, направленная на восстановление культуры чтения.
-                    </div>
+                  </div>
                 </div>
 
-                <a href="./foundation.html" class="btn btn-primary">Поддержать Фонд ИВУ</a>
+                <div class="acc-card reward-card">
+                  <strong>100 домашних заданий</strong>
+                  <span>
+                    Продолжение методического маршрута за пределами занятия. Блок помогает закреплять
+                    материал, вовлекать семью и удерживать ритм развития ребёнка между встречами с педагогом.
+                  </span>
+                </div>
+              </div>
             </div>
-        </section>
+          </details>
 
-        <section class="not-just-reading reveal">
-            <div class="container not-just-reading__inner">
-                <h3 class="not-just-reading__title">ИВУ — не курс чтения.</h3>
-                <p class="not-just-reading__text">
-                    Это система развития памяти, речи, письма и математического мышления.
-                </p>
-            </div>
-        </section>
+          <details class="acc-item">
+            <summary class="acc-header">Школьный факультет (7–11 лет)</summary>
 
-        <section class="section-padding reveal section-transparent">
-            <div class="container">
-                <div class="section-header educators-section-header">
-                    <h2 class="educators-section-title">Траектории внедрения</h2>
+            <div class="acc-content">
+              <p class="acc-desc">
+                Удержание объёма памяти, развитие логики и устойчивости к школьным нагрузкам.
+              </p>
+
+              <div class="acc-grid">
+                <div class="acc-card">
+                  <strong>Диктанты (1–4 класс)</strong>
+                  <span>
+                    Школьный блок контроля и тренировки. Слуховые, буквенные и смысловые диктанты
+                    распределены по ступеням и помогают укреплять память, письмо, внимание
+                    и устойчивость к учебной нагрузке.
+                  </span>
+
+                  <div class="acc-card-kpis">
+                    <span>1 класс</span>
+                    <span>2 класс</span>
+                    <span>3 класс</span>
+                    <span>4 класс</span>
+                  </div>
+
+                  <div class="premium-list-container">
+                    <div class="premium-list-category">1–4 классы</div>
+                    <ul class="premium-list">
+                      <li>Диктанты распределены по школьным ступеням</li>
+                      <li>Тренируют память, письмо и устойчивость внимания</li>
+                      <li>Помогают удерживать структуру задания до результата</li>
+                    </ul>
+                  </div>
                 </div>
 
-                <div class="routes-grid">
-                    <a href="./parents.html" class="route-card">
-                        <span class="route-num">01 / Семья</span>
-                        <h3>Родителям</h3>
-                        <p>Домашняя лаборатория и первые 100 слов</p>
-                    </a>
-
-                    <div class="route-card active">
-                        <span class="route-num">02 / Практика</span>
-                        <h3>Педагогам</h3>
-                        <p>Методкабинет и сценарии уроков</p>
-                    </div>
-
-                    <a href="./kindergarten.html" class="route-card">
-                        <span class="route-num">03 / Учреждения</span>
-                        <h3>Детским садам</h3>
-                        <p>Системное внедрение ММНГ</p>
-                    </a>
+                <div class="acc-card">
+                  <strong>100 устных вопросов и письменных задач</strong>
+                  <span>
+                    Аналитический блок Методкабинета. Материалы тренируют логическое мышление,
+                    устный счёт, кратковременную память и способность ребёнка удерживать
+                    структуру задания до результата.
+                  </span>
                 </div>
-            </div>
-        </section>
 
-        <section class="site-manifesto reveal">
-            <div class="container">
-                <div class="site-manifesto-text">
-                    Мы вернём России статус<br>самой читающей страны в мире.
+                <div class="acc-card reward-card">
+                  <strong>270 Мультуроков</strong>
+                  <span>
+                    Призовой архив ИВУ из дошкольных и школьных обучающих роликов.
+                    Используется как система поощрения, дополнительной мотивации
+                    и мягкого сопровождения маршрута ребёнка.
+                  </span>
+
+                  <div class="acc-card-kpis">
+                    <span>15 уровней</span>
+                    <span>дошкольные</span>
+                    <span>школьные</span>
+                    <span>герои и учителя</span>
+                  </div>
+
+                  <div class="premium-list-container">
+                    <div class="premium-list-category">Дошкольные герои (135 уроков)</div>
+                    <ul class="premium-list">
+                      <li>Незнайка, Лунтик, Пятачок</li>
+                      <li>Бельчонок, Трубодур, Котёнок Гав</li>
+                      <li>Карлсон, Львёнок (с черепахой)</li>
+                      <li>Дядя Фёдор, Маша (без медведя)</li>
+                      <li>Забава, Ёжик, Колобок</li>
+                      <li>Тигра, Богатырь</li>
+                    </ul>
+
+                    <div class="premium-list-category">Школьные учителя (135 уроков)</div>
+                    <ul class="premium-list">
+                      <li>Учительница Эмма Карловна</li>
+                      <li>Учительница Августина Романовна</li>
+                      <li>Учительница Северина Львовна</li>
+                      <li>Учительница Клавдия Эрнестовна</li>
+                      <li>Учительница Акулина Степановна</li>
+                      <li>Учительница Аврора Станиславовна</li>
+                      <li>Учительница Варвара Аверьяновна</li>
+                      <li>Учительница Лада Эдуардовна</li>
+                      <li>Учительница Анжелика Руслановна</li>
+                      <li>Учительница Анфиса Арнольдовна</li>
+                      <li>Учительница Анна Альбертовна</li>
+                      <li>Учительница Клара Спартаковна</li>
+                      <li>Учительница Эльвира Кузьминична</li>
+                      <li>Учительница Марта Аркадьевна</li>
+                      <li>Учительница Алевтина Пантелеевна</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
-    </main>
+          </details>
 
-    <footer class="footer-minimal">
-        <div class="container footer-minimal__inner">
-            <div class="footer-minimal__left">
-                <a href="./index.html" class="footer-minimal__logo-block">
-                    <div class="footer-minimal__logo-icon">ИВУ</div>
-                    <div class="footer-minimal__logo-text">
-                        <strong>Институт Врожденной<br>Успеваемости</strong>
-                        <span>От первых 100 слов —<br>к 100 книгам школьника</span>
-                    </div>
-                </a>
-            </div>
-
-            <div class="footer-minimal__center">
-                Авторская система Сергея Белолипецкого<br>
-                <a href="./privacy.html" style="font-size: 0.8rem; text-decoration: underline; margin-top: 8px; display: inline-block; color: var(--text-muted); opacity: 0.8;">Политика конфиденциальности</a>
+          <div class="method-cabinet-practice">
+            <div class="method-cabinet-practice__head">
+              <span class="method-cabinet-practice__kicker">Практический фонд ИВУ</span>
+              <h3 class="method-cabinet-practice__title">Фонд заданий и практики</h3>
+              <p class="method-cabinet-practice__lead">
+                Отдельный пласт Методкабинета, в котором собраны практические материалы для закрепления чтения,
+                письма, внимания, логики и математики. Это не приложение к курсу, а рабочий фонд упражнений,
+                карточек и заданий, который помогает педагогу удерживать систему в действии.
+              </p>
             </div>
 
-            <div class="footer-minimal__right">
-                <a href="#header" class="footer-minimal__up">Наверх ↑</a>
+            <div class="method-cabinet-practice__grid">
+              <div class="method-cabinet-practice__card">
+                <strong>Практические блоки</strong>
+                <span>
+                  Карточки, прописи, скороговорки, загадки, упражнения и игровые задания
+                  для закрепления структуры языка и развития устойчивого навыка.
+                </span>
+
+                <div class="acc-card-kpis">
+                  <span>3000+ страниц</span>
+                  <span>карточки</span>
+                  <span>прописи</span>
+                  <span>игровая практика</span>
+                </div>
+
+                <div class="premium-list-container">
+                  <div class="premium-list-category">Практические блоки</div>
+                  <ul class="premium-list">
+                    <li>Считалки, загадки, скороговорки</li>
+                    <li>Карточки с буквами и образами</li>
+                    <li>Прописи и паттерны (32 листа)</li>
+                    <li>Развивающие раскраски</li>
+                    <li>Задачи с прогрессией сложности</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="method-cabinet-practice__card method-cabinet-practice__card--accent">
+                <strong>Математика, логика и тексты</strong>
+                <span>
+                  Система охватывает не только чтение, но и математическое мышление,
+                  удержание структуры задания, развитие внимания и постепенное увеличение объёма текста.
+                </span>
+
+                <div class="acc-card-kpis">
+                  <span>математика</span>
+                  <span>логика</span>
+                  <span>55 рассказов</span>
+                  <span>324 слова</span>
+                </div>
+
+                <div class="premium-list-container">
+                  <div class="premium-list-category">Математика и логика</div>
+                  <ul class="premium-list">
+                    <li>27 заданий по математике</li>
+                    <li>Разложение чисел (наглядные модели)</li>
+                    <li>Пространственное мышление</li>
+                    <li>Составление задач</li>
+                  </ul>
+
+                  <div class="premium-list-category">Чтение и тексты</div>
+                  <ul class="premium-list">
+                    <li>55 рассказов с иллюстрациями</li>
+                    <li>27 тематических текстов</li>
+                    <li>324 слова + 324 изображения</li>
+                    <li>Постепенное увеличение объёма текста</li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </footer>
 
-    <script src="./script.js"></script>
+        <div class="smart-form-cta">
+          <h3>Умная заявка педагога</h3>
+          <p>
+            Доступ к закрытому фонду выдаётся через профессиональный бриф. Нам важен ваш опыт,
+            готовность делиться результатами практики и мотивация довести ребёнка до 100 книг.
+          </p>
+          <a href="./contacts.html#form" class="btn btn-outline">Заполнить заявку педагога</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding container reveal" id="evidence">
+      <div class="section-header educators-section-header">
+        <h2 class="educators-section-title">Научная база и среда</h2>
+      </div>
+
+      <div class="evidence-grid">
+        <div class="ev-panel">
+          <h3>Профессиональная среда</h3>
+          <ul class="ev-list">
+            <li>Демонстрационные уроки на реальных группах</li>
+            <li>Обучение педагогов и методическое сопровождение</li>
+            <li>Закрытый методкабинет для сертифицированных специалистов</li>
+            <li>Живой обмен практиками между регионами</li>
+          </ul>
+          <a href="./contacts.html#educators" class="btn btn-outline ev-panel__btn">
+            Связаться с Институтом
+          </a>
+        </div>
+
+        <div class="ev-panel ev-panel--accent">
+          <h3>Доказательная база метода</h3>
+          <ul class="ev-list">
+            <li>Опора на графики раннего развития Б.П. Никитина</li>
+            <li>Шкалы измерения интеллекта и памяти Дэвида Векслера</li>
+            <li>Метод объёма как способ уплотнить и структурировать время обучения без перегрузки нервной системы</li>
+            <li><strong>Фундаментальная библиотека:</strong> 7 авторских учебных изданий (от бестселлеров ЭКСМО до современных «НОУ-ХАУ Азбуки» и «Букваря А») и 4 рабочие тетради.</li>
+            <li><strong>Инженерный тренажёр (Патент 1999 г.):</strong> Авторские крутящиеся кубики. Компактная система из 10 кубиков, заменяющая громоздкие аналоги прошлого века (40 кубиков Зайцева), с 4-х цветовой кодировкой для мгновенного чтения слов.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="evidence-bridge">
+        Метод объёма соединяет идеи раннего развития Никитина и измерения памяти Векслера в единую образовательную архитектуру.
+      </div>
+
+      <div class="foundation-bridge">
+        <div class="fb-text">
+          <h3>Инициатива масштаба страны</h3>
+          <p>
+            Базовые программы для детей и садов бесплатны. Институт развивается благодаря поддержке
+            сообщества и попечителей. Эти средства идут на разработку материалов, демонстрации
+            и обучение педагогов.
+          </p>
+          <div class="fb-mission">
+            ИВУ — общественная инициатива, направленная на восстановление культуры чтения.
+          </div>
+        </div>
+
+        <a href="./foundation.html" class="btn btn-primary">Поддержать Фонд ИВУ</a>
+      </div>
+    </section>
+
+    <section class="not-just-reading reveal">
+      <div class="container not-just-reading__inner">
+        <h3 class="not-just-reading__title">ИВУ — не курс чтения.</h3>
+        <p class="not-just-reading__text">
+          Это система развития памяти, речи, письма и математического мышления.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-padding reveal section-transparent" id="routes">
+      <div class="container">
+        <div class="section-header educators-section-header">
+          <h2 class="educators-section-title">Траектории внедрения</h2>
+        </div>
+
+        <div class="routes-grid">
+          <a href="./parents.html" class="route-card">
+            <span class="route-num">01 / Семья</span>
+            <h3>Родителям</h3>
+            <p>Домашняя лаборатория и первые 100 слов</p>
+          </a>
+
+          <div class="route-card active">
+            <span class="route-num">02 / Практика</span>
+            <h3>Педагогам</h3>
+            <p>Методкабинет и сценарии уроков</p>
+          </div>
+
+          <a href="./kindergarten.html" class="route-card">
+            <span class="route-num">03 / Учреждения</span>
+            <h3>Детским садам</h3>
+            <p>Системное внедрение ММНГ</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-manifesto reveal">
+      <div class="container">
+        <div class="site-manifesto-text">
+          Мы вернём России статус<br>самой читающей страны в мире.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-minimal">
+    <div class="container footer-minimal__inner">
+      <div class="footer-minimal__left">
+        <a href="./index.html" class="footer-minimal__logo-block">
+          <div class="footer-minimal__logo-icon">ИВУ</div>
+          <div class="footer-minimal__logo-text">
+            <strong>Институт Врожденной<br>Успеваемости</strong>
+            <span>От первых 100 слов —<br>к 100 книгам школьника</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="footer-minimal__center">
+        Авторская система Сергея Белолипецкого<br>
+        <a href="./privacy.html" style="font-size: 0.8rem; text-decoration: underline; margin-top: 8px; display: inline-block; color: var(--text-muted); opacity: 0.8;">Политика конфиденциальности</a>
+      </div>
+
+      <div class="footer-minimal__right">
+        <a href="#header" class="footer-minimal__up">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>

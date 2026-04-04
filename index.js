@@ -38,73 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  goToSlide(0);
-  startSlider();
-
-  /* ==========================================================================
-     2. НАВИГАЦИЯ ПО РАЗДЕЛАМ (Dropdown + ScrollSpy)
-     ========================================================================== */
-  const sectionsNav = document.querySelector('.page-sections');
-  const sectionsToggle = document.querySelector('.page-sections__toggle');
-  const sectionsPanel = document.querySelector('.page-sections__panel');
-  const sectionsLinks = document.querySelectorAll('.page-sections__link');
-
-  if (sectionsNav && sectionsToggle && sectionsPanel) {
-    sectionsPanel.hidden = true;
-    sectionsToggle.setAttribute('aria-expanded', 'false');
-
-    sectionsToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const shouldOpen = sectionsPanel.hidden;
-      sectionsPanel.hidden = !shouldOpen;
-      sectionsToggle.setAttribute('aria-expanded', String(shouldOpen));
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!sectionsNav.contains(e.target)) {
-        sectionsPanel.hidden = true;
-        sectionsToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    sectionsLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        sectionsPanel.hidden = true;
-        sectionsToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    const observerOptions = {
-      rootMargin: '-20% 0px -70% 0px',
-      threshold: 0
-    };
-
-    const scrollSpyObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = `#${entry.target.id}`;
-
-          sectionsLinks.forEach((link) => {
-            link.classList.toggle('is-active', link.getAttribute('href') === id);
-          });
-        }
-      });
-    }, observerOptions);
-
-    sectionsLinks.forEach((link) => {
-      const targetId = link.getAttribute('href');
-
-      if (targetId && targetId.startsWith('#')) {
-        const targetSection = document.querySelector(targetId);
-        if (targetSection) {
-          scrollSpyObserver.observe(targetSection);
-        }
-      }
-    });
+  if (slides.length && buttons.length) {
+    goToSlide(0);
+    startSlider();
   }
 
   /* ==========================================================================
-     3. АНИМАЦИЯ 3D-КУБИКА
+     2. АНИМАЦИЯ 3D-КУБИКА
      Запуск только если пользователь находится в блоке 2 секунды
      ========================================================================== */
   const cubeSection = document.querySelector('#cubes');
@@ -131,8 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cubeObserver.observe(cubeSection);
   }
-       /* ==========================================================================
-     4. КАРТОЧКИ AUDIENCES — появление по скроллу + раскрытие по hover/tap
+
+  /* ==========================================================================
+     3. КАРТОЧКИ AUDIENCES — появление по скроллу + раскрытие по hover/tap
      ========================================================================== */
   const roleCards = document.querySelectorAll('.role-stack .role-card');
 
