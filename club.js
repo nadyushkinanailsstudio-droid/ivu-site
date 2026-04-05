@@ -4,8 +4,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const sysMsg = document.getElementById('sys-msg');
   const letterGrid = document.getElementById('letter-grid');
   const victoryArea = document.getElementById('victory-area');
-  const unlockBtn = document.getElementById('btn-unlock');
-  const secretLessons = document.getElementById('secret-lessons');
+
+  const paradeStage = document.getElementById('parade-stage');
+  const anthemStage = document.getElementById('anthem-stage');
+  const lessonsStage = document.getElementById('lessons-stage');
+  const videoStage = document.getElementById('video-stage');
 
   const btnStartDeep = document.getElementById('btn-start-deep');
   const deepStartScreen = document.getElementById('deep-start-screen');
@@ -15,6 +18,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const targetRows = ['БВГДЖ', 'ЗКЛМШ', 'НПРСЧ', 'ТФХЦЩ'];
   const cells = letterGrid ? Array.from(letterGrid.querySelectorAll('.l-cell')) : [];
   let currentRow = 0;
+
+  const funnyErrors = [
+    'Кручучу шепчет: почти получилось, попробуй ещё раз.',
+    'Ой-ой, одна буква убежала не на своё место.',
+    'Почти! Шеренга хочет встать красиво, но пока не выходит.',
+    'Кручучу улыбается: ещё одна попытка — и парад получится.',
+    'Буквы чуть-чуть перепутались. Давай соберём шеренгу снова.'
+  ];
 
   function clearMessage() {
     if (!sysMsg) return;
@@ -48,6 +59,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function showStage(stageEl) {
+    if (!stageEl) return;
+
+    stageEl.style.display = 'block';
+
+    requestAnimationFrame(() => {
+      stageEl.classList.add('show');
+    });
+  }
+
+  function hideStage(stageEl) {
+    if (!stageEl) return;
+
+    stageEl.classList.remove('show');
+    stageEl.style.display = 'none';
+  }
+
+  function resetStages() {
+    hideStage(paradeStage);
+    hideStage(anthemStage);
+    hideStage(lessonsStage);
+    hideStage(videoStage);
+  }
+
+  function runVictorySequence() {
+    setTimeout(() => showStage(paradeStage), 500);
+    setTimeout(() => showStage(anthemStage), 1300);
+    setTimeout(() => showStage(lessonsStage), 2100);
+    setTimeout(() => showStage(videoStage), 2900);
+  }
+
   function resetMatrix() {
     currentRow = 0;
 
@@ -66,9 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
       victoryArea.style.display = 'none';
     }
 
-    if (secretLessons) {
-      secretLessons.style.display = 'none';
-    }
+    resetStages();
 
     if (deepStartScreen) {
       deepStartScreen.hidden = false;
@@ -103,6 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
         block: 'start'
       });
     }
+
+    runVictorySequence();
   }
 
   function checkCurrentRow() {
@@ -133,12 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-  showMessage('Почти получилось. Проверь порядок букв в этой шеренге.', 'msg-error');
-    // Даем ребенку 1.5 секунды увидеть свою ошибку перед очисткой
+    const funnyText = funnyErrors[Math.floor(Math.random() * funnyErrors.length)];
+    showMessage(funnyText, 'msg-error');
+
     setTimeout(() => {
       codeInput.value = '';
     }, 1500);
   }
+
   if (codeInput) {
     codeInput.addEventListener('input', () => {
       codeInput.value = normalizeInput(codeInput.value).slice(0, 5);
@@ -151,16 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (btnReset) {
     btnReset.addEventListener('click', resetMatrix);
-  }
-
-  if (unlockBtn && secretLessons) {
-    unlockBtn.addEventListener('click', () => {
-      secretLessons.style.display = 'block';
-      secretLessons.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
   }
 
   if (btnStartDeep && deepStartScreen && demoVideoBlock) {

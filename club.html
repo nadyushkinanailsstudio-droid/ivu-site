@@ -249,259 +249,281 @@
         </div>
       </details>
     </section>
+<section class="puzzle-section reveal" id="puzzle">
+  <div class="container">
+    <div class="puzzle-wrapper">
+      <div class="puzzle-grid">
+        <div class="puzzle-text">
+          <h2>Парад букв</h2>
+          <p>
+            Это первая загадка мага Кручучу. На календаре 20 августа.
+            Согласные буквы готовятся к торжественному параду, но они забыли свои места!
+          </p>
+          <p class="puzzle-text-strong">
+            Эти 20 букв составляют инженерное ядро языка.
+          </p>
 
-    <section class="puzzle-section reveal" id="puzzle">
-      <div class="container">
-        <div class="puzzle-wrapper">
-          <div class="puzzle-grid">
-            <div class="puzzle-text">
-              <h2>Парад букв</h2>
-              <p>
-                Это первая загадка мага Кручучу. На календаре 20 августа.
-                Согласные буквы готовятся к торжественному параду, но они забыли свои места!
-              </p>
-              <p class="puzzle-text-strong">
-                Эти 20 букв составляют инженерное ядро языка.
-              </p>
+          <div class="puzzle-rules">
+            <h4>Инструкция Мага:</h4>
+            <ul>
+              <li>В параде участвуют только согласные буквы.</li>
+              <li>Буква <strong>А</strong> — знаменосец, она встанет впереди, когда парад будет собран.</li>
+              <li>Буквы строятся в 4 шеренги по 5 букв.</li>
+              <li>В каждой шеренге прячется ровно одна шипящая буква.</li>
+              <li>Соблюдайте строгий алфавитный порядок!</li>
+            </ul>
+          </div>
+        </div>
 
-              <div class="puzzle-rules">
-                <h4>Инструкция Мага:</h4>
-                <ul>
-                  <li>В параде участвуют только согласные буквы.</li>
-                  <li>Буква <strong>А</strong> — знаменосец, она встанет впереди, когда парад будет собран.</li>
-                  <li>Буквы строятся в 4 шеренги по 5 букв.</li>
-                  <li>В каждой шеренге прячется ровно одна шипящая буква.</li>
-                  <li>Соблюдайте строгий алфавитный порядок!</li>
-                </ul>
-              </div>
-            </div>
+        <div class="matrix-board">
+          <div class="m-status">
+            <button class="m-reset" id="btn-reset" type="button">Очистить парад</button>
+          </div>
 
-            <div class="matrix-board">
-              <div class="m-status">
-                <button class="m-reset" id="btn-reset" type="button">Очистить парад</button>
-              </div>
+          <div class="letter-grid" id="letter-grid">
+            <div class="l-cell" data-idx="0">?</div>
+            <div class="l-cell" data-idx="1">?</div>
+            <div class="l-cell" data-idx="2">?</div>
+            <div class="l-cell" data-idx="3">?</div>
+            <div class="l-cell" data-idx="4">?</div>
 
-              <div class="letter-grid" id="letter-grid">
-                <div class="l-cell" data-idx="0">?</div>
-                <div class="l-cell" data-idx="1">?</div>
-                <div class="l-cell" data-idx="2">?</div>
-                <div class="l-cell" data-idx="3">?</div>
-                <div class="l-cell" data-idx="4">?</div>
-                <div class="l-cell" data-idx="5">?</div>
-                <div class="l-cell" data-idx="6">?</div>
-                <div class="l-cell" data-idx="7">?</div>
-                <div class="l-cell" data-idx="8">?</div>
-                <div class="l-cell" data-idx="9">?</div>
-                <div class="l-cell" data-idx="10">?</div>
-                <div class="l-cell" data-idx="11">?</div>
-                <div class="l-cell" data-idx="12">?</div>
-                <div class="l-cell" data-idx="13">?</div>
-                <div class="l-cell" data-idx="14">?</div>
-                <div class="l-cell" data-idx="15">?</div>
-                <div class="l-cell" data-idx="16">?</div>
-                <div class="l-cell" data-idx="17">?</div>
-                <div class="l-cell" data-idx="18">?</div>
-                <div class="l-cell" data-idx="19">?</div>
-              </div>
+            <div class="l-cell" data-idx="5">?</div>
+            <div class="l-cell" data-idx="6">?</div>
+            <div class="l-cell" data-idx="7">?</div>
+            <div class="l-cell" data-idx="8">?</div>
+            <div class="l-cell" data-idx="9">?</div>
 
-              <div class="input-area" id="input-area">
-                <input
-                  type="text"
-                  id="code-input"
-                  class="code-input"
-                  placeholder="Введи 5 букв..."
-                  maxlength="5"
-                  autocomplete="off"
-                >
-              </div>
+            <div class="l-cell" data-idx="10">?</div>
+            <div class="l-cell" data-idx="11">?</div>
+            <div class="l-cell" data-idx="12">?</div>
+            <div class="l-cell" data-idx="13">?</div>
+            <div class="l-cell" data-idx="14">?</div>
 
-              <div class="sys-msg" id="sys-msg"></div>
+            <div class="l-cell" data-idx="15">?</div>
+            <div class="l-cell" data-idx="16">?</div>
+            <div class="l-cell" data-idx="17">?</div>
+            <div class="l-cell" data-idx="18">?</div>
+            <div class="l-cell" data-idx="19">?</div>
+          </div>
 
-              <div class="victory-area" id="victory-area">
-                <div class="victory-announcement">
-                  <span class="victory-icon">🏆</span>
-                  <h3 class="victory-title">Ура! Матрица собрана правильно!</h3>
-                  <p class="victory-text-primary">
-                    Ты разгадал первую большую загадку Кручучу и правильно построил все четыре шеренги.
-                  </p>
-                  <p class="victory-text-secondary">
-                    Теперь перед тобой открывается <span class="victory-underline">Торжественный Гимн Матрицы</span>
-                    и первые секретные уроки. Это и есть твой первый шаг к тайному коду чтения.
-                  </p>
-                </div>
+          <div class="input-area" id="input-area">
+            <input
+              type="text"
+              id="code-input"
+              class="code-input"
+              placeholder="Введи 5 букв..."
+              maxlength="5"
+              autocomplete="off"
+            >
+          </div>
 
-                <p class="anthem-intro">
-                  Твоя награда за разгаданную Матрицу — запомни эти четыре шеренги и открой путь дальше.
-                </p>
+          <div class="sys-msg" id="sys-msg"></div>
+        </div>
+      </div>
+    </div>
 
-                <div class="anthem-box">
-                  <h4 class="anthem-title">Торжественный Гимн Матрицы</h4>
+    <div class="victory-area" id="victory-area">
+      <div class="victory-announcement">
+        <span class="victory-icon">🏆</span>
+        <h3 class="victory-title">Ура! Матрица собрана правильно!</h3>
+        <p class="victory-text-primary">
+          Ты разгадал первую большую загадку Кручучу и правильно построил все четыре шеренги.
+        </p>
+        <p class="victory-text-secondary">
+          Теперь начинается настоящий парад букв.
+        </p>
+      </div>
+    </div>
 
-                  <div class="anthem-line">
-                    <span class="highlight-letter">Б В Г Д Ж</span>
-                    Россия — священная наша ДЕРЖАВА
-                  </div>
+    <div class="club-stage" id="parade-stage">
+      <div class="club-stage-inner">
+        <h3>Буква А выходит первой</h3>
 
-                  <div class="anthem-line">
-                    <span class="highlight-letter">З К Л М Ш</span>
-                    Россия — любимая наша СТРАНА
-                  </div>
+        <div class="parade-scene">
+          <div class="parade-letter">А</div>
 
-                  <div class="anthem-line">
-                    <span class="highlight-letter">Н П Р С Ч</span>
-                    Могучая воля, великая СЛАВА
-                  </div>
-
-                  <div class="anthem-line">
-                    <span class="highlight-letter">Т Ф Х Ц Щ</span>
-                    Твоё достоянье на все ВРЕМЕНА
-                  </div>
-                </div>
-
-                <div class="text-center" id="btn-unlock-container">
-                  <button class="btn btn-magic btn-unlock-club" id="btn-unlock" type="button">
-                    Открыть 4 секретных урока
-                  </button>
-                </div>
-
-                <div class="secret-lessons" id="secret-lessons">
-                  <div class="secret-lessons-head">
-                    <p class="secret-lessons-intro">Это первые шаги метода объёма.</p>
-                    <p class="secret-lessons-lead">
-                      После разгадки Матрицы ты получаешь доступ к первым четырём шагам —
-                      именно с них часто начинается настоящее вхождение в систему.
-                    </p>
-                  </div>
-
-                  <div class="lessons-showcase lessons-showcase--premium">
-                    <article class="lesson-stage lesson-stage--featured">
-                      <div class="lesson-stage-meta">
-                        <span class="lesson-stage-num">Шаг 1</span>
-                        <h4 class="lesson-stage-title">БВГДЖ + А</h4>
-                      </div>
-                      <div class="lesson-stage-body">
-                        <p class="lesson-stage-main">БА · ВА · ГА · ДА · ЖА</p>
-                        <p class="lesson-stage-formula">Первые слова: САД · ЧАЙ · ШАР · РАК</p>
-                      </div>
-                    </article>
-
-                    <article class="lesson-stage">
-                      <div class="lesson-stage-meta">
-                        <span class="lesson-stage-num">Шаг 2</span>
-                        <h4 class="lesson-stage-title">ЗКЛМШ + А</h4>
-                      </div>
-                      <div class="lesson-stage-body">
-                        <p class="lesson-stage-main">ЗА · КА · ЛА · МА · ША</p>
-                        <p class="lesson-stage-formula">Первые слова: ДАЧА · РАМА · ВАЗА · ЖАБА</p>
-                      </div>
-                    </article>
-
-                    <article class="lesson-stage">
-                      <div class="lesson-stage-meta">
-                        <span class="lesson-stage-num">Шаг 3</span>
-                        <h4 class="lesson-stage-title">НПРСЧ + А</h4>
-                      </div>
-                      <div class="lesson-stage-body">
-                        <p class="lesson-stage-main">НА · ПА · РА · СА · ЧА</p>
-                        <p class="lesson-stage-formula">Матрица расширяется и начинает работать как система.</p>
-                      </div>
-                    </article>
-
-                    <article class="lesson-stage">
-                      <div class="lesson-stage-meta">
-                        <span class="lesson-stage-num">Шаг 4</span>
-                        <h4 class="lesson-stage-title">ТФХЦЩ + А</h4>
-                      </div>
-                      <div class="lesson-stage-body">
-                        <p class="lesson-stage-main">ТА · ФА · ХА · ЦА · ЩА</p>
-                        <p class="lesson-stage-formula">Язык раскрывается дальше и собирается в цельную логику.</p>
-                      </div>
-                    </article>
-                  </div>
-
-                  <div class="lesson-result-window">
-                    <p class="lesson-result-label">Что происходит дальше</p>
-                    <h4 class="lesson-result-title">Слова начинают соединяться между собой</h4>
-                    <div class="lesson-result-grid">
-                      <span>САД — ДАЧА</span>
-                      <span>ЧАЙ — РАМА</span>
-                      <span>ШАР — ВАЗА</span>
-                      <span>РАК — ЖАБА</span>
-                    </div>
-                  </div>
-
-                  <div class="lessons-download-strip">
-                    <p class="lessons-download-text">
-                      Хочешь рассмотреть эти шаги внимательно? Ниже открыт полный лист с уроками —
-                      его можно пролистать прямо здесь или распечатать отдельно.
-                    </p>
-                    <a href="./img/uroki.pdf" class="btn btn-outline lessons-download-btn" target="_blank" rel="noopener">
-                      Скачать уроки в PDF
-                    </a>
-                  </div>
-
-                  <div class="lessons-pdf-viewer">
-                    <div class="lessons-pdf-head">
-                      <p class="lessons-pdf-kicker">Полный разворот уроков</p>
-                      <h4 class="lessons-pdf-title">Открытый лист для спокойного просмотра</h4>
-                    </div>
-
-                    <div class="lessons-pdf-frame-wrap">
-                      <iframe
-                        class="lessons-pdf-frame"
-                        src="./img/uroki.pdf"
-                        title="Первые уроки ИВУ"
-                        loading="lazy">
-                      </iframe>
-                    </div>
-                  </div>
-
-                  <div class="deep-start-screen" id="deep-start-screen">
-                    <img src="./img/kru-underwater.webp" alt="Кручучу под водой" class="deep-image">
-                    <div class="deep-overlay">
-                      <h4 class="deep-title">Готов к дальнейшему погружению?</h4>
-                      <p class="deep-text">
-                        Ты уже увидел, как буквы превращаются в слоги и слова.
-                        Теперь посмотри, как метод работает вживую.
-                      </p>
-                      <button class="btn btn-magic" id="btn-start-deep" type="button">
-                        Погрузиться глубже
-                      </button>
-                    </div>
-                  </div>
-
-                  <div class="demo-video-block" id="demo-video-block" hidden>
-                    <h4 class="demo-video-title">Демо-урок</h4>
-                    <p class="demo-video-text">
-                      Это короткий вход в живое объяснение метода после первых шагов.
-                    </p>
-
-                    <video id="club-video" class="demo-video-player" controls preload="metadata">
-                      <source src="./media/uroven_01_01.mp4" type="video/mp4">
-                      Ваш браузер не поддерживает воспроизведение видео.
-                    </video>
-                  </div>
-
-                  <div class="lesson-parent-note">
-                    <p class="lesson-note">
-                      Родители: сравните этот старт по ИВУ с обычным букварём и посмотрите,
-                      как ребёнок собирает слоги и слова.
-                    </p>
-                  </div>
-
-                  <div class="secret-actions">
-                    <a href="YOUR_VK_REVIEW_LINK_HERE" class="btn btn-outline btn-share-club" target="_blank" rel="noopener">
-                      Поделиться впечатлением во ВКонтакте
-                    </a>
-                    <a href="./contacts.html" class="btn btn-magic">Заказать консультацию</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div class="parade-rows">
+            <div>Б В Г Д Ж</div>
+            <div>З К Л М Ш</div>
+            <div>Н П Р С Ч</div>
+            <div>Т Ф Х Ц Щ</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <div class="club-stage" id="anthem-stage">
+      <div class="club-stage-inner">
+        <p class="anthem-intro">
+          Твоя награда за разгаданную Матрицу — запомни эти четыре шеренги и открой путь дальше.
+        </p>
+
+        <div class="anthem-box">
+          <h4 class="anthem-title">Торжественный Гимн Матрицы</h4>
+
+          <div class="anthem-line">
+            <span class="highlight-letter">Б В Г Д Ж</span>
+            Россия — священная наша ДЕРЖАВА
+          </div>
+
+          <div class="anthem-line">
+            <span class="highlight-letter">З К Л М Ш</span>
+            Россия — любимая наша СТРАНА
+          </div>
+
+          <div class="anthem-line">
+            <span class="highlight-letter">Н П Р С Ч</span>
+            Могучая воля, великая СЛАВА
+          </div>
+
+          <div class="anthem-line">
+            <span class="highlight-letter">Т Ф Х Ц Щ</span>
+            Твоё достоянье на все ВРЕМЕНА
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="club-stage" id="lessons-stage">
+      <div class="club-stage-inner">
+        <div class="secret-lessons-head">
+          <p class="secret-lessons-intro">Это первые шаги метода объёма.</p>
+          <p class="secret-lessons-lead">
+            После разгадки Матрицы ты получаешь доступ к первым четырём шагам —
+            именно с них часто начинается настоящее вхождение в систему.
+          </p>
+        </div>
+
+        <div class="lessons-showcase lessons-showcase--premium">
+          <article class="lesson-stage lesson-stage--featured">
+            <div class="lesson-stage-meta">
+              <span class="lesson-stage-num">Шаг 1</span>
+              <h4 class="lesson-stage-title">БВГДЖ + А</h4>
+            </div>
+            <div class="lesson-stage-body">
+              <p class="lesson-stage-main">БА · ВА · ГА · ДА · ЖА</p>
+              <p class="lesson-stage-formula">Первые слова: САД · ЧАЙ · ШАР · РАК</p>
+            </div>
+          </article>
+
+          <article class="lesson-stage">
+            <div class="lesson-stage-meta">
+              <span class="lesson-stage-num">Шаг 2</span>
+              <h4 class="lesson-stage-title">ЗКЛМШ + А</h4>
+            </div>
+            <div class="lesson-stage-body">
+              <p class="lesson-stage-main">ЗА · КА · ЛА · МА · ША</p>
+              <p class="lesson-stage-formula">Первые слова: ДАЧА · РАМА · ВАЗА · ЖАБА</p>
+            </div>
+          </article>
+
+          <article class="lesson-stage">
+            <div class="lesson-stage-meta">
+              <span class="lesson-stage-num">Шаг 3</span>
+              <h4 class="lesson-stage-title">НПРСЧ + А</h4>
+            </div>
+            <div class="lesson-stage-body">
+              <p class="lesson-stage-main">НА · ПА · РА · СА · ЧА</p>
+              <p class="lesson-stage-formula">Матрица расширяется и начинает работать как система.</p>
+            </div>
+          </article>
+
+          <article class="lesson-stage">
+            <div class="lesson-stage-meta">
+              <span class="lesson-stage-num">Шаг 4</span>
+              <h4 class="lesson-stage-title">ТФХЦЩ + А</h4>
+            </div>
+            <div class="lesson-stage-body">
+              <p class="lesson-stage-main">ТА · ФА · ХА · ЦА · ЩА</p>
+              <p class="lesson-stage-formula">Язык раскрывается дальше и собирается в цельную логику.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="lesson-result-window">
+          <p class="lesson-result-label">Что происходит дальше</p>
+          <h4 class="lesson-result-title">Слова начинают соединяться между собой</h4>
+          <div class="lesson-result-grid">
+            <span>САД — ДАЧА</span>
+            <span>ЧАЙ — РАМА</span>
+            <span>ШАР — ВАЗА</span>
+            <span>РАК — ЖАБА</span>
+          </div>
+        </div>
+
+        <div class="lessons-download-strip">
+          <p class="lessons-download-text">
+            Хочешь рассмотреть эти шаги внимательно? Ниже открыт полный лист с уроками —
+            его можно пролистать прямо здесь или распечатать отдельно.
+          </p>
+          <a href="./img/uroki.pdf" class="btn btn-outline lessons-download-btn" target="_blank" rel="noopener">
+            Скачать уроки в PDF
+          </a>
+        </div>
+
+        <div class="lessons-pdf-viewer">
+          <div class="lessons-pdf-head">
+            <p class="lessons-pdf-kicker">Полный разворот уроков</p>
+            <h4 class="lessons-pdf-title">Открытый лист для спокойного просмотра</h4>
+          </div>
+
+          <div class="lessons-pdf-frame-wrap">
+            <iframe
+              class="lessons-pdf-frame"
+              src="./img/uroki.pdf"
+              title="Первые уроки ИВУ"
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="club-stage" id="video-stage">
+      <div class="club-stage-inner">
+        <div class="deep-start-screen" id="deep-start-screen">
+          <img src="./img/kru-underwater.webp" alt="Кручучу под водой" class="deep-image">
+          <div class="deep-overlay">
+            <h4 class="deep-title">Готов к дальнейшему погружению?</h4>
+            <p class="deep-text">
+              Ты уже увидел, как буквы превращаются в слоги и слова.
+              Теперь посмотри, как метод работает вживую.
+            </p>
+            <button class="btn btn-magic" id="btn-start-deep" type="button">
+              Погрузиться глубже
+            </button>
+          </div>
+        </div>
+
+        <div class="demo-video-block" id="demo-video-block" hidden>
+          <h4 class="demo-video-title">Демо-урок</h4>
+          <p class="demo-video-text">
+            Это короткий вход в живое объяснение метода после первых шагов.
+          </p>
+
+          <video id="club-video" class="demo-video-player" controls preload="metadata">
+            <source src="./media/uroven_01_01.mp4" type="video/mp4">
+            Ваш браузер не поддерживает воспроизведение видео.
+          </video>
+        </div>
+
+        <div class="lesson-parent-note">
+          <p class="lesson-note">
+            Родители: сравните этот старт по ИВУ с обычным букварём и посмотрите,
+            как ребёнок собирает слоги и слова.
+          </p>
+        </div>
+
+        <div class="secret-actions">
+          <a href="YOUR_VK_REVIEW_LINK_HERE" class="btn btn-outline btn-share-club" target="_blank" rel="noopener">
+            Поделиться впечатлением во ВКонтакте
+          </a>
+          <a href="./contacts.html" class="btn btn-magic">Заказать консультацию</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <p class="challenge-bridge">
       Но это только начало. У Кручучу есть особый день,
