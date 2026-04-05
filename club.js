@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const victoryArea = document.getElementById('victory-area');
 
   const paradeStage = document.getElementById('parade-stage');
+  const stageBreak = document.getElementById('stage-break');
   const anthemStage = document.getElementById('anthem-stage');
   const lessonsStage = document.getElementById('lessons-stage');
   const videoStage = document.getElementById('video-stage');
@@ -76,18 +77,91 @@ document.addEventListener('DOMContentLoaded', () => {
     stageEl.style.display = 'none';
   }
 
+  function scrollToBlock(el, block = 'start') {
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: 'smooth',
+      block
+    });
+  }
+
+  function observeAndStart(stage) {
+    if (!stage) return;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          stage.classList.add('show');
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+
+    observer.observe(stage);
+  }
+
   function resetStages() {
     hideStage(paradeStage);
     hideStage(anthemStage);
     hideStage(lessonsStage);
     hideStage(videoStage);
+
+    if (stageBreak) {
+      stageBreak.classList.remove('show');
+    }
   }
 
   function runVictorySequence() {
-    setTimeout(() => showStage(paradeStage), 500);
-    setTimeout(() => showStage(anthemStage), 1300);
-    setTimeout(() => showStage(lessonsStage), 2100);
-    setTimeout(() => showStage(videoStage), 2900);
+    // 1. Показываем поздравление
+    setTimeout(() => {
+      if (victoryArea) {
+        victoryArea.style.display = 'block';
+        scrollToBlock(victoryArea, 'center');
+      }
+    }, 150);
+
+    // 2. Прокрутка к параду
+    setTimeout(() => {
+      if (paradeStage) {
+        paradeStage.style.display = 'block';
+        scrollToBlock(paradeStage, 'start');
+        observeAndStart(paradeStage);
+      }
+    }, 2600);
+
+    // 3. После полного парада показываем "Торжественный момент"
+    setTimeout(() => {
+      if (stageBreak) {
+        scrollToBlock(stageBreak, 'center');
+        stageBreak.classList.add('show');
+      }
+    }, 11800);
+
+    // 4. Потом идём к гимну
+    setTimeout(() => {
+      if (anthemStage) {
+        anthemStage.style.display = 'block';
+        scrollToBlock(anthemStage, 'start');
+        observeAndStart(anthemStage);
+      }
+    }, 13800);
+
+    // 5. После гимна — уроки
+    setTimeout(() => {
+      if (lessonsStage) {
+        lessonsStage.style.display = 'block';
+        observeAndStart(lessonsStage);
+      }
+    }, 18800);
+
+    // 6. Потом видео
+    setTimeout(() => {
+      if (videoStage) {
+        videoStage.style.display = 'block';
+        observeAndStart(videoStage);
+      }
+    }, 21000);
   }
 
   function resetMatrix() {
@@ -138,10 +212,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (victoryArea) {
       victoryArea.style.display = 'block';
-      victoryArea.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
     }
 
     runVictorySequence();
@@ -180,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
       codeInput.value = '';
-    }, 1500);
+    }, 1200);
   }
 
   if (codeInput) {
