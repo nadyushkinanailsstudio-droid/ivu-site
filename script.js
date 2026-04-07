@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach((el) => observer.observe(el));
   }
 
-  /* ===============================
+    /* ===============================
      НАВИГАЦИЯ ПО РАЗДЕЛАМ
      Dropdown + ScrollSpy
   =============================== */
@@ -181,5 +181,32 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('resize', updateActiveSection);
       }
     });
+  }
+
+  /* ===============================
+     КНОПКА ПРОКРУТКИ МЕНЮ
+  =============================== */
+  const nav = document.querySelector('.nav');
+  const navScrollBtn = document.querySelector('.nav-scroll-btn');
+
+  if (nav && navScrollBtn) {
+    const updateNavButton = () => {
+      const maxScroll = nav.scrollWidth - nav.clientWidth - 4;
+      const isAtEnd = nav.scrollLeft >= maxScroll;
+
+      navScrollBtn.style.display = isAtEnd ? 'none' : 'inline-flex';
+    };
+
+    navScrollBtn.addEventListener('click', () => {
+      nav.scrollBy({
+        left: 180,
+        behavior: 'smooth'
+      });
+    });
+
+    nav.addEventListener('scroll', updateNavButton, { passive: true });
+    window.addEventListener('resize', updateNavButton);
+
+    updateNavButton();
   }
 });
