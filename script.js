@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('js');
+
   /* ===============================
      ГЛОБАЛЬНЫЙ СКРОЛЛ-ДИСПЕТЧЕР
      Управляет шапкой и раздает событие 'app-scroll'
