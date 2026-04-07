@@ -834,10 +834,7 @@ border-bottom: 1.2px solid rgba(210,175,99,.6);
 /* ==========================================================================
    VOLUME INTRO
    ========================================================================== */
-.index-page #volume-intro.section-padding {
-  padding-top: 56px;
-  padding-bottom: 40px;
-}
+
 .index-page .volume-intro-header {
   max-width: 860px;
   margin: 0 auto 30px;
@@ -3485,15 +3482,13 @@ border-bottom: 1.2px solid rgba(210,175,99,.6);
   }
 }
 
+
 @media (max-width: 768px) {
   html,
   body {
     overflow-x: hidden;
   }
 
-  .index-page .container,
-  .index-page .header,
-  .index-page .header__inner,
   .index-page .hero,
   .index-page .hero-shell,
   .index-page .hero__grid,
@@ -3504,38 +3499,10 @@ border-bottom: 1.2px solid rgba(210,175,99,.6);
     max-width: 100%;
   }
 
-  .index-page .header__inner {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 14px;
+  .index-page .hero {
+    padding-top: 162px;
+    padding-bottom: 8px;
   }
-
- .index-page .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 16px;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 2px;
-  }
-
-  .index-page .nav::-webkit-scrollbar {
-    display: none;
-  }
-
-  .index-page .nav__link {
-    flex: 0 0 auto;
-  }
-
-.index-page .hero {
-  padding-top: 162px;
-  padding-bottom: 8px;
-}
 
   .index-page .hero-shell {
     padding: 22px 16px 18px;
@@ -4314,103 +4281,4 @@ border-bottom: 1.2px solid rgba(210,175,99,.6);
   .index-page .faq-content {
     padding: 0 16px 18px;
   }
-}
-/* ==========================================================================
-   FINAL — UNIFIED VERTICAL RHYTHM (ИТОГОВЫЙ)
-   ВСТАВИТЬ В САМЫЙ КОНЕЦ index.css
-   ========================================================================== */
-
-/* HERO → PROBLEM (добавили воздуха) */
-.index-page #problem > .section-padding {
-  padding-top: 90px;
-  padding-bottom: 60px;
-}
-
-/* PROBLEM → RESULT (логическая связка) */
-.index-page #result > .section-padding {
-  padding-top: 60px;
-  padding-bottom: 72px;
-}
-
-/* RESULT → VOLUME (разгрузили) */
-.index-page #volume-intro.section-padding {
-  padding-top: 80px;
-  padding-bottom: 52px;
-}
-
-/* VOLUME → ANTI-ARBUZ (чуть компактнее) */
-.index-page #anti-watermelon.section-padding {
-  padding-top: 52px;
-  padding-bottom: 60px;
-}
-
-/* ANTI-ARBUZ → MATRIX (убрали провал) */
-.index-page #language-core.section-padding {
-  padding-top: 56px;
-  padding-bottom: 72px;
-}
-
-/* MATRIX → ROUTE (сильный блок — даём воздух) */
-.index-page #funnel {
-  padding-top: 84px;
-  padding-bottom: 80px;
-}
-
-/* ROUTE → FORMATS (чуть плотнее) */
-.index-page #formats.section-padding {
-  padding-top: 70px;
-  padding-bottom: 40px;
-}
-
-/* FORMATS → ACCESS (склеили) */
-.index-page #access.section-padding {
-  padding-top: 40px;
-  padding-bottom: 80px;
-}
-
-/* ACCESS → CUBES (акцентный вход) */
-.index-page #cubes.section-padding {
-  padding-top: 80px;
-  padding-bottom: 60px;
-}
-
-/* CUBES → BOOKS (идеальная связка) */
-.index-page #books-system.section-padding {
-  padding-top: 60px;
-  padding-bottom: 76px;
-}
-
-/* BOOKS → BABYSTUDENT (баланс) */
-.index-page #bs-result.section-padding {
-  padding-top: 72px;
-  padding-bottom: 72px;
-}
-
-/* BABYSTUDENT → FAQ (даём выдох) */
-.index-page #faq.section-padding {
-  padding-top: 80px;
-  padding-bottom: 90px;
-}
-/* ==========================================================================
-   MICRO POLISH — FINAL TOUCH
-   ========================================================================== */
-
-/* Чуть больше воздуха после hero */
-.index-page .hero {
-  padding-bottom: 50px;
-}
-
-/* Лёгкое выравнивание визуального ритма середины */
-.index-page #volume-intro.section-padding {
-  padding-bottom: 60px;
-}
-
-/* Убираем ощущение "просадки" перед тёмным блоком */
-.index-page #bs-result.section-padding {
-  padding-top: 80px;
-}
-
-/* Финал — делаем достойную точку */
-.index-page #faq.section-padding {
-  padding-bottom: 110px;
 }

@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     reveals.forEach((el) => observer.observe(el));
   }
 
-    /* ===============================
+  /* ===============================
      НАВИГАЦИЯ ПО РАЗДЕЛАМ
      Dropdown + ScrollSpy
   =============================== */
@@ -184,38 +184,131 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ===============================
-   КНОПКА ПРОКРУТКИ МЕНЮ
-=============================== */
-const nav = document.querySelector('.nav');
-const btnLeft = document.querySelector('.nav-scroll-btn--left');
-const btnRight = document.querySelector('.nav-scroll-btn--right');
+     КНОПКИ ПРОКРУТКИ МЕНЮ
+  =============================== */
+  const nav = document.querySelector('.nav');
+  const btnLeft = document.querySelector('.nav-scroll-btn--left');
+  const btnRight = document.querySelector('.nav-scroll-btn--right');
 
-if (nav && btnLeft && btnRight) {
+  if (nav && btnLeft && btnRight) {
+    const getLinks = () => Array.from(nav.querySelectorAll('.nav__link'));
+    const isHomePage = () => document.body.classList.contains('index-page');
 
-  const updateButtons = () => {
-    const maxScroll = nav.scrollWidth - nav.clientWidth - 4;
+    const updateButtons = () => {
+      const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth - 4);
+      const atStart = nav.scrollLeft <= 10;
+      const atEnd = nav.scrollLeft >= maxScroll - 10;
 
-    const atStart = nav.scrollLeft <= 10;
-    const atEnd = nav.scrollLeft >= maxScroll - 10;
+      if (isHomePage()) {
+        btnLeft.style.opacity = '0';
+        btnLeft.style.pointerEvents = 'none';
+        btnLeft.style.visibility = 'hidden';
+      } else {
+        btnLeft.style.opacity = atStart ? '0' : '1';
+        btnLeft.style.pointerEvents = atStart ? 'none' : 'auto';
+        btnLeft.style.visibility = atStart ? 'hidden' : 'visible';
+      }
 
-    btnLeft.style.opacity = atStart ? '0' : '1';
-    btnLeft.style.pointerEvents = atStart ? 'none' : 'auto';
+      btnRight.style.opacity = atEnd ? '0' : '1';
+      btnRight.style.pointerEvents = atEnd ? 'none' : 'auto';
+      btnRight.style.visibility = atEnd ? 'hidden' : 'visible';
+    };
 
-    btnRight.style.opacity = atEnd ? '0' : '1';
-    btnRight.style.pointerEvents = atEnd ? 'none' : 'auto';
-  };
+    const forceHomeMenuStart = () => {
+      nav.scrollLeft = 0;
+      updateButtons();
+    };
 
-  btnRight.addEventListener('click', () => {
-    nav.scrollBy({ left: 180, behavior: 'smooth' });
-  });
+    const scrollActiveLinkIntoView = (smooth = false) => {
+      const allLinks = getLinks();
+      const activeLink = nav.querySelector('.nav__link.is-active');
 
-  btnLeft.addEventListener('click', () => {
-    nav.scrollBy({ left: -180, behavior: 'smooth' });
-  });
+      if (!activeLink || allLinks.length === 0) {
+        updateButtons();
+        return;
+      }
 
-  nav.addEventListener('scroll', updateButtons, { passive: true });
-  window.addEventListener('resize', updateButtons);
+      if (isHomePage()) {
+        forceHomeMenuStart();
+        return;
+      }
 
-  updateButtons();
-}
+      const activeIndex = allLinks.indexOf(activeLink);
+      const lastIndex = allLinks.length - 1;
+      const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
+
+      let targetLeft = 0;
+
+      if (activeIndex <= 0) {
+        targetLeft = 0;
+      } else if (activeIndex >= lastIndex) {
+        targetLeft = maxScroll;
+      } else {
+        targetLeft =
+          activeLink.offsetLeft - (nav.clientWidth / 2) + (activeLink.offsetWidth / 2);
+      }
+
+      const safeLeft = Math.max(0, Math.min(targetLeft, maxScroll));
+
+      nav.scrollTo({
+        left: safeLeft,
+        behavior: smooth ? 'smooth' : 'auto'
+      });
+
+      updateButtons();
+    };
+
+    const syncMenuState = (smooth = false) => {
+      if (isHomePage()) {
+        forceHomeMenuStart();
+      } else {
+        scrollActiveLinkIntoView(smooth);
+      }
+    };
+
+    btnRight.addEventListener('click', () => {
+      nav.scrollBy({
+        left: 180,
+        behavior: 'smooth'
+      });
+    });
+
+    btnLeft.addEventListener('click', () => {
+      nav.scrollBy({
+        left: -180,
+        behavior: 'smooth'
+      });
+    });
+
+    nav.addEventListener('scroll', updateButtons, { passive: true });
+
+    window.addEventListener('resize', () => {
+      syncMenuState(false);
+    });
+
+    window.addEventListener('load', () => {
+      syncMenuState(false);
+      setTimeout(() => syncMenuState(false), 80);
+      setTimeout(() => syncMenuState(false), 220);
+    });
+
+    window.addEventListener('pageshow', () => {
+      syncMenuState(false);
+      setTimeout(() => syncMenuState(false), 80);
+      setTimeout(() => syncMenuState(false), 220);
+    });
+
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => {
+        syncMenuState(false);
+        setTimeout(() => syncMenuState(false), 80);
+      });
+    }
+
+    requestAnimationFrame(() => {
+      syncMenuState(false);
+      setTimeout(() => syncMenuState(false), 80);
+      setTimeout(() => syncMenuState(false), 220);
+    });
+  }
 });

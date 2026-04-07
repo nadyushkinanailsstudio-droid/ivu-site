@@ -89,11 +89,6 @@
    HERO
    ========================================================================== */
 
-.parents-page .hero-parents {
-  position: relative;
-  padding-top: 144px;
-  padding-bottom: 28px;
-}
 
 .parents-page .hero-parents::before,
 .parents-page .hero-parents::after {
@@ -429,10 +424,6 @@
 
 .parents-page .parent-hook {
   padding: 0;
-}
-
-.parents-page .parent-hook .container {
-  max-width: 980px;
 }
 
 .parents-page .parent-hook__inner {
@@ -1119,11 +1110,7 @@
     padding-bottom: 56px;
   }
 
-  .parents-page .hero-parents {
-    padding-top: 136px;
-    padding-bottom: 28px;
-  }
-
+  
   .parents-page .hero-grid,
   .parents-page .lab-grid,
   .parents-page .form-grid {
@@ -1145,11 +1132,6 @@
 }
 
 @media (max-width: 768px) {
-  .parents-page .hero-parents {
-    padding-top: 124px;
-    padding-bottom: 20px;
-  }
-
   .parents-page .hero-content,
   .parents-page .role-panel,
   .parents-page .p-card,

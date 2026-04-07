@@ -49,7 +49,7 @@
             </button>
 
             <div class="page-sections__panel" id="parents-sections-panel" hidden>
-             <a href="#hero" class="page-sections__link is-active">Старт</a>
+              <a href="#hero" class="page-sections__link is-active">Старт</a>
               <a href="#programs" class="page-sections__link">Маршрут</a>
               <a href="#lab" class="page-sections__link">Домашняя практика</a>
               <a href="#brief" class="page-sections__link">Заявка</a>
@@ -58,23 +58,33 @@
         </div>
       </div>
 
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="./index.html" class="nav__link">Главная</a>
-        <a href="./system.html" class="nav__link">Метод</a>
-        <a href="./parents.html" class="nav__link is-active">Родителям</a>
-        <a href="./educators.html" class="nav__link">Педагогам</a>
-        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
-        <a href="./club.html" class="nav__link">Клуб Кручучу</a>
-        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
-        <a href="./foundation.html" class="nav__link">Фонд</a>
-        <a href="./contacts.html" class="nav__link">Контакты</a>
-      </nav>
+      <div class="nav-scroll-area">
+        <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
+          <span>‹</span>
+        </button>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="./index.html" class="nav__link">Главная</a>
+          <a href="./system.html" class="nav__link">Метод</a>
+          <a href="./parents.html" class="nav__link is-active">Родителям</a>
+          <a href="./educators.html" class="nav__link">Педагогам</a>
+          <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+          <a href="./club.html" class="nav__link">Клуб Кручучу</a>
+          <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+          <a href="./foundation.html" class="nav__link">Фонд</a>
+          <a href="./contacts.html" class="nav__link">Контакты</a>
+        </nav>
+
+        <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
+          <span>›</span>
+        </button>
+      </div>
 
     </div>
   </header>
 
   <main>
-  <section class="hero-parents container reveal" id="hero">
+  <section class="hero-parents page-hero container reveal" id="hero">
     <div class="hero-grid">
       <div class="hero-content">
         <span class="label">Домашняя траектория ИВУ</span>

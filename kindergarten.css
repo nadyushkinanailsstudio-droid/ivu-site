@@ -44,11 +44,6 @@ body.kindergarten-page::after {
   z-index: 2;
 }
 
-.kindergarten-page .container {
-  position: relative;
-  z-index: 2;
-}
-
 .kindergarten-page section {
   position: relative;
   scroll-margin-top: 112px;
@@ -148,13 +143,6 @@ body.kindergarten-page::after {
 /* ==========================================================================
    HERO
    ========================================================================== */
-
-.kg-hero {
-  position: relative;
-  padding-top: 132px;
-  padding-bottom: 36px;
-  overflow: hidden;
-}
 
 .kg-hero::before,
 .kg-hero::after {

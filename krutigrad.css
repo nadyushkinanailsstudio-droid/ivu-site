@@ -75,11 +75,6 @@
    HERO
    ========================================================================== */
 
-.krutigrad-page .kg-hero {
-  position: relative;
-  padding: 160px 0 86px;
-}
-
 .krutigrad-page .kg-hero::before,
 .krutigrad-page .kg-hero::after {
   content: "";
@@ -923,11 +918,7 @@
 }
 
 @media (max-width: 768px) {
-  .krutigrad-page .kg-hero {
-    padding: 144px 0 72px;
-  }
-
-  .krutigrad-page .kg-hero-shell,
+   .krutigrad-page .kg-hero-shell,
   .krutigrad-page .kg-card,
   .krutigrad-page .kg-partnership-shell {
     padding: 26px 20px;

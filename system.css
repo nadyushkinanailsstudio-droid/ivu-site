@@ -13,11 +13,6 @@
   z-index: 2;
 }
 
-.system-page .container {
-  position: relative;
-  z-index: 1;
-}
-
 .system-page section {
   position: relative;
   scroll-margin-top: 112px;
@@ -70,14 +65,7 @@
   box-shadow: 0 0 0 6px rgba(210,175,99,.04);
 }
 
-/* ==========================================================================
-   EXCEPTIONS (где линия и точки не нужны)
-   ========================================================================== */
 
-.system-page .system-hero::before,
-.system-page .site-manifesto::before {
-  display: none;
-}
 /* ==========================================================================
    SYSTEM COMMON
    ========================================================================== */
@@ -134,15 +122,9 @@
    HERO — FINAL PREMIUM
    ========================================================================== */
 
-.system-page .system-hero {
-  text-align: center;
-  padding-top: 132px;
-  padding-bottom: 40px;
-}
 
 .system-page .system-hero__shell {
   position: relative;
- max-width: 1160px;
 width: 100%;
   margin: 0 auto;
   padding: 32px 28px 30px;
@@ -236,11 +218,7 @@ width: 100%;
 }
 
 @media (max-width: 1024px) {
-  .system-page .system-hero {
-    padding-top: 120px;
-    padding-bottom: 36px;
-  }
-
+ 
   .system-page .system-hero__shell {
     padding: 28px 22px 26px;
     border-radius: 28px;
@@ -257,12 +235,7 @@ width: 100%;
 }
 
 @media (max-width: 768px) {
-  .system-page .system-hero {
-    padding-top: 108px;
-    padding-bottom: 28px;
-  }
-
-  .system-page .system-hero__shell {
+   .system-page .system-hero__shell {
     padding: 22px 16px 20px;
     border-radius: 24px;
   }
@@ -305,8 +278,7 @@ width: 100%;
 }
 
 .system-page .memory-final {
-  max-width: 1160px;
-  margin: 0 auto;
+   margin: 0 auto;
   padding: 40px 24px 24px;
   border-radius: 34px;
   background:
@@ -822,8 +794,7 @@ width: 100%;
 
 .algorithm {
   position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
+   margin: 0 auto;
   padding: 42px 28px 30px;
   overflow: hidden;
   border-radius: 34px;
@@ -1367,8 +1338,7 @@ width: 100%;
 
 .system-page .triumph-shell {
   position: relative;
-  max-width: 1120px;
-  margin: 0 auto;
+    margin: 0 auto;
   padding: 46px 34px 30px;
   border-radius: 34px;
   overflow: hidden;
@@ -1795,7 +1765,6 @@ width: 100%;
 
 .system-next__shell {
   position: relative;
-  max-width: 1180px;
   margin: 0 auto;
   padding: 42px 24px 24px;
   border-radius: 34px;
@@ -1987,18 +1956,18 @@ width: 100%;
    ========================================================================== */
 
 @media (max-width: 1200px) {
-  .system-next__grid {
+  .system-page .system-next__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .architecture-grid {
+  .system-page .architecture-grid {
     grid-template-columns: 1fr;
     max-width: 760px;
   }
 }
 
 @media (max-width: 1024px) {
-  .page-flow::before,
+  .system-page .page-flow::before,
   .system-page section::before {
     display: none;
   }
@@ -2007,53 +1976,53 @@ width: 100%;
     padding: 64px 0;
   }
 
-  .memory-final__core {
+  .system-page .memory-final__core {
     grid-template-columns: 1fr;
     gap: 18px;
   }
 
-  .memory-visual {
+  .system-page .memory-visual {
     order: -1;
     max-width: 360px;
     margin: 0 auto;
   }
 
-  .puzzle-grid {
+  .system-page .puzzle-grid {
     flex-direction: column;
   }
 
-  .puzzle-arrow {
+  .system-page .puzzle-arrow {
     width: 54px;
     min-width: 54px;
     height: 54px;
     transform: rotate(90deg);
   }
 
-  .algorithm__core {
+  .system-page .algorithm__core {
     grid-template-columns: 1fr;
     gap: 18px;
     text-align: center;
   }
 
-  .algorithm__flow {
+  .system-page .algorithm__flow {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
   }
 
-  .algorithm__arrow {
+  .system-page .algorithm__arrow {
     transform: rotate(90deg);
   }
 
-  .memory-final,
-  .algorithm,
-  .triumph-shell,
-  .system-next__shell {
+  .system-page .memory-final,
+  .system-page .algorithm,
+  .system-page .triumph-shell,
+  .system-page .system-next__shell {
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .system-next__grid {
+  .system-page .system-next__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -2063,204 +2032,179 @@ width: 100%;
     padding: 56px 0;
   }
 
-  .system-hero {
-    padding-top: 126px !important;
-    padding-bottom: 20px !important;
-  }
-
-  .system-hero__title {
-    margin-bottom: 20px;
-    font-size: 2.45rem;
-    line-height: .98;
-  }
-
-  .system-hero__title-line + .system-hero__title-line {
-    margin-top: .12em;
-  }
-
-  .system-hero__statement {
-    padding: 16px;
-    border-radius: 16px;
-    font-size: .98rem;
-    line-height: 1.65;
-  }
-
-  .memory-flow-final,
-  .system-puzzle,
-  .system-algorithm,
-  .system-architecture,
-  .system-triumph,
-  .system-tools,
-  .system-next {
+  .system-page .memory-flow-final,
+  .system-page .system-puzzle,
+  .system-page .system-algorithm,
+  .system-page .system-architecture,
+  .system-page .system-triumph,
+  .system-page .system-tools,
+  .system-page .system-next {
     padding-top: 16px !important;
     padding-bottom: 44px !important;
   }
 
-  .memory-final,
-  .algorithm,
-  .triumph-shell,
-  .system-next__shell {
+  .system-page .memory-final,
+  .system-page .algorithm,
+  .system-page .triumph-shell,
+  .system-page .system-next__shell {
     border-radius: 26px;
   }
 
-  .memory-final {
+  .system-page .memory-final {
     padding: 30px 16px 18px;
   }
 
-  .memory-card {
+  .system-page .memory-card {
     min-height: auto;
     padding: 22px 18px;
     border-radius: 20px;
   }
 
-  .memory-solution {
+  .system-page .memory-solution {
     flex-direction: column;
     align-items: flex-start;
     padding: 22px 18px;
   }
 
-  .memory-solution__title {
+  .system-page .memory-solution__title {
     font-size: 1.26rem;
   }
 
-  .puzzle-card {
+  .system-page .puzzle-card {
     min-height: auto;
     padding: 24px 18px;
     border-radius: 20px;
   }
 
-  .algorithm {
+  .system-page .algorithm {
     padding: 30px 16px 20px;
   }
 
-  .algorithm__title,
-  .system-next__title,
-  .section-header--system h2,
-  .memory-final__title,
-  .triumph-title {
+  .system-page .algorithm__title,
+  .system-page .system-next__title,
+  .system-page .section-header--system h2,
+  .system-page .memory-final__title,
+  .system-page .triumph-title {
     font-size: 2rem;
   }
 
-  .algorithm__main {
+  .system-page .algorithm__main {
     font-size: 1.22rem;
   }
 
-  .triumph-shell {
+  .system-page .triumph-shell {
     padding: 34px 18px;
   }
 
-  .triumph-stats {
+  .system-page .triumph-stats {
     flex-direction: column;
     gap: 22px;
     margin-bottom: 24px;
   }
 
-  .stat-item--divider {
+  .system-page .stat-item--divider {
     padding-top: 22px;
     padding-left: 0;
     border-left: none;
     border-top: 1px solid rgba(255,255,255,.16);
   }
 
-  .tool-card {
+  .system-page .tool-card {
     flex-direction: column;
     padding: 20px 16px;
     border-radius: 20px;
     text-align: center;
   }
 
-  .tool-card:hover {
+  .system-page .tool-card:hover {
     transform: none;
   }
 
-  .tool-card__icon {
+  .system-page .tool-card__icon {
     width: 68px;
     height: 68px;
     margin-right: 0;
     margin-bottom: 18px;
   }
 
-  .system-next__shell {
+  .system-page .system-next__shell {
     padding: 30px 16px 18px;
   }
 
-  .system-next__grid {
+  .system-page .system-next__grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  .system-next__card {
+  .system-page .system-next__card {
     min-height: auto;
     padding: 22px 18px 18px;
     border-radius: 20px;
   }
 
-  .section-header--system {
+  .system-page .section-header--system {
     margin-bottom: 30px;
   }
 
-  .section-header--system p,
-  .algorithm__subtitle,
-  .triumph-lead,
-  .triumph-note,
-  .triumph-result,
-  .memory-final__subtitle,
-  .memory-card__text,
-  .memory-card__accent,
-  .tool-card__content p,
-  .tools-result,
-  .system-next__lead,
-  .system-next__card p,
-  .system-next__final p,
-  .arch-card p,
-  .puzzle-card__metaphor {
+  .system-page .section-header--system p,
+  .system-page .algorithm__subtitle,
+  .system-page .triumph-lead,
+  .system-page .triumph-note,
+  .system-page .triumph-result,
+  .system-page .memory-final__subtitle,
+  .system-page .memory-card__text,
+  .system-page .memory-card__accent,
+  .system-page .tool-card__content p,
+  .system-page .tools-result,
+  .system-page .system-next__lead,
+  .system-page .system-next__card p,
+  .system-page .system-next__final p,
+  .system-page .arch-card p,
+  .system-page .puzzle-card__metaphor {
     font-size: .95rem;
     line-height: 1.62;
   }
-
-  }
+}
 
 @media (max-width: 560px) {
-  .system-chip {
+  .system-page .system-chip {
     min-height: 30px;
     font-size: .66rem;
     letter-spacing: .08em;
   }
 
-  .system-hero__title {
+  .system-page .system-hero__title {
     font-size: 1.96rem;
   }
 
-  .memory-final__title,
-  .section-header--system h2,
-  .algorithm__title,
-  .triumph-title,
-  .system-next__title {
+  .system-page .memory-final__title,
+  .system-page .section-header--system h2,
+  .system-page .algorithm__title,
+  .system-page .triumph-title,
+  .system-page .system-next__title {
     font-size: 1.86rem;
   }
 
-  .memory-visual {
+  .system-page .memory-visual {
     max-width: 280px;
   }
 
-  .puzzle-card h3,
-  .tool-card__content h3,
-  .arch-card h3 {
+  .system-page .puzzle-card h3,
+  .system-page .tool-card__content h3,
+  .system-page .arch-card h3 {
     font-size: 1.28rem;
   }
 
-  .algorithm__vowels {
+  .system-page .algorithm__vowels {
     gap: 8px;
   }
 
-  .algorithm__vowels span {
+  .system-page .algorithm__vowels span {
     width: 34px;
     height: 34px;
   }
 
-  .stat-item__number {
+  .system-page .stat-item__number {
     font-size: 2.3rem;
   }
-
- 
 }

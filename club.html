@@ -35,43 +35,49 @@
 
   <div class="noise-overlay"></div>
 
-  <header class="header" id="header">
-    <div class="container header__inner">
+<header class="header" id="header">
+  <div class="container header__inner">
 
-      <div class="header__brand">
-        <a href="./index.html" class="header__logo">
-          <span class="header__logo-title">Институт Врожденной Успеваемости</span>
-          <span class="header__logo-sub">Инженерный код языка</span>
-        </a>
+    <div class="header__brand">
+      <a href="./index.html" class="header__logo">
+        <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+        <span class="header__logo-sub">Инженерный код языка</span>
+      </a>
 
-        <div class="page-sections-bar page-sections-bar--header">
-          <div class="page-sections">
-            <button
-              class="page-sections__toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="page-sections-panel-club"
-            >
-              <span class="page-sections__label">Разделы</span>
-              <span class="page-sections__icon"></span>
-            </button>
+      <div class="page-sections-bar page-sections-bar--header">
+        <div class="page-sections">
+          <button
+            class="page-sections__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="page-sections-panel-club"
+          >
+            <span class="page-sections__label">Разделы</span>
+            <span class="page-sections__icon"></span>
+          </button>
 
-            <div class="page-sections__panel" id="page-sections-panel-club" hidden>
-              <a href="#hero" class="page-sections__link is-active">Старт</a>
-              <a href="#map" class="page-sections__link">Карта</a>
-              <a href="#heroes" class="page-sections__link">Кто ждёт тебя</a>
-              <a href="#puzzle" class="page-sections__link">Парад букв</a>
-              <a href="#parade-stage" class="page-sections__link">Парад</a>
-              <a href="#anthem-stage" class="page-sections__link">Гимн</a>
-              <a href="#lessons-stage" class="page-sections__link">Первые шаги</a>
-              <a href="#video-stage" class="page-sections__link">Погружение</a>
-              <a href="#challenge" class="page-sections__link">Испытание 20</a>
-              <a href="#bridge" class="page-sections__link">Для взрослых</a>
-              <a href="#manifesto" class="page-sections__link">Финал</a>
-            </div>
+          <div class="page-sections__panel" id="page-sections-panel-club" hidden>
+            <a href="#hero" class="page-sections__link is-active">Старт</a>
+            <a href="#map" class="page-sections__link">Карта</a>
+            <a href="#heroes" class="page-sections__link">Кто ждёт тебя</a>
+            <a href="#puzzle" class="page-sections__link">Парад букв</a>
+            <a href="#parade-stage" class="page-sections__link">Парад</a>
+            <a href="#anthem-stage" class="page-sections__link">Гимн</a>
+            <a href="#lessons-stage" class="page-sections__link">Первые шаги</a>
+            <a href="#video-stage" class="page-sections__link">Погружение</a>
+            <a href="#challenge" class="page-sections__link">Испытание 20</a>
+            <a href="#bridge" class="page-sections__link">Для взрослых</a>
+            <a href="#manifesto" class="page-sections__link">Финал</a>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="nav-scroll-area">
+
+      <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
+        <span>‹</span>
+      </button>
 
       <nav class="nav" aria-label="Основная навигация">
         <a href="./index.html" class="nav__link">Главная</a>
@@ -85,12 +91,18 @@
         <a href="./contacts.html" class="nav__link">Контакты</a>
       </nav>
 
+      <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
+        <span>›</span>
+      </button>
+
     </div>
-  </header>
+
+  </div>
+</header>
 
   <main>
 
-    <section class="club-hero reveal" id="hero">
+   <section class="club-hero page-hero reveal" id="hero">
       <div class="container">
         <div class="club-hero-shell">
           <div class="hero-grid">

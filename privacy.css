@@ -1,0 +1,81 @@
+/* ==========================================================================
+   PRIVACY PAGE
+   ========================================================================== */
+
+body.privacy-page {
+  overflow-x: hidden;
+}
+
+body.privacy-page main {
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
+   CONTENT
+   ========================================================================== */
+
+.privacy-content {
+  padding: 140px 0 80px;
+  max-width: 800px;
+}
+
+.privacy-content h1 {
+  margin-bottom: 36px;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.privacy-content h2 {
+  margin: 28px 0 14px;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.privacy-content p {
+  margin: 0 0 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* дата обновления */
+
+.privacy-update {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   FOOTER FIX
+   ========================================================================== */
+
+.footer-minimal__inner {
+  justify-content: center;
+}
+
+/* ==========================================================================
+   MOBILE
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .privacy-content {
+    padding: 120px 0 64px;
+  }
+
+  .privacy-content h1 {
+    margin-bottom: 28px;
+  }
+
+  .privacy-content h2 {
+    margin: 22px 0 12px;
+    font-size: 1.15rem;
+  }
+
+  .privacy-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
