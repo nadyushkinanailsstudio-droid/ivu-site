@@ -837,23 +837,7 @@ summary:focus-visible,
     scroll-snap-align: start;
   }
 
-  .nav-scroll-btn {
-    position: absolute;
-    top: 50%;
-    right: 6px;
-    transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid rgba(13,27,47,.08);
-    background: rgba(248,245,239,.96);
-    box-shadow: 0 6px 18px rgba(13,27,47,.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 3;
-  }
+
 
   .nav-scroll-btn span {
     font-size: 1.2rem;
@@ -861,22 +845,83 @@ summary:focus-visible,
     transform: translateX(1px);
   }
 
-  .nav-scroll-area::after {
-    content: "";
-    position: absolute;
-    right: 40px;
-    top: 0;
-    width: 40px;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(
-      90deg,
-      rgba(248,245,239,0),
-      rgba(248,245,239,.9) 55%,
-      rgba(248,245,239,1)
-    );
-    z-index: 2;
-  }
+/* кнопки прокрутки — новая версия */
+.nav-scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(13,27,47,.05);
+  background: rgba(248,245,239,.88);
+  box-shadow: 0 4px 12px rgba(13,27,47,.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 3;
+  transition: all .2s ease;
+  backdrop-filter: blur(6px);
+}
+
+/* позиции */
+.nav-scroll-btn--left {
+  left: 0;
+}
+
+.nav-scroll-btn--right {
+  right: 0;
+}
+
+/* стрелки */
+.nav-scroll-btn span {
+  font-size: .9rem;
+  color: rgba(13,27,47,.6);
+}
+.nav-scroll-btn--left {
+  left: 4px;
+}
+
+.nav-scroll-btn--right {
+  right: 4px;
+}
+
+/* hover */
+.nav-scroll-btn:hover {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(13,27,47,.08);
+}
+
+/* дымка слева и справа */
+.nav-scroll-area::before,
+.nav-scroll-area::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.nav-scroll-area::before {
+  left: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(248,245,239,0),
+    rgba(248,245,239,.95)
+  );
+}
+
+.nav-scroll-area::after {
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(248,245,239,0),
+    rgba(248,245,239,.95)
+  );
+}
 
   .site-manifesto-text {
     padding: 44px 22px;

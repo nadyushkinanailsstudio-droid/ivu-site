@@ -184,29 +184,38 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ===============================
-     КНОПКА ПРОКРУТКИ МЕНЮ
-  =============================== */
-  const nav = document.querySelector('.nav');
-  const navScrollBtn = document.querySelector('.nav-scroll-btn');
+   КНОПКА ПРОКРУТКИ МЕНЮ
+=============================== */
+const nav = document.querySelector('.nav');
+const btnLeft = document.querySelector('.nav-scroll-btn--left');
+const btnRight = document.querySelector('.nav-scroll-btn--right');
 
-  if (nav && navScrollBtn) {
-    const updateNavButton = () => {
-      const maxScroll = nav.scrollWidth - nav.clientWidth - 4;
-      const isAtEnd = nav.scrollLeft >= maxScroll;
+if (nav && btnLeft && btnRight) {
 
-      navScrollBtn.style.display = isAtEnd ? 'none' : 'inline-flex';
-    };
+  const updateButtons = () => {
+    const maxScroll = nav.scrollWidth - nav.clientWidth - 4;
 
-    navScrollBtn.addEventListener('click', () => {
-      nav.scrollBy({
-        left: 180,
-        behavior: 'smooth'
-      });
-    });
+    const atStart = nav.scrollLeft <= 10;
+    const atEnd = nav.scrollLeft >= maxScroll - 10;
 
-    nav.addEventListener('scroll', updateNavButton, { passive: true });
-    window.addEventListener('resize', updateNavButton);
+    btnLeft.style.opacity = atStart ? '0' : '1';
+    btnLeft.style.pointerEvents = atStart ? 'none' : 'auto';
 
-    updateNavButton();
-  }
+    btnRight.style.opacity = atEnd ? '0' : '1';
+    btnRight.style.pointerEvents = atEnd ? 'none' : 'auto';
+  };
+
+  btnRight.addEventListener('click', () => {
+    nav.scrollBy({ left: 180, behavior: 'smooth' });
+  });
+
+  btnLeft.addEventListener('click', () => {
+    nav.scrollBy({ left: -180, behavior: 'smooth' });
+  });
+
+  nav.addEventListener('scroll', updateButtons, { passive: true });
+  window.addEventListener('resize', updateButtons);
+
+  updateButtons();
+}
 });
