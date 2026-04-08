@@ -15,7 +15,6 @@
 
 .system-page section {
   position: relative;
-  scroll-margin-top: 112px;
 }
 
 /* ==========================================================================
@@ -125,19 +124,19 @@
 
 .system-page .system-hero__shell {
   position: relative;
-width: 100%;
+  width: 100%;
   margin: 0 auto;
   padding: 32px 28px 30px;
   border-radius: 32px;
- background:
-  radial-gradient(circle at 50% -10%, rgba(210,175,99,.18) 0%, transparent 46%),
-  linear-gradient(180deg, rgba(255,255,255,.96), rgba(244,240,232,.92));
+  background:
+    radial-gradient(circle at 50% -10%, rgba(210,175,99,.18) 0%, transparent 46%),
+    linear-gradient(180deg, rgba(255,255,255,.96), rgba(244,240,232,.92));
   border: 1px solid rgba(13,27,47,.10);
- box-shadow:
-  0 40px 100px rgba(13,27,47,.10),
-  0 10px 24px rgba(13,27,47,.04),
-  0 20px 40px rgba(13,27,47,.06), /* ← ВОТ ЭТО НОВОЕ */
-  inset 0 1px 0 rgba(255,255,255,.8);
+  box-shadow:
+    0 40px 100px rgba(13,27,47,.10),
+    0 10px 24px rgba(13,27,47,.04),
+    0 20px 40px rgba(13,27,47,.06),
+    inset 0 1px 0 rgba(255,255,255,.8);
   overflow: hidden;
 }
 
@@ -218,7 +217,6 @@ width: 100%;
 }
 
 @media (max-width: 1024px) {
- 
   .system-page .system-hero__shell {
     padding: 28px 22px 26px;
     border-radius: 28px;
@@ -233,9 +231,8 @@ width: 100%;
     font-size: 1rem;
   }
 }
-
 @media (max-width: 768px) {
-   .system-page .system-hero__shell {
+  .system-page .system-hero__shell {
     padding: 22px 16px 20px;
     border-radius: 24px;
   }
@@ -278,7 +275,7 @@ width: 100%;
 }
 
 .system-page .memory-final {
-   margin: 0 auto;
+  margin: 0 auto;
   padding: 40px 24px 24px;
   border-radius: 34px;
   background:
@@ -311,10 +308,16 @@ width: 100%;
 
 .system-page .memory-final__core {
   display: grid;
-  grid-template-columns: 1fr 300px 1fr;
+  grid-template-columns: minmax(0, 1fr) 300px minmax(0, 1fr);
   gap: 16px;
   align-items: stretch;
   margin-bottom: 22px;
+}
+
+.system-page .memory-card,
+.system-page .memory-visual,
+.system-page .memory-solution__content {
+  min-width: 0;
 }
 
 .system-page .memory-card {
@@ -596,8 +599,8 @@ width: 100%;
    ========================================================================== */
 
 .system-puzzle {
-  padding-top: 48px !important;
-  padding-bottom: 54px !important;
+  padding-top: 48px;
+  padding-bottom: 54px;
 }
 
 /* ================= GRID ================= */
@@ -615,23 +618,18 @@ width: 100%;
 
 .puzzle-card {
   position: relative;
-
   display: flex;
   flex: 1;
+  min-width: 0;
   flex-direction: column;
-
   padding: 30px 26px;
   border-radius: 26px;
-
   background:
     linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,244,236,.9));
-
   border: 1px solid rgba(13,27,47,.07);
-
   box-shadow:
     0 22px 54px rgba(13,27,47,.06),
     inset 0 1px 0 rgba(255,255,255,.7);
-
   transition:
     transform .35s cubic-bezier(.22,.61,.36,1),
     box-shadow .35s cubic-bezier(.22,.61,.36,1),
@@ -667,11 +665,9 @@ width: 100%;
 
 .puzzle-card--ivu {
   border-color: rgba(210,175,99,.34);
-
   background:
     radial-gradient(circle at top, rgba(210,175,99,.08), transparent 40%),
     linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,244,236,.9));
-
   box-shadow:
     0 24px 60px rgba(210,175,99,.12),
     inset 0 1px 0 rgba(255,255,255,.7);
@@ -681,9 +677,7 @@ width: 100%;
 
 .puzzle-card__badge {
   margin-bottom: 16px;
-
   color: var(--text-muted);
-
   font-family: var(--font-mono);
   font-size: .66rem;
   font-weight: 700;
@@ -695,7 +689,6 @@ width: 100%;
 
 .puzzle-card h3 {
   margin: 0 0 20px;
-
   font-size: 1.6rem;
   line-height: 1.18;
 }
@@ -712,7 +705,6 @@ width: 100%;
   position: relative;
   margin-bottom: 12px;
   padding-left: 22px;
-
   color: var(--text-main);
   line-height: 1.6;
 }
@@ -729,15 +721,11 @@ width: 100%;
 
 .puzzle-card__metaphor {
   margin-top: auto;
-
   padding: 18px;
   border-radius: 16px;
-
   background:
     linear-gradient(180deg, rgba(13,27,47,.035), rgba(13,27,47,.025));
-
   border: 1px solid rgba(13,27,47,.06);
-
   color: var(--text-muted);
   font-size: .94rem;
   line-height: 1.64;
@@ -749,25 +737,18 @@ width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-
   align-self: center;
-
   width: 58px;
   min-width: 58px;
   height: 58px;
-
   border-radius: 50%;
-
   background:
     radial-gradient(circle at top, rgba(255,255,255,.1), transparent 40%),
     linear-gradient(180deg, #0f2747 0%, #07162a 100%);
-
   border: 1px solid rgba(255,255,255,.08);
-
   box-shadow:
     0 16px 34px rgba(13,27,47,.18),
     inset 0 1px 0 rgba(255,255,255,.12);
-
   color: #fff;
   font-size: 1.3rem;
 }
@@ -775,11 +756,42 @@ width: 100%;
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
+  .system-puzzle {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
   .puzzle-grid {
     flex-direction: column;
+    gap: 14px;
+  }
+
+  .puzzle-card {
+    padding: 22px 18px;
+    border-radius: 20px;
+  }
+
+  .puzzle-card h3 {
+    margin-bottom: 16px;
+    font-size: 1.28rem;
+  }
+
+  .puzzle-card__list {
+    margin-bottom: 18px;
+  }
+
+  .puzzle-card__list li,
+  .puzzle-card__metaphor {
+    font-size: .92rem;
+    line-height: 1.58;
   }
 
   .puzzle-arrow {
+    width: 48px;
+    min-width: 48px;
+    height: 48px;
+    margin: 2px auto;
+    font-size: 1.1rem;
     transform: rotate(90deg);
   }
 }
@@ -788,25 +800,21 @@ width: 100%;
    ========================================================================== */
 
 .system-algorithm {
-  padding-top: 18px !important;
-  padding-bottom: 58px !important;
+  padding-top: 18px;
+  padding-bottom: 58px;
 }
 
 .algorithm {
   position: relative;
-   margin: 0 auto;
+  margin: 0 auto;
   padding: 42px 28px 30px;
   overflow: hidden;
   border-radius: 34px;
-
   color: #fff;
-
   background:
     radial-gradient(circle at top center, rgba(255,255,255,.08), transparent 30%),
     linear-gradient(145deg, #16263d 0%, #0d1b2f 100%);
-
   border: 1px solid rgba(255,255,255,.08);
-
   box-shadow:
     0 28px 70px rgba(13,27,47,.25),
     inset 0 1px 0 rgba(255,255,255,.08);
@@ -873,6 +881,11 @@ width: 100%;
   margin-bottom: 18px;
 }
 
+.algorithm__block,
+.algorithm__flow {
+  min-width: 0;
+}
+
 .algorithm__block {
   display: flex;
   flex-direction: column;
@@ -880,11 +893,9 @@ width: 100%;
   min-height: 118px;
   padding: 22px;
   border-radius: 22px;
-
   background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
   border: 1px solid rgba(255,255,255,.08);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.05);
-
   transition:
     transform .35s cubic-bezier(.22,.61,.36,1),
     box-shadow .35s cubic-bezier(.22,.61,.36,1),
@@ -968,11 +979,9 @@ width: 100%;
   width: 38px;
   height: 38px;
   border-radius: 10px;
-
   background: rgba(255,255,255,.12);
   border: 1px solid rgba(255,255,255,.2);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-
   color: #fff;
   font-weight: 700;
 }
@@ -999,6 +1008,11 @@ width: 100%;
    ========================================================================== */
 
 @media (max-width: 768px) {
+  .system-algorithm {
+    padding-top: 12px;
+    padding-bottom: 40px;
+  }
+
   .algorithm {
     padding: 30px 18px 22px;
     border-radius: 26px;
@@ -1062,14 +1076,13 @@ width: 100%;
     letter-spacing: .14em;
   }
 }
-
 /* ==========================================================================
    SCIENCE — FINAL PREMIUM
    ========================================================================== */
 
 .system-architecture {
-  padding-top: 18px !important;
-  padding-bottom: 58px !important;
+  padding-top: 18px;
+  padding-bottom: 58px;
 }
 
 .architecture-grid {
@@ -1119,6 +1132,7 @@ width: 100%;
 /* карточки */
 .arch-card {
   position: relative;
+  min-width: 0;
   padding: 30px 22px 24px;
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(249,246,240,.92));
@@ -1303,8 +1317,8 @@ width: 100%;
 
 @media (max-width: 768px) {
   .system-architecture {
-    padding-top: 12px !important;
-    padding-bottom: 44px !important;
+    padding-top: 12px;
+    padding-bottom: 44px;
   }
 
   .arch-card {
@@ -1326,19 +1340,18 @@ width: 100%;
     font-size: .70rem;
   }
 }
-
 /* ==========================================================================
    TRIUMPH / CONTROL POINT — FINAL PREMIUM
    ========================================================================== */
 
 .system-page .system-triumph {
-  padding-top: 18px !important;
-  padding-bottom: 58px !important;
+  padding-top: 18px;
+  padding-bottom: 58px;
 }
 
 .system-page .triumph-shell {
   position: relative;
-    margin: 0 auto;
+  margin: 0 auto;
   padding: 46px 34px 30px;
   border-radius: 34px;
   overflow: hidden;
@@ -1374,6 +1387,7 @@ width: 100%;
   background-size: 84px 84px;
   opacity: .18;
   mask-image: radial-gradient(circle at center, rgba(0,0,0,.9) 0%, rgba(0,0,0,.42) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0,0,0,.9) 0%, rgba(0,0,0,.42) 60%, rgba(0,0,0,0) 100%);
 }
 
 .system-page .triumph-shell > * {
@@ -1461,6 +1475,7 @@ width: 100%;
 }
 
 .system-page .triumph-result {
+  min-width: 0;
   max-width: 650px;
   margin: 0 auto;
   padding: 16px 18px;
@@ -1480,8 +1495,8 @@ width: 100%;
 
 @media (max-width: 768px) {
   .system-page .system-triumph {
-    padding-top: 12px !important;
-    padding-bottom: 44px !important;
+    padding-top: 12px;
+    padding-bottom: 44px;
   }
 
   .system-page .triumph-shell {
@@ -1547,8 +1562,8 @@ width: 100%;
    ========================================================================== */
 
 .system-page .system-tools {
-  padding-top: 18px !important;
-  padding-bottom: 58px !important;
+  padding-top: 18px;
+  padding-bottom: 58px;
 }
 
 .system-page .tools-grid {
@@ -1565,18 +1580,15 @@ width: 100%;
   position: relative;
   display: flex;
   align-items: center;
+  min-width: 0;
   padding: 26px 28px;
   border-radius: 24px;
-
   background:
     linear-gradient(180deg, rgba(255,255,255,.96), rgba(248,244,236,.92));
-
   border: 1px solid rgba(13,27,47,.06);
-
   box-shadow:
     0 16px 40px rgba(13,27,47,.04),
     inset 0 1px 0 rgba(255,255,255,.7);
-
   transition:
     transform .35s cubic-bezier(.22,.61,.36,1),
     box-shadow .35s cubic-bezier(.22,.61,.36,1),
@@ -1587,7 +1599,6 @@ width: 100%;
 .system-page .tool-card:hover {
   transform: translateY(-4px);
   border-color: rgba(210,175,99,.38);
-
   box-shadow:
     0 22px 54px rgba(13,27,47,.08),
     0 0 0 1px rgba(210,175,99,.08);
@@ -1596,36 +1607,27 @@ width: 100%;
 /* первая карточка — акцент */
 .system-page .tool-card:first-child {
   border-color: rgba(210,175,99,.26);
-
   box-shadow:
     0 20px 50px rgba(210,175,99,.10),
     inset 0 1px 0 rgba(255,255,255,.7);
 }
 
-/* === ИКОНКА (сильно улучшаем) === */
+/* === ИКОНКА === */
 
 .system-page .tool-card__icon {
   position: relative;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
-
   width: 72px;
   height: 72px;
-
   margin-right: 26px;
-
   border-radius: 18px;
-
   background:
     radial-gradient(circle at 30% 20%, rgba(210,175,99,.18), transparent 60%),
     rgba(13,27,47,.03);
-
   border: 1px solid rgba(13,27,47,.06);
-
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.6);
 }
@@ -1652,6 +1654,7 @@ width: 100%;
 
 .system-page .tool-card__content {
   flex-grow: 1;
+  min-width: 0;
 }
 
 .system-page .tool-card__content h3 {
@@ -1664,9 +1667,7 @@ width: 100%;
 
 .system-page .tool-card__subtitle {
   margin-bottom: 12px;
-
   color: var(--gold);
-
   font-family: var(--font-mono);
   font-size: .74rem;
   font-weight: 700;
@@ -1684,40 +1685,33 @@ width: 100%;
 /* === RESULT BLOCK === */
 
 .system-page .tools-result {
+  min-width: 0;
   max-width: 680px;
   margin: 26px auto 0;
   padding: 18px 22px;
-
   border-radius: 18px;
-
   background:
     linear-gradient(180deg, rgba(255,255,255,.78), rgba(248,244,236,.7));
-
   border: 1px solid rgba(13,27,47,.07);
-
   box-shadow:
     0 18px 44px rgba(13,27,47,.05),
     inset 0 1px 0 rgba(255,255,255,.6);
-
   color: var(--navy);
-
   font-size: .98rem;
   line-height: 1.66;
   font-weight: 600;
   text-align: center;
-
   text-wrap: balance;
 }
 
-/* ========================================================================== 
+/* ==========================================================================
    MOBILE
    ========================================================================== */
 
 @media (max-width: 768px) {
-
   .system-page .system-tools {
-    padding-top: 12px !important;
-    padding-bottom: 44px !important;
+    padding-top: 12px;
+    padding-bottom: 44px;
   }
 
   .system-page .tool-card {
@@ -1753,14 +1747,13 @@ width: 100%;
     font-size: .94rem;
   }
 }
-
 /* ==========================================================================
    NEXT / IMPLEMENTATION PATHS
    ========================================================================== */
 
 .system-next {
-  padding-top: 18px !important;
-  padding-bottom: 64px !important;
+  padding-top: 18px;
+  padding-bottom: 64px;
 }
 
 .system-next__shell {
@@ -1827,6 +1820,7 @@ width: 100%;
 .system-next__card {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 0;
   padding: 22px 18px 18px;
   border-radius: 22px;
@@ -1950,7 +1944,6 @@ width: 100%;
   opacity: .9;
 }
 
-
 /* ==========================================================================
    RESPONSIVE
    ========================================================================== */
@@ -1958,11 +1951,6 @@ width: 100%;
 @media (max-width: 1200px) {
   .system-page .system-next__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .system-page .architecture-grid {
-    grid-template-columns: 1fr;
-    max-width: 760px;
   }
 }
 
@@ -1972,51 +1960,6 @@ width: 100%;
     display: none;
   }
 
-  .system-page section {
-    padding: 64px 0;
-  }
-
-  .system-page .memory-final__core {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .system-page .memory-visual {
-    order: -1;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-
-  .system-page .puzzle-grid {
-    flex-direction: column;
-  }
-
-  .system-page .puzzle-arrow {
-    width: 54px;
-    min-width: 54px;
-    height: 54px;
-    transform: rotate(90deg);
-  }
-
-  .system-page .algorithm__core {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    text-align: center;
-  }
-
-  .system-page .algorithm__flow {
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .system-page .algorithm__arrow {
-    transform: rotate(90deg);
-  }
-
-  .system-page .memory-final,
-  .system-page .algorithm,
-  .system-page .triumph-shell,
   .system-page .system-next__shell {
     padding-left: 20px;
     padding-right: 20px;
@@ -2028,107 +1971,18 @@ width: 100%;
 }
 
 @media (max-width: 768px) {
-  .system-page section {
-    padding: 56px 0;
-  }
-
-  .system-page .memory-flow-final,
-  .system-page .system-puzzle,
-  .system-page .system-algorithm,
-  .system-page .system-architecture,
-  .system-page .system-triumph,
-  .system-page .system-tools,
   .system-page .system-next {
-    padding-top: 16px !important;
-    padding-bottom: 44px !important;
+    padding-top: 16px;
+    padding-bottom: 44px;
   }
 
-  .system-page .memory-final,
-  .system-page .algorithm,
-  .system-page .triumph-shell,
   .system-page .system-next__shell {
+    padding: 30px 16px 18px;
     border-radius: 26px;
   }
 
-  .system-page .memory-final {
-    padding: 30px 16px 18px;
-  }
-
-  .system-page .memory-card {
-    min-height: auto;
-    padding: 22px 18px;
-    border-radius: 20px;
-  }
-
-  .system-page .memory-solution {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 22px 18px;
-  }
-
-  .system-page .memory-solution__title {
-    font-size: 1.26rem;
-  }
-
-  .system-page .puzzle-card {
-    min-height: auto;
-    padding: 24px 18px;
-    border-radius: 20px;
-  }
-
-  .system-page .algorithm {
-    padding: 30px 16px 20px;
-  }
-
-  .system-page .algorithm__title,
-  .system-page .system-next__title,
-  .system-page .section-header--system h2,
-  .system-page .memory-final__title,
-  .system-page .triumph-title {
+  .system-page .system-next__title {
     font-size: 2rem;
-  }
-
-  .system-page .algorithm__main {
-    font-size: 1.22rem;
-  }
-
-  .system-page .triumph-shell {
-    padding: 34px 18px;
-  }
-
-  .system-page .triumph-stats {
-    flex-direction: column;
-    gap: 22px;
-    margin-bottom: 24px;
-  }
-
-  .system-page .stat-item--divider {
-    padding-top: 22px;
-    padding-left: 0;
-    border-left: none;
-    border-top: 1px solid rgba(255,255,255,.16);
-  }
-
-  .system-page .tool-card {
-    flex-direction: column;
-    padding: 20px 16px;
-    border-radius: 20px;
-    text-align: center;
-  }
-
-  .system-page .tool-card:hover {
-    transform: none;
-  }
-
-  .system-page .tool-card__icon {
-    width: 68px;
-    height: 68px;
-    margin-right: 0;
-    margin-bottom: 18px;
-  }
-
-  .system-page .system-next__shell {
-    padding: 30px 16px 18px;
   }
 
   .system-page .system-next__grid {
@@ -2142,69 +1996,16 @@ width: 100%;
     border-radius: 20px;
   }
 
-  .system-page .section-header--system {
-    margin-bottom: 30px;
-  }
-
-  .system-page .section-header--system p,
-  .system-page .algorithm__subtitle,
-  .system-page .triumph-lead,
-  .system-page .triumph-note,
-  .system-page .triumph-result,
-  .system-page .memory-final__subtitle,
-  .system-page .memory-card__text,
-  .system-page .memory-card__accent,
-  .system-page .tool-card__content p,
-  .system-page .tools-result,
   .system-page .system-next__lead,
   .system-page .system-next__card p,
-  .system-page .system-next__final p,
-  .system-page .arch-card p,
-  .system-page .puzzle-card__metaphor {
+  .system-page .system-next__final p {
     font-size: .95rem;
     line-height: 1.62;
   }
 }
 
 @media (max-width: 560px) {
-  .system-page .system-chip {
-    min-height: 30px;
-    font-size: .66rem;
-    letter-spacing: .08em;
-  }
-
-  .system-page .system-hero__title {
-    font-size: 1.96rem;
-  }
-
-  .system-page .memory-final__title,
-  .system-page .section-header--system h2,
-  .system-page .algorithm__title,
-  .system-page .triumph-title,
   .system-page .system-next__title {
     font-size: 1.86rem;
-  }
-
-  .system-page .memory-visual {
-    max-width: 280px;
-  }
-
-  .system-page .puzzle-card h3,
-  .system-page .tool-card__content h3,
-  .system-page .arch-card h3 {
-    font-size: 1.28rem;
-  }
-
-  .system-page .algorithm__vowels {
-    gap: 8px;
-  }
-
-  .system-page .algorithm__vowels span {
-    width: 34px;
-    height: 34px;
-  }
-
-  .system-page .stat-item__number {
-    font-size: 2.3rem;
   }
 }
