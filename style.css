@@ -165,7 +165,6 @@
 /* ==========================================================================
    TOKENS / RESET
    ========================================================================== */
-
 :root {
   --ivory: #f8f5ef;
   --stone: #ece7dc;
@@ -179,20 +178,24 @@
   --white-80: rgba(255, 255, 255, 0.8);
   --white-92: rgba(255, 255, 255, 0.92);
   --gold: #d2af63;
+
   --radius-sm: 14px;
   --radius-md: 20px;
   --radius-lg: 28px;
+
   --shadow-sm: 0 10px 30px rgba(13, 27, 47, 0.05);
   --shadow-md: 0 20px 60px rgba(13, 27, 47, 0.08);
   --shadow-lg: 0 30px 80px rgba(13, 27, 47, 0.12);
+
   --transition: 0.32s cubic-bezier(.22,.61,.36,1);
+
   --font-heading: 'Playfair Display', serif;
   --font-text: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
-}
-:root {
+
   --header-offset-desktop: 132px;
-  --header-offset-mobile: 116px;
+  --header-offset-mobile: 172px;
+  --header-offset-mobile-sm: 180px;
 }
 
 .page-hero {
@@ -205,19 +208,41 @@
   }
 }
 
+@media (max-width: 560px) {
+  .page-hero {
+    padding-top: var(--header-offset-mobile-sm);
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 120px;
+  scroll-padding-top: var(--header-offset-desktop);
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: var(--header-offset-mobile);
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    scroll-padding-top: var(--header-offset-mobile-sm);
+  }
 }
 
 body {
   margin: 0;
+  position: relative;
+  max-width: 100%;
+  overflow-x: hidden;
   font-family: var(--font-text);
   color: var(--text-main);
   line-height: 1.6;
@@ -228,7 +253,6 @@ body {
     radial-gradient(circle at top center, rgba(255,255,255,0.75), transparent 42%);
   background-size: 96px 96px, 96px 96px, auto;
   background-position: center top, center top, center top;
-  overflow-x: hidden;
 }
 
 body::before {
@@ -286,10 +310,12 @@ select {
    ========================================================================== */
 
 .container {
-  width: min(1320px, 100%);
+  width: 100%;
+  max-width: 1320px;
   margin: 0 auto;
   padding-left: 24px;
   padding-right: 24px;
+  min-width: 0;
 }
 
 .section-padding {
@@ -1066,32 +1092,3 @@ summary:focus-visible,
   height: 5px;
 }
 
-/* ==========================================================================
-   HERO OFFSET — ЕДИНЫЙ СТАРТ ПЕРВОГО БЛОКА
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  .hero.page-hero,
-  .system-hero.page-hero,
-  .hero-parents.page-hero,
-  .hero-educators.page-hero,
-  .kg-hero.page-hero,
-  .club-hero.page-hero,
-  .foundation-hero.page-hero,
-  .contacts-hero.page-hero {
-    padding-top: 172px !important;
-  }
-}
-
-@media (max-width: 560px) {
-  .hero.page-hero,
-  .system-hero.page-hero,
-  .hero-parents.page-hero,
-  .hero-educators.page-hero,
-  .kg-hero.page-hero,
-  .club-hero.page-hero,
-  .foundation-hero.page-hero,
-  .contacts-hero.page-hero {
-    padding-top: 180px !important;
-  }
-}

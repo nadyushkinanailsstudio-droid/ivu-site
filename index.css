@@ -63,10 +63,8 @@ body.index-page main {
    ========================================================================== */
 
 .index-page .hero {
-  padding-top: 132px;
   padding-bottom: 24px;
 }
-
 .index-page .hero-shell {
   position: relative;
   padding: 28px 34px;
