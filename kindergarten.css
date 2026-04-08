@@ -1,7 +1,7 @@
 /* ==========================================================================
    KINDERGARTEN PAGE — FINAL CLEAN PREMIUM
    Под текущий kindergarten.html
-   Визуально приведено к семье index.css + system.css + style.css
+   Работает поверх общего style.css
    Куб и его анимация сохранены отдельным блоком
    ========================================================================== */
 
@@ -14,29 +14,8 @@ body.kindergarten-page {
   background-color: #fcfbfa;
 }
 
-body.kindergarten-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: 0.26;
-  background-image:
-    linear-gradient(rgba(13,27,47,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13,27,47,.035) 1px, transparent 1px);
-  background-size: 34px 34px;
-  background-position: center top;
-}
-
-body.kindergarten-page::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 18% 8%, rgba(212,190,148,.08) 0%, transparent 22%),
-    radial-gradient(circle at 82% 24%, rgba(18,34,58,.035) 0%, transparent 24%);
+body.kindergarten-page .kg-conditions-submit {
+  margin-top: 26px;
 }
 
 .kindergarten-page main {
@@ -44,12 +23,8 @@ body.kindergarten-page::after {
   z-index: 2;
 }
 
-.kindergarten-page section {
-  position: relative;
-  scroll-margin-top: 112px;
-}
-
 .kg-section {
+  position: relative;
   padding: 84px 0;
 }
 
@@ -144,6 +119,10 @@ body.kindergarten-page::after {
    HERO
    ========================================================================== */
 
+.kg-hero {
+  position: relative;
+}
+
 .kg-hero::before,
 .kg-hero::after {
   content: "";
@@ -218,6 +197,7 @@ body.kindergarten-page::after {
 .kg-hero__aside {
   position: relative;
   z-index: 2;
+  min-width: 0;
 }
 
 .kg-hero .label {
@@ -295,6 +275,7 @@ body.kindergarten-page::after {
 .kg-hero-route {
   position: relative;
   height: 100%;
+  min-width: 0;
   padding: 24px 22px;
   border-radius: 28px;
   background:
@@ -351,6 +332,7 @@ body.kindergarten-page::after {
   display: flex;
   gap: 14px;
   align-items: flex-start;
+  min-width: 0;
   padding: 16px;
   border-radius: 18px;
   background: rgba(255,255,255,.92);
@@ -396,6 +378,10 @@ body.kindergarten-page::after {
   box-shadow: none;
 }
 
+.kg-route-step__body {
+  min-width: 0;
+}
+
 .kg-route-step__title {
   margin-bottom: 4px;
   color: var(--navy);
@@ -403,6 +389,7 @@ body.kindergarten-page::after {
   font-size: 1.03rem;
   font-weight: 700;
   line-height: 1.12;
+  text-wrap: balance;
 }
 
 .kg-route-step__text {
@@ -426,7 +413,6 @@ body.kindergarten-page::after {
   margin-left: 30px;
   background: linear-gradient(180deg, rgba(13,27,47,.14), rgba(13,27,47,.04));
 }
-
 /* ==========================================================================
    ROLE / PROOF BAND
    ========================================================================== */
@@ -527,6 +513,7 @@ body.kindergarten-page::after {
 .kg-proof-node {
   position: relative;
   z-index: 1;
+  min-width: 0;
   min-height: 220px;
   padding: 24px 22px 22px;
   border-radius: 24px;
@@ -711,6 +698,7 @@ body.kindergarten-page::after {
   display: flex;
   gap: 16px;
   align-items: flex-start;
+  min-width: 0;
   min-height: 100%;
   padding: 24px 22px 22px;
   border-radius: 24px;
@@ -767,6 +755,10 @@ body.kindergarten-page::after {
   font-weight: 700;
 }
 
+.kg-director-card > div {
+  min-width: 0;
+}
+
 .kg-director-card h3 {
   margin: 0 0 10px;
   font-family: var(--font-heading);
@@ -794,6 +786,7 @@ body.kindergarten-page::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
   border-radius: 30px;
   padding: 30px 24px;
   background:
@@ -996,6 +989,7 @@ body.kindergarten-page::after {
 .kg-stage-card {
   position: relative;
   z-index: 2;
+  min-width: 0;
   padding: 24px 20px;
   border-radius: 22px;
   background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(249,246,240,.92) 100%);
@@ -1146,6 +1140,7 @@ body.kindergarten-page::after {
    -------------------------------------------------------------------------- */
 
 .kg-demo-text {
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1193,6 +1188,7 @@ body.kindergarten-page::after {
   display: flex;
   gap: 14px;
   align-items: center;
+  min-width: 0;
   padding: 16px 18px;
   border-radius: 18px;
   background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(249,246,240,.92) 100%);
@@ -1232,6 +1228,7 @@ body.kindergarten-page::after {
 }
 
 .kg-scenario-step__text {
+  min-width: 0;
   color: var(--text-main);
   font-size: .96rem;
   line-height: 1.58;
@@ -1248,6 +1245,7 @@ body.kindergarten-page::after {
 .kg-demo-visual {
   position: relative;
   overflow: hidden;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1718,13 +1716,14 @@ body.kindergarten-page::after {
 
 .kg-archive-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: 240px;
   gap: 16px;
 }
 
 .archive-card {
   position: relative;
+  min-width: 0;
   overflow: hidden;
   border-radius: 24px;
   background: #fff;
@@ -1783,8 +1782,8 @@ body.kindergarten-page::after {
   font-size: .7rem;
   font-weight: 700;
   letter-spacing: .05em;
+  text-wrap: balance;
 }
-
 /* ==========================================================================
    APPLICATION
    ========================================================================== */
@@ -1824,8 +1823,12 @@ body.kindergarten-page::after {
 
 .form-grid-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+.form-group {
+  min-width: 0;
 }
 
 .form-group--full {
@@ -1878,6 +1881,7 @@ body.kindergarten-page::after {
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
   padding: 15px 18px;
   border-radius: 16px;
   background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(249,246,240,.92) 100%);
@@ -1974,7 +1978,7 @@ body.kindergarten-page::after {
   }
 
   .kg-archive-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .archive-item-1 {
@@ -1995,11 +1999,6 @@ body.kindergarten-page::after {
 }
 
 @media (max-width: 1024px) {
-  .kg-hero {
-    padding-top: 122px;
-    padding-bottom: 34px;
-  }
-
   .kg-hero__shell {
     padding: 26px 22px;
   }
@@ -2037,11 +2036,6 @@ body.kindergarten-page::after {
   .kg-demo-text > p {
     font-size: .96rem;
     line-height: 1.66;
-  }
-
-  .kg-hero {
-    padding-top: 110px;
-    padding-bottom: 28px;
   }
 
   .kg-hero__shell,
