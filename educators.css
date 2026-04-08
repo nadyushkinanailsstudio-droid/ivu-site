@@ -25,33 +25,6 @@ body.educators-page .section-transparent {
   background: transparent;
 }
 
-/* blueprint grid */
-
-body.educators-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  opacity: .32;
-  background-image:
-    linear-gradient(rgba(13,27,47,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(13,27,47,.04) 1px, transparent 1px);
-  background-size: 32px 32px;
-  background-position: center top;
-}
-
-body.educators-page::after {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background:
-    radial-gradient(circle at 18% 8%, rgba(212,190,148,.08) 0%, transparent 20%),
-    radial-gradient(circle at 82% 24%, rgba(18,34,58,.035) 0%, transparent 22%);
-}
-
 /* ==========================================================================
    2. SHARED
    ========================================================================== */
@@ -77,6 +50,7 @@ body.educators-page .label {
 
 body.educators-page .educators-section-header {
   max-width: 880px;
+  min-width: 0;
   margin: 0 auto 28px;
   text-align: center;
 }
@@ -151,6 +125,7 @@ body.educators-page .method-cabinet-practice__card,
 body.educators-page .ev-panel,
 body.educators-page .route-card {
   position: relative;
+  min-width: 0;
   background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(249,246,240,.92) 100%);
   border: 1px solid rgba(13,27,47,.08);
   box-shadow:
@@ -220,7 +195,6 @@ body.educators-page .method-cabinet-practice__card--accent {
 
 body.educators-page .hero-educators {
   position: relative;
-  padding-top: 128px;
   padding-bottom: 24px;
 }
 
@@ -239,7 +213,7 @@ body.educators-page .hero-educators::after {
 
 body.educators-page .hero-grid {
   display: grid;
-  grid-template-columns: minmax(360px, 1.05fr) minmax(340px, .95fr);
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
   gap: 22px;
   align-items: stretch;
 }
@@ -247,6 +221,7 @@ body.educators-page .hero-grid {
 body.educators-page .hero-content,
 body.educators-page .hero-panel {
   position: relative;
+  min-width: 0;
   border-radius: 30px;
   overflow: hidden;
 }
@@ -306,6 +281,7 @@ body.educators-page .hero-content .subtitle {
 }
 
 body.educators-page .hero-markers {
+  list-style: none;
   display: grid;
   gap: 12px;
   margin: 0 0 28px;
@@ -320,6 +296,7 @@ body.educators-page .h-marker {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  min-width: 0;
   font-family: var(--font-mono);
   font-size: .76rem;
   font-weight: 600;
@@ -398,7 +375,6 @@ body.educators-page .hero-panel-note {
   line-height: 1.68;
   color: var(--navy);
 }
-
 /* ==========================================================================
    4. AUDIENCE
    ========================================================================== */
@@ -410,6 +386,7 @@ body.educators-page .audience-grid {
 }
 
 body.educators-page .audience-card {
+  min-width: 0;
   padding: 28px 24px 22px;
   border-radius: 24px;
 }
@@ -438,6 +415,7 @@ body.educators-page .audience-card h3 {
   font-weight: 700;
   line-height: 1.1;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .audience-card p {
@@ -447,7 +425,6 @@ body.educators-page .audience-card p {
   line-height: 1.68;
   color: var(--text-muted);
 }
-
 /* ==========================================================================
    5. RHYTHM
    ========================================================================== */
@@ -462,6 +439,7 @@ body.educators-page .r-block {
   display: flex;
   gap: 18px;
   align-items: flex-start;
+  min-width: 0;
   padding: 26px 22px 22px;
   border-radius: 24px;
 }
@@ -484,6 +462,10 @@ body.educators-page .r-icon {
   color: var(--navy);
 }
 
+body.educators-page .r-text {
+  min-width: 0;
+}
+
 body.educators-page .r-text h4 {
   margin: 0 0 10px;
   font-family: var(--font-heading);
@@ -491,6 +473,7 @@ body.educators-page .r-text h4 {
   font-weight: 700;
   line-height: 1.1;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .r-text p {
@@ -500,7 +483,6 @@ body.educators-page .r-text p {
   line-height: 1.68;
   color: var(--text-muted);
 }
-
 /* ==========================================================================
    6. PROGRAMS
    ========================================================================== */
@@ -513,6 +495,7 @@ body.educators-page .mmng-timeline {
 }
 
 body.educators-page .tl-step {
+  min-width: 0;
   padding: 26px 22px 22px;
   border-radius: 24px;
 }
@@ -542,6 +525,7 @@ body.educators-page .tl-step h4 {
   font-weight: 700;
   line-height: 1.12;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .tl-step p {
@@ -590,6 +574,7 @@ body.educators-page .mmng-grid::before {
 body.educators-page .m-card {
   position: relative;
   z-index: 1;
+  min-width: 0;
   min-height: 128px;
   padding: 22px 16px;
   border-radius: 20px;
@@ -615,6 +600,7 @@ body.educators-page .m-title {
   font-weight: 600;
   line-height: 1.5;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .m-card.active {
@@ -647,6 +633,7 @@ body.educators-page .lesson-grid {
 
 body.educators-page .prep-panel,
 body.educators-page .process-panel {
+  min-width: 0;
   padding: 28px 24px 24px;
   border-radius: 24px;
 }
@@ -672,6 +659,7 @@ body.educators-page .process-panel h3 {
   font-weight: 700;
   line-height: 1.1;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .prep-list {
@@ -684,6 +672,7 @@ body.educators-page .prep-item {
   display: flex;
   align-items: flex-start;
   gap: 12px;
+  min-width: 0;
   padding: 14px 14px;
   border-radius: 16px;
   background: rgba(13,27,47,.04);
@@ -746,6 +735,7 @@ body.educators-page .p-step {
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  min-width: 0;
 }
 
 body.educators-page .p-step::after {
@@ -789,6 +779,7 @@ body.educators-page .p-content h4 {
   font-weight: 600;
   line-height: 1.3;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .p-content p {
@@ -800,6 +791,7 @@ body.educators-page .p-content p {
 }
 
 body.educators-page .lesson-result {
+  min-width: 0;
   margin-top: 22px;
   padding: 18px 18px;
   text-align: center;
@@ -813,6 +805,7 @@ body.educators-page .lesson-result {
   font-size: 1.08rem;
   line-height: 1.4;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .lesson-accent {
@@ -823,7 +816,6 @@ body.educators-page .lesson-accent {
   line-height: 1.68;
   color: var(--navy);
 }
-
 /* ==========================================================================
    8. FOUNDER
    ========================================================================== */
@@ -842,10 +834,12 @@ body.educators-page .founder-quote h2 {
   line-height: 1.06;
   letter-spacing: -0.03em;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .founder-quote__inner {
   position: relative;
+  min-width: 0;
   padding: 34px 34px 30px;
   background:
     radial-gradient(circle at 18% 18%, rgba(255,255,255,.08) 0%, transparent 26%),
@@ -869,6 +863,7 @@ body.educators-page .founder-quote__inner::before {
 
 body.educators-page .founder-quote__card {
   position: relative;
+  min-width: 0;
   padding: 4px 0 4px 22px;
 }
 
@@ -944,6 +939,7 @@ body.educators-page .founder-quote__meta {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
 body.educators-page .founder-quote__name {
@@ -962,7 +958,6 @@ body.educators-page .founder-quote__role {
   font-size: .84rem;
   color: rgba(255,255,255,.68);
 }
-
 /* ==========================================================================
    9. METHOD CABINET
    ========================================================================== */
@@ -970,7 +965,6 @@ body.educators-page .founder-quote__role {
 body.educators-page .accordion-container {
   max-width: 1040px;
   margin: 0 auto 46px;
-  scroll-margin-top: 120px;
 }
 
 body.educators-page .method-cabinet-head {
@@ -1044,6 +1038,7 @@ body.educators-page .method-cabinet-meta {
 }
 
 body.educators-page .mc-meta-card {
+  min-width: 0;
   padding: 22px 20px 18px;
   border-radius: 20px;
 }
@@ -1132,6 +1127,7 @@ body.educators-page .funnel-banner strong {
   font-size: 1.12rem;
   font-weight: 700;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .funnel-banner span {
@@ -1256,6 +1252,7 @@ body.educators-page .acc-grid {
 }
 
 body.educators-page .acc-card {
+  min-width: 0;
   padding: 22px 20px 20px;
   border-radius: 16px;
 }
@@ -1268,6 +1265,7 @@ body.educators-page .acc-card strong {
   font-weight: 700;
   line-height: 1.45;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .acc-card > span {
@@ -1404,6 +1402,7 @@ body.educators-page .method-cabinet-practice__grid {
 }
 
 body.educators-page .method-cabinet-practice__card {
+  min-width: 0;
   padding: 22px 20px 20px;
   border-radius: 16px;
 }
@@ -1416,6 +1415,7 @@ body.educators-page .method-cabinet-practice__card strong {
   font-weight: 700;
   line-height: 1.45;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .method-cabinet-practice__card > span {
@@ -1465,6 +1465,7 @@ body.educators-page .smart-form-cta h3 {
   font-weight: 700;
   line-height: 1.08;
   color: #fff;
+  text-wrap: balance;
 }
 
 body.educators-page .smart-form-cta p {
@@ -1482,7 +1483,6 @@ body.educators-page .smart-form-cta .btn {
   position: relative;
   z-index: 1;
 }
-
 /* ==========================================================================
    11. EVIDENCE / FOUNDATION
    ========================================================================== */
@@ -1496,6 +1496,7 @@ body.educators-page .evidence-grid {
 }
 
 body.educators-page .ev-panel {
+  min-width: 0;
   padding: 28px 22px 22px;
   border-radius: 24px;
 }
@@ -1506,6 +1507,7 @@ body.educators-page .ev-panel h3 {
   font-size: 1.34rem;
   font-weight: 700;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .ev-list {
@@ -1548,6 +1550,7 @@ body.educators-page .evidence-bridge {
   font-weight: 600;
   line-height: 1.42;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .foundation-bridge {
@@ -1566,12 +1569,17 @@ body.educators-page .foundation-bridge {
     inset 0 1px 0 rgba(255,255,255,.82);
 }
 
+body.educators-page .fb-text {
+  min-width: 0;
+}
+
 body.educators-page .fb-text h3 {
   margin-bottom: 14px;
   font-family: var(--font-heading);
   font-size: 1.62rem;
   font-weight: 700;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .fb-text p {
@@ -1591,7 +1599,6 @@ body.educators-page .fb-mission {
   text-transform: uppercase;
   color: var(--navy);
 }
-
 /* ==========================================================================
    12. NOT JUST READING
    ========================================================================== */
@@ -1610,6 +1617,7 @@ body.educators-page .not-just-reading__title {
   font-weight: 700;
   line-height: 1.12;
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .not-just-reading__text {
@@ -1618,6 +1626,7 @@ body.educators-page .not-just-reading__text {
   font-size: 1rem;
   line-height: 1.64;
   color: var(--text-muted);
+  text-wrap: balance;
 }
 
 /* ==========================================================================
@@ -1633,6 +1642,7 @@ body.educators-page .routes-grid {
 }
 
 body.educators-page .route-card {
+  position: relative;
   display: block;
   padding: 28px 24px 22px;
   text-align: left;
@@ -1640,15 +1650,59 @@ body.educators-page .route-card {
   color: inherit;
   cursor: pointer;
   border-radius: 24px;
+
+  background: linear-gradient(180deg, rgba(255,255,255,.96) 0%, rgba(249,246,240,.92) 100%);
+  border: 1px solid rgba(13,27,47,.08);
+
+  box-shadow:
+    0 18px 42px rgba(13,27,47,.05),
+    inset 0 1px 0 rgba(255,255,255,.88);
+
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    border-color .35s ease;
 }
+
+/* верхняя тонкая линия (как в системе карточек) */
+body.educators-page .route-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(212,190,148,0),
+    rgba(212,190,148,.55),
+    rgba(212,190,148,0)
+  );
+  opacity: .9;
+  pointer-events: none;
+}
+
+body.educators-page .route-card:hover:not(.active) {
+  transform: translateY(-4px);
+  border-color: rgba(160,142,106,.24);
+  box-shadow:
+    0 24px 52px rgba(13,27,47,.08),
+    inset 0 1px 0 rgba(255,255,255,.92);
+}
+
+/* ACTIVE */
 
 body.educators-page .route-card.active {
   pointer-events: none;
+
   background: linear-gradient(180deg, #1c2f4d 0%, #0f223e 100%);
   border-color: rgba(13,27,47,.22);
+
   box-shadow:
     0 24px 52px rgba(13,27,47,.16),
     inset 0 1px 0 rgba(255,255,255,.08);
+
   color: #fff;
 }
 
@@ -1663,11 +1717,13 @@ body.educators-page .route-card.active p {
 body.educators-page .route-num {
   display: block;
   margin-bottom: 14px;
+
   font-family: var(--font-mono);
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: .1em;
   text-transform: uppercase;
+
   color: var(--text-muted);
 }
 
@@ -1677,19 +1733,26 @@ body.educators-page .route-card.active .route-num {
 
 body.educators-page .route-card h3 {
   margin-bottom: 10px;
+
   font-family: var(--font-heading);
   font-size: 1.22rem;
   font-weight: 700;
+  line-height: 1.15;
+
   color: var(--navy);
+  text-wrap: balance;
 }
 
 body.educators-page .route-card p {
+  margin: 0;
+
   font-family: var(--font-text);
   font-size: .94rem;
   line-height: 1.62;
-  color: var(--text-muted);
-}
 
+  color: var(--text-muted);
+  text-wrap: balance;
+}
 /* ==========================================================================
    14. RESPONSIVE
    ========================================================================== */
@@ -1735,12 +1798,11 @@ body.educators-page .route-card p {
 }
 
 @media (max-width: 768px) {
-   body.educators-page .section-padding {
+  body.educators-page .section-padding {
     padding: 36px 0;
   }
 
   body.educators-page .hero-educators {
-    padding-top: 116px;
     padding-bottom: 18px;
   }
 
