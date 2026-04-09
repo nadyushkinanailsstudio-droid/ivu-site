@@ -2019,11 +2019,11 @@ body.club-page .parade-side .flag--2::after {
 body.club-page .parade-side .flag--3::after {
   background: linear-gradient(180deg, #85dcff 0%, #4cb8ff 100%);
 }
-
 body.club-page .parade-rows {
   position: relative;
   z-index: 1;
   display: grid;
+  justify-items: center;
   gap: 12px;
   max-width: 100%;
   margin: 6px auto 0;
@@ -2047,7 +2047,11 @@ body.club-page .parade-row span {
   display: grid;
   place-items: center;
   border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.11) 0%, rgba(255, 255, 255, 0.045) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.11) 0%,
+    rgba(255, 255, 255, 0.045) 100%
+  );
   border: 1px solid rgba(255, 255, 255, 0.08);
   color: #fff4d8;
   font-family: var(--font-mono);
@@ -2062,7 +2066,6 @@ body.club-page .parade-row span {
   opacity: 0;
   transform: translateY(16px) scale(0.88);
 }
-
 body.club-page .parade-row span::before {
   content: "";
   position: absolute;
@@ -2243,7 +2246,6 @@ body.club-page .club-stage.show .parade-sparkles span {
     transform: scale(0.82) translateY(-18px);
   }
 }
-
 /* ==========================================================================
    COMMON STAGE + PARADE — RESPONSIVE
    ========================================================================== */
@@ -2357,22 +2359,25 @@ body.club-page .club-stage.show .parade-sparkles span {
   }
 
   body.club-page .parade-rows {
-    gap: 10px;
+    display: grid;
+    justify-items: center;
+    gap: 8px;
     margin-top: 2px;
     transform: scale(1);
   }
 
   body.club-page .parade-row {
-    grid-template-columns: repeat(5, 56px);
-    gap: 8px;
+    grid-template-columns: repeat(5, 52px);
+    gap: 6px;
+    justify-content: center;
     transform: none;
   }
 
   body.club-page .parade-row span {
-    width: 56px;
-    height: 56px;
-    border-radius: 16px;
-    font-size: 1rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 15px;
+    font-size: 0.96rem;
   }
 
   body.club-page .parade-sparkles span {
@@ -2417,24 +2422,27 @@ body.club-page .club-stage.show .parade-sparkles span {
   }
 
   body.club-page .parade-lane {
-    width: 214px;
+    width: 190px;
   }
 
   body.club-page .parade-rows {
-    gap: 8px;
+    display: grid;
+    justify-items: center;
+    gap: 6px;
   }
 
   body.club-page .parade-row {
-    grid-template-columns: repeat(5, 48px);
-    gap: 6px;
+    grid-template-columns: repeat(5, 44px);
+    gap: 5px;
+    justify-content: center;
     transform: none;
   }
 
   body.club-page .parade-row span {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    font-size: 0.9rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    font-size: 0.82rem;
   }
 }
 /* ==========================================================================

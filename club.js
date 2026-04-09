@@ -186,7 +186,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       if (lessonsStage) {
         lessonsStage.style.display = 'block';
-        observeAndStart(lessonsStage);
+        scrollToBlock(lessonsStage, 'start');
+
+        requestAnimationFrame(() => {
+          lessonsStage.classList.add('show');
+        });
       }
     }, 18800);
 
@@ -194,7 +198,11 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
       if (videoStage) {
         videoStage.style.display = 'block';
-        observeAndStart(videoStage);
+        scrollToBlock(videoStage, 'start');
+
+        requestAnimationFrame(() => {
+          videoStage.classList.add('show');
+        });
       }
     }, 21000);
   }
