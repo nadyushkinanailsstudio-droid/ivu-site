@@ -5,14 +5,8 @@
 
 .krutigrad-page {
   --kg-line: rgba(10, 25, 47, 0.08);
-  --kg-line-strong: rgba(10, 25, 47, 0.14);
   --kg-gold: #d2af63;
-  --kg-gold-soft: rgba(210, 175, 99, 0.14);
 
-  --kg-card: rgba(255, 255, 255, 0.86);
-  --kg-card-strong: rgba(255, 255, 255, 0.94);
-
-  --kg-shadow-sm: 0 12px 30px rgba(10, 25, 47, 0.05);
   --kg-shadow-md: 0 20px 50px rgba(10, 25, 47, 0.08);
   --kg-shadow-lg: 0 30px 80px rgba(10, 25, 47, 0.12);
 
@@ -75,10 +69,15 @@
    HERO
    ========================================================================== */
 
+.krutigrad-page .kg-hero {
+  position: relative;
+}
+
 .krutigrad-page .kg-hero::before,
 .krutigrad-page .kg-hero::after {
   content: "";
   position: absolute;
+  z-index: 0;
   border-radius: 50%;
   pointer-events: none;
   filter: blur(14px);
@@ -102,17 +101,16 @@
 
 .krutigrad-page .kg-hero-shell {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   padding: 48px;
   border-radius: var(--kg-radius-lg);
   border: 1px solid var(--kg-line);
-  /* 👇 Вот эта часть обновилась 👇 */
   background:
     radial-gradient(circle at calc(var(--kg-mouse-x, 0.5) * 100%) calc(var(--kg-mouse-y, 0.5) * 100%), rgba(255, 255, 255, 0.95), transparent 30%),
     radial-gradient(circle at 14% 16%, rgba(210,175,99,0.12), transparent 28%),
     radial-gradient(circle at 88% 18%, rgba(255,255,255,0.68), transparent 22%),
     linear-gradient(180deg, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.76) 100%);
-  /* 👆 ---------------------- 👆 */
   box-shadow: var(--kg-shadow-lg);
 }
 
@@ -312,12 +310,8 @@
    GLOBAL SECTION SPACING
    ========================================================================== */
 
-.krutigrad-page .kg-story,
-.krutigrad-page .kg-world,
-.krutigrad-page .kg-impact,
-.krutigrad-page .kg-national,
-.krutigrad-page .kg-partnership {
-  padding: 112px 0;
+.krutigrad-page .section-padding {
+  padding: 96px 0;
 }
 
 /* ==========================================================================
@@ -399,8 +393,8 @@
 
 .krutigrad-page .kg-card--character {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 280px;
-  gap: 22px;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 26px;
   align-items: center;
 }
 
@@ -409,17 +403,56 @@
 }
 
 .krutigrad-page .kg-strong-line {
-  margin-top: 8px;
-  color: var(--navy) !important;
+  margin-top: 10px;
+  color: var(--navy);
   font-weight: 600;
 }
 
 .krutigrad-page .kg-character-visual {
   position: relative;
-  min-height: 320px;
+  min-height: 340px;
   display: flex;
   align-items: flex-end;
   justify-content: center;
+}
+
+.krutigrad-page .kg-character-visual::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  width: 250px;
+  height: 120px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(210,175,99,0.22) 0%,
+    rgba(210,175,99,0.08) 42%,
+    rgba(210,175,99,0) 76%
+  );
+  filter: blur(18px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.krutigrad-page .kg-character-visual::after {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 50%;
+  width: 190px;
+  height: 190px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(46,104,255,0.06) 0%,
+    rgba(46,104,255,0) 72%
+  );
+  filter: blur(14px);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .krutigrad-page .kg-character-orbit {
@@ -436,10 +469,11 @@
   background:
     radial-gradient(circle at 50% 50%, rgba(248,245,239,0.78) 0%, rgba(255,255,255,0.96) 68%);
   box-shadow:
-    inset 0 0 30px rgba(210,175,99,0.08),
-    0 14px 30px rgba(13,27,47,0.05);
+    inset 0 0 30px rgba(210,175,99,0.12),
+    0 18px 40px rgba(13,27,47,0.08);
   opacity: 0.96;
   transition: transform .45s ease, border-color .45s ease, opacity .45s ease;
+  z-index: 1;
 }
 
 .krutigrad-page .kg-character-orbit-two {
@@ -449,6 +483,7 @@
   border: 1px solid rgba(13,27,47,0.10);
   opacity: 0.75;
   transition: transform .45s ease, border-color .45s ease, opacity .45s ease;
+  z-index: 1;
 }
 
 .krutigrad-page .kg-character-img {
@@ -473,8 +508,8 @@
 }
 
 .krutigrad-page .kg-card--character:hover .kg-character-img {
-  transform: translateY(-8px) scale(1.03);
-  filter: drop-shadow(0 24px 38px rgba(13,27,47,0.2));
+  transform: translateY(-10px) scale(1.04);
+  filter: drop-shadow(0 26px 44px rgba(13,27,47,0.24));
 }
 
 @keyframes kgFloat {
@@ -516,7 +551,12 @@
   position: absolute;
   inset: 0 0 auto 0;
   height: 3px;
-  background: linear-gradient(90deg, rgba(210,175,99,0.25), rgba(13,27,47,0.7), rgba(210,175,99,0.25));
+  background: linear-gradient(
+    90deg,
+    rgba(210,175,99,0.25),
+    rgba(13,27,47,0.7),
+    rgba(210,175,99,0.25)
+  );
   opacity: 0;
   transition: opacity .35s ease;
 }
@@ -745,10 +785,6 @@
    PARTNERSHIP
    ========================================================================== */
 
-.krutigrad-page .kg-partnership {
-  padding-top: 74px;
-}
-
 .krutigrad-page .kg-partnership-shell {
   max-width: 1020px;
   margin: 0 auto;
@@ -815,13 +851,6 @@
   background: linear-gradient(180deg, var(--navy-2) 0%, var(--navy) 100%);
   border-color: rgba(10,25,47,0.18);
   box-shadow: 0 24px 60px rgba(10,25,47,0.16);
-}
-
-.krutigrad-page .kg-track-card--accent h3,
-.krutigrad-page .kg-track-card--accent p,
-.krutigrad-page .kg-track-card--accent .kg-track-num,
-.krutigrad-page .kg-track-card--accent .kg-track-line {
-  color: #fff;
 }
 
 .krutigrad-page .kg-track-head {
@@ -909,7 +938,7 @@
 
   .krutigrad-page .kg-character-visual {
     order: 2;
-    min-height: 270px;
+    min-height: 290px;
   }
 
   .krutigrad-page .kg-impact-shell {
@@ -918,7 +947,7 @@
 }
 
 @media (max-width: 768px) {
-   .krutigrad-page .kg-hero-shell,
+  .krutigrad-page .kg-hero-shell,
   .krutigrad-page .kg-card,
   .krutigrad-page .kg-partnership-shell {
     padding: 26px 20px;
@@ -943,22 +972,28 @@
     font-size: 0.8rem;
   }
 
-  .krutigrad-page .kg-story,
-  .krutigrad-page .kg-world,
-  .krutigrad-page .kg-impact,
-  .krutigrad-page .kg-national,
-  .krutigrad-page .kg-partnership {
-    padding: 84px 0;
-  }
-
   .krutigrad-page .section-header {
     margin-bottom: 42px;
+  }
+
+  .krutigrad-page .section-padding,
+  .krutigrad-page .kg-national {
+    padding: 84px 0;
   }
 
   .krutigrad-page .kg-factions-grid,
   .krutigrad-page .kg-national-grid,
   .krutigrad-page .kg-partnership-grid {
     grid-template-columns: 1fr;
+  }
+
+  .krutigrad-page .kg-faction-card {
+    padding: 28px 22px 24px;
+  }
+
+  .krutigrad-page .kg-world-footer {
+    padding: 24px 20px;
+    font-size: 1.18rem;
   }
 
   .krutigrad-page .kg-impact-shell {
@@ -1007,6 +1042,11 @@
     font-size: 0.62rem;
     letter-spacing: 0.1em;
   }
+
+  .krutigrad-page .kg-world-footer {
+    font-size: 1.06rem;
+    line-height: 1.5;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1023,34 +1063,31 @@
     transition: none;
   }
 }
+
 /* ==========================================================================
-   FIX — accent partnership card text
+   ACCENT PARTNERSHIP CARD
    ========================================================================== */
 
-.krutigrad-page .kg-track-card--accent,
-.krutigrad-page .kg-track-card--accent h3,
-.krutigrad-page .kg-track-card--accent p,
-.krutigrad-page .kg-track-card--accent .kg-track-num,
-.krutigrad-page .kg-track-card--accent .kg-track-line {
+.krutigrad-page .kg-track-card--accent {
   color: #ffffff;
 }
 
 .krutigrad-page .kg-track-card--accent h3 {
-  color: #ffffff !important;
+  color: #ffffff;
 }
 
 .krutigrad-page .kg-track-card--accent p {
-  color: rgba(255, 255, 255, 0.82) !important;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 .krutigrad-page .kg-track-card--accent .kg-track-num {
-  color: rgba(255, 255, 255, 0.78) !important;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .krutigrad-page .kg-track-card--accent .kg-track-line {
-  color: rgba(255, 255, 255, 0.9) !important;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .krutigrad-page .kg-track-card--accent .kg-track-line::after {
-  background: rgba(210, 175, 99, 0.5) !important;
+  background: rgba(210, 175, 99, 0.5);
 }

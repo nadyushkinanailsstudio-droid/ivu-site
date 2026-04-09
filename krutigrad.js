@@ -5,14 +5,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const heroShell = document.querySelector('.kg-hero-shell');
 
-  if (heroShell && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-    heroShell.addEventListener('mousemove', (e) => {
-      const rect = heroShell.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width;
-      const y = (e.clientY - rect.top) / rect.height;
+if (heroShell && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
 
-      heroShell.style.setProperty('--kg-mouse-x', `${x}`);
-      heroShell.style.setProperty('--kg-mouse-y', `${y}`);
-    });
-  }
+  heroShell.addEventListener('mousemove', (e) => {
+    const rect = heroShell.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+
+    heroShell.style.setProperty('--kg-mouse-x', `${x}`);
+    heroShell.style.setProperty('--kg-mouse-y', `${y}`);
+  });
+
+  heroShell.addEventListener('mouseleave', () => {
+    heroShell.style.removeProperty('--kg-mouse-x');
+    heroShell.style.removeProperty('--kg-mouse-y');
+  });
+
+}
 });
