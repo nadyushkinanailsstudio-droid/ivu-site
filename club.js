@@ -146,67 +146,60 @@ document.addEventListener('DOMContentLoaded', () => {
   /* --------------------------------------------------------------------------
      MAIN SEQUENCE
      -------------------------------------------------------------------------- */
+function runVictorySequence() {
+  // 1. Показываем поздравление
+  setTimeout(() => {
+    if (victoryArea) {
+      victoryArea.style.display = 'block';
+    }
+  }, 150);
 
-  function runVictorySequence() {
-    // 1. Показываем поздравление
-    setTimeout(() => {
-      if (victoryArea) {
-        victoryArea.style.display = 'block';
-        scrollToBlock(victoryArea, 'center');
-      }
-    }, 150);
+  // 2. Показываем парад и один раз мягко прокручиваем к нему
+  setTimeout(() => {
+    if (paradeStage) {
+      paradeStage.style.display = 'block';
+      scrollToBlock(paradeStage, 'start');
+      observeAndStart(paradeStage);
+    }
+  }, 2600);
 
-    // 2. Прокрутка к параду
-    setTimeout(() => {
-      if (paradeStage) {
-        paradeStage.style.display = 'block';
-        scrollToBlock(paradeStage, 'start');
-        observeAndStart(paradeStage);
-      }
-    }, 2600);
+  // 3. После полного парада показываем "Торжественный момент"
+  setTimeout(() => {
+    if (stageBreak) {
+      stageBreak.classList.add('show');
+    }
+  }, 11800);
 
-    // 3. После полного парада показываем "Торжественный момент"
-    setTimeout(() => {
-      if (stageBreak) {
-        scrollToBlock(stageBreak, 'center');
-        stageBreak.classList.add('show');
-      }
-    }, 11800);
+  // 4. Потом показываем гимн, но уже БЕЗ автопрокрутки
+  setTimeout(() => {
+    if (anthemStage) {
+      anthemStage.style.display = 'block';
+      requestAnimationFrame(() => {
+        anthemStage.classList.add('show');
+      });
+    }
+  }, 13800);
 
-    // 4. Потом идём к гимну
-    setTimeout(() => {
-      if (anthemStage) {
-        anthemStage.style.display = 'block';
-        scrollToBlock(anthemStage, 'start');
-        observeAndStart(anthemStage);
-      }
-    }, 13800);
+  // 5. После гимна — уроки, тоже без автопрокрутки
+  setTimeout(() => {
+    if (lessonsStage) {
+      lessonsStage.style.display = 'block';
+      requestAnimationFrame(() => {
+        lessonsStage.classList.add('show');
+      });
+    }
+  }, 18800);
 
-    // 5. После гимна — уроки
-    setTimeout(() => {
-      if (lessonsStage) {
-        lessonsStage.style.display = 'block';
-        scrollToBlock(lessonsStage, 'start');
-
-        requestAnimationFrame(() => {
-          lessonsStage.classList.add('show');
-        });
-      }
-    }, 18800);
-
-    // 6. Потом видео
-    setTimeout(() => {
-      if (videoStage) {
-        videoStage.style.display = 'block';
-        scrollToBlock(videoStage, 'start');
-
-        requestAnimationFrame(() => {
-          videoStage.classList.add('show');
-        });
-      }
-    }, 21000);
-  }
-
+  // 6. Потом видео, тоже без автопрокрутки
+  setTimeout(() => {
+    if (videoStage) {
+      videoStage.style.display = 'block';
+      requestAnimationFrame(() => {
+        videoStage.classList.add('show');
+      });
+    }
+  }, 21000);
+}
   /* --------------------------------------------------------------------------
      RESET
      -------------------------------------------------------------------------- */
