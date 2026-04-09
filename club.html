@@ -592,11 +592,13 @@
               </div>
             </div>
 
-           <div class="lessons-download-strip">
+            <!-- DOWNLOAD STRIP -->
+<div class="lessons-download-strip">
   <p class="lessons-download-text">
     Хочешь рассмотреть эти шаги внимательно? Ниже открыт полный лист с уроками —
-    его можно пролистать прямо здесь или распечатать отдельно.
+    его можно пролистать прямо здесь или открыть отдельно для спокойного просмотра и печати.
   </p>
+
   <a
     href="./img/uroki.pdf"
     class="btn btn-outline lessons-download-btn"
@@ -607,34 +609,52 @@
   </a>
 </div>
 
+<!-- PDF VIEWER -->
 <div class="lessons-pdf-viewer">
+
   <div class="lessons-pdf-head">
     <p class="lessons-pdf-kicker">Полный разворот уроков</p>
     <h4 class="lessons-pdf-title">Открытый лист для спокойного просмотра</h4>
   </div>
 
   <div class="lessons-pdf-frame-wrap">
+
+    <!-- MOBILE NOTE -->
     <div class="lessons-pdf-mobile-note">
-      <p>На телефоне встроенный просмотр PDF может работать нестабильно.</p>
-      <a
-        href="./img/uroki.pdf"
-        class="btn btn-outline lessons-download-btn"
-        target="_blank"
-        rel="noopener"
-      >
-        Открыть уроки PDF
-      </a>
+      <p>
+        На мобильном устройстве встроенный просмотр может отображаться не полностью.
+        Открой файл отдельно, чтобы спокойно посмотреть его или сохранить для печати.
+      </p>
+
+      <div class="lessons-pdf-mobile-actions">
+        <a
+          href="./img/uroki.pdf"
+          class="btn btn-outline lessons-download-btn"
+          target="_blank"
+          rel="noopener"
+        >
+          Открыть PDF
+        </a>
+
+        <a
+          href="./img/uroki.pdf"
+          class="btn btn-magic"
+          download
+        >
+          Скачать для печати
+        </a>
+      </div>
     </div>
 
+    <!-- DESKTOP PDF -->
     <iframe
       class="lessons-pdf-frame"
       src="./img/uroki.pdf"
       title="Первые уроки ИВУ"
       loading="lazy">
     </iframe>
+
   </div>
-</div>
-</div>
 </div>
 
 <div class="club-stage" id="video-stage">
