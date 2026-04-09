@@ -302,11 +302,11 @@
             <li>Марта Аркадьевна</li>
             <li>Алевтина Пантелеевна</li>
           </ul>
-        </div>
-      </details>
-    </section>
+       </div>
+</details>
+</section>
 
-  <section class="puzzle-intro reveal">
+<section class="puzzle-intro reveal">
   <div class="container">
     <div class="puzzle-intro-card">
 
@@ -316,6 +316,7 @@
           <div class="puzzle-intro-orbit puzzle-intro-orbit--two"></div>
 
           <img
+            id="puzzle-kruchu-img"
             src="./img/kruchuchu-2.svg"
             alt="Кручучу приглашает к первой загадке"
             class="puzzle-intro-kruchu"
@@ -337,7 +338,7 @@
 </section>
 
 <section class="puzzle-section reveal" id="puzzle">
-      <div class="container">
+  <div class="container">
         <div class="puzzle-wrapper">
           <div class="puzzle-grid">
 
@@ -591,61 +592,84 @@
               </div>
             </div>
 
-            <div class="lessons-download-strip">
-              <p class="lessons-download-text">
-                Хочешь рассмотреть эти шаги внимательно? Ниже открыт полный лист с уроками —
-                его можно пролистать прямо здесь или распечатать отдельно.
-              </p>
-              <a href="./img/uroki.pdf" class="btn btn-outline lessons-download-btn" target="_blank" rel="noopener">
-                Скачать уроки в PDF
-              </a>
-            </div>
-
-            <div class="lessons-pdf-viewer">
-              <div class="lessons-pdf-head">
-                <p class="lessons-pdf-kicker">Полный разворот уроков</p>
-                <h4 class="lessons-pdf-title">Открытый лист для спокойного просмотра</h4>
-              </div>
-
-              <div class="lessons-pdf-frame-wrap">
-               <iframe
-  class="lessons-pdf-frame"
-  src="./img/uroki.pdf"
-  title="Первые уроки ИВУ"
-  loading="lazy">
-</iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="club-stage" id="video-stage">
-          <div class="club-stage-inner">
-            <div class="deep-start-screen" id="deep-start-screen">
-              <img src="./img/kru-underwater.webp" alt="Кручучу под водой" class="deep-image">
-              <div class="deep-overlay">
-                <h4 class="deep-title">Готов к дальнейшему погружению?</h4>
-                <p class="deep-text">
-                  Ты уже увидел, как буквы превращаются в слоги и слова.
-                  Теперь посмотри, как метод работает вживую.
-                </p>
-                <button class="btn btn-magic" id="btn-start-deep" type="button">
-                  Погрузиться глубже
-                </button>
-              </div>
-            </div>
-
-            <div class="demo-video-block" id="demo-video-block" hidden>
-  <h4 class="demo-video-title">Демо-урок</h4>
-  <p class="demo-video-text">
-    Это короткий вход в живое объяснение метода после первых шагов.
+           <div class="lessons-download-strip">
+  <p class="lessons-download-text">
+    Хочешь рассмотреть эти шаги внимательно? Ниже открыт полный лист с уроками —
+    его можно пролистать прямо здесь или распечатать отдельно.
   </p>
-
-  <video id="club-video" class="demo-video-player" controls preload="metadata" playsinline aria-label="Демо-урок Клуба Кручучу">
-    <source src="./media/uroven_01_01.mp4" type="video/mp4">
-    Ваш браузер не поддерживает воспроизведение видео.
-  </video>
+  <a
+    href="./img/uroki.pdf"
+    class="btn btn-outline lessons-download-btn"
+    target="_blank"
+    rel="noopener"
+  >
+    Скачать уроки в PDF
+  </a>
 </div>
+
+<div class="lessons-pdf-viewer">
+  <div class="lessons-pdf-head">
+    <p class="lessons-pdf-kicker">Полный разворот уроков</p>
+    <h4 class="lessons-pdf-title">Открытый лист для спокойного просмотра</h4>
+  </div>
+
+  <div class="lessons-pdf-frame-wrap">
+    <div class="lessons-pdf-mobile-note">
+      <p>На телефоне встроенный просмотр PDF может работать нестабильно.</p>
+      <a
+        href="./img/uroki.pdf"
+        class="btn btn-outline lessons-download-btn"
+        target="_blank"
+        rel="noopener"
+      >
+        Открыть уроки PDF
+      </a>
+    </div>
+
+    <iframe
+      class="lessons-pdf-frame"
+      src="./img/uroki.pdf"
+      title="Первые уроки ИВУ"
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="club-stage" id="video-stage">
+  <div class="club-stage-inner">
+    <div class="deep-start-screen" id="deep-start-screen">
+      <img src="./img/kru-underwater.webp" alt="Кручучу под водой" class="deep-image">
+      <div class="deep-overlay">
+        <h4 class="deep-title">Готов к дальнейшему погружению?</h4>
+        <p class="deep-text">
+          Ты уже увидел, как буквы превращаются в слоги и слова.
+          Теперь посмотри, как метод работает вживую.
+        </p>
+        <button class="btn btn-magic" id="btn-start-deep" type="button">
+          Погрузиться глубже
+        </button>
+      </div>
+    </div>
+
+    <div class="demo-video-block" id="demo-video-block" hidden>
+      <h4 class="demo-video-title">Демо-урок</h4>
+      <p class="demo-video-text">
+        Это короткий вход в живое объяснение метода после первых шагов.
+      </p>
+
+      <video
+        id="club-video"
+        class="demo-video-player"
+        controls
+        preload="metadata"
+        playsinline
+        aria-label="Демо-урок Клуба Кручучу">
+        <source src="./media/uroven_01_01.mp4" type="video/mp4">
+        Ваш браузер не поддерживает воспроизведение видео.
+      </video>
+    </div>
 
             <div class="lesson-parent-note">
               <p class="lesson-note">
