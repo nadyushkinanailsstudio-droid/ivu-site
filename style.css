@@ -224,6 +224,7 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   overflow-x: hidden;
+  scrollbar-gutter: stable;
 }
 
 @media (max-width: 768px) {

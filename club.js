@@ -91,22 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function showStage(stageEl) {
-    if (!stageEl) return;
+function showStage(stageEl) {
+  if (!stageEl) return;
 
-    stageEl.style.display = 'block';
-
-    requestAnimationFrame(() => {
-      stageEl.classList.add('show');
-    });
-  }
+  requestAnimationFrame(() => {
+    stageEl.classList.add('show');
+  });
+}
 
   function hideStage(stageEl) {
-    if (!stageEl) return;
+  if (!stageEl) return;
 
-    stageEl.classList.remove('show');
-    stageEl.style.display = 'none';
-  }
+  stageEl.classList.remove('show');
+}
 
  const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -157,13 +154,7 @@ function runVictorySequence() {
   }, 150);
 
   setTimeout(() => {
-    if (paradeStage) {
-      paradeStage.style.display = 'block';
-
-      requestAnimationFrame(() => {
-        paradeStage.classList.add('show');
-      });
-    }
+    showStage(paradeStage);
   }, 2600);
 
   setTimeout(() => {
@@ -173,33 +164,15 @@ function runVictorySequence() {
   }, 11800);
 
   setTimeout(() => {
-    if (anthemStage) {
-      anthemStage.style.display = 'block';
-
-      requestAnimationFrame(() => {
-        anthemStage.classList.add('show');
-      });
-    }
+    showStage(anthemStage);
   }, 13800);
 
   setTimeout(() => {
-    if (lessonsStage) {
-      lessonsStage.style.display = 'block';
-
-      requestAnimationFrame(() => {
-        lessonsStage.classList.add('show');
-      });
-    }
+    showStage(lessonsStage);
   }, 18800);
 
   setTimeout(() => {
-    if (videoStage) {
-      videoStage.style.display = 'block';
-
-      requestAnimationFrame(() => {
-        videoStage.classList.add('show');
-      });
-    }
+    showStage(videoStage);
   }, 21000);
 }
   /* --------------------------------------------------------------------------
