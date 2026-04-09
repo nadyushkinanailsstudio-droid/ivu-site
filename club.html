@@ -101,31 +101,29 @@
 </header>
 
   <main>
+<section class="club-hero page-hero reveal" id="hero">
+  <div class="container">
+    <div class="club-hero-shell">
+      <div class="hero-grid">
 
-   <section class="club-hero page-hero reveal" id="hero">
-      <div class="container">
-        <div class="club-hero-shell">
-          <div class="hero-grid">
+        <div class="hero-visual">
+          <div class="hero-visual-frame">
+            <div class="hero-orbit hero-orbit-one"></div>
+            <div class="hero-orbit hero-orbit-two"></div>
 
-            <div class="hero-visual">
-              <div class="hero-visual-frame">
-                <div class="hero-orbit hero-orbit-one"></div>
-                <div class="hero-orbit hero-orbit-two"></div>
+            <img
+              src="./img/kruchuchu.svg"
+              alt="Маг Кручучу"
+              class="hero-kruchu"
+              id="hero-kruchu-img"
+            >
+          </div>
+        </div>
 
-                <img
-                  src="./img/kruchuchu.svg"
-                  alt="Маг Кручучу"
-                  class="hero-kruchu"
-                  onerror="this.onerror=null;this.src='./img/kruchuchu-fallback.svg';"
-                >
-              </div>
-            </div>
+        <div class="hero-content">
+          <span class="label">Деканат для детей</span>
 
-            <div class="hero-content">
-              <span class="label">Деканат для детей</span>
-
-              <h1>Приветствую вас, мои маленькие друзья!</h1>
-
+          <h1>Приветствую вас, мои маленькие друзья!</h1>
               <div class="hero-prose">
                 <p>
                   Как вы думаете, кто я? Правильно, Кручучу. Я — не учитель и не воспитатель!
@@ -308,6 +306,41 @@
       </details>
     </section>
 
+  <section class="puzzle-intro reveal">
+  <div class="container">
+    <div class="puzzle-intro-card">
+
+      <div class="puzzle-intro-visual">
+        <div class="puzzle-intro-visual-frame">
+          <div class="puzzle-intro-orbit puzzle-intro-orbit--one"></div>
+          <div class="puzzle-intro-orbit puzzle-intro-orbit--two"></div>
+
+          <img
+            src="./img/kruchuchu-2.svg"
+            alt="Кручучу приглашает к первой загадке"
+            class="puzzle-intro-kruchu"
+          >
+        </div>
+      </div>
+
+      <div class="puzzle-intro-text">
+        <span class="puzzle-intro-kicker">Испытание №1</span>
+        <h3>Разгадаем все тайны?</h3>
+        <p>
+          Маг Кручучу приготовил для тебя первую загадку.
+          Если справишься — откроется секрет.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    </div>
+
+  </div>
+</section>
+
     <section class="puzzle-section reveal" id="puzzle">
       <div class="container">
         <div class="puzzle-wrapper">
@@ -315,10 +348,6 @@
 
             <div class="puzzle-text puzzle-text--big">
               <h2>Парад букв</h2>
-
-              <p class="puzzle-intro">
-                Это первая загадка мага Кручучу.
-              </p>
 
               <p class="puzzle-story">
                 На календаре 20 августа. Согласные буквы готовятся к торжественному параду, но они забыли свои места!
@@ -469,7 +498,7 @@
             <p class="club-stage-kicker">Этап 2</p>
             <h3 class="anthem-stage-title">Гимн Матрицы</h3>
             <p class="club-stage-lead anthem-stage-lead">
-              Твоя награда за разгаданную Матрицу — запомни эти четыре шеренги и открой путь дальше.
+              Запомни эти четыре шеренги и открой путь дальше.
             </p>
 
             <div class="anthem-box anthem-box--stage">
@@ -584,14 +613,12 @@
               </div>
 
               <div class="lessons-pdf-frame-wrap">
-                <iframe
-                  class="lessons-pdf-frame"
-                  src="./img/uroki.pdf"
-                  title="Первые уроки ИВУ"
-                  loading="lazy">
-                  Ваш браузер не поддерживает встроенный просмотр PDF.
-                  <a href="./img/uroki.pdf" target="_blank" rel="noopener">Открыть PDF отдельно</a>
-                </iframe>
+               <iframe
+  class="lessons-pdf-frame"
+  src="./img/uroki.pdf"
+  title="Первые уроки ИВУ"
+  loading="lazy">
+</iframe>
               </div>
             </div>
           </div>
@@ -614,16 +641,16 @@
             </div>
 
             <div class="demo-video-block" id="demo-video-block" hidden>
-              <h4 class="demo-video-title">Демо-урок</h4>
-              <p class="demo-video-text">
-                Это короткий вход в живое объяснение метода после первых шагов.
-              </p>
+  <h4 class="demo-video-title">Демо-урок</h4>
+  <p class="demo-video-text">
+    Это короткий вход в живое объяснение метода после первых шагов.
+  </p>
 
-              <video id="club-video" class="demo-video-player" controls preload="metadata" playsinline>
-                <source src="./media/uroven_01_01.mp4" type="video/mp4">
-                Ваш браузер не поддерживает воспроизведение видео.
-              </video>
-            </div>
+  <video id="club-video" class="demo-video-player" controls preload="metadata" playsinline aria-label="Демо-урок Клуба Кручучу">
+    <source src="./media/uroven_01_01.mp4" type="video/mp4">
+    Ваш браузер не поддерживает воспроизведение видео.
+  </video>
+</div>
 
             <div class="lesson-parent-note">
               <p class="lesson-note">

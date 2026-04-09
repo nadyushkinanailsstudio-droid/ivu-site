@@ -28,14 +28,45 @@ document.addEventListener('DOMContentLoaded', () => {
     'Буквы чуть-чуть перепутались. Давай соберём шеренгу снова.'
   ];
 
+  /* --------------------------------------------------------------------------
+     IMAGE FALLBACKS
+     -------------------------------------------------------------------------- */
+
+  const kruchuchuImages = [
+    {
+      id: 'hero-kruchu-img',
+      fallback: './img/kruchuchu-fallback.svg'
+    },
+    {
+      id: 'puzzle-kruchu-img',
+      fallback: './img/kruchuchu-fallback.svg'
+    }
+  ];
+
+  kruchuchuImages.forEach(({ id, fallback }) => {
+    const img = document.getElementById(id);
+
+    if (!img) return;
+
+    img.addEventListener('error', () => {
+      img.src = fallback;
+    }, { once: true });
+  });
+
+  /* --------------------------------------------------------------------------
+     HELPERS
+     -------------------------------------------------------------------------- */
+
   function clearMessage() {
     if (!sysMsg) return;
+
     sysMsg.textContent = '';
     sysMsg.classList.remove('msg-success', 'msg-error');
   }
 
   function showMessage(text, type) {
     if (!sysMsg) return;
+
     sysMsg.textContent = text;
     sysMsg.classList.remove('msg-success', 'msg-error');
 
@@ -112,6 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  /* --------------------------------------------------------------------------
+     MAIN SEQUENCE
+     -------------------------------------------------------------------------- */
+
   function runVictorySequence() {
     // 1. Показываем поздравление
     setTimeout(() => {
@@ -164,6 +199,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 21000);
   }
 
+  /* --------------------------------------------------------------------------
+     RESET
+     -------------------------------------------------------------------------- */
+
   function resetMatrix() {
     currentRow = 0;
 
@@ -202,6 +241,10 @@ document.addEventListener('DOMContentLoaded', () => {
     clearMessage();
   }
 
+  /* --------------------------------------------------------------------------
+     COMPLETE
+     -------------------------------------------------------------------------- */
+
   function completeMatrix() {
     if (codeInput) {
       codeInput.value = '';
@@ -222,6 +265,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (currentRow >= targetRows.length) return;
 
     const value = normalizeInput(codeInput.value);
+
     if (value.length < 5) return;
 
     const target = targetRows[currentRow];
@@ -249,9 +293,15 @@ document.addEventListener('DOMContentLoaded', () => {
     showMessage(funnyText, 'msg-error');
 
     setTimeout(() => {
-      codeInput.value = '';
+      if (codeInput) {
+        codeInput.value = '';
+      }
     }, 1200);
   }
+
+  /* --------------------------------------------------------------------------
+     EVENTS
+     -------------------------------------------------------------------------- */
 
   if (codeInput) {
     codeInput.addEventListener('input', () => {
@@ -285,6 +335,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  /* --------------------------------------------------------------------------
+     INIT
+     -------------------------------------------------------------------------- */
 
   resetMatrix();
 });
