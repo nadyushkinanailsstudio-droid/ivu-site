@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const deepStartScreen = document.getElementById('deep-start-screen');
   const demoVideoBlock = document.getElementById('demo-video-block');
   const clubVideo = document.getElementById('club-video');
+  const header = document.getElementById('header');
 
   const targetRows = ['БВГДЖ', 'ЗКЛМШ', 'НПРСЧ', 'ТФХЦЩ'];
   const cells = letterGrid ? Array.from(letterGrid.querySelectorAll('.l-cell')) : [];
@@ -83,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showStage(stageEl) {
     if (!stageEl) return;
+
     stageEl.style.display = 'block';
 
     requestAnimationFrame(() => {
@@ -92,6 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function hideStage(stageEl) {
     if (!stageEl) return;
+
     stageEl.classList.remove('show');
     stageEl.style.display = 'none';
   }
@@ -104,6 +107,20 @@ document.addEventListener('DOMContentLoaded', () => {
   function schedule(fn, delay) {
     const timerId = window.setTimeout(fn, delay);
     sequenceTimers.push(timerId);
+  }
+
+  function scrollToBlock(element) {
+    if (!element) return;
+
+    const headerHeight = header ? header.offsetHeight : 0;
+    const extraOffset = 18;
+    const targetY =
+      element.getBoundingClientRect().top + window.pageYOffset - headerHeight - extraOffset;
+
+    window.scrollTo({
+      top: Math.max(0, targetY),
+      behavior: 'smooth'
+    });
   }
 
   function resetStages() {
@@ -130,6 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     schedule(() => {
       showStage(paradeStage);
+      schedule(() => {
+        scrollToBlock(paradeStage);
+      }, 120);
     }, 2600);
 
     schedule(() => {
@@ -140,6 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     schedule(() => {
       showStage(anthemStage);
+      schedule(() => {
+        scrollToBlock(anthemStage);
+      }, 120);
     }, 13800);
 
     schedule(() => {
@@ -268,10 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clubVideo.play().catch(() => {});
       }
 
-      demoVideoBlock.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
+      scrollToBlock(demoVideoBlock);
     });
   }
 

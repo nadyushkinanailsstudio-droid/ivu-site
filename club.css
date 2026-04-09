@@ -2355,23 +2355,42 @@ body.club-page .club-stage.show .parade-sparkles span {
     line-height: 1.32;
     border-radius: 18px;
   }
-
   body.club-page .parade-ground {
-    grid-template-columns: 1fr;
-    gap: 14px;
-    max-width: 100%;
-  }
+  grid-template-columns: 34px minmax(0, 1fr) 34px;
+  gap: 8px;
+  max-width: 100%;
+  align-items: stretch;
+}
+
+body.club-page .parade-side {
+  display: flex;
+  padding: 2px 0;
+  opacity: 1;
+}
+
+body.club-page .parade-side .flag {
+  width: 10px;
+  height: 54px;
+}
+
+body.club-page .parade-side .flag::before {
+  width: 1.5px;
+  height: 54px;
+}
+
+body.club-page .parade-side .flag::after {
+  top: 3px;
+  width: 10px;
+  height: 8px;
+  border-radius: 0 5px 5px 0;
+}
 
   body.club-page .parade-lane {
     top: 8px;
     bottom: 8px;
     width: 250px;
   }
-
-  body.club-page .parade-side {
-    display: none;
-  }
-
+ 
   body.club-page .parade-rows {
     display: grid;
     justify-items: center;
@@ -2445,12 +2464,34 @@ body.club-page .club-stage.show .parade-sparkles span {
     gap: 6px;
   }
 
-  body.club-page .parade-row {
-    grid-template-columns: repeat(5, 44px);
-    gap: 5px;
-    justify-content: center;
-    transform: none;
-  }
+ body.club-page .parade-ground {
+  grid-template-columns: 24px minmax(0, 1fr) 24px;
+  gap: 6px;
+}
+
+body.club-page .parade-side .flag {
+  width: 8px;
+  height: 44px;
+}
+
+body.club-page .parade-side .flag::before {
+  width: 1px;
+  height: 44px;
+}
+
+body.club-page .parade-side .flag::after {
+  top: 3px;
+  width: 8px;
+  height: 6px;
+  border-radius: 0 4px 4px 0;
+}
+
+body.club-page .parade-row {
+  grid-template-columns: repeat(5, 44px);
+  gap: 5px;
+  justify-content: center;
+  transform: none;
+}
 
   body.club-page .parade-row span {
     width: 44px;
@@ -3076,6 +3117,19 @@ body.club-page .lessons-pdf-frame {
 body.club-page .lessons-pdf-mobile-note {
   display: none;
 }
+body.club-page .lessons-pdf-mobile-note {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body.club-page .lessons-pdf-mobile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
 
 @media (max-width: 900px) {
   body.club-page .lessons-showcase--premium,
@@ -3087,28 +3141,27 @@ body.club-page .lessons-pdf-mobile-note {
     text-align: left;
   }
 
-  body.club-page .lessons-pdf-frame {
-    display: none;
-  }
+body.club-page .lessons-pdf-frame {
+  display: none;
+}
 
-  body.club-page .lessons-pdf-frame-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 140px;
-    padding: 18px;
-  }
+body.club-page .lessons-pdf-frame-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 20px 18px;
+}
 
-  body.club-page .lessons-pdf-mobile-note {
-    display: block;
-    text-align: center;
-  }
+body.club-page .lessons-pdf-mobile-note {
+  display: block;
+}
 
-  body.club-page .lessons-pdf-mobile-note p {
-    margin: 0 0 12px;
-    color: rgba(255, 255, 255, 0.84);
-    line-height: 1.6;
-  }
+body.club-page .lessons-pdf-mobile-note p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.6;
+}
 }
 
 @media (max-width: 640px) {
