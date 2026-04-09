@@ -296,6 +296,141 @@ body.club-page .hero-actions {
   gap: 12px;
 }
 
+/* HERO — RESPONSIVE */
+
+@media (max-width: 1024px) {
+  body.club-page .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  body.club-page .hero-visual {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.club-page .club-hero {
+    padding-bottom: 56px;
+  }
+
+  body.club-page .club-hero-shell {
+    padding: 24px 18px;
+    border-radius: 24px;
+  }
+
+  body.club-page .hero-grid {
+    gap: 22px;
+  }
+
+  body.club-page .hero-visual {
+    min-height: 260px;
+  }
+
+  body.club-page .hero-visual-frame {
+    width: min(100%, 250px);
+  }
+
+  body.club-page .hero-orbit-one {
+    width: 180px;
+    height: 180px;
+  }
+
+  body.club-page .hero-orbit-two {
+    width: 240px;
+    height: 240px;
+  }
+
+  body.club-page .hero-kruchu {
+    width: min(100%, 180px);
+  }
+
+  body.club-page .hero-content .label {
+    margin-bottom: 14px;
+    padding: 8px 14px;
+    font-size: 0.66rem;
+    letter-spacing: 0.08em;
+  }
+
+  body.club-page .hero-content h1 {
+    margin-bottom: 14px;
+    font-size: clamp(1.9rem, 9vw, 2.5rem);
+    line-height: 1.04;
+  }
+
+  body.club-page .hero-prose {
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  body.club-page .hero-prose p,
+  body.club-page .hero-italic-note,
+  body.club-page .hero-path-note {
+    font-size: 0.96rem;
+    line-height: 1.6;
+  }
+
+  body.club-page .hero-quote-box {
+    margin-bottom: 16px;
+    padding: 18px 16px 18px 18px;
+    border-radius: 16px;
+  }
+
+  body.club-page .hero-quote-text {
+    font-size: 1.02rem;
+    line-height: 1.44;
+  }
+
+  body.club-page .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+@media (max-width: 560px) {
+  body.club-page .club-hero-shell {
+    padding: 18px 14px;
+    border-radius: 18px;
+  }
+
+  body.club-page .hero-visual {
+    min-height: 220px;
+  }
+
+  body.club-page .hero-visual-frame {
+    width: min(100%, 210px);
+  }
+
+  body.club-page .hero-orbit-one {
+    width: 150px;
+    height: 150px;
+  }
+
+  body.club-page .hero-orbit-two {
+    width: 200px;
+    height: 200px;
+  }
+
+  body.club-page .hero-kruchu {
+    width: min(100%, 150px);
+  }
+
+  body.club-page .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  body.club-page .hero-prose p,
+  body.club-page .hero-italic-note,
+  body.club-page .hero-path-note {
+    font-size: 0.9rem;
+    line-height: 1.54;
+  }
+
+  body.club-page .hero-quote-text {
+    font-size: 0.96rem;
+  }
+}
+
 /* ==========================================================================
    MAP
    ========================================================================== */
