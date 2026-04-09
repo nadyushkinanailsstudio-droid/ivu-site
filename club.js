@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const targetRows = ['БВГДЖ', 'ЗКЛМШ', 'НПРСЧ', 'ТФХЦЩ'];
   const cells = letterGrid ? Array.from(letterGrid.querySelectorAll('.l-cell')) : [];
+
   let currentRow = 0;
+  let sequenceTimers = [];
 
   const funnyErrors = [
     'Кручучу шепчет: почти получилось, попробуй ещё раз.',
@@ -33,24 +35,21 @@ document.addEventListener('DOMContentLoaded', () => {
      -------------------------------------------------------------------------- */
 
   const kruchuchuImages = [
-    {
-      id: 'hero-kruchu-img',
-      fallback: './img/kruchuchu-fallback.svg'
-    },
-    {
-      id: 'puzzle-kruchu-img',
-      fallback: './img/kruchuchu-fallback.svg'
-    }
+    { id: 'hero-kruchu-img', fallback: './img/kruchuchu-fallback.svg' },
+    { id: 'puzzle-kruchu-img', fallback: './img/kruchuchu-fallback.svg' }
   ];
 
   kruchuchuImages.forEach(({ id, fallback }) => {
     const img = document.getElementById(id);
-
     if (!img) return;
 
-    img.addEventListener('error', () => {
-      img.src = fallback;
-    }, { once: true });
+    img.addEventListener(
+      'error',
+      () => {
+        img.src = fallback;
+      },
+      { once: true }
+    );
   });
 
   /* --------------------------------------------------------------------------
@@ -59,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function clearMessage() {
     if (!sysMsg) return;
-
     sysMsg.textContent = '';
     sysMsg.classList.remove('msg-success', 'msg-error');
   }
@@ -91,48 +89,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-function showStage(stageEl) {
-  if (!stageEl) return;
-
-  requestAnimationFrame(() => {
-    stageEl.classList.add('show');
-  });
-}
+  function showStage(stageEl) {
+    if (!stageEl) return;
+    requestAnimationFrame(() => {
+      stageEl.classList.add('show');
+    });
+  }
 
   function hideStage(stageEl) {
-  if (!stageEl) return;
+    if (!stageEl) return;
+    stageEl.classList.remove('show');
+  }
 
-  stageEl.classList.remove('show');
-}
+  function clearSequenceTimers() {
+    sequenceTimers.forEach((timerId) => clearTimeout(timerId));
+    sequenceTimers = [];
+  }
 
- const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-
-function scrollToBlock(el, block = 'start') {
-  if (!el) return;
-
-  el.scrollIntoView({
-    behavior: isIOS ? 'auto' : 'smooth',
-    block
-  });
-}
-
-  function observeAndStart(stage) {
-    if (!stage) return;
-
-    const observer = new IntersectionObserver((entries, obs) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          stage.classList.add('show');
-          obs.disconnect();
-        }
-      });
-    }, { threshold: 0.4 });
-
-    observer.observe(stage);
+  function schedule(fn, delay) {
+    const timerId = window.setTimeout(fn, delay);
+    sequenceTimers.push(timerId);
   }
 
   function resetStages() {
+    clearSequenceTimers();
+
     hideStage(paradeStage);
     hideStage(anthemStage);
     hideStage(lessonsStage);
@@ -146,35 +127,39 @@ function scrollToBlock(el, block = 'start') {
   /* --------------------------------------------------------------------------
      MAIN SEQUENCE
      -------------------------------------------------------------------------- */
-function runVictorySequence() {
-  setTimeout(() => {
-    if (victoryArea) {
-      victoryArea.style.display = 'block';
-    }
-  }, 150);
 
-  setTimeout(() => {
-    showStage(paradeStage);
-  }, 2600);
+  function runVictorySequence() {
+    clearSequenceTimers();
 
-  setTimeout(() => {
-    if (stageBreak) {
-      stageBreak.classList.add('show');
-    }
-  }, 11800);
+    schedule(() => {
+      if (victoryArea) {
+        victoryArea.style.display = 'block';
+      }
+    }, 150);
 
-  setTimeout(() => {
-    showStage(anthemStage);
-  }, 13800);
+    schedule(() => {
+      showStage(paradeStage);
+    }, 2600);
 
-  setTimeout(() => {
-    showStage(lessonsStage);
-  }, 18800);
+    schedule(() => {
+      if (stageBreak) {
+        stageBreak.classList.add('show');
+      }
+    }, 11800);
 
-  setTimeout(() => {
-    showStage(videoStage);
-  }, 21000);
-}
+    schedule(() => {
+      showStage(anthemStage);
+    }, 13800);
+
+    schedule(() => {
+      showStage(lessonsStage);
+    }, 18800);
+
+    schedule(() => {
+      showStage(videoStage);
+    }, 21000);
+  }
+
   /* --------------------------------------------------------------------------
      RESET
      -------------------------------------------------------------------------- */
@@ -241,7 +226,6 @@ function runVictorySequence() {
     if (currentRow >= targetRows.length) return;
 
     const value = normalizeInput(codeInput.value);
-
     if (value.length < 5) return;
 
     const target = targetRows[currentRow];
@@ -268,7 +252,7 @@ function runVictorySequence() {
     const funnyText = funnyErrors[Math.floor(Math.random() * funnyErrors.length)];
     showMessage(funnyText, 'msg-error');
 
-    setTimeout(() => {
+    window.setTimeout(() => {
       if (codeInput) {
         codeInput.value = '';
       }
