@@ -108,14 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
     stageEl.style.display = 'none';
   }
 
-  function scrollToBlock(el, block = 'start') {
-    if (!el) return;
+ const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
-    el.scrollIntoView({
-      behavior: 'smooth',
-      block
-    });
-  }
+function scrollToBlock(el, block = 'start') {
+  if (!el) return;
+
+  el.scrollIntoView({
+    behavior: isIOS ? 'auto' : 'smooth',
+    block
+  });
+}
 
   function observeAndStart(stage) {
     if (!stage) return;
@@ -147,53 +150,52 @@ document.addEventListener('DOMContentLoaded', () => {
      MAIN SEQUENCE
      -------------------------------------------------------------------------- */
 function runVictorySequence() {
-  // 1. Показываем поздравление
   setTimeout(() => {
     if (victoryArea) {
       victoryArea.style.display = 'block';
     }
   }, 150);
 
-  // 2. Показываем парад и один раз мягко прокручиваем к нему
   setTimeout(() => {
     if (paradeStage) {
       paradeStage.style.display = 'block';
-      scrollToBlock(paradeStage, 'start');
-      observeAndStart(paradeStage);
+
+      requestAnimationFrame(() => {
+        paradeStage.classList.add('show');
+      });
     }
   }, 2600);
 
-  // 3. После полного парада показываем "Торжественный момент"
   setTimeout(() => {
     if (stageBreak) {
       stageBreak.classList.add('show');
     }
   }, 11800);
 
-  // 4. Потом показываем гимн, но уже БЕЗ автопрокрутки
   setTimeout(() => {
     if (anthemStage) {
       anthemStage.style.display = 'block';
+
       requestAnimationFrame(() => {
         anthemStage.classList.add('show');
       });
     }
   }, 13800);
 
-  // 5. После гимна — уроки, тоже без автопрокрутки
   setTimeout(() => {
     if (lessonsStage) {
       lessonsStage.style.display = 'block';
+
       requestAnimationFrame(() => {
         lessonsStage.classList.add('show');
       });
     }
   }, 18800);
 
-  // 6. Потом видео, тоже без автопрокрутки
   setTimeout(() => {
     if (videoStage) {
       videoStage.style.display = 'block';
+
       requestAnimationFrame(() => {
         videoStage.classList.add('show');
       });
