@@ -224,7 +224,6 @@ html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   overflow-x: hidden;
-  scrollbar-gutter: stable;
 }
 
 @media (max-width: 768px) {
@@ -244,7 +243,6 @@ body {
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
   font-family: var(--font-text);
   color: var(--text-main);
   line-height: 1.6;
@@ -657,6 +655,7 @@ summary:focus-visible,
   line-height: 1;
   white-space: nowrap;
 }
+
 .page-sections__icon {
   position: relative;
   display: inline-block;
@@ -847,10 +846,6 @@ summary:focus-visible,
 }
 
 @media (max-width: 1024px) {
-  .section-padding {
-    padding: 80px 0;
-  }
-
   .header__inner {
     min-height: 76px;
   }
@@ -1006,8 +1001,6 @@ summary:focus-visible,
     );
   }
 
-  /* На главной слева ничего не мешает первому пункту */
-  
   body.index-page .nav-scroll-area::before {
     opacity: 0;
   }
@@ -1081,16 +1074,3 @@ summary:focus-visible,
   background: rgba(210, 175, 99, 0.25);
   color: var(--navy);
 }
-
-.page-sections__icon {
-  width: 9px;
-  height: 9px;
-  flex-basis: 9px;
-  margin-left: 5px;
-}
-
-.page-sections__icon::before {
-  width: 5px;
-  height: 5px;
-}
-

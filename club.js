@@ -30,10 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'Буквы чуть-чуть перепутались. Давай соберём шеренгу снова.'
   ];
 
-  /* --------------------------------------------------------------------------
-     IMAGE FALLBACKS
-     -------------------------------------------------------------------------- */
-
   const kruchuchuImages = [
     { id: 'hero-kruchu-img', fallback: './img/kruchuchu-fallback.svg' },
     { id: 'puzzle-kruchu-img', fallback: './img/kruchuchu-fallback.svg' }
@@ -51,10 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
       { once: true }
     );
   });
-
-  /* --------------------------------------------------------------------------
-     HELPERS
-     -------------------------------------------------------------------------- */
 
   function clearMessage() {
     if (!sysMsg) return;
@@ -91,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showStage(stageEl) {
     if (!stageEl) return;
+    stageEl.style.display = 'block';
+
     requestAnimationFrame(() => {
       stageEl.classList.add('show');
     });
@@ -99,6 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function hideStage(stageEl) {
     if (!stageEl) return;
     stageEl.classList.remove('show');
+    stageEl.style.display = 'none';
   }
 
   function clearSequenceTimers() {
@@ -123,10 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
       stageBreak.classList.remove('show');
     }
   }
-
-  /* --------------------------------------------------------------------------
-     MAIN SEQUENCE
-     -------------------------------------------------------------------------- */
 
   function runVictorySequence() {
     clearSequenceTimers();
@@ -159,10 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
       showStage(videoStage);
     }, 21000);
   }
-
-  /* --------------------------------------------------------------------------
-     RESET
-     -------------------------------------------------------------------------- */
 
   function resetMatrix() {
     currentRow = 0;
@@ -201,10 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     clearMessage();
   }
-
-  /* --------------------------------------------------------------------------
-     COMPLETE
-     -------------------------------------------------------------------------- */
 
   function completeMatrix() {
     if (codeInput) {
@@ -259,10 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 1200);
   }
 
-  /* --------------------------------------------------------------------------
-     EVENTS
-     -------------------------------------------------------------------------- */
-
   if (codeInput) {
     codeInput.addEventListener('input', () => {
       codeInput.value = normalizeInput(codeInput.value).slice(0, 5);
@@ -295,10 +274,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
-  /* --------------------------------------------------------------------------
-     INIT
-     -------------------------------------------------------------------------- */
 
   resetMatrix();
 });

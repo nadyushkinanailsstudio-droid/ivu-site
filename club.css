@@ -1188,28 +1188,19 @@ body.club-page .puzzle-text--big p {
   line-height: 1.72;
 }
 
-body.club-page .puzzle-text .puzzle-intro {
-  margin-bottom: 6px;
-  color: var(--navy);
-  font-weight: 700;
-}
-
 body.club-page .puzzle-story {
   margin-bottom: 16px;
   color: #2f4a68;
 }
 
-body.club-page .puzzle-text-strong,
-body.club-page .puzzle-text--big .puzzle-text-strong {
-  margin-top: 10px;
-  margin-bottom: 18px;
+body.club-page .puzzle-text-strong {
+  margin: 10px 0 18px;
   color: var(--navy);
   font-size: clamp(1.1rem, 1.35vw, 1.24rem);
   font-weight: 700;
 }
 
-body.club-page .puzzle-rules,
-body.club-page .puzzle-text--big .puzzle-rules {
+body.club-page .puzzle-rules {
   margin-top: 0;
   padding: 26px 28px;
   border-radius: 20px;
@@ -1218,8 +1209,7 @@ body.club-page .puzzle-text--big .puzzle-rules {
   box-shadow: var(--club-shadow-sm);
 }
 
-body.club-page .puzzle-rules h4,
-body.club-page .puzzle-text--big .puzzle-rules h4 {
+body.club-page .puzzle-rules h4 {
   margin: 0 0 12px;
   color: var(--navy);
   font-size: 1.16rem;
@@ -1234,8 +1224,7 @@ body.club-page .puzzle-rules ul {
   list-style: none;
 }
 
-body.club-page .puzzle-rules li,
-body.club-page .puzzle-text--big .puzzle-rules li {
+body.club-page .puzzle-rules li {
   position: relative;
   padding-left: 18px;
   color: var(--text-main);
@@ -1319,6 +1308,7 @@ body.club-page .l-cell {
   aspect-ratio: 1;
   display: grid;
   place-items: center;
+  min-width: 0;
   border-radius: 14px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: rgba(255, 255, 255, 0.04);
@@ -1326,7 +1316,11 @@ body.club-page .l-cell {
   font-family: var(--font-mono);
   font-size: 1.45rem;
   font-weight: 700;
-  transition: all var(--transition);
+  transition:
+    color var(--transition),
+    background var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 body.club-page .l-cell.revealed {
@@ -1338,8 +1332,16 @@ body.club-page .l-cell.revealed {
     0 10px 24px rgba(0, 0, 0, 0.14);
 }
 
-body.club-page .code-input {
+body.club-page .input-area {
   width: 100%;
+  min-width: 0;
+}
+
+body.club-page .code-input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 56px;
   padding: 16px 20px;
   border-radius: 16px;
@@ -1351,9 +1353,13 @@ body.club-page .code-input {
   font-weight: 700;
   letter-spacing: 0.22em;
   text-transform: uppercase;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-size-adjust: 100%;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   transition:
     border-color var(--transition),
-    box-shadow var(--transition),
     background var(--transition);
 }
 
@@ -1367,7 +1373,6 @@ body.club-page .code-input::placeholder {
 body.club-page .code-input:focus {
   outline: none;
   border-color: rgba(210, 175, 99, 0.5);
-  box-shadow: 0 0 0 4px rgba(210, 175, 99, 0.12);
   background: rgba(255, 255, 255, 0.08);
 }
 
@@ -1435,22 +1440,18 @@ body.club-page .msg-error {
     margin-bottom: 14px;
   }
 
-  body.club-page .puzzle-text-strong,
-  body.club-page .puzzle-text--big .puzzle-text-strong {
-    margin-top: 6px;
-    margin-bottom: 14px;
+  body.club-page .puzzle-text-strong {
+    margin: 6px 0 14px;
     font-size: 1rem;
     line-height: 1.5;
   }
 
-  body.club-page .puzzle-rules,
-  body.club-page .puzzle-text--big .puzzle-rules {
+  body.club-page .puzzle-rules {
     padding: 20px 18px;
     border-radius: 18px;
   }
 
-  body.club-page .puzzle-rules h4,
-  body.club-page .puzzle-text--big .puzzle-rules h4 {
+  body.club-page .puzzle-rules h4 {
     font-size: 1.02rem;
   }
 
@@ -1458,8 +1459,7 @@ body.club-page .msg-error {
     gap: 10px;
   }
 
-  body.club-page .puzzle-rules li,
-  body.club-page .puzzle-text--big .puzzle-rules li {
+  body.club-page .puzzle-rules li {
     font-size: 0.94rem;
     line-height: 1.56;
   }
@@ -1490,13 +1490,13 @@ body.club-page .msg-error {
     font-size: 1.08rem;
   }
 
-  body.club-page .code-input {
-    min-height: 50px;
-    padding: 14px 16px;
-    border-radius: 14px;
-    font-size: 1rem;
-    letter-spacing: 0.14em;
-  }
+body.club-page .code-input {
+  min-height: 50px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+}
 
   body.club-page .sys-msg {
     margin-top: 12px;
@@ -1519,24 +1519,20 @@ body.club-page .msg-error {
     line-height: 1.58;
   }
 
-  body.club-page .puzzle-text-strong,
-  body.club-page .puzzle-text--big .puzzle-text-strong {
+  body.club-page .puzzle-text-strong {
     font-size: 0.94rem;
   }
 
-  body.club-page .puzzle-rules,
-  body.club-page .puzzle-text--big .puzzle-rules {
+  body.club-page .puzzle-rules {
     padding: 16px 14px;
     border-radius: 16px;
   }
 
-  body.club-page .puzzle-rules h4,
-  body.club-page .puzzle-text--big .puzzle-rules h4 {
+  body.club-page .puzzle-rules h4 {
     font-size: 0.96rem;
   }
 
-  body.club-page .puzzle-rules li,
-  body.club-page .puzzle-text--big .puzzle-rules li {
+  body.club-page .puzzle-rules li {
     padding-left: 16px;
     font-size: 0.9rem;
     line-height: 1.5;
@@ -1560,12 +1556,12 @@ body.club-page .msg-error {
     font-size: 0.94rem;
   }
 
-  body.club-page .code-input {
-    min-height: 46px;
-    padding: 12px 14px;
-    font-size: 0.92rem;
-    letter-spacing: 0.1em;
-  }
+ body.club-page .code-input {
+  min-height: 46px;
+  padding: 12px 14px;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+}
 
   body.club-page .m-reset {
     font-size: 0.72rem;
@@ -1574,6 +1570,19 @@ body.club-page .msg-error {
   body.club-page .sys-msg {
     font-size: 0.76rem;
     line-height: 1.42;
+  }
+}
+@supports (-webkit-touch-callout: none) {
+  body.club-page .matrix-board,
+  body.club-page .input-area,
+  body.club-page .code-input {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+
+  body.club-page .code-input {
+    font-size: 16px !important;
+    line-height: 1.2;
   }
 }
 /* ==========================================================================
@@ -1762,16 +1771,20 @@ body.club-page .victory-text-secondary {
    ========================================================================== */
 
 body.club-page .club-stage {
-  display: none;
-  margin-top: 34px;
+  visibility: hidden;
   opacity: 0;
   transform: translateY(18px);
+  margin-top: 34px;
+  height: 0;
+  overflow: hidden;
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
 body.club-page .club-stage.show {
+  visibility: visible;
   opacity: 1;
   transform: translateY(0);
+  height: auto;
 }
 
 body.club-page .club-stage-inner {
@@ -2025,9 +2038,10 @@ body.club-page .parade-rows {
   display: grid;
   justify-items: center;
   gap: 12px;
+  width: 100%;
   max-width: 100%;
   margin: 6px auto 0;
-  transform: scale(1.08);
+  transform: none;
 }
 
 body.club-page .parade-row {
@@ -2191,7 +2205,7 @@ body.club-page .club-stage.show .parade-row--4 { animation-delay: 6.75s; }
 
 @keyframes rowHeroPulse {
   0% { transform: scale(1); }
-  40% { transform: scale(1.06); }
+  40% { transform: scale(1.02); }
   100% { transform: scale(1); }
 }
 
@@ -3059,6 +3073,10 @@ body.club-page .lessons-pdf-frame {
   background: #fff;
 }
 
+body.club-page .lessons-pdf-mobile-note {
+  display: none;
+}
+
 @media (max-width: 900px) {
   body.club-page .lessons-showcase--premium,
   body.club-page .lesson-result-grid {
@@ -3070,7 +3088,26 @@ body.club-page .lessons-pdf-frame {
   }
 
   body.club-page .lessons-pdf-frame {
-    height: 680px;
+    display: none;
+  }
+
+  body.club-page .lessons-pdf-frame-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140px;
+    padding: 18px;
+  }
+
+  body.club-page .lessons-pdf-mobile-note {
+    display: block;
+    text-align: center;
+  }
+
+  body.club-page .lessons-pdf-mobile-note p {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, 0.84);
+    line-height: 1.6;
   }
 }
 
@@ -3131,10 +3168,8 @@ body.club-page .lessons-pdf-frame {
 
   body.club-page .lessons-pdf-frame-wrap {
     border-radius: 16px;
-  }
-
-  body.club-page .lessons-pdf-frame {
-    height: 520px;
+    min-height: 120px;
+    padding: 16px;
   }
 }
 
@@ -3148,7 +3183,8 @@ body.club-page .lessons-pdf-frame {
   }
 
   body.club-page .secret-lessons-lead,
-  body.club-page .lessons-download-text {
+  body.club-page .lessons-download-text,
+  body.club-page .lessons-pdf-mobile-note p {
     font-size: 0.9rem;
     line-height: 1.56;
   }
@@ -3203,10 +3239,8 @@ body.club-page .lessons-pdf-frame {
 
   body.club-page .lessons-pdf-frame-wrap {
     border-radius: 14px;
-  }
-
-  body.club-page .lessons-pdf-frame {
-    height: 420px;
+    min-height: 108px;
+    padding: 14px;
   }
 }
 /* ==========================================================================
