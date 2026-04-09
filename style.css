@@ -244,6 +244,7 @@ body {
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
   font-family: var(--font-text);
   color: var(--text-main);
   line-height: 1.6;
