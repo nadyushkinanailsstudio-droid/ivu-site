@@ -42,36 +42,6 @@
         <span class="header__logo-title">Институт Врожденной Успеваемости</span>
         <span class="header__logo-sub">Инженерный код языка</span>
       </a>
-
-      <div class="page-sections-bar page-sections-bar--header">
-        <div class="page-sections">
-          <button
-            class="page-sections__toggle"
-            type="button"
-            aria-expanded="false"
-            aria-controls="page-sections-panel"
-          >
-            <span class="page-sections__label">Разделы</span>
-            <span class="page-sections__icon"></span>
-          </button>
-
-          <div class="page-sections__panel" id="page-sections-panel" hidden>
-            <a href="#hero" class="page-sections__link is-active">Старт</a>
-            <a href="#problem" class="page-sections__link">Проблема</a>
-            <a href="#result" class="page-sections__link">Результат</a>
-            <a href="#volume-intro" class="page-sections__link">Метод объёма</a>
-            <a href="#anti-watermelon" class="page-sections__link">Почему «А — арбуз» тормозит</a>
-            <a href="#funnel" class="page-sections__link">Маршрут</a>
-            <a href="#formats" class="page-sections__link">Кому подходит</a>
-            <a href="#access" class="page-sections__link">Как начать</a>
-            <a href="#scale" class="page-sections__link">Масштаб</a>
-            <a href="#cubes" class="page-sections__link">Кубики</a>
-            <a href="#books-system" class="page-sections__link">Азбука и Букварь</a>
-            <a href="#bs-result" class="page-sections__link">BabyStudent</a>
-            <a href="#faq" class="page-sections__link">FAQ</a>
-          </div>
-        </div>
-      </div>
     </div>
 
     <div class="nav-scroll-area">
@@ -94,6 +64,36 @@
       <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
         <span>›</span>
       </button>
+    </div>
+
+    <div class="page-sections-bar page-sections-bar--header">
+      <div class="page-sections">
+        <button
+          class="page-sections__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="page-sections-panel"
+        >
+          <span class="page-sections__label">Разделы</span>
+          <span class="page-sections__icon"></span>
+        </button>
+
+        <div class="page-sections__panel" id="page-sections-panel" hidden>
+          <a href="#hero" class="page-sections__link is-active">Старт</a>
+          <a href="#problem" class="page-sections__link">Проблема</a>
+          <a href="#result" class="page-sections__link">Результат</a>
+          <a href="#volume-intro" class="page-sections__link">Метод объёма</a>
+          <a href="#anti-watermelon" class="page-sections__link">Почему «А — арбуз» тормозит</a>
+          <a href="#funnel" class="page-sections__link">Маршрут</a>
+          <a href="#formats" class="page-sections__link">Кому подходит</a>
+          <a href="#access" class="page-sections__link">Как начать</a>
+          <a href="#scale" class="page-sections__link">Масштаб</a>
+          <a href="#cubes" class="page-sections__link">Кубики</a>
+          <a href="#books-system" class="page-sections__link">Азбука и Букварь</a>
+          <a href="#bs-result" class="page-sections__link">BabyStudent</a>
+          <a href="#faq" class="page-sections__link">FAQ</a>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -138,9 +138,26 @@
           </div>
 
           <div class="hero__author-controls">
-            <button class="control-btn is-active" type="button" data-target="1">1986 — Детские сады</button>
-            <button class="control-btn" type="button" data-target="2">2003 — Книги ЭКСМО</button>
-            <button class="control-btn" type="button" data-target="3">2022+ — ИВУ</button>
+            <button class="control-btn is-active" type="button" data-target="1" aria-label="Показать этап 1986 — Детские сады">
+              <span class="year-chip">
+                <span class="year-chip__year">1986</span>
+                <span class="year-chip__text">Детские сады</span>
+              </span>
+            </button>
+
+            <button class="control-btn" type="button" data-target="2" aria-label="Показать этап 2003 — Книги ЭКСМО">
+              <span class="year-chip">
+                <span class="year-chip__year">2003</span>
+                <span class="year-chip__text">Книги ЭКСМО</span>
+              </span>
+            </button>
+
+            <button class="control-btn" type="button" data-target="3" aria-label="Показать этап 2022+ — ИВУ">
+              <span class="year-chip">
+                <span class="year-chip__year">2022+</span>
+                <span class="year-chip__text">ИВУ</span>
+              </span>
+            </button>
           </div>
 
           <a href="./foundation.html" class="btn btn-outline hero__author-btn">

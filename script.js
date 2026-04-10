@@ -177,123 +177,121 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ===============================
-     КНОПКИ ПРОКРУТКИ МЕНЮ
-  =============================== */
-  const nav = document.querySelector('.nav');
-  const btnLeft = document.querySelector('.nav-scroll-btn--left');
-  const btnRight = document.querySelector('.nav-scroll-btn--right');
+/* ===============================
+   КНОПКИ ПРОКРУТКИ МЕНЮ
+=============================== */
+const nav = document.querySelector('.nav');
+const btnLeft = document.querySelector('.nav-scroll-btn--left');
+const btnRight = document.querySelector('.nav-scroll-btn--right');
 
-  if (nav && btnLeft && btnRight) {
-    const getLinks = () => Array.from(nav.querySelectorAll('.nav__link'));
-    const isHomePage = () => document.body.classList.contains('index-page');
+if (nav && btnLeft && btnRight) {
+  const getLinks = () => Array.from(nav.querySelectorAll('.nav__link'));
+  const isHomePage = () => document.body.classList.contains('index-page');
 
-    const updateButtons = () => {
-      const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth - 4);
-      const atStart = nav.scrollLeft <= 10;
-      const atEnd = nav.scrollLeft >= maxScroll - 10;
+  const setButtonState = (button, isVisible) => {
+    button.style.opacity = isVisible ? '1' : '0';
+    button.style.pointerEvents = isVisible ? 'auto' : 'none';
+    button.style.visibility = isVisible ? 'visible' : 'hidden';
+  };
 
-      if (isHomePage()) {
-        btnLeft.style.opacity = '0';
-        btnLeft.style.pointerEvents = 'none';
-        btnLeft.style.visibility = 'hidden';
-      } else {
-        btnLeft.style.opacity = atStart ? '0' : '1';
-        btnLeft.style.pointerEvents = atStart ? 'none' : 'auto';
-        btnLeft.style.visibility = atStart ? 'hidden' : 'visible';
-      }
+const updateButtons = () => {
+  const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth - 4);
+  const atStart = nav.scrollLeft <= 10;
+  const atEnd = nav.scrollLeft >= maxScroll - 10;
 
-      btnRight.style.opacity = atEnd ? '0' : '1';
-      btnRight.style.pointerEvents = atEnd ? 'none' : 'auto';
-      btnRight.style.visibility = atEnd ? 'hidden' : 'visible';
-    };
+  const isDesktop = window.innerWidth > 1200;
 
-    const forceHomeMenuStart = () => {
-      nav.scrollLeft = 0;
+  // ❗ на десктопе скрываем
+  if (isDesktop) {
+    setButtonState(btnLeft, false);
+    setButtonState(btnRight, false);
+    return;
+  }
+
+  // ❗ на всех остальных — показываем всегда (но дизейблим края)
+  setButtonState(btnLeft, !atStart);
+  setButtonState(btnRight, !atEnd);
+};
+
+  const forceHomeMenuStart = () => {
+    nav.scrollLeft = 0;
+    updateButtons();
+  };
+
+  const scrollActiveLinkIntoView = (smooth = false) => {
+    const allLinks = getLinks();
+    const activeLink = nav.querySelector('.nav__link.is-active');
+
+    if (!activeLink || allLinks.length === 0) {
       updateButtons();
-    };
-
-    const scrollActiveLinkIntoView = (smooth = false) => {
-      const allLinks = getLinks();
-      const activeLink = nav.querySelector('.nav__link.is-active');
-
-      if (!activeLink || allLinks.length === 0) {
-        updateButtons();
-        return;
-      }
-
-      if (isHomePage()) {
-        forceHomeMenuStart();
-        return;
-      }
-
-      const activeIndex = allLinks.indexOf(activeLink);
-      const lastIndex = allLinks.length - 1;
-      const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
-
-      let targetLeft = 0;
-
-      if (activeIndex <= 0) {
-        targetLeft = 0;
-      } else if (activeIndex >= lastIndex) {
-        targetLeft = maxScroll;
-      } else {
-        targetLeft =
-          activeLink.offsetLeft - nav.clientWidth / 2 + activeLink.offsetWidth / 2;
-      }
-
-      nav.scrollTo({
-        left: Math.max(0, Math.min(targetLeft, maxScroll)),
-        behavior: smooth ? 'smooth' : 'auto'
-      });
-
-      updateButtons();
-    };
-
-    const syncMenuState = (smooth = false) => {
-      if (isHomePage()) {
-        forceHomeMenuStart();
-      } else {
-        scrollActiveLinkIntoView(smooth);
-      }
-    };
-
-    btnRight.addEventListener('click', () => {
-      nav.scrollBy({
-        left: 180,
-        behavior: 'smooth'
-      });
-    });
-
-    btnLeft.addEventListener('click', () => {
-      nav.scrollBy({
-        left: -180,
-        behavior: 'smooth'
-      });
-    });
-
-    nav.addEventListener('scroll', updateButtons, { passive: true });
-
-    window.addEventListener('resize', () => {
-      syncMenuState(false);
-    });
-
-    window.addEventListener('load', () => {
-      syncMenuState(false);
-    });
-
-    window.addEventListener('pageshow', () => {
-      syncMenuState(false);
-    });
-
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(() => {
-        syncMenuState(false);
-      });
+      return;
     }
 
-    requestAnimationFrame(() => {
+    const activeIndex = allLinks.indexOf(activeLink);
+    const lastIndex = allLinks.length - 1;
+    const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
+
+    let targetLeft = 0;
+
+    if (isHomePage()) {
+      targetLeft = 0;
+    } else if (activeIndex <= 0) {
+      targetLeft = 0;
+    } else if (activeIndex >= lastIndex) {
+      targetLeft = maxScroll;
+    } else {
+      targetLeft =
+        activeLink.offsetLeft - nav.clientWidth / 2 + activeLink.offsetWidth / 2;
+    }
+
+    nav.scrollTo({
+      left: Math.max(0, Math.min(targetLeft, maxScroll)),
+      behavior: smooth ? 'smooth' : 'auto'
+    });
+
+    updateButtons();
+  };
+
+  const syncMenuState = (smooth = false) => {
+    scrollActiveLinkIntoView(smooth);
+  };
+
+  btnRight.addEventListener('click', () => {
+    nav.scrollBy({
+      left: 180,
+      behavior: 'smooth'
+    });
+  });
+
+  btnLeft.addEventListener('click', () => {
+    nav.scrollBy({
+      left: -180,
+      behavior: 'smooth'
+    });
+  });
+
+  nav.addEventListener('scroll', updateButtons, { passive: true });
+
+  window.addEventListener('resize', () => {
+    syncMenuState(false);
+  });
+
+  window.addEventListener('load', () => {
+    syncMenuState(false);
+  });
+
+  window.addEventListener('pageshow', () => {
+    syncMenuState(false);
+  });
+
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(() => {
       syncMenuState(false);
     });
   }
+
+  requestAnimationFrame(() => {
+    syncMenuState(false);
+  });
+}
 });
