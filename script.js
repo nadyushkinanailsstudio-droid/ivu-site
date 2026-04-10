@@ -194,26 +194,17 @@ if (nav && btnLeft && btnRight) {
     button.style.visibility = isVisible ? 'visible' : 'hidden';
   };
 
+
 const updateButtons = () => {
   const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth - 4);
   const atStart = nav.scrollLeft <= 10;
   const atEnd = nav.scrollLeft >= maxScroll - 10;
 
-  const isDesktop = window.innerWidth > 1200;
-
-  // ❗ на десктопе скрываем
-  if (isDesktop) {
-    setButtonState(btnLeft, false);
-    setButtonState(btnRight, false);
-    return;
-  }
-
-  // ❗ на всех остальных — показываем всегда (но дизейблим края)
   setButtonState(btnLeft, !atStart);
   setButtonState(btnRight, !atEnd);
 };
 
-  const forceHomeMenuStart = () => {
+ const forceHomeMenuStart = () => {
     nav.scrollLeft = 0;
     updateButtons();
   };

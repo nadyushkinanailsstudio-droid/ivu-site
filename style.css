@@ -221,17 +221,17 @@
   --header-offset-tablet: 172px;
   --header-offset-mobile: 180px;
 
-  --section-space-desktop: 56px;
-  --section-space-tablet: 48px;
-  --section-space-mobile: 42px;
+  --section-space-desktop: 80px;
+--section-space-tablet: 60px;
+--section-space-mobile: 40px;
 
-  --section-space-tight-desktop: 40px;
-  --section-space-tight-tablet: 32px;
-  --section-space-tight-mobile: 28px;
+--section-space-tight-desktop: 56px;
+--section-space-tight-tablet: 44px;
+--section-space-tight-mobile: 28px;
 
-  --section-space-loose-desktop: 72px;
-  --section-space-loose-tablet: 56px;
-  --section-space-loose-mobile: 48px;
+--section-space-loose-desktop: 80px;
+--section-space-loose-tablet: 60px;
+--section-space-loose-mobile: 40px;
 }
 
 .page-hero {

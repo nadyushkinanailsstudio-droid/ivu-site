@@ -17,14 +17,6 @@
   position: relative;
 }
 
-.parents-page .programs,
-.parents-page .lab-section,
-.parents-page .family-bridge,
-.parents-page .brief-section {
-  padding-top: 72px;
-  padding-bottom: 72px;
-}
-
 .parents-page .section-header {
   max-width: 860px;
   margin: 0 auto 30px;
@@ -466,10 +458,6 @@
 /* ==========================================================================
    PROGRAMS
    ========================================================================== */
-
-.parents-page .programs {
-  padding-top: 56px;
-}
 
 .parents-page .programs-grid {
   display: grid;
