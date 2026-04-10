@@ -69,7 +69,7 @@ body.foundation-page .section-header h2 {
 body.foundation-page .section-header p {
   margin: 0;
 
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 1.02rem;
   line-height: 1.72;
   color: var(--text-muted);
@@ -82,7 +82,6 @@ body.foundation-page .section-header p {
 body.foundation-page .foundation-story {
   max-width: 920px;
   margin: 0 auto 36px;
-  padding-top: 56px;
   text-align: center;
 }
 
@@ -106,7 +105,7 @@ body.foundation-page .foundation-story__lead {
   max-width: 760px;
   margin: 0 auto 14px;
 
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 1.02rem;
   line-height: 1.72;
   color: rgba(10, 25, 47, 0.74);
@@ -116,7 +115,7 @@ body.foundation-page .foundation-story p {
   max-width: 760px;
   margin: 0 auto 14px;
 
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.98rem;
   line-height: 1.7;
   color: rgba(10, 25, 47, 0.62);
@@ -199,8 +198,6 @@ body.foundation-page .bridge-item:hover {
 
 body.foundation-page .foundation-hero {
   position: relative;
-  padding-top: 176px;
-  padding-bottom: 74px;
 }
 
 body.foundation-page .foundation-hero::before {
@@ -219,7 +216,7 @@ body.foundation-page .foundation-hero::before {
 body.foundation-page .foundation-hero__shell {
   position: relative;
   overflow: hidden;
-  padding: 52px 52px 56px;
+  padding: 68px 52px 56px;
 
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(247, 243, 235, 0.8) 100%);
@@ -263,7 +260,7 @@ body.foundation-page .foundation-hero__content h1 {
 body.foundation-page .foundation-hero__lead {
   margin: 0 0 18px;
 
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 1.08rem;
   line-height: 1.74;
   color: var(--text-muted);
@@ -277,7 +274,7 @@ body.foundation-page .foundation-hero__note {
   border: 1px solid rgba(46, 104, 255, 0.12);
   border-radius: 18px;
 
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.98rem;
   line-height: 1.68;
   color: var(--navy);
@@ -450,6 +447,7 @@ body.foundation-page .timeline__line {
     rgba(10, 25, 47, 0.12) 92%,
     rgba(10, 25, 47, 0) 100%
   );
+  pointer-events: none;
 }
 
 body.foundation-page .timeline__item {
@@ -509,7 +507,7 @@ body.foundation-page .timeline__card h3 {
 body.foundation-page .timeline__card p {
   margin: 0;
 
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.97rem;
   line-height: 1.68;
   color: var(--text-muted);
@@ -520,7 +518,6 @@ body.foundation-page .timeline__card p {
    ========================================================================== */
 
 body.foundation-page .foundation-books .foundation-story {
-  padding-top: 0;
   margin-bottom: 30px;
 }
 
@@ -532,9 +529,9 @@ body.foundation-page .foundation-books .foundation-story h2 {
 
 body.foundation-page .foundation-shelf {
   position: relative;
+  overflow: hidden;
   padding: 22px 22px 18px;
   border-radius: 30px;
-  overflow: hidden;
   background:
     radial-gradient(circle at 18% 0%, rgba(212,190,148,.10), transparent 36%),
     radial-gradient(circle at 82% 18%, rgba(255,255,255,.04), transparent 28%),
@@ -604,6 +601,7 @@ body.foundation-page .foundation-shelf__head h3 {
 body.foundation-page .foundation-shelf__lead {
   margin-top: 10px;
   max-width: 360px;
+  font-family: var(--font-text);
   font-size: 0.92rem;
   line-height: 1.62;
   color: rgba(255,255,255,.80);
@@ -629,8 +627,7 @@ body.foundation-page .books-nav {
   justify-content: center;
   border-radius: 14px;
   border: 1px solid rgba(255,255,255,.12);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.06) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.06) 100%);
   color: #ffffff;
   cursor: pointer;
   box-shadow:
@@ -655,14 +652,13 @@ body.foundation-page .books-nav__svg {
   stroke-linejoin: round;
   fill: none;
   opacity: .88;
-  transition: opacity .24s ease, transform .24s ease;
+  transition: opacity .24s ease;
 }
 
 body.foundation-page .books-nav:hover {
   transform: translateY(-2px);
   border-color: rgba(212,190,148,.34);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,.18) 0%, rgba(255,255,255,.08) 100%);
   box-shadow:
     0 18px 36px rgba(0,0,0,.32),
     0 0 18px rgba(212,190,148,.12),
@@ -707,12 +703,8 @@ body.foundation-page .books-carousel {
   min-height: 250px;
   padding: 16px 18px 12px;
   border-radius: 28px;
-  background:
-    linear-gradient(180deg, #fbf8f2 0%, #f3efe6 100%);
+  background: linear-gradient(180deg, #fbf8f2 0%, #f3efe6 100%);
   border: 1px solid rgba(13,27,47,.06);
-  border-radius: 28px;
-
-  /* мягкая внутренняя рамка */
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.9),
     inset 0 -12px 24px rgba(13,27,47,.05),
@@ -790,25 +782,28 @@ body.foundation-page .book-slide {
   display: flex;
   align-items: flex-end;
   justify-content: center;
+  perspective: 900px;
 }
 
 body.foundation-page .book-slide::before {
   content: "";
   position: absolute;
-  left: 20%;
-  right: 20%;
-  bottom: 34px;
-  height: 84px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(212,190,148,.18) 0%,
-    rgba(212,190,148,.08) 40%,
-    rgba(212,190,148,0) 75%
+  top: 6%;
+  bottom: 6%;
+  right: 18%;
+  width: 6%;
+  border-radius: 0 6px 6px 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.12),
+    rgba(0,0,0,.04),
+    rgba(255,255,255,.25)
   );
-  filter: blur(18px);
+  filter: blur(1px);
+  opacity: .6;
   z-index: 0;
   pointer-events: none;
+  transition: opacity .35s ease, right .35s ease;
 }
 
 body.foundation-page .book-slide::after {
@@ -833,88 +828,22 @@ body.foundation-page .book-slide img {
   max-width: 188px;
   height: auto;
   object-fit: contain;
-  filter:
-    drop-shadow(0 18px 26px rgba(13,27,47,.18))
-    drop-shadow(0 0 18px rgba(212,190,148,.10));
-  transform: translateY(0) scale(1);
-  transition:
-    transform 0.35s ease,
-    filter 0.35s ease;
-   }
-   body.foundation-page .book-slide img {
   border-radius: 8px;
-
   box-shadow:
     0 18px 26px rgba(13,27,47,.18),
     0 0 0 1px rgba(255,255,255,.6);
-}
-
-body.foundation-page .book-slide:hover img {
-  transform: translateY(-6px) scale(1.01);
-  filter:
-    drop-shadow(0 24px 34px rgba(0,0,0,.34))
-    drop-shadow(0 0 28px rgba(212,190,148,.14));
-}
-/* === КНИГА КАК ОБЪЕКТ (толщина + глубина) === */
-
-body.foundation-page .book-slide {
-  perspective: 900px;
-}
-
-body.foundation-page .book-slide img {
-  border-radius: 8px;
-  position: relative;
-  z-index: 1;
-
-  /* базовый свет */
-  box-shadow:
-    0 18px 26px rgba(13,27,47,.18),
-    0 0 0 1px rgba(255,255,255,.6);
-
   transform: rotateY(0deg) scale(1);
   transition:
     transform 0.4s ease,
     box-shadow 0.35s ease;
 }
 
-/* === псевдо "толщина книги" === */
-
-body.foundation-page .book-slide::before {
-  content: "";
-  position: absolute;
-  top: 6%;
-  bottom: 6%;
-  right: 18%;
-
-  width: 6%;
-
-  border-radius: 0 6px 6px 0;
-
-  background: linear-gradient(
-    90deg,
-    rgba(0,0,0,.12),
-    rgba(0,0,0,.04),
-    rgba(255,255,255,.25)
-  );
-
-  filter: blur(1px);
-  opacity: .6;
-
-  z-index: 0;
-  pointer-events: none;
-}
-
-/* === лёгкое свечение при hover === */
-
 body.foundation-page .book-slide:hover img {
   transform: rotateY(-4deg) scale(1.02);
-
   box-shadow:
     0 24px 34px rgba(0,0,0,.28),
     0 0 26px rgba(212,190,148,.16);
 }
-
-/* === усиление "объёма" === */
 
 body.foundation-page .book-slide:hover::before {
   opacity: .85;
@@ -925,7 +854,6 @@ body.foundation-page .book-slide:hover::before {
    ========================================================================== */
 
 body.foundation-page .foundation-newspaper .foundation-story {
-  padding-top: 0;
   margin-bottom: 34px;
 }
 
@@ -961,26 +889,27 @@ body.foundation-page .archive-card__media {
   display: block;
   width: 100%;
   padding: 14px 14px 0;
-
   background: transparent;
   border: none;
   cursor: pointer;
 }
 
-body.foundation-page .archive-card__media picture,
-body.foundation-page .archive-card__media img {
-  display: block;
-  width: 100%;
-}
-
 body.foundation-page .archive-card__media picture {
+  display: block;
   overflow: hidden;
+  width: 100%;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(10, 25, 47, 0.05);
   box-shadow:
     0 18px 36px rgba(10, 25, 47, 0.05),
     inset 0 1px 0 rgba(255, 255, 255, 0.92);
+}
+
+body.foundation-page .archive-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 body.foundation-page .archive-card__body {
@@ -997,11 +926,9 @@ body.foundation-page .archive-card__meta {
   min-height: 28px;
   padding: 5px 10px;
   margin-bottom: 12px;
-
   background: rgba(10, 25, 47, 0.04);
   border: 1px solid rgba(10, 25, 47, 0.05);
   border-radius: 999px;
-
   font-family: var(--font-mono);
   font-size: 0.62rem;
   font-weight: 700;
@@ -1012,7 +939,6 @@ body.foundation-page .archive-card__meta {
 
 body.foundation-page .archive-card__body h3 {
   margin: 0 0 10px;
-
   font-family: var(--font-heading);
   font-size: 1.22rem;
   font-weight: 700;
@@ -1023,8 +949,7 @@ body.foundation-page .archive-card__body h3 {
 body.foundation-page .archive-card__body p {
   margin: 0;
   flex: 1;
-
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.94rem;
   line-height: 1.62;
   color: rgba(10, 25, 47, 0.66);
@@ -1043,8 +968,7 @@ body.foundation-page .archive-card__link {
   background: none;
   border: none;
   cursor: pointer;
-
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--navy);
@@ -1055,13 +979,11 @@ body.foundation-page .archive-card__actions a:hover,
 body.foundation-page .archive-card__link:hover {
   opacity: 0.72;
 }
-
 /* ==========================================================================
    8. FOUNDATION PATENT
    ========================================================================== */
 
 body.foundation-page .foundation-patent .foundation-story {
-  padding-top: 0;
   margin-bottom: 34px;
 }
 
@@ -1086,7 +1008,6 @@ body.foundation-page .foundation-patent__media {
   display: block;
   width: 100%;
   padding: 14px 14px 0;
-
   background: transparent;
   border: none;
   cursor: pointer;
@@ -1095,6 +1016,7 @@ body.foundation-page .foundation-patent__media {
 body.foundation-page .foundation-patent__media img {
   display: block;
   width: 100%;
+  height: auto;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(10, 25, 47, 0.05);
@@ -1110,6 +1032,10 @@ body.foundation-page .foundation-patent__body {
   padding: 16px 16px 18px;
 }
 
+body.foundation-page .foundation-patent__body--compact {
+  padding-bottom: 16px;
+}
+
 body.foundation-page .foundation-patent__meta {
   display: inline-flex;
   align-items: center;
@@ -1117,11 +1043,9 @@ body.foundation-page .foundation-patent__meta {
   min-height: 28px;
   padding: 5px 10px;
   margin-bottom: 12px;
-
   background: rgba(10, 25, 47, 0.04);
   border: 1px solid rgba(10, 25, 47, 0.05);
   border-radius: 999px;
-
   font-family: var(--font-mono);
   font-size: 0.62rem;
   font-weight: 700;
@@ -1132,7 +1056,6 @@ body.foundation-page .foundation-patent__meta {
 
 body.foundation-page .foundation-patent__title {
   margin: 0 0 10px;
-
   font-family: var(--font-heading);
   font-size: 1.22rem;
   font-weight: 700;
@@ -1142,14 +1065,10 @@ body.foundation-page .foundation-patent__title {
 
 body.foundation-page .foundation-patent__text {
   margin: 0 0 12px;
-
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.94rem;
   line-height: 1.62;
   color: rgba(10, 25, 47, 0.66);
-}
-body.foundation-page .foundation-patent__body--compact {
-  padding-bottom: 16px;
 }
 
 body.foundation-page .foundation-patent__text--lead {
@@ -1167,8 +1086,7 @@ body.foundation-page .foundation-patent__link {
   background: none;
   border: none;
   cursor: pointer;
-
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--navy);
@@ -1178,7 +1096,6 @@ body.foundation-page .foundation-patent__link {
 body.foundation-page .foundation-patent__link:hover {
   opacity: 0.72;
 }
-
 /* ==========================================================================
    9. FOUNDATION SCIENCE
    ========================================================================== */
@@ -1192,64 +1109,35 @@ body.foundation-page .foundation-science__grid {
 body.foundation-page .foundation-science__panel {
   position: relative;
   padding: 34px 28px;
-
   background: linear-gradient(180deg, #ffffff 0%, #f8f7f4 100%);
   border: 1px solid rgba(13, 27, 47, 0.06);
+  border-top: 2px solid rgba(210,175,99,0.35);
   border-radius: 22px;
   box-shadow: 0 12px 40px rgba(13, 27, 47, 0.04);
-
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
     border-color 0.35s ease,
-    background 0.35s ease;
+    background 0.35s ease,
+    opacity 0.35s ease;
 }
 
-body.foundation-page .foundation-science__panel {
-  position: relative;
-  padding: 34px 28px;
-
-  background: linear-gradient(180deg, #ffffff 0%, #f8f7f4 100%);
-  border: 1px solid rgba(13, 27, 47, 0.06);
-  border-radius: 22px;
-
-  box-shadow: 0 12px 40px rgba(13, 27, 47, 0.04);
-
-  border-top: 2px solid rgba(210,175,99,0.35);
-
-  transition: all .35s ease;
-}
-
-/* усиление первой карточки */
 body.foundation-page .foundation-science__panel:first-child {
-  border-top: 2px solid rgba(13,27,47,0.25);
+  border-top-color: rgba(13,27,47,0.25);
+  background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
+  border-color: rgba(210, 175, 99, 0.18);
+  box-shadow: 0 18px 55px rgba(13, 27, 47, 0.07);
+}
+
+body.foundation-page .foundation-science__panel:last-child {
+  opacity: 0.96;
+  transform: translateY(6px);
 }
 
 body.foundation-page .foundation-science__panel:hover {
   transform: translateY(-6px);
   border-color: rgba(210, 175, 99, 0.22);
   box-shadow: 0 18px 50px rgba(13, 27, 47, 0.08);
-}
-
-body.foundation-page .foundation-science__panel:first-child {
-  background: linear-gradient(180deg, #ffffff 0%, #f5f7fb 100%);
-  border-color: rgba(210, 175, 99, 0.18);
-  box-shadow: 0 18px 55px rgba(13, 27, 47, 0.07);
-}
-
-body.foundation-page .foundation-science__panel:first-child::before {
-  width: 66px;
-  height: 2.5px;
-  background: linear-gradient(
-    90deg,
-    rgba(210, 175, 99, 1),
-    rgba(210, 175, 99, 0)
-  );
-}
-
-body.foundation-page .foundation-science__panel:last-child {
-  opacity: 0.96;
-  transform: translateY(6px);
 }
 
 body.foundation-page .foundation-science__panel:last-child:hover {
@@ -1261,14 +1149,12 @@ body.foundation-page .foundation-science__panel .mini-label {
   margin-bottom: 12px;
   padding: 4px 10px;
   border-radius: 999px;
-
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 0.72rem;
   font-weight: 600;
   line-height: 1;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-
   color: rgba(13, 27, 47, 0.58);
   background: rgba(210, 175, 99, 0.12);
   border: 1px solid rgba(210, 175, 99, 0.24);
@@ -1276,7 +1162,6 @@ body.foundation-page .foundation-science__panel .mini-label {
 
 body.foundation-page .foundation-science__panel h3 {
   margin: 0 0 16px;
-
   font-family: var(--font-heading);
   font-size: 1.6rem;
   font-weight: 700;
@@ -1292,17 +1177,173 @@ body.foundation-page .foundation-science__panel:first-child h3 {
 body.foundation-page .foundation-science__panel p {
   margin: 0;
   max-width: 520px;
-
-  font-family: var(--font-sans);
+  font-family: var(--font-text);
   font-size: 1rem;
   line-height: 1.75;
   color: var(--text-muted);
 }
 
-@media (max-width: 900px) {
+/* ==========================================================================
+   10. FOUNDATION ARCHIVE METRICS
+   ========================================================================== */
+
+body.foundation-page .foundation-archive__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* карточка */
+
+body.foundation-page .archive-metric {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  min-height: 254px;
+  padding: 28px 22px 24px;
+
+  text-align: center;
+}
+
+/* число */
+
+body.foundation-page .archive-metric__value {
+  display: block;
+  margin-bottom: 12px;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 3vw, 3.35rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+
+  color: var(--navy);
+}
+
+/* заголовок */
+
+body.foundation-page .archive-metric__title {
+  display: block;
+  margin-bottom: 12px;
+
+  font-family: var(--font-text);
+  font-size: 0.98rem;
+  font-weight: 700;
+  line-height: 1.38;
+
+  color: var(--navy);
+}
+
+/* текст */
+
+body.foundation-page .archive-metric p {
+  margin: 0;
+
+  font-family: var(--font-text);
+  font-size: 0.9rem;
+  line-height: 1.6;
+
+  color: var(--text-muted);
+}
+
+/* чтобы текст не "разваливал" карточки */
+
+body.foundation-page .archive-metric p:last-child {
+  margin-top: auto;
+}
+
+/* ==========================================================================
+   11. FOUNDATION BRIDGE
+   ========================================================================== */
+
+body.foundation-page .foundation-bridge__inner {
+  padding: 46px 38px;
+}
+
+body.foundation-page .foundation-bridge__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+body.foundation-page .bridge-item {
+  display: flex;
+  flex-direction: column;
+  min-height: 194px;
+  padding: 24px 20px 22px;
+}
+
+body.foundation-page .bridge-item h3 {
+  margin: 0 0 10px;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.16;
+  color: var(--navy);
+}
+
+body.foundation-page .bridge-item p {
+  margin: 0;
+  font-family: var(--font-text);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+body.foundation-page .bridge-item p:last-child {
+  margin-top: auto;
+}
+
+body.foundation-page .foundation-bridge__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+/* ==========================================================================
+   FOUNDATION PAGE — RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 1280px) {
+  body.foundation-page .archive-grid--4,
+  body.foundation-page .foundation-archive__grid,
+  body.foundation-page .foundation-bridge__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1024px) {
+  body.foundation-page .foundation-hero__grid,
+  body.foundation-page .foundation-patent__grid,
   body.foundation-page .foundation-science__grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+  }
+
+body.foundation-page .foundation-hero__shell {
+  padding: 54px 36px 46px;
+}
+
+  body.foundation-page .foundation-hero__metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  body.foundation-page .foundation-shelf__head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body.foundation-page .foundation-shelf__lead {
+    max-width: none;
+  }
+
+  body.foundation-page .foundation-shelf__nav {
+    justify-content: flex-start;
+  }
+
+  body.foundation-page .book-slide {
+    flex: 0 0 calc((100% - 22px) / 2);
   }
 
   body.foundation-page .foundation-science__panel,
@@ -1327,7 +1368,134 @@ body.foundation-page .foundation-science__panel p {
   }
 }
 
+@media (max-width: 900px) {
+  body.foundation-page .timeline {
+    padding-left: 124px;
+  }
+
+  body.foundation-page .timeline__line {
+    left: 136px;
+  }
+
+  body.foundation-page .timeline__year {
+    left: -124px;
+    width: 90px;
+    font-size: 0.86rem;
+  }
+
+  body.foundation-page .timeline__year::after {
+    right: -49px;
+  }
+}
+
+@media (max-width: 768px) {
+body.foundation-page .foundation-hero__shell {
+  padding: 42px 22px 30px;
+}
+
+body.foundation-page .foundation-bridge__inner {
+  padding: 30px 22px;
+}
+
+  body.foundation-page .foundation-hero__metrics {
+    grid-template-columns: 1fr;
+  }
+
+  body.foundation-page .foundation-hero__actions,
+  body.foundation-page .foundation-doc-actions,
+  body.foundation-page .foundation-bridge__actions {
+    justify-content: center;
+  }
+
+  body.foundation-page .foundation-shelf {
+    padding: 18px 16px 16px;
+  }
+
+  body.foundation-page .books-carousel {
+    padding: 14px 14px 10px;
+  }
+
+  body.foundation-page .books-track {
+    gap: 16px;
+    min-height: 210px;
+  }
+
+  body.foundation-page .book-slide {
+    flex: 0 0 100%;
+    min-height: 200px;
+  }
+
+  body.foundation-page .archive-grid--4,
+  body.foundation-page .foundation-archive__grid,
+  body.foundation-page .foundation-bridge__grid {
+    grid-template-columns: 1fr;
+  }
+
+  body.foundation-page .archive-metric,
+  body.foundation-page .bridge-item {
+    min-height: auto;
+  }
+
+  body.foundation-page .foundation-patent__grid {
+    gap: 18px;
+  }
+
+  body.foundation-page .foundation-lightbox__dialog {
+    width: min(100vw - 20px, 1100px);
+    max-height: calc(100vh - 20px);
+    margin: 10px auto;
+    border-radius: 22px;
+  }
+
+  body.foundation-page .foundation-lightbox__head {
+    padding: 18px 18px 10px;
+  }
+
+  body.foundation-page .foundation-lightbox__head h3 {
+    font-size: 1.16rem;
+    padding-right: 50px;
+  }
+
+  body.foundation-page .foundation-lightbox__body {
+    padding: 0 18px 18px;
+    max-height: calc(100vh - 104px);
+  }
+}
+
 @media (max-width: 640px) {
+  body.foundation-page .timeline {
+    padding-left: 0;
+  }
+
+  body.foundation-page .timeline__line {
+    left: 12px;
+  }
+
+  body.foundation-page .timeline__item {
+    padding-left: 38px;
+  }
+
+  body.foundation-page .timeline__year {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  body.foundation-page .timeline__year::after {
+    top: 0.4rem;
+    left: -32px;
+    right: auto;
+    transform: none;
+    box-shadow: 0 0 0 6px #f5f0e7;
+  }
+
+  body.foundation-page .timeline__card {
+    padding: 22px 20px 20px;
+  }
+
   body.foundation-page .foundation-science__grid {
     gap: 14px;
   }
@@ -1335,15 +1503,6 @@ body.foundation-page .foundation-science__panel p {
   body.foundation-page .foundation-science__panel {
     padding: 24px 18px;
     border-radius: 18px;
-  }
-
-  body.foundation-page .foundation-science__panel::before {
-    left: 18px;
-    width: 44px;
-  }
-
-  body.foundation-page .foundation-science__panel:first-child::before {
-    width: 56px;
   }
 
   body.foundation-page .foundation-science__panel .mini-label {
@@ -1364,189 +1523,64 @@ body.foundation-page .foundation-science__panel p {
   }
 }
 
-/* ==========================================================================
-   10. FOUNDATION ARCHIVE METRICS
-   ========================================================================== */
-
-body.foundation-page .foundation-archive__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
+@media (max-width: 480px) {
+body.foundation-page .foundation-hero__shell {
+  padding: 34px 16px 24px;
+  border-radius: 24px;
 }
-
-body.foundation-page .archive-metric {
-  min-height: 254px;
-  padding: 28px 22px 24px;
-  text-align: center;
-}
-
-body.foundation-page .archive-metric__value {
-  display: block;
-  margin-bottom: 12px;
-
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 3vw, 3.35rem);
-  font-weight: 700;
-  line-height: 1;
-  color: var(--navy);
-}
-
-body.foundation-page .archive-metric__title {
-  display: block;
-  margin-bottom: 12px;
-
-  font-family: var(--font-sans);
-  font-size: 0.98rem;
-  font-weight: 700;
-  line-height: 1.38;
-  color: var(--navy);
-}
-
-body.foundation-page .archive-metric p {
-  margin: 0;
-
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  line-height: 1.58;
-  color: var(--text-muted);
-}
-
-/* ==========================================================================
-   11. FOUNDATION BRIDGE
-   ========================================================================== */
 
 body.foundation-page .foundation-bridge__inner {
-  padding: 46px 38px;
+  padding: 24px 16px;
+  border-radius: 24px;
 }
 
-body.foundation-page .foundation-bridge__grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  margin-bottom: 30px;
+  body.foundation-page .foundation-shelf {
+    padding: 16px 14px 14px;
+    border-radius: 24px;
+  }
+
+  body.foundation-page .books-carousel {
+    border-radius: 22px;
+  }
+
+  body.foundation-page .archive-card__body,
+  body.foundation-page .foundation-patent__body {
+    padding: 14px 14px 16px;
+  }
+
+  body.foundation-page .archive-metric {
+    padding: 24px 18px 20px;
+  }
+
+  body.foundation-page .bridge-item {
+    padding: 20px 18px;
+  }
+
+  body.foundation-page .foundation-lightbox__close {
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
 }
 
-body.foundation-page .bridge-item {
-  min-height: 194px;
-  padding: 24px 20px 22px;
+@media (prefers-reduced-motion: reduce) {
+  body.foundation-page .books-carousel::after {
+    animation: none;
+  }
+
+  body.foundation-page .archive-object__sheet,
+  body.foundation-page .books-track,
+  body.foundation-page .book-slide img,
+  body.foundation-page .book-slide::before,
+  body.foundation-page .foundation-science__panel,
+  body.foundation-page .foundation-lightbox__close {
+    transition: none;
+  }
 }
-
-body.foundation-page .bridge-item h3 {
-  margin: 0 0 10px;
-
-  font-family: var(--font-heading);
-  font-size: 1.2rem;
-  font-weight: 700;
-  line-height: 1.16;
-  color: var(--navy);
-}
-
-body.foundation-page .bridge-item p {
-  margin: 0;
-
-  font-family: var(--font-sans);
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--text-muted);
-}
-
-body.foundation-page .foundation-bridge__actions {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-
 /* ==========================================================================
-   12. FOUNDATION LIGHTBOX
-   ========================================================================== */
-
-body.foundation-page .foundation-lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: none;
-}
-
-body.foundation-page .foundation-lightbox.is-open {
-  display: block;
-}
-
-body.foundation-page .foundation-lightbox__backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(8, 17, 32, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-body.foundation-page .foundation-lightbox__dialog {
-  position: relative;
-  z-index: 1;
-  width: min(1100px, calc(100vw - 32px));
-  max-height: calc(100vh - 32px);
-  margin: 16px auto;
-  overflow: hidden;
-
-  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,243,235,0.94) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 28px;
-  box-shadow: 0 40px 90px rgba(0, 0, 0, 0.28);
-}
-
-body.foundation-page .foundation-lightbox__close {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  z-index: 2;
-
-  width: 42px;
-  height: 42px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(10, 25, 47, 0.08);
-  border-radius: 50%;
-  cursor: pointer;
-
-  font-size: 1.35rem;
-  color: var(--navy);
-}
-
-body.foundation-page .foundation-lightbox__head {
-  padding: 20px 24px 12px;
-}
-
-body.foundation-page .foundation-lightbox__head h3 {
-  margin: 0;
-  padding-right: 56px;
-
-  font-family: var(--font-heading);
-  font-size: 1.35rem;
-  font-weight: 700;
-  line-height: 1.16;
-  color: var(--navy);
-}
-
-body.foundation-page .foundation-lightbox__body {
-  padding: 0 24px 24px;
-  max-height: calc(100vh - 120px);
-  overflow: auto;
-}
-
-body.foundation-page .foundation-lightbox__body img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
-  background: #fff;
-}
-
-/* ==========================================================================
-   13. FOUNDATION ADAPTIVE 1280
+   FOUNDATION PAGE — RESPONSIVE
    ========================================================================== */
 
 @media (max-width: 1280px) {
@@ -1557,114 +1591,19 @@ body.foundation-page .foundation-lightbox__body img {
   }
 }
 
-/* ==========================================================================
-   14. FOUNDATION ADAPTIVE 1024
-   ========================================================================== */
-
 @media (max-width: 1024px) {
   body.foundation-page .foundation-hero__grid,
-  body.foundation-page .foundation-science__grid,
-  body.foundation-page .foundation-patent__grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  body.foundation-page .foundation-hero__shell {
-    padding: 42px 30px 44px;
-  }
-
-  body.foundation-page .foundation-hero__metrics {
+  body.foundation-page .foundation-patent__grid,
+  body.foundation-page .foundation-science__grid {
     grid-template-columns: 1fr;
   }
 
-  body.foundation-page .foundation-story h2 {
-    font-size: clamp(2.2rem, 4vw, 3.2rem);
-  }
-
-  body.foundation-page .book-slide {
-    flex: 0 0 calc((100% - 22px) / 2);
-    min-height: 370px;
-  }
+body.foundation-page .foundation-hero__shell {
+  padding: 54px 36px 46px;
 }
 
-/* ==========================================================================
-   15. FOUNDATION ADAPTIVE 768
-   ========================================================================== */
-
-@media (max-width: 768px) {
-  body.foundation-page .foundation-hero {
-    padding-top: 142px;
-    padding-bottom: 60px;
-  }
-
-  body.foundation-page .foundation-hero__shell {
-    padding: 34px 22px 36px;
-    border-radius: 28px;
-  }
-
-  body.foundation-page .foundation-hero__content h1 {
-    font-size: 2.35rem;
-  }
-
-  body.foundation-page .foundation-hero__lead,
-  body.foundation-page .foundation-story__lead,
-  body.foundation-page .foundation-story p,
-  body.foundation-page .section-header p {
-    font-size: 0.97rem;
-    line-height: 1.66;
-  }
-
-  body.foundation-page .foundation-hero__actions,
-  body.foundation-page .foundation-doc-actions,
-  body.foundation-page .foundation-bridge__actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  body.foundation-page .archive-object {
-    max-width: 320px;
-  }
-
-  body.foundation-page .archive-object__sheet--front {
-    padding: 26px;
-  }
-
-  body.foundation-page .timeline {
-    padding-left: 54px;
-  }
-
-  body.foundation-page .timeline__line {
-    left: 19px;
-  }
-
-  body.foundation-page .timeline__year {
-    position: relative;
-    top: auto;
-    left: auto;
-    width: auto;
-    margin-bottom: 12px;
-    text-align: left;
-    font-size: 0.84rem;
-  }
-
-  body.foundation-page .timeline__year::after {
-    right: auto;
-    left: -41px;
-    width: 12px;
-    height: 12px;
-    box-shadow: 0 0 0 6px #f5f0e7;
-  }
-
-  body.foundation-page .timeline__card {
-    padding: 22px 18px 20px;
-  }
-
-  body.foundation-page .timeline__card h3 {
-    font-size: 1.16rem;
-  }
-
-  body.foundation-page .foundation-shelf {
-    padding: 22px 18px 22px;
+  body.foundation-page .foundation-hero__metrics {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   body.foundation-page .foundation-shelf__head {
@@ -1672,73 +1611,241 @@ body.foundation-page .foundation-lightbox__body img {
     align-items: stretch;
   }
 
+  body.foundation-page .foundation-shelf__lead {
+    max-width: none;
+  }
+
   body.foundation-page .foundation-shelf__nav {
     justify-content: flex-start;
   }
 
   body.foundation-page .book-slide {
-    flex: 0 0 100%;
-    min-height: 320px;
+    flex: 0 0 calc((100% - 22px) / 2);
   }
 
-  body.foundation-page .book-slide img {
-    max-width: 170px;
+  body.foundation-page .foundation-science__panel,
+  body.foundation-page .foundation-science__panel:first-child,
+  body.foundation-page .foundation-science__panel:last-child {
+    transform: none;
+    opacity: 1;
+  }
+
+  body.foundation-page .foundation-science__panel {
+    padding: 28px 22px;
+  }
+
+  body.foundation-page .foundation-science__panel h3,
+  body.foundation-page .foundation-science__panel:first-child h3 {
+    font-size: 1.42rem;
+  }
+
+  body.foundation-page .foundation-science__panel p {
+    font-size: 0.97rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 900px) {
+  body.foundation-page .timeline {
+    padding-left: 124px;
+  }
+
+  body.foundation-page .timeline__line {
+    left: 136px;
+  }
+
+  body.foundation-page .timeline__year {
+    left: -124px;
+    width: 90px;
+    font-size: 0.86rem;
+  }
+
+  body.foundation-page .timeline__year::after {
+    right: -49px;
+  }
+}
+
+@media (max-width: 768px) {
+  body.foundation-page .foundation-hero__shell,
+  body.foundation-page .foundation-bridge__inner {
+    padding: 30px 22px;
+  }
+
+  body.foundation-page .foundation-hero__metrics {
+    grid-template-columns: 1fr;
+  }
+
+  body.foundation-page .foundation-hero__actions,
+  body.foundation-page .foundation-doc-actions,
+  body.foundation-page .foundation-bridge__actions {
+    justify-content: center;
+  }
+
+  body.foundation-page .foundation-shelf {
+    padding: 18px 16px 16px;
+  }
+
+  body.foundation-page .books-carousel {
+    padding: 14px 14px 10px;
+  }
+
+  body.foundation-page .books-track {
+    gap: 16px;
+    min-height: 210px;
+  }
+
+  body.foundation-page .book-slide {
+    flex: 0 0 100%;
+    min-height: 200px;
   }
 
   body.foundation-page .archive-grid--4,
   body.foundation-page .foundation-archive__grid,
-  body.foundation-page .foundation-bridge__grid,
-  body.foundation-page .foundation-patent__grid {
+  body.foundation-page .foundation-bridge__grid {
     grid-template-columns: 1fr;
   }
 
-  body.foundation-page .archive-card__body,
-  body.foundation-page .foundation-patent__body,
-  body.foundation-page .foundation-science__panel,
   body.foundation-page .archive-metric,
-  body.foundation-page .bridge-item,
-  body.foundation-page .foundation-bridge__inner {
-    padding-left: 18px;
-    padding-right: 18px;
+  body.foundation-page .bridge-item {
+    min-height: auto;
+  }
+
+  body.foundation-page .foundation-patent__grid {
+    gap: 18px;
   }
 
   body.foundation-page .foundation-lightbox__dialog {
-    width: calc(100vw - 20px);
+    width: min(100vw - 20px, 1100px);
+    max-height: calc(100vh - 20px);
     margin: 10px auto;
     border-radius: 22px;
   }
 
   body.foundation-page .foundation-lightbox__head {
-    padding: 18px 18px 12px;
+    padding: 18px 18px 10px;
+  }
+
+  body.foundation-page .foundation-lightbox__head h3 {
+    font-size: 1.16rem;
+    padding-right: 50px;
   }
 
   body.foundation-page .foundation-lightbox__body {
     padding: 0 18px 18px;
+    max-height: calc(100vh - 104px);
   }
 }
 
-/* ==========================================================================
-   16. FOUNDATION ADAPTIVE 480
-   ========================================================================== */
+@media (max-width: 640px) {
+  body.foundation-page .timeline {
+    padding-left: 0;
+  }
+
+  body.foundation-page .timeline__line {
+    left: 12px;
+  }
+
+  body.foundation-page .timeline__item {
+    padding-left: 38px;
+  }
+
+  body.foundation-page .timeline__year {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  body.foundation-page .timeline__year::after {
+    top: 0.4rem;
+    left: -32px;
+    right: auto;
+    transform: none;
+    box-shadow: 0 0 0 6px #f5f0e7;
+  }
+
+  body.foundation-page .timeline__card {
+    padding: 22px 20px 20px;
+  }
+
+  body.foundation-page .foundation-science__grid {
+    gap: 14px;
+  }
+
+  body.foundation-page .foundation-science__panel {
+    padding: 24px 18px;
+    border-radius: 18px;
+  }
+
+  body.foundation-page .foundation-science__panel .mini-label {
+    margin-bottom: 10px;
+    font-size: 0.68rem;
+    padding: 4px 9px;
+  }
+
+  body.foundation-page .foundation-science__panel h3,
+  body.foundation-page .foundation-science__panel:first-child h3 {
+    margin-bottom: 12px;
+    font-size: 1.28rem;
+  }
+
+  body.foundation-page .foundation-science__panel p {
+    font-size: 0.94rem;
+    line-height: 1.65;
+  }
+}
 
 @media (max-width: 480px) {
-  body.foundation-page .foundation-hero__content h1 {
-    font-size: 2.02rem;
+  body.foundation-page .foundation-hero__shell,
+  body.foundation-page .foundation-bridge__inner {
+    padding: 24px 16px;
+    border-radius: 24px;
   }
 
-  body.foundation-page .section-chip,
-  body.foundation-page .foundation-chip {
-    font-size: 0.62rem;
-    letter-spacing: 0.1em;
+  body.foundation-page .foundation-shelf {
+    padding: 16px 14px 14px;
+    border-radius: 24px;
   }
 
-  body.foundation-page .foundation-story h2,
-  body.foundation-page .section-header h2 {
-    font-size: 1.85rem;
+  body.foundation-page .books-carousel {
+    border-radius: 22px;
   }
 
-  body.foundation-page .archive-card__body h3,
-  body.foundation-page .foundation-patent__title {
-    font-size: 1.08rem;
+  body.foundation-page .archive-card__body,
+  body.foundation-page .foundation-patent__body {
+    padding: 14px 14px 16px;
+  }
+
+  body.foundation-page .archive-metric {
+    padding: 24px 18px 20px;
+  }
+
+  body.foundation-page .bridge-item {
+    padding: 20px 18px;
+  }
+
+  body.foundation-page .foundation-lightbox__close {
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.foundation-page .books-carousel::after {
+    animation: none;
+  }
+
+  body.foundation-page .archive-object__sheet,
+  body.foundation-page .books-track,
+  body.foundation-page .book-slide img,
+  body.foundation-page .book-slide::before,
+  body.foundation-page .foundation-science__panel,
+  body.foundation-page .foundation-lightbox__close {
+    transition: none;
   }
 }

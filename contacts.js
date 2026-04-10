@@ -1,86 +1,56 @@
-document.addEventListener("DOMContentLoaded", () => {
-  initStickyHeader();
-  initReveal();
-  initSmartBrief();
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contact-form');
+  const successBlock = document.getElementById('form-success');
+  const submitBtn = document.getElementById('submit-btn');
 
-function initStickyHeader() {
-  const header = document.getElementById("header");
-  if (!header) return;
+  // ВАША ФИРМЕННАЯ ЗАДЕРЖКА ("рукодельная" математика отправки)
+  function startSubmitSequence() {
+    if (!submitBtn) return;
+    submitBtn.classList.add('sending');
+    
+    // Плавный скролл к форме, чтобы видеть процесс
+    contactForm.scrollIntoView({ behavior: 'smooth', block: 'center' });
 
-  const toggleHeaderState = () => {
-    header.classList.toggle("scrolled", window.scrollY > 50);
-  };
-
-  toggleHeaderState();
-  window.addEventListener("scroll", toggleHeaderState, { passive: true });
-}
-
-function initReveal() {
-  const revealElements = document.querySelectorAll(".reveal");
-  if (!revealElements.length) return;
-
-  if (!("IntersectionObserver" in window)) {
-    revealElements.forEach((el) => el.classList.add("active"));
-    return;
+    // Имитация методической обработки (2.1 секунды)
+    setTimeout(() => {
+      submitBtn.classList.remove('sending');
+      completeForm();
+    }, 2100);
   }
 
-  const observer = new IntersectionObserver(
-    (entries, obs) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add("active");
-        obs.unobserve(entry.target);
+  // ЗАВЕРШЕНИЕ (ПРЕМИАЛЬНАЯ ПЛАВНАЯ АНИМАЦИЯ СМЕНЫ БЛОКОВ)
+  function completeForm() {
+    if (!contactForm || !successBlock) return;
+    
+    // 1. Скрываем форму с плавным растворением (добавить CSS transition для полной магии)
+    contactForm.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+    contactForm.style.opacity = '0';
+    contactForm.style.transform = 'translateY(-10px)';
+    
+    setTimeout(() => {
+      contactForm.style.display = 'none'; // Убираем из потока
+      
+      // 2. Показываем блок успеха, убирая класс-заглушку
+      successBlock.classList.remove('contact-success--hidden');
+      
+      // Плавное появление (transition прописан в contacts.css для класса contact-success)
+      requestAnimationFrame(() => {
+        successBlock.style.opacity = '1';
+        successBlock.style.transform = 'translateY(0)';
       });
-    },
-    {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
-    }
-  );
 
-  revealElements.forEach((el) => observer.observe(el));
-}
+      // Скролл к блоку успеха
+      successBlock.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      
+      contactForm.reset(); // Сброс формы
+    }, 400); // Тайминг равен CSS transition
+  }
 
-function initSmartBrief() {
-  const form = document.getElementById("smart-brief-form");
-  const helperBlock = document.getElementById("dynamic-helper");
-  const roleRadios = document.querySelectorAll('input[name="user-role"]');
-
-  if (!form || !helperBlock || !roleRadios.length) return;
-
-  const helperTexts = {
-    parent:
-      "Укажите возраст ребёнка, текущий уровень чтения и вашу готовность работать дома по маршруту «первые 100 слов».",
-    educator:
-      "Опишите ваши ключевые сложности в обучении чтению, опыт работы по разворотам / слогам и готовность делиться результатами в методсообществе.",
-    dou:
-      "Укажите номер ДОУ и уровень готовности: провести демо-урок, внедрить годовую программу или подготовить детей к Дошкольной Аттестации.",
-    partner:
-      "Укажите ваше издание или организацию, а также формат предполагаемого сотрудничества: интервью, статья, спонсорство, внедрение."
-  };
-
-  const updateHelperText = (role) => {
-    helperBlock.style.opacity = "0";
-
-    window.setTimeout(() => {
-      helperBlock.textContent = helperTexts[role] || helperTexts.parent;
-      helperBlock.style.opacity = "1";
-    }, 180);
-  };
-
-  roleRadios.forEach((radio) => {
-    radio.addEventListener("change", (event) => {
-      updateHelperText(event.target.value);
+  // ОБРАБОТКА ОТПРАВКИ (Ваша логика, не тронута)
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      startSubmitSequence();
     });
-  });
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
-    alert("Бриф успешно отправлен в Приёмную Института. Мы свяжемся с вами после обработки заявки.");
-
-    form.reset();
-    updateHelperText("parent");
-  });
-}
+  }
+});

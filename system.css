@@ -184,20 +184,29 @@
 .system-page .system-hero__statement {
   position: relative;
   z-index: 1;
-  max-width: 820px;
+
+  max-width: 720px; /* чуть уже — будет аккуратнее */
   margin: 0 auto;
-  padding: 20px 24px;
+
+  padding: 22px 26px;
+
   border-radius: 20px;
+
   background:
     linear-gradient(180deg, rgba(255,255,255,.86), rgba(248,244,236,.78));
+
   border: 1px solid rgba(210,175,99,.18);
+
   box-shadow:
     0 20px 50px rgba(13,27,47,.06),
     inset 0 1px 0 rgba(255,255,255,.85);
+
   color: var(--navy);
-  font-size: 1.08rem;
-  line-height: 1.72;
-  text-wrap: balance;
+
+  font-size: 1.05rem;
+  line-height: 1.8;
+
+  text-align: left; /* фиксируем чётко */
 }
 
 .system-page .system-hero__statement::before {

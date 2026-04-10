@@ -2355,48 +2355,47 @@ body.club-page .club-stage.show .parade-sparkles span {
     line-height: 1.32;
     border-radius: 18px;
   }
+
   body.club-page .parade-ground {
-  grid-template-columns: 34px minmax(0, 1fr) 34px;
-  gap: 8px;
-  max-width: 100%;
-  align-items: stretch;
-}
+    grid-template-columns: 34px minmax(0, 1fr) 34px;
+    gap: 8px;
+    max-width: 100%;
+    align-items: stretch;
+  }
 
-body.club-page .parade-side {
-  display: flex;
-  padding: 2px 0;
-  opacity: 1;
-}
+  body.club-page .parade-side {
+    display: flex;
+    padding: 2px 0;
+    opacity: 1;
+  }
 
-body.club-page .parade-side .flag {
-  width: 10px;
-  height: 54px;
-}
+  body.club-page .parade-side .flag {
+    width: 10px;
+    height: 54px;
+  }
 
-body.club-page .parade-side .flag::before {
-  width: 1.5px;
-  height: 54px;
-}
+  body.club-page .parade-side .flag::before {
+    width: 1.5px;
+    height: 54px;
+  }
 
-body.club-page .parade-side .flag::after {
-  top: 3px;
-  width: 10px;
-  height: 8px;
-  border-radius: 0 5px 5px 0;
-}
+  body.club-page .parade-side .flag::after {
+    top: 3px;
+    width: 10px;
+    height: 8px;
+    border-radius: 0 5px 5px 0;
+  }
 
   body.club-page .parade-lane {
     top: 8px;
     bottom: 8px;
     width: 250px;
   }
- 
+
   body.club-page .parade-rows {
-    display: grid;
     justify-items: center;
     gap: 8px;
     margin-top: 2px;
-    transform: scale(1);
   }
 
   body.club-page .parade-row {
@@ -2454,44 +2453,43 @@ body.club-page .parade-side .flag::after {
     border-radius: 16px;
   }
 
+  body.club-page .parade-ground {
+    grid-template-columns: 24px minmax(0, 1fr) 24px;
+    gap: 6px;
+  }
+
+  body.club-page .parade-side .flag {
+    width: 8px;
+    height: 44px;
+  }
+
+  body.club-page .parade-side .flag::before {
+    width: 1px;
+    height: 44px;
+  }
+
+  body.club-page .parade-side .flag::after {
+    top: 3px;
+    width: 8px;
+    height: 6px;
+    border-radius: 0 4px 4px 0;
+  }
+
   body.club-page .parade-lane {
     width: 190px;
   }
 
   body.club-page .parade-rows {
-    display: grid;
     justify-items: center;
     gap: 6px;
   }
 
- body.club-page .parade-ground {
-  grid-template-columns: 24px minmax(0, 1fr) 24px;
-  gap: 6px;
-}
-
-body.club-page .parade-side .flag {
-  width: 8px;
-  height: 44px;
-}
-
-body.club-page .parade-side .flag::before {
-  width: 1px;
-  height: 44px;
-}
-
-body.club-page .parade-side .flag::after {
-  top: 3px;
-  width: 8px;
-  height: 6px;
-  border-radius: 0 4px 4px 0;
-}
-
-body.club-page .parade-row {
-  grid-template-columns: repeat(5, 44px);
-  gap: 5px;
-  justify-content: center;
-  transform: none;
-}
+  body.club-page .parade-row {
+    grid-template-columns: repeat(5, 44px);
+    gap: 5px;
+    justify-content: center;
+    transform: none;
+  }
 
   body.club-page .parade-row span {
     width: 44px;
@@ -3027,7 +3025,6 @@ body.club-page .lesson-stage-formula {
 }
 
 body.club-page .lesson-result-window,
-body.club-page .lessons-download-strip,
 body.club-page .lessons-pdf-viewer {
   margin-bottom: 22px;
   padding: 22px;
@@ -3081,12 +3078,6 @@ body.club-page .lesson-result-grid span {
   text-align: center;
 }
 
-body.club-page .lessons-download-text {
-  margin: 0 0 12px;
-  color: rgba(255, 255, 255, 0.84);
-  line-height: 1.68;
-}
-
 body.club-page .lessons-pdf-head {
   margin-bottom: 16px;
   text-align: center;
@@ -3116,20 +3107,34 @@ body.club-page .lessons-pdf-frame {
 
 body.club-page .lessons-pdf-mobile-note {
   display: none;
-}
-body.club-page .lessons-pdf-mobile-note {
   width: 100%;
   max-width: 420px;
   margin: 0 auto;
+  padding: 18px;
   text-align: center;
 }
 
-body.club-page .lessons-pdf-mobile-actions {
+body.club-page .lessons-pdf-note-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  line-height: 1.6;
+}
+
+body.club-page .lessons-pdf-actions {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  margin-top: 12px;
+  margin-top: 14px;
 }
+
+body.club-page .lessons-pdf-actions .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   LESSONS — RESPONSIVE
+   ========================================================================== */
 
 @media (max-width: 900px) {
   body.club-page .lessons-showcase--premium,
@@ -3141,27 +3146,21 @@ body.club-page .lessons-pdf-mobile-actions {
     text-align: left;
   }
 
-body.club-page .lessons-pdf-frame {
-  display: none;
-}
+  body.club-page .lessons-pdf-frame {
+    display: none;
+  }
 
-body.club-page .lessons-pdf-frame-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 180px;
-  padding: 20px 18px;
-}
+  body.club-page .lessons-pdf-frame-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 170px;
+    padding: 20px 18px;
+  }
 
-body.club-page .lessons-pdf-mobile-note {
-  display: block;
-}
-
-body.club-page .lessons-pdf-mobile-note p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.84);
-  line-height: 1.6;
-}
+  body.club-page .lessons-pdf-mobile-note {
+    display: block;
+  }
 }
 
 @media (max-width: 640px) {
@@ -3169,15 +3168,13 @@ body.club-page .lessons-pdf-mobile-note p {
     font-size: 1.12rem;
   }
 
-  body.club-page .secret-lessons-lead,
-  body.club-page .lessons-download-text {
+  body.club-page .secret-lessons-lead {
     font-size: 0.95rem;
     line-height: 1.62;
   }
 
   body.club-page .lesson-stage,
   body.club-page .lesson-result-window,
-  body.club-page .lessons-download-strip,
   body.club-page .lessons-pdf-viewer {
     padding: 18px;
     border-radius: 18px;
@@ -3221,7 +3218,7 @@ body.club-page .lessons-pdf-mobile-note p {
 
   body.club-page .lessons-pdf-frame-wrap {
     border-radius: 16px;
-    min-height: 120px;
+    min-height: 150px;
     padding: 16px;
   }
 }
@@ -3236,15 +3233,13 @@ body.club-page .lessons-pdf-mobile-note p {
   }
 
   body.club-page .secret-lessons-lead,
-  body.club-page .lessons-download-text,
-  body.club-page .lessons-pdf-mobile-note p {
+  body.club-page .lessons-pdf-note-text {
     font-size: 0.9rem;
     line-height: 1.56;
   }
 
   body.club-page .lesson-stage,
   body.club-page .lesson-result-window,
-  body.club-page .lessons-download-strip,
   body.club-page .lessons-pdf-viewer {
     padding: 14px;
     border-radius: 16px;
@@ -3292,8 +3287,12 @@ body.club-page .lessons-pdf-mobile-note p {
 
   body.club-page .lessons-pdf-frame-wrap {
     border-radius: 14px;
-    min-height: 108px;
+    min-height: 138px;
     padding: 14px;
+  }
+
+  body.club-page .lessons-pdf-actions {
+    gap: 8px;
   }
 }
 /* ==========================================================================

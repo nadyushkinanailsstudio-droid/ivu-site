@@ -592,41 +592,26 @@
               </div>
             </div>
 
-            <!-- DOWNLOAD STRIP -->
-<div class="lessons-download-strip">
-  <p class="lessons-download-text">
-    Хочешь рассмотреть эти шаги внимательно? Ниже открыт полный лист с уроками —
-    его можно пролистать прямо здесь или открыть отдельно для спокойного просмотра и печати.
-  </p>
-
-  <a
-    href="./img/uroki.pdf"
-    class="btn btn-outline lessons-download-btn"
-    target="_blank"
-    rel="noopener"
-  >
-    Скачать уроки в PDF
-  </a>
-</div>
-
-<!-- PDF VIEWER -->
 <div class="lessons-pdf-viewer">
-
   <div class="lessons-pdf-head">
     <p class="lessons-pdf-kicker">Полный разворот уроков</p>
-    <h4 class="lessons-pdf-title">Открытый лист для спокойного просмотра</h4>
+    <h4 class="lessons-pdf-title">Первые уроки для спокойного просмотра</h4>
   </div>
 
   <div class="lessons-pdf-frame-wrap">
+    <iframe
+      class="lessons-pdf-frame"
+      src="./img/uroki.pdf"
+      title="Первые уроки ИВУ"
+      loading="lazy">
+    </iframe>
 
-    <!-- MOBILE NOTE -->
     <div class="lessons-pdf-mobile-note">
-      <p>
-        На мобильном устройстве встроенный просмотр может отображаться не полностью.
-        Открой файл отдельно, чтобы спокойно посмотреть его или сохранить для печати.
+      <p class="lessons-pdf-note-text">
+        На телефоне встроенный просмотр может отображаться не полностью.
       </p>
 
-      <div class="lessons-pdf-mobile-actions">
+      <div class="lessons-pdf-actions">
         <a
           href="./img/uroki.pdf"
           class="btn btn-outline lessons-download-btn"
@@ -641,19 +626,10 @@
           class="btn btn-magic"
           download
         >
-          Скачать для печати
+          Скачать
         </a>
       </div>
     </div>
-
-    <!-- DESKTOP PDF -->
-    <iframe
-      class="lessons-pdf-frame"
-      src="./img/uroki.pdf"
-      title="Первые уроки ИВУ"
-      loading="lazy">
-    </iframe>
-
   </div>
 </div>
 

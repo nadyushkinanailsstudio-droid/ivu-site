@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const page = document.body;
+
+  if (!page.classList.contains("foundation-page")) return;
+
   /* ==========================================================================
      FOUNDATION — BOOKS CAROUSEL
-     Что здесь:
-     - горизонтальная прокрутка книжной витрины
-     - корректный расчёт visible slides на desktop / tablet / mobile
      ========================================================================== */
 
   const track = document.querySelector(".books-track");
@@ -68,9 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ==========================================================================
      FOUNDATION — LIGHTBOX
-     Что здесь:
-     - единый zoom-modal для газеты, патента и кубиков
-     - открытие по data-zoom-src и data-zoom-title
      ========================================================================== */
 
   const lightbox = document.getElementById("foundationLightbox");
