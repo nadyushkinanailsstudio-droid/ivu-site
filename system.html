@@ -35,14 +35,37 @@
 
   <div class="noise-overlay"></div>
 
- <header class="header" id="header">
-  <div class="container header__inner">
+  <header class="header" id="header">
+    <div class="container header__inner">
 
-    <div class="header__brand">
-      <a href="./index.html" class="header__logo">
-        <span class="header__logo-title">Институт Врожденной Успеваемости</span>
-        <span class="header__logo-sub">Инженерный код языка</span>
-      </a>
+      <div class="header__brand">
+        <a href="./index.html" class="header__logo">
+          <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+          <span class="header__logo-sub">Инженерный код языка</span>
+        </a>
+      </div>
+
+      <div class="nav-scroll-area">
+        <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
+          <span>‹</span>
+        </button>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="./index.html" class="nav__link">Главная</a>
+          <a href="./system.html" class="nav__link is-active">Метод</a>
+          <a href="./parents.html" class="nav__link">Родителям</a>
+          <a href="./educators.html" class="nav__link">Педагогам</a>
+          <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+          <a href="./club.html" class="nav__link">Клуб Кручучу</a>
+          <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+          <a href="./foundation.html" class="nav__link">Фонд</a>
+          <a href="./contacts.html" class="nav__link">Контакты</a>
+        </nav>
+
+        <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
+          <span>›</span>
+        </button>
+      </div>
 
       <div class="page-sections-bar page-sections-bar--header">
         <div class="page-sections">
@@ -68,32 +91,9 @@
           </div>
         </div>
       </div>
+
     </div>
-
-    <div class="nav-scroll-area">
-      <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
-        <span>‹</span>
-      </button>
-
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="./index.html" class="nav__link">Главная</a>
-        <a href="./system.html" class="nav__link is-active">Метод</a>
-        <a href="./parents.html" class="nav__link">Родителям</a>
-        <a href="./educators.html" class="nav__link">Педагогам</a>
-        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
-        <a href="./club.html" class="nav__link">Клуб Кручучу</a>
-        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
-        <a href="./foundation.html" class="nav__link">Фонд</a>
-        <a href="./contacts.html" class="nav__link">Контакты</a>
-      </nav>
-
-      <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
-        <span>›</span>
-      </button>
-    </div>
-
-  </div>
-</header>
+  </header>
 
   <main class="page-flow">
 
@@ -566,11 +566,14 @@
       </div>
 
       <div class="footer-minimal__center">
-        Авторская система Сергея Белолипецкого<br>
-        <a href="./privacy.html" class="footer-minimal__policy">
-          Политика конфиденциальности
-        </a>
-      </div>
+  <span class="footer-minimal__center-title">
+    Авторская система Сергея Белолипецкого
+  </span>
+
+  <a href="./privacy.html" class="footer-minimal__policy">
+    Политика конфиденциальности
+  </a>
+</div>
 
       <div>
         <a href="#header" class="footer-minimal__up">Наверх ↑</a>

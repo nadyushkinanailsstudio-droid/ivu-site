@@ -26,64 +26,67 @@
 
   <div class="noise-overlay"></div>
 
-  <header class="header" id="header">
-    <div class="container header__inner">
+ <header class="header" id="header">
+  <div class="container header__inner">
 
-      <div class="header__brand">
-        <a href="./index.html" class="header__logo">
-          <span class="header__logo-title">Институт Врожденной Успеваемости</span>
-          <span class="header__logo-sub">Инженерный код языка</span>
-        </a>
+    <!-- ЛОГО -->
+    <div class="header__brand">
+      <a href="./index.html" class="header__logo">
+        <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+        <span class="header__logo-sub">Инженерный код языка</span>
+      </a>
+    </div>
 
-        <div class="page-sections-bar page-sections-bar--header">
-          <div class="page-sections">
-            <button
-              class="page-sections__toggle"
-              type="button"
-              aria-expanded="false"
-              aria-controls="foundation-sections-panel"
-            >
-              <span class="page-sections__label">Разделы</span>
-              <span class="page-sections__icon"></span>
-            </button>
+    <!-- МЕНЮ -->
+    <div class="nav-scroll-area">
+      <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
+        <span>‹</span>
+      </button>
 
-            <div class="page-sections__panel" id="foundation-sections-panel" hidden>
-              <a href="#hero" class="page-sections__link is-active">Старт</a>
-              <a href="#author-path" class="page-sections__link">Путь автора</a>
-              <a href="#books" class="page-sections__link">Книги</a>
-              <a href="#archive" class="page-sections__link">Архив</a>
-              <a href="#patent" class="page-sections__link">Патент</a>
-              <a href="#science-base" class="page-sections__link">Научная опора</a>
-              <a href="#mission" class="page-sections__link">Миссия</a>
-            </div>
-          </div>
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="./index.html" class="nav__link">Главная</a>
+        <a href="./system.html" class="nav__link">Метод</a>
+        <a href="./parents.html" class="nav__link">Родителям</a>
+        <a href="./educators.html" class="nav__link">Педагогам</a>
+        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+        <a href="./club.html" class="nav__link">Клуб Кручучу</a>
+        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+        <a href="./foundation.html" class="nav__link is-active">Фонд</a>
+        <a href="./contacts.html" class="nav__link">Контакты</a>
+      </nav>
+
+      <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
+        <span>›</span>
+      </button>
+    </div>
+
+    <!-- РАЗДЕЛЫ (ВАЖНО: ВНЕ BRAND) -->
+    <div class="page-sections-bar page-sections-bar--header">
+      <div class="page-sections">
+        <button
+          class="page-sections__toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="foundation-sections-panel"
+        >
+          <span class="page-sections__label">Разделы</span>
+          <span class="page-sections__icon"></span>
+        </button>
+
+        <div class="page-sections__panel" id="foundation-sections-panel" hidden>
+          <a href="#hero" class="page-sections__link is-active">Старт</a>
+          <a href="#author-path" class="page-sections__link">Путь автора</a>
+          <a href="#books" class="page-sections__link">Книги</a>
+          <a href="#archive" class="page-sections__link">Архив</a>
+          <a href="#patent" class="page-sections__link">Патент</a>
+          <a href="#science-base" class="page-sections__link">Научная опора</a>
+          <a href="#mission" class="page-sections__link">Миссия</a>
         </div>
       </div>
-
-      <div class="nav-scroll-area">
-        <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
-          <span>‹</span>
-        </button>
-
-        <nav class="nav" aria-label="Основная навигация">
-          <a href="./index.html" class="nav__link">Главная</a>
-          <a href="./system.html" class="nav__link">Метод</a>
-          <a href="./parents.html" class="nav__link">Родителям</a>
-          <a href="./educators.html" class="nav__link">Педагогам</a>
-          <a href="./kindergarten.html" class="nav__link">Детским садам</a>
-          <a href="./club.html" class="nav__link">Клуб Кручучу</a>
-          <a href="./krutigrad.html" class="nav__link">Крутиград</a>
-          <a href="./foundation.html" class="nav__link is-active">Фонд</a>
-          <a href="./contacts.html" class="nav__link">Контакты</a>
-        </nav>
-
-        <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
-          <span>›</span>
-        </button>
-      </div>
-
     </div>
-  </header>
+
+  </div>
+</header>
 
  <main>
 
@@ -793,9 +796,14 @@
     </div>
 
     <div class="footer-minimal__center">
-      Авторская система Сергея Белолипецкого<br>
-      <a href="./privacy.html" class="footer-minimal__policy">Политика конфиденциальности</a>
-    </div>
+  <span class="footer-minimal__center-title">
+    Авторская система Сергея Белолипецкого
+  </span>
+
+  <a href="./privacy.html" class="footer-minimal__policy">
+    Политика конфиденциальности
+  </a>
+</div>
 
     <div class="footer-minimal__right">
       <a href="#header" class="footer-minimal__up">Наверх ↑</a>
@@ -803,21 +811,7 @@
   </div>
 </footer>
 
-  <div class="foundation-lightbox" id="foundationLightbox" aria-hidden="true">
-    <div class="foundation-lightbox__backdrop" data-close-lightbox></div>
-    <div class="foundation-lightbox__dialog" role="dialog" aria-modal="true">
-      <button class="foundation-lightbox__close" type="button" aria-label="Закрыть" data-close-lightbox>×</button>
-      
-      <div class="foundation-lightbox__head">
-        <h3 id="foundationLightboxTitle">Просмотр документа</h3>
-      </div>
-      
-      <div class="foundation-lightbox__body">
-        <img id="foundationLightboxImage" src="" alt="">
-      </div>
-    </div>
-  </div>
-
+  
   <script src="./script.js"></script>
   <script src="./foundation.js"></script>
 </body>
