@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Институт Врожденной Успеваемости | Контакты Кафедры</title>
-  <meta name="description" content="Контакты ИВУ: отправьте запрос на кафедру, задайте вопрос специалисту или запросите методическую консультацию.">
+  <meta
+    name="description"
+    content="Контакты ИВУ: отправьте запрос на кафедру, задайте вопрос специалисту или запросите методическую консультацию."
+  >
 
   <link rel="icon" href="favicon/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -13,217 +16,253 @@
   <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
 
+  <meta property="og:title" content="Институт Врожденной Успеваемости | Контакты Кафедры">
+  <meta
+    property="og:description"
+    content="Отправьте запрос на кафедру ИВУ, задайте вопрос специалисту или запросите методическую консультацию."
+  >
+  <meta property="og:image" content="favicon/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="/contacts.html">
+  <meta property="og:locale" content="ru_RU">
+
   <link rel="stylesheet" href="./style.css">
   <link rel="stylesheet" href="./contacts.css">
 </head>
 <body class="contacts-page">
   <div id="top"></div>
-
-
   <div class="noise-overlay"></div>
 
   <header class="header" id="header">
-  <div class="container header__inner">
+    <div class="container header__inner">
+      <div class="header__brand">
+        <a href="./index.html" class="header__logo">
+          <span class="header__logo-title">Институт Врожденной Успеваемости</span>
+          <span class="header__logo-sub">Инженерный код языка</span>
+        </a>
+      </div>
 
-    <div class="header__brand">
-      <a href="./index.html" class="header__logo">
-        <span class="header__logo-title">Институт Врожденной Успеваемости</span>
-        <span class="header__logo-sub">Инженерный код языка</span>
-      </a>
-    </div>
-
-    <div class="nav-scroll-area">
-      <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
-        <span>‹</span>
-      </button>
-
-      <nav class="nav" aria-label="Основная навигация">
-        <a href="./index.html" class="nav__link">Главная</a>
-        <a href="./system.html" class="nav__link">Метод</a>
-        <a href="./parents.html" class="nav__link">Родителям</a>
-        <a href="./educators.html" class="nav__link">Педагогам</a>
-        <a href="./kindergarten.html" class="nav__link">Детским садам</a>
-        <a href="./club.html" class="nav__link">Клуб Кручучу</a>
-        <a href="./krutigrad.html" class="nav__link">Крутиград</a>
-        <a href="./foundation.html" class="nav__link">Фонд</a>
-        <a href="./contacts.html" class="nav__link is-active">Контакты</a>
-      </nav>
-
-      <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
-        <span>›</span>
-      </button>
-    </div>
-
-    <div class="page-sections-bar page-sections-bar--header">
-      <div class="page-sections">
-        <button
-          class="page-sections__toggle"
-          type="button"
-          aria-expanded="false"
-          aria-controls="page-sections-panel-contacts"
-        >
-          <span class="page-sections__label">Разделы</span>
-          <span class="page-sections__icon"></span>
+      <div class="nav-scroll-area">
+        <button class="nav-scroll-btn nav-scroll-btn--left" type="button" aria-label="Прокрутить меню влево">
+          <span>‹</span>
         </button>
 
-        <div class="page-sections__panel" id="page-sections-panel-contacts" hidden>
-          <a href="#hero" class="page-sections__link is-active">Старт</a>
-          <a href="#application-form" class="page-sections__link">Форма</a>
+        <nav class="nav" aria-label="Основная навигация">
+          <a href="./index.html" class="nav__link">Главная</a>
+          <a href="./system.html" class="nav__link">Метод</a>
+          <a href="./parents.html" class="nav__link">Родителям</a>
+          <a href="./educators.html" class="nav__link">Педагогам</a>
+          <a href="./kindergarten.html" class="nav__link">Детским садам</a>
+          <a href="./club.html" class="nav__link">Клуб Кручучу</a>
+          <a href="./krutigrad.html" class="nav__link">Крутиград</a>
+          <a href="./foundation.html" class="nav__link">Фонд</a>
+          <a href="./contacts.html" class="nav__link is-active">Контакты</a>
+        </nav>
+
+        <button class="nav-scroll-btn nav-scroll-btn--right" type="button" aria-label="Прокрутить меню вправо">
+          <span>›</span>
+        </button>
+      </div>
+
+      <div class="page-sections-bar page-sections-bar--header">
+        <div class="page-sections">
+          <button
+            class="page-sections__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="page-sections-panel-contacts"
+          >
+            <span class="page-sections__label">Разделы</span>
+            <span class="page-sections__icon"></span>
+          </button>
+
+          <div class="page-sections__panel" id="page-sections-panel-contacts" hidden>
+            <a href="#hero" class="page-sections__link is-active">Старт</a>
+            <a href="#application-form" class="page-sections__link">Форма</a>
+          </div>
         </div>
       </div>
     </div>
+  </header>
 
-  </div>
-</header>
+  <main>
+    <section class="contacts-hero page-hero" id="hero">
+      <div class="container">
+        <div class="contacts-hero__head section-header reveal">
+          <span class="label">Связь с кафедрой</span>
+          <h1>Запрос методической консультации</h1>
+          <p>
+            Отправьте ваш вопрос, запрос или предложение. Специалисты Кафедры
+            рассмотрят обращение в рабочем порядке и вернутся с ответом.
+          </p>
+        </div>
 
-<main>
-  <section class="contacts-hero page-hero reveal" id="hero">
-    <div class="container">
-      <div class="contacts-hero__head section-header">
-        <span class="label">Связь с кафедрой</span>
-        <h1>Запрос методической консультации</h1>
-        <p>
-          Отправьте ваш вопрос, запрос или предложение. Специалисты Кафедры
-          рассмотрят обращение в рабочем порядке и вернутся с ответом.
-        </p>
-      </div>
+        <div class="contacts-layout reveal" id="application-form">
+          <aside class="contacts-side">
+            <article class="contacts-note-card">
+              <p class="contacts-note-card__kicker">Принцип работы</p>
+              <h3>Каждое обращение — отдельный методический маршрут</h3>
+              <p>
+                Мы не даём шаблонных ответов. Каждое сообщение рассматривается
+                специалистом как самостоятельная задача: с вниманием к возрасту,
+                ситуации, уровню ребёнка и целям семьи или педагога.
+              </p>
+            </article>
 
-      <div class="contacts-layout reveal">
-        <aside class="contacts-side">
-          <article class="contacts-note-card">
-            <p class="contacts-note-card__kicker">Принцип работы</p>
-            <h3>Каждое обращение — отдельный методический маршрут</h3>
-            <p>
-              Мы не даём шаблонных ответов. Каждое сообщение рассматривается
-              специалистом как самостоятельная задача: с вниманием к возрасту,
-              ситуации, уровню ребёнка и целям семьи или педагога.
-            </p>
-          </article>
-
-          <div class="contacts-cube-card" aria-hidden="true">
-            <div class="cube-visual">
-              <div class="cube-main-premium">
-                <div class="cubeScene">
-                  <div class="cubeRoot">
-
-                    <div class="half half--left">
-                      <div class="halfInner">
-                        <div class="face f-front"></div>
-                        <div class="face f-left"></div>
-                        <div class="face f-right">
-                          <div class="cube-mark">
-                            <div class="cube-mark__mb">МБ</div>
-                            <div class="cube-mark__line"></div>
-                            <div class="cube-mark__txt">методика</div>
-                            <div class="cube-mark__txt cube-mark__txt--small">Белолипецкого</div>
-                            <div class="cube-mark__badge">1986</div>
+            <div class="contacts-cube-card" aria-hidden="true">
+              <div class="cube-visual">
+                <div class="cube-main-premium">
+                  <div class="cubeScene">
+                    <div class="cubeRoot">
+                      <div class="half half--left">
+                        <div class="halfInner">
+                          <div class="face f-front"></div>
+                          <div class="face f-left"></div>
+                          <div class="face f-right">
+                            <div class="cube-mark">
+                              <div class="cube-mark__mb">МБ</div>
+                              <div class="cube-mark__line"></div>
+                              <div class="cube-mark__txt">методика</div>
+                              <div class="cube-mark__txt cube-mark__txt--small">Белолипецкого</div>
+                              <div class="cube-mark__badge">1986</div>
+                            </div>
                           </div>
+                          <div class="face f-back"></div>
+                          <div class="face f-top"></div>
+                          <div class="face f-bottom"></div>
                         </div>
-                        <div class="face f-back"></div>
-                        <div class="face f-top"></div>
-                        <div class="face f-bottom"></div>
+                      </div>
+
+                      <div class="half half--right">
+                        <div class="halfInner">
+                          <div class="face f-front"></div>
+                          <div class="face f-right"></div>
+                          <div class="face f-left"></div>
+                          <div class="face f-back"></div>
+                          <div class="face f-top"></div>
+                          <div class="face f-bottom"></div>
+                        </div>
+                      </div>
+
+                      <div class="brain-container">
+                        <div class="brain-nucleus">
+                          <div class="nucleus-ring"></div>
+                          <div class="nucleus-ring"></div>
+                          <div class="nucleus-ring"></div>
+                          <div class="nucleus-ring"></div>
+                        </div>
+                        <div class="nucleus-core">
+                          <div class="core-plane"></div>
+                          <div class="core-plane"></div>
+                          <div class="core-plane"></div>
+                        </div>
                       </div>
                     </div>
-
-                    <div class="half half--right">
-                      <div class="halfInner">
-                        <div class="face f-front"></div>
-                        <div class="face f-right"></div>
-                        <div class="face f-left"></div>
-                        <div class="face f-back"></div>
-                        <div class="face f-top"></div>
-                        <div class="face f-bottom"></div>
-                      </div>
-                    </div>
-
-                    <div class="brain-container">
-                      <div class="brain-nucleus">
-                        <div class="nucleus-ring"></div>
-                        <div class="nucleus-ring"></div>
-                        <div class="nucleus-ring"></div>
-                        <div class="nucleus-ring"></div>
-                      </div>
-                      <div class="nucleus-core">
-                        <div class="core-plane"></div>
-                        <div class="core-plane"></div>
-                        <div class="core-plane"></div>
-                      </div>
-                    </div>
-
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </aside>
+          </aside>
 
-        <section class="contacts-form-card">
-          <div class="contacts-form-card__head">
-            <p class="contacts-form-card__kicker">Методическая форма связи</p>
-            <h2>Оставьте обращение</h2>
-            <p>
-              Кратко опишите вопрос, чтобы мы направили его нужному специалисту.
-            </p>
-          </div>
-
-          <form class="contacts-form" action="#" method="post">
-            <div class="contacts-form__grid">
-              <label class="field">
-                <span class="field__label">Имя</span>
-                <input type="text" name="name" placeholder="Как к Вам обращаться" />
-              </label>
-
-              <label class="field">
-                <span class="field__label">Телефон</span>
-                <input type="tel" name="phone" placeholder="+7 999 000-00-00" />
-              </label>
-
-              <label class="field field--full">
-                <span class="field__label">E-mail (если есть)</span>
-                <input type="email" name="email" placeholder="example@email.com" />
-              </label>
-
-              <label class="field field--full">
-                <span class="field__label">Суть запроса</span>
-                <textarea
-                  name="message"
-                  rows="6"
-                  placeholder="Кратко опишите ваш вопрос, ситуацию или предложение..."
-                ></textarea>
-              </label>
+          <section class="contacts-form-card">
+            <div class="contacts-form-card__head">
+              <p class="contacts-form-card__kicker">Методическая форма связи</p>
+              <h2>Оставьте обращение</h2>
+              <p>
+                Кратко опишите вопрос, чтобы мы направили его нужному специалисту.
+              </p>
             </div>
 
-            <label class="contacts-consent">
-              <input type="checkbox" name="privacy" />
-              <span>
-                Согласен на обработку персональных данных
-                <a href="./privacy.html">Политика конфиденциальности</a>
-              </span>
-            </label>
+            <form class="contacts-form" id="contact-form" action="#" method="post" novalidate>
+              <div class="contacts-form__grid">
+                <label class="field">
+                  <span class="field__label">Имя</span>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Как к Вам обращаться"
+                    autocomplete="name"
+                    required
+                  >
+                </label>
 
-            <button type="submit" class="btn btn-block contacts-submit">
-              Отправить запрос на Кафедру
-            </button>
-          </form>
-        </section>
+                <label class="field">
+                  <span class="field__label">Телефон</span>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="+7 999 000-00-00"
+                    autocomplete="tel"
+                  >
+                </label>
+
+                <label class="field field--full">
+                  <span class="field__label">E-mail (если есть)</span>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                  >
+                </label>
+
+                <label class="field field--full">
+                  <span class="field__label">Суть запроса</span>
+                  <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Кратко опишите ваш вопрос, ситуацию или предложение..."
+                    required
+                  ></textarea>
+                </label>
+              </div>
+
+              <label class="contacts-consent">
+                <input type="checkbox" name="privacy" required>
+                <span>
+                  Согласен на обработку персональных данных
+                  <a href="./privacy.html">Политика конфиденциальности</a>
+                </span>
+              </label>
+
+              <button
+                type="submit"
+                class="btn btn-block contacts-submit"
+                id="submit-btn"
+              >
+                Отправить запрос на Кафедру
+              </button>
+            </form>
+
+         <div
+  class="contact-success contact-success--hidden"
+  id="form-success"
+  aria-live="polite"
+  tabindex="-1"
+>
+  <p class="contact-success__kicker">Обращение принято</p>
+  <h3>Спасибо. Запрос отправлен на Кафедру.</h3>
+  <p>
+    Мы получили ваше сообщение и рассмотрим его в рабочем порядке.
+    Ответ вернётся по указанным контактам, если они были оставлены.
+  </p>
+</div>
+          </section>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-  <section class="site-manifesto reveal">
+    <section class="site-manifesto reveal">
       <div class="container">
         <div class="site-manifesto-text">
           Мы вернём России статус<br>самой читающей страны в мире.
         </div>
       </div>
     </section>
-
   </main>
 
   <footer class="footer-minimal">
     <div class="container footer-minimal__inner">
-
       <div>
         <a href="./index.html" class="footer-minimal__logo-block">
           <div class="footer-minimal__logo-icon">ИВУ</div>
@@ -235,19 +274,18 @@
       </div>
 
       <div class="footer-minimal__center">
-  <span class="footer-minimal__center-title">
-    Авторская система Сергея Белолипецкого
-  </span>
+        <span class="footer-minimal__center-title">
+          Авторская система Сергея Белолипецкого
+        </span>
 
-  <a href="./privacy.html" class="footer-minimal__policy">
-    Политика конфиденциальности
-  </a>
-</div>
+        <a href="./privacy.html" class="footer-minimal__policy">
+          Политика конфиденциальности
+        </a>
+      </div>
 
       <div>
         <a href="#top" class="footer-minimal__up">Наверх ↑</a>
       </div>
-
     </div>
   </footer>
 

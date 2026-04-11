@@ -176,9 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
 /* ===============================
-   КНОПКИ ПРОКРУТКИ МЕНЮ
+   КНОПКИ ПРОКРУТКИ МЕНЮ — FIXED
 =============================== */
 const nav = document.querySelector('.nav');
 const btnLeft = document.querySelector('.nav-scroll-btn--left');
@@ -194,17 +193,16 @@ if (nav && btnLeft && btnRight) {
     button.style.visibility = isVisible ? 'visible' : 'hidden';
   };
 
+  const updateButtons = () => {
+    const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth - 4);
+    const atStart = nav.scrollLeft <= 10;
+    const atEnd = nav.scrollLeft >= maxScroll - 10;
 
-const updateButtons = () => {
-  const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth - 4);
-  const atStart = nav.scrollLeft <= 10;
-  const atEnd = nav.scrollLeft >= maxScroll - 10;
+    setButtonState(btnLeft, !atStart);
+    setButtonState(btnRight, !atEnd);
+  };
 
-  setButtonState(btnLeft, !atStart);
-  setButtonState(btnRight, !atEnd);
-};
-
- const forceHomeMenuStart = () => {
+  const forceHomeMenuStart = () => {
     nav.scrollLeft = 0;
     updateButtons();
   };
@@ -219,24 +217,27 @@ const updateButtons = () => {
     }
 
     const activeIndex = allLinks.indexOf(activeLink);
-    const lastIndex = allLinks.length - 1;
     const maxScroll = Math.max(0, nav.scrollWidth - nav.clientWidth);
 
-    let targetLeft = 0;
+    let targetLeft;
 
     if (isHomePage()) {
       targetLeft = 0;
-    } else if (activeIndex <= 0) {
-      targetLeft = 0;
-    } else if (activeIndex >= lastIndex) {
-      targetLeft = maxScroll;
     } else {
+      // 🔥 ВАЖНО: центрируем, но НЕ даём уехать в край
       targetLeft =
-        activeLink.offsetLeft - nav.clientWidth / 2 + activeLink.offsetWidth / 2;
+        activeLink.offsetLeft -
+        nav.clientWidth / 2 +
+        activeLink.offsetWidth / 2;
+
+      // 🔥 ограничение (ключевой фикс)
+      const safePadding = 60; // запас, чтобы стрелка оставалась
+      targetLeft = Math.max(0, targetLeft);
+      targetLeft = Math.min(targetLeft, maxScroll - safePadding);
     }
 
     nav.scrollTo({
-      left: Math.max(0, Math.min(targetLeft, maxScroll)),
+      left: targetLeft,
       behavior: smooth ? 'smooth' : 'auto'
     });
 
@@ -244,7 +245,11 @@ const updateButtons = () => {
   };
 
   const syncMenuState = (smooth = false) => {
-    scrollActiveLinkIntoView(smooth);
+    if (isHomePage()) {
+      forceHomeMenuStart();
+    } else {
+      scrollActiveLinkIntoView(smooth);
+    }
   };
 
   btnRight.addEventListener('click', () => {
@@ -263,17 +268,9 @@ const updateButtons = () => {
 
   nav.addEventListener('scroll', updateButtons, { passive: true });
 
-  window.addEventListener('resize', () => {
-    syncMenuState(false);
-  });
-
-  window.addEventListener('load', () => {
-    syncMenuState(false);
-  });
-
-  window.addEventListener('pageshow', () => {
-    syncMenuState(false);
-  });
+  window.addEventListener('resize', () => syncMenuState(false));
+  window.addEventListener('load', () => syncMenuState(false));
+  window.addEventListener('pageshow', () => syncMenuState(false));
 
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => {

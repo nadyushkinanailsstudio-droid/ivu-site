@@ -17,10 +17,6 @@ body.educators-page main {
   z-index: 2;
 }
 
-body.educators-page .section-padding {
-  padding: 42px 0;
-}
-
 body.educators-page .section-transparent {
   background: transparent;
 }
@@ -1798,10 +1794,7 @@ body.educators-page .route-card p {
 }
 
 @media (max-width: 768px) {
-  body.educators-page .section-padding {
-    padding: 36px 0;
-  }
-
+  
   body.educators-page .hero-educators {
     padding-bottom: 18px;
   }

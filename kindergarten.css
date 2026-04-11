@@ -23,11 +23,6 @@ body.kindergarten-page .kg-conditions-submit {
   z-index: 2;
 }
 
-.kg-section {
-  position: relative;
-  padding: 84px 0;
-}
-
 .kg-section--soft {
   background:
     linear-gradient(
