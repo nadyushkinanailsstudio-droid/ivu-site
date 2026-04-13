@@ -2266,6 +2266,7 @@ body.club-page .club-stage.show .parade-sparkles span {
 
 @media (max-width: 1024px) {
   body.club-page .club-stage-inner {
+    overflow: hidden;
     padding: 32px 24px;
   }
 
@@ -2274,33 +2275,44 @@ body.club-page .club-stage.show .parade-sparkles span {
   }
 
   body.club-page .parade-ground {
-    grid-template-columns: 72px minmax(0, 1fr) 72px;
-    gap: 14px;
+    width: 100%;
     max-width: 680px;
-  }
-
-  body.club-page .parade-lane {
-    width: 270px;
-  }
-
-  body.club-page .parade-side .flag {
-    height: 82px;
-  }
-
-  body.club-page .parade-side .flag::before {
-    height: 82px;
-  }
-
-  body.club-page .parade-row {
-    grid-template-columns: repeat(5, 64px);
+    margin: 0 auto;
+    grid-template-columns: 56px minmax(0, 1fr) 56px;
     gap: 10px;
   }
 
+  body.club-page .parade-lane {
+    width: min(100%, 250px);
+  }
+
+  body.club-page .parade-side .flag {
+    height: 72px;
+  }
+
+  body.club-page .parade-side .flag::before {
+    height: 72px;
+  }
+
+  body.club-page .parade-rows {
+    width: 100%;
+    max-width: 100%;
+    justify-items: center;
+  }
+
+  body.club-page .parade-row {
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 56px));
+    justify-content: center;
+    gap: 8px;
+  }
+
   body.club-page .parade-row span {
-    width: 64px;
-    height: 64px;
-    border-radius: 18px;
-    font-size: 1.16rem;
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    font-size: 1rem;
   }
 }
 
@@ -2310,6 +2322,7 @@ body.club-page .club-stage.show .parade-sparkles span {
   }
 
   body.club-page .club-stage-inner {
+    overflow: hidden;
     padding: 26px 18px;
     border-radius: 24px;
   }
@@ -2357,59 +2370,65 @@ body.club-page .club-stage.show .parade-sparkles span {
   }
 
   body.club-page .parade-ground {
-    grid-template-columns: 34px minmax(0, 1fr) 34px;
-    gap: 8px;
+    width: 100%;
     max-width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 16px minmax(0, 1fr) 16px;
+    gap: 4px;
     align-items: stretch;
   }
 
   body.club-page .parade-side {
-    display: flex;
-    padding: 2px 0;
+    padding: 0;
     opacity: 1;
   }
 
   body.club-page .parade-side .flag {
-    width: 10px;
-    height: 54px;
+    width: 8px;
+    height: 50px;
   }
 
   body.club-page .parade-side .flag::before {
-    width: 1.5px;
-    height: 54px;
+    width: 1px;
+    height: 50px;
   }
 
   body.club-page .parade-side .flag::after {
     top: 3px;
-    width: 10px;
-    height: 8px;
-    border-radius: 0 5px 5px 0;
+    width: 8px;
+    height: 7px;
+    border-radius: 0 4px 4px 0;
   }
 
   body.club-page .parade-lane {
     top: 8px;
     bottom: 8px;
-    width: 250px;
+    width: min(100%, 220px);
   }
 
   body.club-page .parade-rows {
-    justify-items: center;
-    gap: 8px;
+    width: 100%;
+    max-width: 100%;
     margin-top: 2px;
+    gap: 8px;
+    justify-items: center;
   }
 
   body.club-page .parade-row {
-    grid-template-columns: repeat(5, 52px);
-    gap: 6px;
+    width: 100%;
+    max-width: 100%;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     justify-content: center;
-    transform: none;
+    gap: 6px;
   }
 
   body.club-page .parade-row span {
-    width: 52px;
-    height: 52px;
-    border-radius: 15px;
-    font-size: 0.96rem;
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    font-size: 0.92rem;
   }
 
   body.club-page .parade-sparkles span {
@@ -2420,6 +2439,7 @@ body.club-page .club-stage.show .parade-sparkles span {
 
 @media (max-width: 560px) {
   body.club-page .club-stage-inner {
+    overflow: hidden;
     padding: 22px 14px;
     border-radius: 18px;
   }
@@ -2454,48 +2474,39 @@ body.club-page .club-stage.show .parade-sparkles span {
   }
 
   body.club-page .parade-ground {
-    grid-template-columns: 24px minmax(0, 1fr) 24px;
-    gap: 6px;
+    grid-template-columns: 12px minmax(0, 1fr) 12px;
+    gap: 3px;
   }
 
   body.club-page .parade-side .flag {
-    width: 8px;
-    height: 44px;
+    width: 6px;
+    height: 40px;
   }
 
   body.club-page .parade-side .flag::before {
-    width: 1px;
-    height: 44px;
+    height: 40px;
   }
 
   body.club-page .parade-side .flag::after {
-    top: 3px;
-    width: 8px;
-    height: 6px;
-    border-radius: 0 4px 4px 0;
+    width: 6px;
+    height: 5px;
   }
 
   body.club-page .parade-lane {
-    width: 190px;
+    width: min(100%, 180px);
   }
 
   body.club-page .parade-rows {
-    justify-items: center;
     gap: 6px;
   }
 
   body.club-page .parade-row {
-    grid-template-columns: repeat(5, 44px);
     gap: 5px;
-    justify-content: center;
-    transform: none;
   }
 
   body.club-page .parade-row span {
-    width: 44px;
-    height: 44px;
     border-radius: 12px;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
   }
 }
 /* ==========================================================================
